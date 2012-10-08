@@ -499,7 +499,7 @@ session_start();
                                          <!--Learn More Code End Here-->
                                           <center><input type="text" value="TSTB1" id="myInput" style="text-align:center;" disabled>
                                          <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
-                                          <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=215&sub1=sub1&sub2=sub2&sub3=sub3&sub4=sub4&sub8=sub8">Redirect to Offer Site</a></center>
+                                          <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=217&sub1=sub1&sub2=sub2&sub3=sub3&sub4=sub4&sub8=sub8">Redirect to Offer Site</a></center>
                                       </div>
 
                                   </div><!--end: .coupon-item -->
