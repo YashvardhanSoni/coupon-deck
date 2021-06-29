@@ -13,10 +13,13 @@
         $query->bindParam("username", $username, PDO::PARAM_STR);
         $query->execute();
         $result = $query->fetch(PDO::FETCH_ASSOC);
+        echo $result['password'];
+        echo (password_verify($password, $result['password']));
+
         if (!$result) {
-            echo '<p class="error">Username/Password is wrong!</p>';
+            echo '<p class="error">Username/Password is wrong!</p>' ;
         } else {
-            if (password_verify($password, $result['password'])) {
+            if ($password == $result['password']) {
                 $_SESSION['user_id'] = $result['id'];
                 $_SESSION['username'] = $result['username'];
                 $_SESSION['email'] = $result['email'];
