@@ -163,14 +163,17 @@ session_start();
                                         <a href="coupon.php">Coupons</a>
                                     </li>
                                     <li class="has-sub">
-                                        <a href="coupon-code-2.php">Coupons Category</a>
+                                        <a>Coupons Category</a>
                                         <ul class="sub-menu">
-                                            <li><a href="coupon-code-2.php">Fashion </a></li>
-                                            <li><a href="coupon-code-2.php">Electronics </a></li>
-                                            <li><a href="coupon-code-2.php">Furniture </a></li>
-                                            <li><a href="coupon-code-2.php">Grocery </a></li>
-                                            <li><a href="coupon-code-2.php">Household </a></li>
+                                            <li><a href="category-fashion.php">Fashion </a></li>
+                                            <li><a href="category-electronics.php">Electronics </a></li>
+                                            <li><a href="coupon-category.php">Furniture </a></li>
+                                            <li><a href="coupon-category.php">Grocery </a></li>
+                                            <li><a href="coupon-category.php">Household </a></li>
                                         </ul>
+                                    </li>
+                                    <li>
+                                        <a href="regional-coupon.php">Regional Offers</a>
                                     </li>
                                     <li>
                                         <a href="brand-list.php">Brands</a>
@@ -223,17 +226,18 @@ session_start();
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="coupon.php">Coupons</a></li>
-
-
                     <li class="has-sub">
-                        <a href="coupon-code-2.php">Coupons Category</a>
+                        <a>Coupons Category</a>
                         <ul class="sub-menu">
-                            <li><a href="coupon-code-2.php">Fashion </a></li>
-                            <li><a href="coupon-code-2.php">Electronics </a></li>
-                            <li><a href="coupon-code-2.php">Furniture </a></li>
-                            <li><a href="coupon-code-2.php">Grocery </a></li>
-                            <li><a href="coupon-code-2.php">Household </a></li>
+                            <li><a href="category-fashion.php">Fashion </a></li>
+                            <li><a href="category-electronics.php">Electronics </a></li>
+                            <li><a href="coupon-category.php">Furniture </a></li>
+                            <li><a href="coupon-category.php">Grocery </a></li>
+                            <li><a href="coupon-category.php">Household </a></li>
                         </ul>
+                    </li>
+                    <li>
+                        <a href="regional-coupon.php">Regional Offers</a>
                     </li>
                     <li>
                         <a href="brand-list.php">Brands</a>

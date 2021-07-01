@@ -278,7 +278,7 @@ session_start();
             <div class="grid_frame">
                 <div class="container_grid clearfix">
                     <div class="grid_12">
-                        <h2 class="page-title"><h1><b>Coupons are waiting for you!</b></h1></h2>
+                        <h2 class="page-title"><h1><b>Regional Offers!</b></h1></h2>
                     </div>
                 </div>
             </div>
@@ -290,8 +290,9 @@ session_start();
                     <div class="grid_12">
                         <h3 class="title-block">
                             <span class="wrap-tab">
-                                <span class="lbl-tab active">New Coupons</span>
-                                <span class="lbl-tab">Featured Coupons</span>
+                                <span class="lbl-tab active">Indian Offers</span>
+                                <span class="lbl-tab">UAE Offers</span>
+                                <span class="lbl-tab">Singapore Offers</span>
                             </span>
                         </h3>
                     </div>
@@ -668,6 +669,162 @@ session_start();
                     </div>
 
                 </div><!--end block: Featured Coupons-->
+
+
+
+                <!-- Featured Coupons Start Here -->
+                </div>
+                <div class="coupon-item grid_3">
+                    <div class="coupon-content">
+                        <div class="img-thumb-center">
+                            <div class="wrap-img-thumb">
+                                <span class="ver_hold"></span>
+                                <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
+                            </div>
+                        </div>
+                        <div class="coupon-price">INR 150 Off</div>
+                        <div class="coupon-brand">Flipkart</div>
+                        <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
+                        <div class="time-left">Valid Till June 5, 2021</div>
+                        <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
+                       <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
+                        <a href="">Redirect to Offer Site</a></center>
+                    </div>
+                    <i class="stick-lbl hot-sale"></i>
+                    </div><!--end: .coupon-item -->
+                    <div class="coupon-item grid_3">
+                        <div class="coupon-content">
+                            <div class="img-thumb-center">
+                                <div class="wrap-img-thumb">
+                                    <span class="ver_hold"></span>
+                                    <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
+                                </div>
+                            </div>
+                            <div class="coupon-price">INR 150 Off</div>
+                            <div class="coupon-brand">Flipkart</div>
+                            <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
+                            <div class="time-left">Valid Till June 5, 2021</div>
+                            <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
+                           <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
+                            <a href="">Redirect to Offer Site</a></center>
+                        </div>
+                        <i class="stick-lbl hot-sale"></i>
+                    </div><!--end: .coupon-item -->
+                    <div class="coupon-item grid_3">
+                        <div class="coupon-content">
+                            <div class="img-thumb-center">
+                                <div class="wrap-img-thumb">
+                                    <span class="ver_hold"></span>
+                                    <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
+                                </div>
+                            </div>
+                            <div class="coupon-price">INR 150 Off</div>
+                            <div class="coupon-brand">Flipkart</div>
+                            <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
+                            <div class="time-left">Valid Till June 5, 2021</div>
+                            <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
+                           <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
+                            <a href="">Redirect to Offer Site</a></center>
+                        </div>
+                        <i class="stick-lbl hot-sale"></i>
+                    </div><!--end: .coupon-item -->
+                    <div class="coupon-item grid_3">
+                        <div class="coupon-content">
+                            <div class="img-thumb-center">
+                                <div class="wrap-img-thumb">
+                                    <span class="ver_hold"></span>
+                                    <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
+                                </div>
+                            </div>
+                            <div class="coupon-price">INR 150 Off</div>
+                            <div class="coupon-brand">Flipkart</div>
+                            <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
+                            <div class="time-left">Valid Till June 5, 2021</div>
+                            <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
+                           <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
+                            <a href="">Redirect to Offer Site</a></center>
+                        </div>
+                        <i class="stick-lbl hot-sale"></i>
+                    </div><!--end: .coupon-item -->
+                    <div class="coupon-item grid_3">
+                        <div class="coupon-content">
+                            <div class="img-thumb-center">
+                                <div class="wrap-img-thumb">
+                                    <span class="ver_hold"></span>
+                                    <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
+                                </div>
+                            </div>
+                            <div class="coupon-price">INR 150 Off</div>
+                            <div class="coupon-brand">Flipkart</div>
+                            <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
+                            <div class="time-left">Valid Till June 5, 2021</div>
+                            <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
+                           <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
+                            <a href="">Redirect to Offer Site</a></center>
+                        </div>
+                        <i class="stick-lbl hot-sale"></i>
+                    </div><!--end: .coupon-item -->
+                    <div class="coupon-item grid_3">
+                        <div class="coupon-content">
+                            <div class="img-thumb-center">
+                                <div class="wrap-img-thumb">
+                                    <span class="ver_hold"></span>
+                                    <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
+                                </div>
+                            </div>
+                            <div class="coupon-price">INR 150 Off</div>
+                            <div class="coupon-brand">Flipkart</div>
+                            <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
+                            <div class="time-left">Valid Till June 5, 2021</div>
+                            <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
+                           <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
+                            <a href="">Redirect to Offer Site</a></center>
+                        </div>
+                        <i class="stick-lbl hot-sale"></i>
+                    </div><!--end: .coupon-item -->
+                    <div class="coupon-item grid_3">
+                        <div class="coupon-content">
+                            <div class="img-thumb-center">
+                                <div class="wrap-img-thumb">
+                                    <span class="ver_hold"></span>
+                                    <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
+                                </div>
+                            </div>
+                            <div class="coupon-price">INR 150 Off</div>
+                            <div class="coupon-brand">Flipkart</div>
+                            <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
+                            <div class="time-left">Valid Till June 5, 2021</div>
+                            <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
+                           <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
+                            <a href="">Redirect to Offer Site</a></center>
+                        </div>
+                        <i class="stick-lbl hot-sale"></i>
+                    </div><!--end: .coupon-item -->
+                    <div class="coupon-item grid_3">
+                        <div class="coupon-content">
+                            <div class="img-thumb-center">
+                                <div class="wrap-img-thumb">
+                                    <span class="ver_hold"></span>
+                                    <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
+                                </div>
+                            </div>
+                            <div class="coupon-price">INR 150 Off</div>
+                            <div class="coupon-brand">Flipkart</div>
+                            <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
+                            <div class="time-left">Valid Till June 5, 2021</div>
+                            <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
+                           <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
+                            <a href="">Redirect to Offer Site</a></center>
+                        </div>
+                        <i class="stick-lbl hot-sale"></i>
+                    </div><!--end: .coupon-item -->
+                </div>
+                </div>
+                </div>
+
+                </div><!--end block: Featured Coupons-->
+
+
 
                 <div class="mod-brands block clearfix">
                     <div class="grid_12">
