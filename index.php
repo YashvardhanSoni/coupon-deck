@@ -172,8 +172,13 @@ session_start();
                                             <li><a href="coupon-category.php">Household </a></li>
                                         </ul>
                                     </li>
-                                    <li>
-                                        <a href="regional-coupon.php">Regional Offers</a>
+                                    <li class="has-sub">
+                                        <a>Regional Offers</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="india-coupon.php">Indian Offers </a></li>
+                                            <li><a href="uae-coupon.php">UAE Offers </a></li>
+                                            <li><a href="singapore-coupon.php">Singapore Offers </a></li>
+                                        </ul>
                                     </li>
                                     <li>
                                         <a href="brand-list.php">Brands</a>
@@ -236,8 +241,13 @@ session_start();
                             <li><a href="coupon-category.php">Household </a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="regional-coupon.php">Regional Offers</a>
+                    <li class="has-sub">
+                        <a>Regional Offers</a>
+                        <ul class="sub-menu">
+                            <li><a href="india-coupon.php">Indian Offers </a></li>
+                            <li><a href="uae-coupon.php">UAE Offers </a></li>
+                            <li><a href="singapore-coupon.php">Singapore Offers </a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="brand-list.php">Brands</a>
