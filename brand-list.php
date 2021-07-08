@@ -170,8 +170,19 @@ session_start();
                                             <li><a href="coupon-category.php">Household </a></li>
                                         </ul>
                                     </li>
-                                    <li>
-                                        <a href="regional-coupon.php">Regional Offers</a>
+                                    <li class="has-sub">
+                                        <a>Regional Offers</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="india-coupon.php">Indian Offers </a></li>
+                                            <li><a href="uae-coupon.php">UAE Offers </a></li>
+                                            <li><a href="singapore-coupon.php">Singapore Offers </a></li>
+                                            <li><a href="indonesia-coupon.php">Indonesia Offers </a></li>
+                                            <li><a href="saudiarab-coupon.php">Saudi Arab Offers </a></li>
+                                            <li><a href="thailand-coupon.php">Thailand Offers </a></li>
+                                            <li><a href="vietnam-coupon.php">Vietnam Offers </a></li>
+                                            <li><a href="malaysia-coupon.php">Malaysia Offers </a></li>
+                                            <li><a href="russia-coupon.php">Russia Offers </a></li>
+                                        </ul>
                                     </li>
                                     <li>
                                         <a href="brand-list.php">Brands</a>
@@ -234,8 +245,19 @@ session_start();
                             <li><a href="coupon-category.php">Household </a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="regional-coupon.php">Regional Offers</a>
+                    <li class="has-sub">
+                        <a>Regional Offers</a>
+                        <ul class="sub-menu">
+                            <li><a href="india-coupon.php">Indian Offers </a></li>
+                            <li><a href="uae-coupon.php">UAE Offers </a></li>
+                            <li><a href="singapore-coupon.php">Singapore Offers </a></li>
+                            <li><a href="indonesia-coupon.php">Indonesia Offers </a></li>
+                            <li><a href="saudiarab-coupon.php">Saudi Arab Offers </a></li>
+                            <li><a href="thailand-coupon.php">Thailand Offers </a></li>
+                            <li><a href="vietnam-coupon.php">Vietnam Offers </a></li>
+                            <li><a href="malaysia-coupon.php">Malaysia Offers </a></li>
+                            <li><a href="russia-coupon.php">Russia Offers </a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="brand-list.php">Brands</a>

@@ -176,6 +176,12 @@ session_start();
                                             <li><a href="india-coupon.php">Indian Offers </a></li>
                                             <li><a href="uae-coupon.php">UAE Offers </a></li>
                                             <li><a href="singapore-coupon.php">Singapore Offers </a></li>
+                                            <li><a href="indonesia-coupon.php">Singapore Offers </a></li>
+                                            <li><a href="saudiarab-coupon.php">Singapore Offers </a></li>
+                                            <li><a href="thailand-coupon.php">Singapore Offers </a></li>
+                                            <li><a href="vietnam-coupon.php">Singapore Offers </a></li>
+                                            <li><a href="malaysia-coupon.php">Singapore Offers </a></li>
+                                            <li><a href="russia-coupon.php">Singapore Offers </a></li>
                                         </ul>
                                     </li>
                                     <li>
@@ -245,6 +251,12 @@ session_start();
                             <li><a href="india-coupon.php">Indian Offers </a></li>
                             <li><a href="uae-coupon.php">UAE Offers </a></li>
                             <li><a href="singapore-coupon.php">Singapore Offers </a></li>
+                            <li><a href="indonesia-coupon.php">Singapore Offers </a></li>
+                            <li><a href="saudiarab-coupon.php">Singapore Offers </a></li>
+                            <li><a href="thailand-coupon.php">Singapore Offers </a></li>
+                            <li><a href="vietnam-coupon.php">Singapore Offers </a></li>
+                            <li><a href="malaysia-coupon.php">Singapore Offers </a></li>
+                            <li><a href="russia-coupon.php">Singapore Offers </a></li>
                         </ul>
                     </li>
                     <li>
