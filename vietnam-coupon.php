@@ -312,7 +312,7 @@ session_start();
                     <div class="grid_12">
                         <h3 class="title-block">
                             <span class="wrap-tab">
-                                <span class="lbl-tab active">Indian Coupons</span>
+                                <span class="lbl-tab active">Vietnam Coupons</span>
 
                             </span>
                         </h3>
