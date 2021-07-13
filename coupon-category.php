@@ -590,77 +590,7 @@ session_start();
                             </div>
                         </div><!--end: .mod-list-store -->
                         <div class="mod-simple-coupon block">
-                            <h3 class="title-block">Latest coupon</h3>
-                            <div class="block-content">
-                                <div class="coupons-code-item simple flex">
-                                    <div class="brand-logo thumb-left">
-                                        <div class="wrap-logo">
-                                            <div class="center-img">
-                                                <span class="ver_hold"></span>
-                                                <a href="#" class="ver_container"><img src="images/ex/04-13.jpg" alt="$BRAND_NAME"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right-content flex-body">
-                                        <p class="rs save-price"><a href="#">Save 10% Off a New Hotel Booking at Participating Price Match Guarantee Hotels</a></p>
-                                    </div>
-                                </div><!--end: .coupons-code-item -->
-                                <div class="coupons-code-item simple flex">
-                                    <div class="brand-logo thumb-left">
-                                        <div class="wrap-logo">
-                                            <div class="center-img">
-                                                <span class="ver_hold"></span>
-                                                <a href="#" class="ver_container"><img src="images/ex/04-14.jpg" alt="$BRAND_NAME"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right-content flex-body">
-                                        <p class="rs save-price"><a href="#">Save 10% Off a New Hotel Booking at Participating Price Match Guarantee Hotels</a></p>
-                                    </div>
-                                </div><!--end: .coupons-code-item -->
-                                <div class="coupons-code-item simple flex">
-                                    <div class="brand-logo thumb-left">
-                                        <div class="wrap-logo">
-                                            <div class="center-img">
-                                                <span class="ver_hold"></span>
-                                                <a href="#" class="ver_container"><img src="images/ex/04-15.jpg" alt="$BRAND_NAME"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right-content flex-body">
-                                        <p class="rs save-price"><a href="#">Save 10% Off a New Hotel Booking at Participating Price Match Guarantee Hotels</a></p>
-                                    </div>
-                                </div><!--end: .coupons-code-item -->
-                                <div class="coupons-code-item simple flex">
-                                    <div class="brand-logo thumb-left">
-                                        <div class="wrap-logo">
-                                            <div class="center-img">
-                                                <span class="ver_hold"></span>
-                                                <a href="#" class="ver_container"><img src="images/ex/04-16.jpg" alt="$BRAND_NAME"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right-content flex-body">
-                                        <p class="rs save-price"><a href="#">Save 10% Off a New Hotel Booking at Participating Price Match Guarantee Hotels</a></p>
-                                    </div>
-                                </div><!--end: .coupons-code-item -->
-                                <div class="coupons-code-item simple flex">
-                                    <div class="brand-logo thumb-left">
-                                        <div class="wrap-logo">
-                                            <div class="center-img">
-                                                <span class="ver_hold"></span>
-                                                <a href="#" class="ver_container"><img src="images/ex/04-13.jpg" alt="$BRAND_NAME"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="right-content flex-body">
-                                        <p class="rs save-price"><a href="#">Save 10% Off a New Hotel Booking at Participating Price Match Guarantee Hotels</a></p>
-                                    </div>
-                                </div><!--end: .coupons-code-item -->
-                            </div>
-                        </div><!--end: .mod-simple-coupon -->
-                        <div class="mod-ads"><a href="#"><img src="images/ex/04-17.jpg" alt="$NAME"/></a></div>
-
+                            
                     </div>
                 </div>
             </div>
