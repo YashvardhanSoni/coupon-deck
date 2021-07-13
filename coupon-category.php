@@ -537,7 +537,7 @@ session_start();
                                         <span class="wrap-logo">
                                             <span class="center-img">
                                                 <span class="ver_hold"></span>
-                                                <span class="ver_container"><img src="images/ex/04-07.jpg" alt="$BRAND_NAME"></span>
+                                                <span class="ver_container"><img src="images/br/smg.png" alt="$BRAND_NAME"></span>
                                             </span>
                                         </span>
                                     </a>
@@ -546,7 +546,7 @@ session_start();
                                         <span class="wrap-logo">
                                             <span class="center-img">
                                                 <span class="ver_hold"></span>
-                                                <span class="ver_container"><img src="images/ex/04-12.jpg" alt="$BRAND_NAME"></span>
+                                                <span class="ver_container"><img src="images/br/ab.png" alt="$BRAND_NAME"></span>
                                             </span>
                                         </span>
                                     </a>
@@ -555,7 +555,7 @@ session_start();
                                         <span class="wrap-logo">
                                             <span class="center-img">
                                                 <span class="ver_hold"></span>
-                                                <span class="ver_container"><img src="images/ex/04-11.jpg" alt="$BRAND_NAME"></span>
+                                                <span class="ver_container"><img src="images/br/amazon.png" alt="$BRAND_NAME"></span>
                                             </span>
                                         </span>
                                     </a>
@@ -564,7 +564,7 @@ session_start();
                                         <span class="wrap-logo">
                                             <span class="center-img">
                                                 <span class="ver_hold"></span>
-                                                <span class="ver_container"><img src="images/ex/04-10.jpg" alt="$BRAND_NAME"></span>
+                                                <span class="ver_container"><img src="images/br/nvpn.png" alt="$BRAND_NAME"></span>
                                             </span>
                                         </span>
                                     </a>
@@ -573,7 +573,7 @@ session_start();
                                         <span class="wrap-logo">
                                             <span class="center-img">
                                                 <span class="ver_hold"></span>
-                                                <span class="ver_container"><img src="images/ex/04-09.jpg" alt="$BRAND_NAME"></span>
+                                                <span class="ver_container"><img src="images/br/ab.png" alt="$BRAND_NAME"></span>
                                             </span>
                                         </span>
                                     </a>
@@ -582,7 +582,7 @@ session_start();
                                         <span class="wrap-logo">
                                             <span class="center-img">
                                                 <span class="ver_hold"></span>
-                                                <span class="ver_container"><img src="images/ex/04-08.jpg" alt="$BRAND_NAME"></span>
+                                                <span class="ver_container"><img src="images/br/rizzle.png" alt="$BRAND_NAME"></span>
                                             </span>
                                         </span>
                                     </a>
