@@ -291,7 +291,7 @@ session_start();
                       if (!isset($_SESSION['username'])){
                         ?>
                     <li>
-                        <a href="login.php" class="btn btn-green type-login btn-login">Login</a>
+                        <a href="login.php" class="btn btn-green type-login btn-login">Logina</a>
                     </li>
                     <?php } ?>
                   </ul>
