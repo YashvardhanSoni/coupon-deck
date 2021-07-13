@@ -300,7 +300,7 @@ session_start();
             <div class="grid_frame">
                 <div class="container_grid clearfix">
                     <div class="grid_12">
-                        <h2 class="page-title"><h1><b>Coupon Category</b></h1></h2>
+                        <h2 class="page-title"><h1><b>Electronics Category</b></h1></h2>
                     </div>
                 </div>
             </div>
@@ -590,7 +590,7 @@ session_start();
                           </div>
                       </div><!--end: .mod-list-store -->
                         <div class="mod-simple-coupon block">
-                          
+
                     </div>
                 </div>
             </div>
