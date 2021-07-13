@@ -328,12 +328,12 @@ session_start();
                                     <div class="img-thumb-center">
                                         <div class="wrap-img-thumb">
                                             <span class="ver_hold"></span>
-                                            <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
+                                            <a href="#" class="ver_container"><img src="images/br/skin.png" alt="$COUPON_TITLE"></a>
                                         </div>
                                     </div>
                                     <div class="coupon-price"></div>
-                                    <div class="coupon-brand">Skincraft</div>
-                                    <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
+                                    <div class="coupon-brand">SkinKraft</div>
+                                    <div class="coupon-desc">Find Products for skin at Skinkraft </div>
                                     <div class="time-left">Valid Till --------</div>
                                     <!--Learn More Code Start Here-->
                                                                      <div>
@@ -344,28 +344,50 @@ session_start();
                                    <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
                                     <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=171">Redirect to Offer Site</a></center>
                                 </div>
-                                <i class="stick-lbl hot-sale"></i>
+
                                 </div><!--end: .coupon-item -->
                                 <div class="coupon-item grid_3">
                                     <div class="coupon-content">
                                         <div class="img-thumb-center">
                                             <div class="wrap-img-thumb">
                                                 <span class="ver_hold"></span>
-                                                <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
+                                                <a href="#" class="ver_container"><img src="images/br/flower.png" alt="$COUPON_TITLE"></a>
                                             </div>
                                         </div>
-                                        <div class="coupon-price">INR 150 Off</div>
-                                        <div class="coupon-brand">Flipkart</div>
-                                        <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
-                                        <div class="time-left">Valid Till June 5, 2021</div>
+                                        <div class="coupon-price"></div>
+                                        <div class="coupon-brand">Floweraura</div>
+                                        <div class="coupon-desc">Find Products at Floweraura </div>
+                                        <div class="time-left">Valid Till --------</div>
                                         <!--Learn More Code Start Here-->
                                                                          <div>
-                                                                         	<center><a href="#popup2">Learn More!</a></center>
+                                                                          <center><a href="#popup2">Learn More!</a></center>
                                                                          </div>
                                        <!--Learn More Code End Here-->
-                                        <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;" disabled>
+                                        <center><input type="text" value="FWA70" id="myInput" style="text-align:center;" disabled>
                                        <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
-                                        <a href="">Redirect to Offer Site</a></center>
+                                        <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=174">Redirect to Offer Site</a></center>
+                                    </div>
+                                </div><!--end: .coupon-item -->
+                                <div class="coupon-item grid_3">
+                                    <div class="coupon-content">
+                                        <div class="img-thumb-center">
+                                            <div class="wrap-img-thumb">
+                                                <span class="ver_hold"></span>
+                                                <a href="#" class="ver_container"><img src="images/br/samsung.png" alt="$COUPON_TITLE"></a>
+                                            </div>
+                                        </div>
+                                        <div class="coupon-price"></div>
+                                        <div class="coupon-brand">Samsung</div>
+                                        <div class="coupon-desc">Find all electronic Products at Samsung </div>
+                                        <div class="time-left">Valid Till --------</div>
+                                        <!--Learn More Code Start Here-->
+                                                                         <div>
+                                                                          <center><a href="#popup3">Learn More!</a></center>
+                                                                         </div>
+                                       <!--Learn More Code End Here-->
+                                        <center><input type="text" value="SMSG100" id="myInput" style="text-align:center;" disabled>
+                                       <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
+                                        <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=173">Redirect to Offer Site</a></center>
                                     </div>
                                     <i class="stick-lbl hot-sale"></i>
                                 </div><!--end: .coupon-item -->
@@ -374,21 +396,21 @@ session_start();
                                         <div class="img-thumb-center">
                                             <div class="wrap-img-thumb">
                                                 <span class="ver_hold"></span>
-                                                <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
+                                                <a href="#" class="ver_container"><img src="images/br/reebok.png" alt="$COUPON_TITLE"></a>
                                             </div>
                                         </div>
-                                        <div class="coupon-price">INR 150 Off</div>
-                                        <div class="coupon-brand">Flipkart</div>
-                                        <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
-                                        <div class="time-left">Valid Till June 5, 2021</div>
+                                        <div class="coupon-price"></div>
+                                        <div class="coupon-brand">Reebok</div>
+                                        <div class="coupon-desc">Find all Sports Products at Reebok </div>
+                                        <div class="time-left">Valid Till --------</div>
                                         <!--Learn More Code Start Here-->
                                                                          <div>
-                                                                         	<center><a href="#popup3">Learn More!</a></center>
+                                                                          <center><a href="#popup4">Learn More!</a></center>
                                                                          </div>
                                        <!--Learn More Code End Here-->
-                                        <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
+                                        <center><input type="text" value="RBK100" id="myInput" style="text-align:center;" disabled>
                                        <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
-                                        <a href="">Redirect to Offer Site</a></center>
+                                        <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=172">Redirect to Offer Site</a></center>
                                     </div>
                                     <i class="stick-lbl hot-sale"></i>
                                 </div><!--end: .coupon-item -->
@@ -397,44 +419,21 @@ session_start();
                                         <div class="img-thumb-center">
                                             <div class="wrap-img-thumb">
                                                 <span class="ver_hold"></span>
-                                                <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
+                                                <a href="#" class="ver_container"><img src="images/br/shopclues.png" alt="$COUPON_TITLE"></a>
                                             </div>
                                         </div>
-                                        <div class="coupon-price">INR 150 Off</div>
-                                        <div class="coupon-brand">Flipkart</div>
-                                        <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
-                                        <div class="time-left">Valid Till June 5, 2021</div>
+                                        <div class="coupon-price"></div>
+                                        <div class="coupon-brand">Shopclues</div>
+                                        <div class="coupon-desc">Find all Products at Shopclues </div>
+                                        <div class="time-left">Valid Till --------</div>
                                         <!--Learn More Code Start Here-->
                                                                          <div>
-                                                                         	<center><a href="#popup4">Learn More!</a></center>
+                                                                          <center><a href="#popup5">Learn More!</a></center>
                                                                          </div>
                                        <!--Learn More Code End Here-->
-                                        <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
+                                        <center><input type="text" value="SHPC40" id="myInput" style="text-align:center;" disabled>
                                        <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
-                                        <a href="">Redirect to Offer Site</a></center>
-                                    </div>
-                                    <i class="stick-lbl hot-sale"></i>
-                                </div><!--end: .coupon-item -->
-                                <div class="coupon-item grid_3">
-                                    <div class="coupon-content">
-                                        <div class="img-thumb-center">
-                                            <div class="wrap-img-thumb">
-                                                <span class="ver_hold"></span>
-                                                <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
-                                            </div>
-                                        </div>
-                                        <div class="coupon-price">INR 150 Off</div>
-                                        <div class="coupon-brand">Flipkart</div>
-                                        <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
-                                        <div class="time-left">Valid Till June 5, 2021</div>
-                                        <!--Learn More Code Start Here-->
-                                                                         <div>
-                                                                         	<center><a href="#popup5">Learn More!</a></center>
-                                                                         </div>
-                                       <!--Learn More Code End Here-->
-                                        <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
-                                       <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
-                                        <a href="">Redirect to Offer Site</a></center>
+                                        <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=178">Redirect to Offer Site</a></center>
                                     </div>
                                     <i class="stick-lbl hot-sale"></i>
                                 </div><!--end: .coupon-item -->
@@ -525,26 +524,23 @@ session_start();
                     <b>Redeemable by:</b>	Both new & old users<br>
                     <b>Usable on:</b>Web and App<br>
                     <b>Transaction method:</b>	Visa Cards<br>
-                    
+
 
                   </div>
                 </div>
                 </div>
 
                 <div id="popup2" class="overlay">
-                <div class="popup">
-                  <center><h2>OFFER DESCRIPTION-2 </h2></center>
-                  <a class="close" href="#">&times;</a>
-                  <div class="content">
-                    Shop here for tees, shorts, makeup, kurtis, night wear, ethic wear, bridal fashion, denim, bedding, <br>
-                    <b>Offer details:</b><br>
-                    <b>Minimum shopping amount:</b> Rs.1899 <br>
-                    <b>Redeemable by:</b>	Both new & old users<br>
-                    <b>Transaction method:</b>	Visa Cards<br>
-                    <b>Discount given:</b>	Rs.500<br>
-                    <b>30 days return</b><br>
-                    Myntra offers doorstep delivery<br>
-                    <b>Get up to 80% discount on apparel, footwear, fashion accessories in Myntra Upcoming Sale.</b><br>
+                  <div class="popup">
+                    <center><h2>OFFER DESCRIPTION- 2</h2></center>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                      Floweraura <br>
+                      <b>Offer details:</b><br>
+                      <b>Minimum shopping amount:</b> Rs.2000 <br>
+                      <b>Redeemable by:</b>	Both new & old users<br>
+                      <b>Usable on:</b>Web and App<br>
+                      <b>Transaction method:</b>	Visa Cards<br>
 
                   </div>
                 </div>
@@ -555,15 +551,12 @@ session_start();
                 <center><h2>OFFER DESCRIPTION- 3</h2></center>
                 <a class="close" href="#">&times;</a>
                 <div class="content">
-                  Shop here for tees, shorts, makeup, kurtis, night wear, ethic wear, bridal fashion, denim, bedding, <br>
+                  Samsung <br>
                   <b>Offer details:</b><br>
-                  <b>Minimum shopping amount:</b> Rs.1899 <br>
+                  <b>Minimum shopping amount:</b> Rs.7999 <br>
                   <b>Redeemable by:</b>	Both new & old users<br>
+                  <b>Usable on:</b>Web and App<br>
                   <b>Transaction method:</b>	Visa Cards<br>
-                  <b>Discount given:</b>	Rs.500<br>
-                  <b>30 days return</b><br>
-                  Myntra offers doorstep delivery<br>
-                  <b>Get up to 80% discount on apparel, footwear, fashion accessories in Myntra Upcoming Sale.</b><br>
 
                 </div>
               </div>
@@ -574,34 +567,28 @@ session_start();
               <center><h2>OFFER DESCRIPTION- 4</h2></center>
               <a class="close" href="#">&times;</a>
               <div class="content">
-                Shop here for tees, shorts, makeup, kurtis, night wear, ethic wear, bridal fashion, denim, bedding, <br>
+                Reebok <br>
                 <b>Offer details:</b><br>
-                <b>Minimum shopping amount:</b> Rs.1899 <br>
+                <b>Minimum shopping amount:</b> Rs.2000 <br>
                 <b>Redeemable by:</b>	Both new & old users<br>
+                <b>Usable on:</b>Web and App<br>
                 <b>Transaction method:</b>	Visa Cards<br>
-                <b>Discount given:</b>	Rs.500<br>
-                <b>30 days return</b><br>
-                Myntra offers doorstep delivery<br>
-                <b>Get up to 80% discount on apparel, footwear, fashion accessories in Myntra Upcoming Sale.</b><br>
 
               </div>
             </div>
           </div>
 
           <div id="popup5" class="overlay">
-          <div class="popup">
-            <center><h2>OFFER DESCRIPTION- 5</h2></center>
-            <a class="close" href="#">&times;</a>
-            <div class="content">
-              Shop here for tees, shorts, makeup, kurtis, night wear, ethic wear, bridal fashion, denim, bedding, <br>
-              <b>Offer details:</b><br>
-              <b>Minimum shopping amount:</b> Rs.1899 <br>
-              <b>Redeemable by:</b>	Both new & old users<br>
-              <b>Transaction method:</b>	Visa Cards<br>
-              <b>Discount given:</b>	Rs.500<br>
-              <b>30 days return</b><br>
-              Myntra offers doorstep delivery<br>
-              <b>Get up to 80% discount on apparel, footwear, fashion accessories in Myntra Upcoming Sale.</b><br>
+            <div class="popup">
+              <center><h2>OFFER DESCRIPTION- 4</h2></center>
+              <a class="close" href="#">&times;</a>
+              <div class="content">
+                Shopclues <br>
+                <b>Offer details:</b><br>
+                <b>Minimum shopping amount:</b> Rs.3000 <br>
+                <b>Redeemable by:</b>	Both new & old users<br>
+                <b>Usable on:</b>Web and App<br>
+                <b>Transaction method:</b>	Visa Cards<br>
 
             </div>
           </div>
