@@ -386,7 +386,7 @@ session_start();
                                          <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
                                           <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=173">Redirect to Offer Site</a></center>
                                       </div>
-                                      <i class="stick-lbl hot-sale"></i>
+
                                   </div><!--end: .coupon-item -->
                                   <div class="coupon-item grid_3">
                                       <div class="coupon-content">
@@ -409,7 +409,7 @@ session_start();
                                          <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
                                           <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=172">Redirect to Offer Site</a></center>
                                       </div>
-                                      <i class="stick-lbl hot-sale"></i>
+
                                   </div><!--end: .coupon-item -->
                                   <div class="coupon-item grid_3">
                                       <div class="coupon-content">
@@ -432,7 +432,7 @@ session_start();
                                          <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
                                           <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=178">Redirect to Offer Site</a></center>
                                       </div>
-                                      <i class="stick-lbl hot-sale"></i>
+
                                   </div><!--end: .coupon-item -->
                                   <div class="coupon-item grid_3">
                                       <div class="coupon-content">
@@ -455,7 +455,7 @@ session_start();
                                          <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
                                           <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=215&sub1=sub1&sub2=sub2&sub3=sub3&sub4=sub4&sub8=sub8">Redirect to Offer Site</a></center>
                                       </div>
-                                      <i class="stick-lbl hot-sale"></i>
+
                                   </div><!--end: .coupon-item -->
                                   <div class="coupon-item grid_3">
                                       <div class="coupon-content">
@@ -478,7 +478,7 @@ session_start();
                                          <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
                                           <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=216&sub1=sub1&sub2=sub2&sub3=sub3&sub4=sub4&sub8=sub8">Redirect to Offer Site</a></center>
                                       </div>
-                                      <i class="stick-lbl hot-sale"></i>
+
                                   </div><!--end: .coupon-item -->
                                   <div class="coupon-item grid_3">
                                       <div class="coupon-content">
@@ -501,7 +501,7 @@ session_start();
                                          <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
                                           <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=215&sub1=sub1&sub2=sub2&sub3=sub3&sub4=sub4&sub8=sub8">Redirect to Offer Site</a></center>
                                       </div>
-                                      <i class="stick-lbl hot-sale"></i>
+
                                   </div><!--end: .coupon-item -->
 
 

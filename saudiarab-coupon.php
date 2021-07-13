@@ -339,7 +339,7 @@ session_start();
                                    <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
                                     <a href="">Redirect to Offer Site</a></center>
                                 </div>
-                                <i class="stick-lbl hot-sale"></i>
+
                                 </div><!--end: .coupon-item -->
                                 <div class="coupon-item grid_3">
                                     <div class="coupon-content">
@@ -357,7 +357,7 @@ session_start();
                                        <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
                                         <a href="">Redirect to Offer Site</a></center>
                                     </div>
-                                    <i class="stick-lbl hot-sale"></i>
+
                                 </div><!--end: .coupon-item -->
                                 <div class="coupon-item grid_3">
                                     <div class="coupon-content">
@@ -375,7 +375,7 @@ session_start();
                                        <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
                                         <a href="">Redirect to Offer Site</a></center>
                                     </div>
-                                    <i class="stick-lbl hot-sale"></i>
+
                                 </div><!--end: .coupon-item -->
                                 <div class="coupon-item grid_3">
                                     <div class="coupon-content">
@@ -393,7 +393,7 @@ session_start();
                                        <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
                                         <a href="">Redirect to Offer Site</a></center>
                                     </div>
-                                    <i class="stick-lbl hot-sale"></i>
+
                                 </div><!--end: .coupon-item -->
                                 <div class="coupon-item grid_3">
                                     <div class="coupon-content">
@@ -411,7 +411,7 @@ session_start();
                                        <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
                                         <a href="">Redirect to Offer Site</a></center>
                                     </div>
-                                    <i class="stick-lbl hot-sale"></i>
+
                                 </div><!--end: .coupon-item -->
                                 <div class="coupon-item grid_3">
                                     <div class="coupon-content">
@@ -429,7 +429,7 @@ session_start();
                                        <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
                                         <a href="">Redirect to Offer Site</a></center>
                                     </div>
-                                    <i class="stick-lbl hot-sale"></i>
+
                                 </div><!--end: .coupon-item -->
                                 <div class="coupon-item grid_3">
                                     <div class="coupon-content">
@@ -447,7 +447,7 @@ session_start();
                                        <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
                                         <a href="">Redirect to Offer Site</a></center>
                                     </div>
-                                    <i class="stick-lbl hot-sale"></i>
+
                                 </div><!--end: .coupon-item -->
                                 <div class="coupon-item grid_3">
                                     <div class="coupon-content">
@@ -465,7 +465,7 @@ session_start();
                                        <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
                                         <a href="">Redirect to Offer Site</a></center>
                                     </div>
-                                    <i class="stick-lbl hot-sale"></i>
+
                                 </div><!--end: .coupon-item -->
                             </div>
                         </div>
