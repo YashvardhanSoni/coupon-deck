@@ -530,65 +530,65 @@ session_start();
                     <div class="grid_4 sidebar">
                         <!--end: .mod-search -->
                         <div class="mod-list-store block">
-                            <h3 class="title-block">Popular store</h3>
-                            <div class="block-content">
-                                <div class="wrap-list-store clearfix">
-                                    <a class="brand-logo" href="#" >
-                                        <span class="wrap-logo">
-                                            <span class="center-img">
-                                                <span class="ver_hold"></span>
-                                                <span class="ver_container"><img src="images/ex/04-07.jpg" alt="$BRAND_NAME"></span>
-                                            </span>
-                                        </span>
-                                    </a>
+                          <h3 class="title-block">Popular store</h3>
+                          <div class="block-content">
+                              <div class="wrap-list-store clearfix">
+                                  <a class="brand-logo" href="#" >
+                                      <span class="wrap-logo">
+                                          <span class="center-img">
+                                              <span class="ver_hold"></span>
+                                              <span class="ver_container"><img src="images/br/smg.png" alt="$BRAND_NAME"></span>
+                                          </span>
+                                      </span>
+                                  </a>
 
-                                    <a class="brand-logo" href="#" >
-                                        <span class="wrap-logo">
-                                            <span class="center-img">
-                                                <span class="ver_hold"></span>
-                                                <span class="ver_container"><img src="images/ex/04-12.jpg" alt="$BRAND_NAME"></span>
-                                            </span>
-                                        </span>
-                                    </a>
+                                  <a class="brand-logo" href="#" >
+                                      <span class="wrap-logo">
+                                          <span class="center-img">
+                                              <span class="ver_hold"></span>
+                                              <span class="ver_container"><img src="images/br/ab.png" alt="$BRAND_NAME"></span>
+                                          </span>
+                                      </span>
+                                  </a>
 
-                                    <a class="brand-logo" href="#" >
-                                        <span class="wrap-logo">
-                                            <span class="center-img">
-                                                <span class="ver_hold"></span>
-                                                <span class="ver_container"><img src="images/ex/04-11.jpg" alt="$BRAND_NAME"></span>
-                                            </span>
-                                        </span>
-                                    </a>
+                                  <a class="brand-logo" href="#" >
+                                      <span class="wrap-logo">
+                                          <span class="center-img">
+                                              <span class="ver_hold"></span>
+                                              <span class="ver_container"><img src="images/br/amazon.png" alt="$BRAND_NAME"></span>
+                                          </span>
+                                      </span>
+                                  </a>
 
-                                    <a class="brand-logo" href="#" >
-                                        <span class="wrap-logo">
-                                            <span class="center-img">
-                                                <span class="ver_hold"></span>
-                                                <span class="ver_container"><img src="images/ex/04-10.jpg" alt="$BRAND_NAME"></span>
-                                            </span>
-                                        </span>
-                                    </a>
+                                  <a class="brand-logo" href="#" >
+                                      <span class="wrap-logo">
+                                          <span class="center-img">
+                                              <span class="ver_hold"></span>
+                                              <span class="ver_container"><img src="images/br/nvpn.png" alt="$BRAND_NAME"></span>
+                                          </span>
+                                      </span>
+                                  </a>
 
-                                    <a class="brand-logo" href="#" >
-                                        <span class="wrap-logo">
-                                            <span class="center-img">
-                                                <span class="ver_hold"></span>
-                                                <span class="ver_container"><img src="images/ex/04-09.jpg" alt="$BRAND_NAME"></span>
-                                            </span>
-                                        </span>
-                                    </a>
+                                  <a class="brand-logo" href="#" >
+                                      <span class="wrap-logo">
+                                          <span class="center-img">
+                                              <span class="ver_hold"></span>
+                                              <span class="ver_container"><img src="images/br/ab.png" alt="$BRAND_NAME"></span>
+                                          </span>
+                                      </span>
+                                  </a>
 
-                                    <a class="brand-logo" href="#" >
-                                        <span class="wrap-logo">
-                                            <span class="center-img">
-                                                <span class="ver_hold"></span>
-                                                <span class="ver_container"><img src="images/ex/04-08.jpg" alt="$BRAND_NAME"></span>
-                                            </span>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div><!--end: .mod-list-store -->
+                                  <a class="brand-logo" href="#" >
+                                      <span class="wrap-logo">
+                                          <span class="center-img">
+                                              <span class="ver_hold"></span>
+                                              <span class="ver_container"><img src="images/br/rizzle.png" alt="$BRAND_NAME"></span>
+                                          </span>
+                                      </span>
+                                  </a>
+                              </div>
+                          </div>
+                      </div><!--end: .mod-list-store -->
                         <div class="mod-simple-coupon block">
                             <h3 class="title-block">Latest coupon</h3>
                             <div class="block-content">
