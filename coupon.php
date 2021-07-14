@@ -467,7 +467,7 @@ session_start();
                                           </div>
                                           <div class="coupon-price"></div>
                                           <div class="coupon-brand">MFine App</div>
-                                          <div class="coupon-desc">Find all Products at Myntra </div>
+                                          <div class="coupon-desc">Find all Healthcare Products at MFine </div>
                                           <div class="time-left">Valid Till --------</div>
                                           <!--Learn More Code Start Here-->
                                                                            <div>
@@ -490,7 +490,7 @@ session_start();
                                           </div>
                                           <div class="coupon-price"></div>
                                           <div class="coupon-brand">Testbook</div>
-                                          <div class="coupon-desc">Find all Products at Myntra </div>
+                                          <div class="coupon-desc">Find all Products at Testbook </div>
                                           <div class="time-left">Valid Till --------</div>
                                           <!--Learn More Code Start Here-->
                                                                            <div>
