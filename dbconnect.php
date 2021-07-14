@@ -1,27 +1,27 @@
 <?php
-   
-    $servername = "localhost"; 
-    $username = "root"; 
+
+    $servername = "localhost";
+    $username = "root";
     $password = "";
-   
-    $database = "test";
-   
-     // Create a connection 
-     $conn = mysqli_connect($servername, 
+
+    $database = "coupondeck";
+
+     // Create a connection
+     $conn = mysqli_connect($servername,
          $username, $password, $database);
-   
+
     // Code written below is a step taken
-    // to check that our Database is 
-    // connected properly or not. If our 
+    // to check that our Database is
+    // connected properly or not. If our
     // Database is properly connected we
-    // can remove this part from the code 
-    // or we can simply make it a comment 
+    // can remove this part from the code
+    // or we can simply make it a comment
     // for future reference.
-   
+
     if($conn) {
-        echo "success"; 
-    } 
+        echo "success";
+    }
     else {
-        die("Error". mysqli_connect_error()); 
-    } 
+        die("Error". mysqli_connect_error());
+    }
 ?>
