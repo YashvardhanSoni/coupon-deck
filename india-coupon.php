@@ -928,6 +928,66 @@ session_start();
   </div>
 </div>
 </div>
+<div id="popup14" class="overlay">
+  <div class="popup">
+    <center><h2>OFFER DESCRIPTION- 14</h2></center>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Nord VPN <br>
+      <b>Offer details:</b><br>
+      <b>Minimum shopping amount:</b> Rs. 499 <br>
+      <b>Redeemable by:</b>	Both new & old users<br>
+      <b>Usable on:</b>App<br>
+      <b>Transaction method:</b>	Visa Cards<br>
+
+  </div>
+</div>
+</div>
+<div id="popup15" class="overlay">
+  <div class="popup">
+    <center><h2>OFFER DESCRIPTION- 15</h2></center>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Mfine <br>
+      <b>Offer details:</b><br>
+      <b>Minimum shopping amount:</b> Rs. 499 <br>
+      <b>Redeemable by:</b>	Both new & old users<br>
+      <b>Usable on:</b>App<br>
+      <b>Transaction method:</b>	Visa Cards<br>
+
+  </div>
+</div>
+</div>
+<div id="popup16" class="overlay">
+  <div class="popup">
+    <center><h2>OFFER DESCRIPTION- 16</h2></center>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Mfine <br>
+      <b>Offer details:</b><br>
+      <b>Minimum shopping amount:</b> Rs. 499 <br>
+      <b>Redeemable by:</b>	Both new & old users<br>
+      <b>Usable on:</b>App<br>
+      <b>Transaction method:</b>	Visa Cards<br>
+
+  </div>
+</div>
+</div>
+<div id="popup17" class="overlay">
+  <div class="popup">
+    <center><h2>OFFER DESCRIPTION- 17</h2></center>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Parimatch <br>
+      <b>Offer details:</b><br>
+      <b>Minimum shopping amount:</b> Rs. 999 <br>
+      <b>Redeemable by:</b>	Both new & old users<br>
+      <b>Usable on:</b>App<br>
+      <b>Transaction method:</b>	Visa Cards<br>
+
+  </div>
+</div>
+</div>
 
 
 
