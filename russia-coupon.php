@@ -328,150 +328,166 @@ session_start();
                                     <div class="img-thumb-center">
                                         <div class="wrap-img-thumb">
                                             <span class="ver_hold"></span>
-                                            <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
+                                            <a href="#" class="ver_container"><img src="images/br/lis.png" alt="$COUPON_TITLE"></a>
                                         </div>
                                     </div>
-                                    <div class="coupon-price">INR 150 Off</div>
-                                    <div class="coupon-brand">Flipkart</div>
-                                    <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
-                                    <div class="time-left">Valid Till June 5, 2021</div>
-                                    <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
+                                    <div class="coupon-price"></div>
+                                    <div class="coupon-brand">Liga stavoc</div>
+                                    <div class="coupon-desc">Find Great offers at Liga stavoc </div>
+                                    <div class="time-left">Valid Till --------</div>
+                                    <!--Learn More Code Start Here-->
+                                                                     <div>
+                                                                     	<center><a href="#popup1">Learn More!</a></center>
+                                                                     </div>
+                                   <!--Learn More Code End Here-->
+                                    <center><input type="text" value="LISV5" id="myInput" style="text-align:center;" disabled>
                                    <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
-                                    <a href="">Redirect to Offer Site</a></center>
+                                    <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=182&sub1=sub1&sub2=sub2&sub3=sub3&sub4=sub4&sub8=sub8">Redirect to Offer Site</a></center>
                                 </div>
 
                                 </div><!--end: .coupon-item -->
+
                                 <div class="coupon-item grid_3">
                                     <div class="coupon-content">
                                         <div class="img-thumb-center">
                                             <div class="wrap-img-thumb">
                                                 <span class="ver_hold"></span>
-                                                <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
+                                                <a href="#" class="ver_container"><img src="images/br/dom.png" alt="$COUPON_TITLE"></a>
                                             </div>
                                         </div>
-                                        <div class="coupon-price">INR 150 Off</div>
-                                        <div class="coupon-brand">Flipkart</div>
-                                        <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
-                                        <div class="time-left">Valid Till June 5, 2021</div>
-                                        <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
+                                        <div class="coupon-price"></div>
+                                        <div class="coupon-brand">Dominos iOS</div>
+                                        <div class="coupon-desc">Find Great offers at Dominos iOS </div>
+                                        <div class="time-left">Valid Till --------</div>
+                                        <!--Learn More Code Start Here-->
+                                                                         <div>
+                                                                         	<center><a href="#popup2">Learn More!</a></center>
+                                                                         </div>
+                                       <!--Learn More Code End Here-->
+                                        <center><input type="text" value="DOM1" id="myInput" style="text-align:center;" disabled>
                                        <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
-                                        <a href="">Redirect to Offer Site</a></center>
+                                        <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=183&sub1=sub1&sub2=sub2&sub3=sub3&sub4=sub4&sub8=sub8">Redirect to Offer Site</a></center>
                                     </div>
 
-                                </div><!--end: .coupon-item -->
-                                <div class="coupon-item grid_3">
-                                    <div class="coupon-content">
-                                        <div class="img-thumb-center">
-                                            <div class="wrap-img-thumb">
-                                                <span class="ver_hold"></span>
-                                                <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
+                                    </div><!--end: .coupon-item -->
+                                    <div class="coupon-item grid_3">
+                                        <div class="coupon-content">
+                                            <div class="img-thumb-center">
+                                                <div class="wrap-img-thumb">
+                                                    <span class="ver_hold"></span>
+                                                    <a href="#" class="ver_container"><img src="images/br/mvid.png" alt="$COUPON_TITLE"></a>
+                                                </div>
                                             </div>
+                                            <div class="coupon-price"></div>
+                                            <div class="coupon-brand">M.Video</div>
+                                            <div class="coupon-desc">Find Great offers at M.Video </div>
+                                            <div class="time-left">Valid Till --------</div>
+                                            <!--Learn More Code Start Here-->
+                                                                             <div>
+                                                                             	<center><a href="#popup3">Learn More!</a></center>
+                                                                             </div>
+                                           <!--Learn More Code End Here-->
+                                            <center><input type="text" value="MVD1" id="myInput" style="text-align:center;" disabled>
+                                           <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
+                                            <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=211&sub1=sub1&sub2=sub2&sub3=sub3&sub4=sub4&sub8=sub8">Redirect to Offer Site</a></center>
                                         </div>
-                                        <div class="coupon-price">INR 150 Off</div>
-                                        <div class="coupon-brand">Flipkart</div>
-                                        <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
-                                        <div class="time-left">Valid Till June 5, 2021</div>
-                                        <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
-                                       <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
-                                        <a href="">Redirect to Offer Site</a></center>
-                                    </div>
 
-                                </div><!--end: .coupon-item -->
-                                <div class="coupon-item grid_3">
-                                    <div class="coupon-content">
-                                        <div class="img-thumb-center">
-                                            <div class="wrap-img-thumb">
-                                                <span class="ver_hold"></span>
-                                                <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
+                                        </div><!--end: .coupon-item -->
+                                        <div class="coupon-item grid_3">
+                                            <div class="coupon-content">
+                                                <div class="img-thumb-center">
+                                                    <div class="wrap-img-thumb">
+                                                        <span class="ver_hold"></span>
+                                                        <a href="#" class="ver_container"><img src="images/br/fbt.png" alt="$COUPON_TITLE"></a>
+                                                    </div>
+                                                </div>
+                                                <div class="coupon-price"></div>
+                                                <div class="coupon-brand">Fonbet</div>
+                                                <div class="coupon-desc">Find Great offers at Fonbet </div>
+                                                <div class="time-left">Valid Till --------</div>
+                                                <!--Learn More Code Start Here-->
+                                                                                 <div>
+                                                                                 	<center><a href="#popup4">Learn More!</a></center>
+                                                                                 </div>
+                                               <!--Learn More Code End Here-->
+                                                <center><input type="text" value="FON5" id="myInput" style="text-align:center;" disabled>
+                                               <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
+                                                <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=213&sub1=sub1&sub2=sub2&sub3=sub3&sub4=sub4&sub8=sub8">Redirect to Offer Site</a></center>
                                             </div>
-                                        </div>
-                                        <div class="coupon-price">INR 150 Off</div>
-                                        <div class="coupon-brand">Flipkart</div>
-                                        <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
-                                        <div class="time-left">Valid Till June 5, 2021</div>
-                                        <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
-                                       <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
-                                        <a href="">Redirect to Offer Site</a></center>
-                                    </div>
 
-                                </div><!--end: .coupon-item -->
-                                <div class="coupon-item grid_3">
-                                    <div class="coupon-content">
-                                        <div class="img-thumb-center">
-                                            <div class="wrap-img-thumb">
-                                                <span class="ver_hold"></span>
-                                                <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
-                                            </div>
-                                        </div>
-                                        <div class="coupon-price">INR 150 Off</div>
-                                        <div class="coupon-brand">Flipkart</div>
-                                        <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
-                                        <div class="time-left">Valid Till June 5, 2021</div>
-                                        <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
-                                       <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
-                                        <a href="">Redirect to Offer Site</a></center>
-                                    </div>
-
-                                </div><!--end: .coupon-item -->
-                                <div class="coupon-item grid_3">
-                                    <div class="coupon-content">
-                                        <div class="img-thumb-center">
-                                            <div class="wrap-img-thumb">
-                                                <span class="ver_hold"></span>
-                                                <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
-                                            </div>
-                                        </div>
-                                        <div class="coupon-price">INR 150 Off</div>
-                                        <div class="coupon-brand">Flipkart</div>
-                                        <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
-                                        <div class="time-left">Valid Till June 5, 2021</div>
-                                        <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
-                                       <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
-                                        <a href="">Redirect to Offer Site</a></center>
-                                    </div>
-
-                                </div><!--end: .coupon-item -->
-                                <div class="coupon-item grid_3">
-                                    <div class="coupon-content">
-                                        <div class="img-thumb-center">
-                                            <div class="wrap-img-thumb">
-                                                <span class="ver_hold"></span>
-                                                <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
-                                            </div>
-                                        </div>
-                                        <div class="coupon-price">INR 150 Off</div>
-                                        <div class="coupon-brand">Flipkart</div>
-                                        <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
-                                        <div class="time-left">Valid Till June 5, 2021</div>
-                                        <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
-                                       <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
-                                        <a href="">Redirect to Offer Site</a></center>
-                                    </div>
-
-                                </div><!--end: .coupon-item -->
-                                <div class="coupon-item grid_3">
-                                    <div class="coupon-content">
-                                        <div class="img-thumb-center">
-                                            <div class="wrap-img-thumb">
-                                                <span class="ver_hold"></span>
-                                                <a href="#" class="ver_container"><img src="images/ex/01_02.png" alt="$COUPON_TITLE"></a>
-                                            </div>
-                                        </div>
-                                        <div class="coupon-price">INR 150 Off</div>
-                                        <div class="coupon-brand">Flipkart</div>
-                                        <div class="coupon-desc">Find Products for All Major Brands at Flipkart.com </div>
-                                        <div class="time-left">Valid Till June 5, 2021</div>
-                                        <center><input type="text" value="Coupon Code" id="myInput" style="text-align:center;">
-                                       <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
-                                        <a href="">Redirect to Offer Site</a></center>
-                                    </div>
-
-                                </div><!--end: .coupon-item -->
+                                            </div><!--end: .coupon-item -->
                             </div>
                         </div>
                     </div>
 
                 </div><!--end block: Featured Coupons-->
+
+
+
+                <div id="popup1" class="overlay">
+                <div class="popup">
+                  <center><h2>OFFER DESCRIPTION- 1</h2></center>
+                  <a class="close" href="#">&times;</a>
+                  <div class="content">
+                    Liga stavoc  <br>
+                    <b>Offer details:</b><br>
+                    <b>Minimum shopping amount:</b> 10 USD <br>
+                    <b>Redeemable by:</b>	Both new & old users<br>
+                    <b>Usable on:</b>App<br>
+                    <b>Transaction method:</b>	Visa Cards<br>
+
+
+                  </div>
+                </div>
+                </div>
+                <div id="popup2" class="overlay">
+                <div class="popup">
+                  <center><h2>OFFER DESCRIPTION- 2</h2></center>
+                  <a class="close" href="#">&times;</a>
+                  <div class="content">
+                    Dominos iOS <br>
+                    <b>Offer details:</b><br>
+                    <b>Minimum shopping amount:</b> 1 USD<br>
+                    <b>Redeemable by:</b>	Both new & old users<br>
+                    <b>Usable on:</b>App<br>
+                    <b>Transaction method:</b>	Visa Cards<br>
+
+
+                  </div>
+                </div>
+                </div>
+                <div id="popup3" class="overlay">
+                <div class="popup">
+                  <center><h2>OFFER DESCRIPTION- 3</h2></center>
+                  <a class="close" href="#">&times;</a>
+                  <div class="content">
+                    M.Video <br>
+                    <b>Offer details:</b><br>
+                    <b>Minimum shopping amount:</b> 10 USD<br>
+                    <b>Redeemable by:</b>	Both new & old users<br>
+                    <b>Usable on:</b>App<br>
+                    <b>Transaction method:</b>	Visa Cards<br>
+
+
+                  </div>
+                </div>
+                </div>
+                <div id="popup4" class="overlay">
+                <div class="popup">
+                  <center><h2>OFFER DESCRIPTION- 4</h2></center>
+                  <a class="close" href="#">&times;</a>
+                  <div class="content">
+                    Fonbet <br>
+                    <b>Offer details:</b><br>
+                    <b>Minimum shopping amount:</b> 10 USD <br>
+                    <b>Redeemable by:</b>	Both new & old users<br>
+                    <b>Usable on:</b>App<br>
+                    <b>Transaction method:</b>	Visa Cards<br>
+
+
+                  </div>
+                </div>
+                </div>
 
                 <div class="mod-brands block clearfix">
                     <div class="grid_12">
