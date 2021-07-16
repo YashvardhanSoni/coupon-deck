@@ -431,25 +431,10 @@ session_start();
                   </div>
                 </div>
                 </div>
+
                 <div id="popup3" class="overlay">
-                <div class="popup">
-                  <center><h2>OFFER DESCRIPTION- 3</h2></center>
-                  <a class="close" href="#">&times;</a>
-                  <div class="content">
-                    BAEMIN  <br>
-                    <b>Offer details:</b><br>
-                    <b>Minimum shopping amount:</b> 25000 VND <br>
-                    <b>Redeemable by:</b>	Both new & old users<br>
-                    <b>Usable on:</b>App<br>
-                    <b>Transaction method:</b>	Visa Cards<br>
-
-
-                  </div>
-                </div>
-                </div>
-                <div id="popup8" class="overlay">
                   <div class="popup">
-                    <center><h2>OFFER DESCRIPTION- 8</h2></center>
+                    <center><h2>OFFER DESCRIPTION- 3</h2></center>
                     <a class="close" href="#">&times;</a>
                     <div class="content">
                       Lotter <br>
