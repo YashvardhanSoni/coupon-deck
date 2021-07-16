@@ -362,7 +362,7 @@ session_start();
                                     <div class="time-left">Valid Till --------</div>
                                     <!--Learn More Code Start Here-->
                                                                      <div>
-                                                                      <center><a href="#popup12">Learn More!</a></center>
+                                                                      <center><a href="#popup2">Learn More!</a></center>
                                                                      </div>
                                    <!--Learn More Code End Here-->
                                     <center><input type="text" value="XTD50" id="myInput" style="text-align:center;" disabled>
