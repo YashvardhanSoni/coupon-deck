@@ -371,6 +371,29 @@ session_start();
                                 </div>
 
                             </div><!--end: .coupon-item -->
+                            <div class="coupon-item grid_3">
+                                <div class="coupon-content">
+                                    <div class="img-thumb-center">
+                                        <div class="wrap-img-thumb">
+                                            <span class="ver_hold"></span>
+                                            <a href="#" class="ver_container"><img src="images/br/lotter.png" alt="$COUPON_TITLE"></a>
+                                        </div>
+                                    </div>
+                                    <div class="coupon-price"></div>
+                                    <div class="coupon-brand">Lotter</div>
+                                    <div class="coupon-desc">Find all Products at Lotter </div>
+                                    <div class="time-left">Valid Till --------</div>
+                                    <!--Learn More Code Start Here-->
+                                                                     <div>
+                                                                      <center><a href="#popup3">Learn More!</a></center>
+                                                                     </div>
+                                   <!--Learn More Code End Here-->
+                                    <center><input type="text" value="LOT5" id="myInput" style="text-align:center;" disabled>
+                                   <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
+                                    <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=191&sub1=sub1&sub2=sub2&sub3=sub3&sub4=sub4&sub8=sub8">Redirect to Offer Site</a></center>
+                                </div>
+
+                            </div><!--end: .coupon-item -->
                             </div>
                         </div>
                     </div>
