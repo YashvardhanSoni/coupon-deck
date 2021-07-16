@@ -330,7 +330,7 @@ session_start();
                                     <div class="img-thumb-center">
                                         <div class="wrap-img-thumb">
                                             <span class="ver_hold"></span>
-                                            <a href="#" class="ver_container"><img src="images/br/laz.png" alt="$COUPON_TITLE"></a>
+                                            <a href="#" class="ver_container"><img src="images/br/fbt.png" alt="$COUPON_TITLE"></a>
                                         </div>
                                     </div>
                                     <div class="coupon-price"></div>
