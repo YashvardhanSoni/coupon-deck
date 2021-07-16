@@ -182,6 +182,7 @@ session_start();
                                             <li><a href="vietnam-coupon.php">Vietnam Offers </a></li>
                                             <li><a href="malaysia-coupon.php">Malaysia Offers </a></li>
                                             <li><a href="russia-coupon.php">Russia Offers </a></li>
+                                            <li><a href="belarus-coupon.php">Belarus Offers </a></li>
                                         </ul>
                                     </li>
                                     <li>
@@ -257,6 +258,7 @@ session_start();
                             <li><a href="vietnam-coupon.php">Vietnam Offers </a></li>
                             <li><a href="malaysia-coupon.php">Malaysia Offers </a></li>
                             <li><a href="russia-coupon.php">Russia Offers </a></li>
+                            <li><a href="belarus-coupon.php">Belarus Offers </a></li>
                         </ul>
                     </li>
                     <li>

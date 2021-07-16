@@ -314,7 +314,7 @@ session_start();
                     <div class="grid_12">
                         <h3 class="title-block">
                             <span class="wrap-tab">
-                                <span class="lbl-tab active">Indonesia Coupons</span>
+                                <span class="lbl-tab active">Belarus Coupons</span>
 
                             </span>
                         </h3>
@@ -334,17 +334,17 @@ session_start();
                                         </div>
                                     </div>
                                     <div class="coupon-price"></div>
-                                    <div class="coupon-brand">Lazada</div>
-                                    <div class="coupon-desc">Find all Products at Lazada </div>
+                                    <div class="coupon-brand">Fonbet</div>
+                                    <div class="coupon-desc">Find all Products at Fonbet </div>
                                     <div class="time-left">Valid Till --------</div>
                                     <!--Learn More Code Start Here-->
                                                                      <div>
                                                                       <center><a href="#popup1">Learn More!</a></center>
                                                                      </div>
                                    <!--Learn More Code End Here-->
-                                    <center><input type="text" value="LZID1000" id="myInput" style="text-align:center;" disabled>
+                                    <center><input type="text" value="FON5" id="myInput" style="text-align:center;" disabled>
                                    <br> <button onclick="myFunction()" class="btn btn-blue btn-take-coupon">Copy Coupon Code</button>
-                                    <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=185&sub1=sub1&sub2=sub2&sub3=sub3&sub4=sub4&sub8=sub8">Redirect to Offer Site</a></center>
+                                    <a href="https://www.trackingmtrack.co.in/click?pid=22&offer_id=197&sub1=sub1&sub2=sub2&sub3=sub3&sub4=sub4&sub8=sub8">Redirect to Offer Site</a></center>
                                 </div>
 
                             </div><!--end: .coupon-item -->
@@ -359,11 +359,11 @@ session_start();
                 <center><h2>OFFER DESCRIPTION- 1</h2></center>
                 <a class="close" href="#">&times;</a>
                 <div class="content">
-                Lazada <br>
+                Fonbet <br>
                 <b>Offer details:</b><br>
-                <b>Minimum shopping amount:</b> 20000 IDR <br>
+                <b>Minimum shopping amount:</b> 10 USD <br>
                 <b>Redeemable by:</b>	Both new & old users<br>
-                <b>Usable on:</b>Web and App<br>
+                <b>Usable on:</b>App<br>
                 <b>Transaction method:</b>	Visa Cards<br>
 
                 </div>
