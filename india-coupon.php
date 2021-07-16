@@ -1051,6 +1051,21 @@ session_start();
   </div>
 </div>
 </div>
+<div id="popup19" class="overlay">
+  <div class="popup">
+    <center><h2>OFFER DESCRIPTION- 19</h2></center>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Lotter <br>
+      <b>Offer details:</b><br>
+      <b>Minimum shopping amount:</b> 10 USD <br>
+      <b>Redeemable by:</b>	Both new & old users<br>
+      <b>Usable on:</b>App<br>
+      <b>Transaction method:</b>	Visa Cards<br>
+
+  </div>
+</div>
+</div>
 
 
 
