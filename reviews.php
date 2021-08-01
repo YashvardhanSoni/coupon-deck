@@ -16,7 +16,7 @@ session_start();
 <html>
 
 <head>
-    <title>Contact US</title>
+    <title>Reviews</title>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="icon" href="images/logo.ico" type="image/icon type">
     <meta charset="utf-8">
@@ -95,6 +95,72 @@ session_start();
   #con_info, #social_info{
     color:white;line-height: 2.6;font-weight: bold;margin-left:20px;margin-right: 20px;text-align: center;font-size: 1.05em;
   }
+}
+
+
+.testimonials{
+  padding: 40px 0;
+  background: #f1f1f1;
+  color: #434343;
+  text-align: center;
+}
+.inner{
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.border{
+  width: 160px;
+  height: 5px;
+  background: #6ab04c;
+  margin: 26px auto;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.col{
+  flex: 33.33%;
+  max-width: 33.33%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.testimonial{
+  background: #fff;
+  padding: 30px;
+}
+.testimonial img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.name{
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+.stars{
+  color: #6ab04c;
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width:960px) {
+.col{
+  flex: 100%;
+  max-width: 80%;
+}
+}
+
+@media screen and (max-width:600px) {
+.col{
+  flex: 100%;
+  max-width: 100%;
+}
 }
 
     </style>
@@ -247,35 +313,129 @@ session_start();
             <div class="grid_frame">
                 <div class="container_grid clearfix">
                     <div class="grid_12">
-                        <h2 class="page-title"><h1><b><CENTER><span style="text-decoration: line-through;">&nbsp&nbsp&nbsp&nbsp</span> CONTACT US <span style="text-decoration: line-through;">&nbsp&nbsp&nbsp&nbsp</span></CENTER></b></h1></h2>
+                        <h2 class="page-title"><h1><b><CENTER><span style="text-decoration: line-through;">&nbsp&nbsp&nbsp&nbsp</span> Reviews <span style="text-decoration: line-through;">&nbsp&nbsp&nbsp&nbsp</span></CENTER></b></h1></h2>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="bg">
+<div class="bg">
+  <div class="testimonials">
+    <div class="inner">
 
-<button class="button" value="Contact Info" name="address" style=""><i class="fa fa-user icon"></i> Contact Info</button>
+      <div class="row">
+        <div class="col">
+          <div class="testimonial">
+            <img src="https://img.icons8.com/material-rounded/96/000000/user-male-circle.png"/>
+            <div class="name"><?php   echo $_SESSION['username']; ?></div>
 
-<p id="con_info">
-Address: The ithum, Tower A, 1131, Noida, UP
-<br>
-Telephone: 9643117230
-<br>
-E-Mail: info@mitraksh.in
-<br>
-</p>
+            <p>
+              CouponDeck is awesome platform to find various offers and coupons WorldWide.
+            </p>
+          </div>
+        </div>
 
-<!-- <button class="button" value="Contact Info" name="address" >Follow Us :</button>
+        <div class="col">
+          <div class="testimonial">
+            <img src="https://img.icons8.com/material-rounded/96/000000/user-male-circle.png"/>
+            <div class="name">User Name</div>
 
-<p id="social_info">
-<i class="fab fa-facebook" style="font-size: 2em;"></i>&nbsp&nbsp&nbsp
-<i class="fab fa-linkedin" style="font-size: 2em;"></i>
-</p> -->
+            <p>
+              CouponDeck is awesome platform to find various offers and coupons WorldWide.
+            </p>
+          </div>
+        </div>
 
-<br><br><br><br>
-<br><br>
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14008.476314600606!2d77.372795!3d28.626193!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa4a968baca30d045!2sIThum%20Tower%20B%20-%20Lift%20Entry!5e0!3m2!1sen!2sin!4v1627282968605!5m2!1sen!2sin" width="100%" height="250" style="border:0; margin-bottom:-5px; bottom:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="col">
+          <div class="testimonial">
+            <img src="https://img.icons8.com/material-rounded/96/000000/user-male-circle.png"/>
+            <div class="name">User Name</div>
+
+            <p>
+              CouponDeck is awesome platform to find various offers and coupons WorldWide.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="testimonial">
+            <img src="https://img.icons8.com/material-rounded/96/000000/user-male-circle.png"/>
+            <div class="name">User Name</div>
+
+            <p>
+              CouponDeck is awesome platform to find various offers and coupons WorldWide.
+            </p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="testimonial">
+          <img src="https://img.icons8.com/material-rounded/96/000000/user-male-circle.png"/>
+            <div class="name">User Name</div>
+
+            <p>
+              CouponDeck is awesome platform to find various offers and coupons WorldWide.
+            </p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="testimonial">
+            <img src="https://img.icons8.com/material-rounded/96/000000/user-male-circle.png"/>
+            <div class="name">User Name</div>
+
+            <p>
+              CouponDeck is awesome platform to find various offers and coupons WorldWide.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<br>
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+          <img src="images/logo-gray.png">
+
+
+				<p class="footer-links">
+					<a href="ind_home.php">Home</a>
+					|
+					<a href="contact.php">Contact</a>
+				</p>
+
+
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span> The ithum, Tower A, 1131,</span>
+						Noida, UP</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91 9643117230</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:info@mitraksh.in">info@mitraksh.in</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About Us</span>
+					We are an Advertising Company.</p>
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+				  <a href="#"><i class="fa fa-linkedin"></i></a>
+				</div>
+			</div>
+		</footer>
 
     </div>
 </div>

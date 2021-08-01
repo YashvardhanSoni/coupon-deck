@@ -1,42 +1,43 @@
 <?php
+session_start();
+include('config.php');
+if (isset($_POST['register'])) {
+$review = $_POST['review'];
+$query = $connection->prepare("SELECT * FROM users WHERE review=:review");
+$query->bindParam("review", $review, PDO::PARAM_STR);
+$query->execute();
+if ($query->rowCount() == 0) {
+    $query = $connection->prepare("INSERT INTO users(username,password,email,review) VALUES (:username,:password,:email,:review)");
+    $query->bindParam("username", $username, PDO::PARAM_STR);
 
-    session_start();
-    if (isset($_SESSION['username'])) {
-        $_SESSION['msg'] = "You have to log in first";
-        header('location: index.php');
+    $query->bindParam("review", $review, PDO::PARAM_STR);
+    $result = $query->execute();
+    if ($result) {
+        echo '<p class="success">Your registration was successful!</p>';
+        header('location: New_index.php');
+    } else {
+        echo '<p class="error">Something went wrong!</p>';
     }
-    include('config.php');
-    if (isset($_POST['login'])) {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $query = $connection->prepare("SELECT * FROM users WHERE username=:username");
-        $query->bindParam("username", $username, PDO::PARAM_STR);
-        $query->execute();
-        $result = $query->fetch(PDO::FETCH_ASSOC);
-        echo $result['password'];
-        echo (password_verify($password, $result['password']));
-
-        if (!$result) {
-            echo '<p class="error">Username/Password is wrong!</p>' ;
-        } else {
-            if ($password == $result['password']) {
-                $_SESSION['user_id'] = $result['id'];
-                $_SESSION['username'] = $result['username'];
-                $_SESSION['email'] = $result['email'];
-                session_set_cookie_params(0);
-                header("Location: select_region.php");
-            } else {
-                echo '<p class="error">Username/Password is wrong!</p>';
-            }
-        }
-    }
+}
+}
+// if (!isset($_SESSION['username'])) {
+//     $_SESSION['msg'] = "You have to log in first";
+//     header('location: login.php');
+// }
+// if (isset($_GET['logout'])) {
+//     session_destroy();
+//     unset($_SESSION['username']);
+//     header("location: login.php");
+//
+// }
 ?>
+
 
 
 <html>
 
 <head>
-  <title>Login</title>
+  <title>Submit Review</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="icon" href="images/logo.ico" type="image/icon type">
@@ -143,22 +144,22 @@ button[type=submit]{
 </style>
 <div class="form_align">
 </head>
-<h4 align="center" style="font-size:3.0vw; padding: 25px;"><span style="color:orange;"><b>Welcome Back!</span><br><span style="color:rgba(5,167,201,1);"><b>Sign in</span></b></h4>
+<h4 align="center" style="font-size:3.0vw; padding: 25px;"><span style="color:orange;"><b>Hello !</span><br><span style="color:rgba(5,167,201,1);"><b>Your Feedback is Valueable to Us.</span></b></h4>
 <h1 id="logo" class="rs">
 <a href="index.html">
 <img src="images/logo.png" alt="CouponDeck"/>
 </a>
 </h1>
-<form method="post" action="" name="signin-form">
+<form method="post" action="" name="review-form">
   <div class="form-element">
     <i class="fa fa-user icon"></i>
-    <input type="text" name="username" pattern="[a-zA-Z0-9]+"  placeholder="Username"  required />
+    <input type="text" name="username" pattern="[a-zA-Z0-9]+"  value="<?php echo $_SESSION['username']; ?>"  disabled required />
   </div>
   <div class="form-element">
-    <i class="fa fa-key icon"></i>
-    <input type="password" name="password"  placeholder="Password"  required />
+<i class="fa fa-pen icon"></i>
+    <input type="text" name="review"  placeholder="Write Review Here !"  required />
   </div>
-  <button type="submit" name="login" value="login">Sign In</button>
-  <br><br><a align="left" href="register.php" style="color:orange;">New User, Register Here</a>
+  <button type="submit" name="submit" value="submit">Submit</button>
+
 </form>
 </div>

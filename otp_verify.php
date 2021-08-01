@@ -36,7 +36,7 @@
 <html>
 
 <head>
-  <title>Login</title>
+  <title>EnterOTP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="icon" href="images/logo.ico" type="image/icon type">
@@ -49,6 +49,7 @@
     box-sizing: border-box;
 }
 body {
+    background: white;
     margin: 50px auto;
     text-align: center;
     width: 800px;
@@ -133,32 +134,34 @@ button[type=submit]{
 
 .form_align{ }
 
-@media screen and (max-width: 390px){
-.form_align{
-  margin-top: 50%;
-}
-}
+@media screen and (max-width: 420px){
 
+  .form_align {
+    padding: 132px;
+    margin-top: 333px;
+    box-sizing: border-box;
+}
+}
+}
 
 </style>
-<div class="form_align">
+
 </head>
-<h4 align="center" style="font-size:3.0vw; padding: 25px;"><span style="color:orange;"><b>Welcome Back!</span><br><span style="color:rgba(5,167,201,1);"><b>Sign in</span></b></h4>
-<h1 id="logo" class="rs">
-<a href="index.html">
-<img src="images/logo.png" alt="CouponDeck"/>
-</a>
+<div class="form_align">
+<div >
+<div style="border-radius: 50px 50px 0px 0px; background:#19a4b7; width: 100%;">
+<h1 id="logo" class="rs" >
+<img src="keypad.png" alt="OTP"/>
 </h1>
+<h4 align="center" style="font-size:3.0vw; padding: 25px;"><span style="color:white;"><b>Enter Verification Code</span></b></h4>
+</div>
+<span><div  style="border-style: groove; border-color:#19a4b7; border-radius: 0px 0px 50px 50px; background-color: lightyellow; max ">
 <form method="post" action="" name="signin-form">
   <div class="form-element">
-    <i class="fa fa-user icon"></i>
-    <input type="text" name="username" pattern="[a-zA-Z0-9]+"  placeholder="Username"  required />
+    <input type="text" name="username" pattern="[a-zA-Z0-9]+"  placeholder="OTP"  required maxlength="4"/>
   </div>
-  <div class="form-element">
-    <i class="fa fa-key icon"></i>
-    <input type="password" name="password"  placeholder="Password"  required />
-  </div>
-  <button type="submit" name="login" value="login">Sign In</button>
-  <br><br><a align="left" href="register.php" style="color:orange;">New User, Register Here</a>
-</form>
+  <button type="submit" name="login" value="login">Submit</button>
+</form></div>
+</span>
+</div>
 </div>

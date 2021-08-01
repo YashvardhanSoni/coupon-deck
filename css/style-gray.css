@@ -12,13 +12,12 @@ a{
 /*	header   */
 .gray .mod-header{
 	background-color: #fff;
-	box-shadow:0 5px 3px rgba(0, 0, 0, 0.2);
 }
 .gray #main-menu > li{
-    border-left-color:  #BBBBBB;
+    border-left-color:  rgb(0 0 0 / 0%);
 }
 .gray #main-menu > li.has-sub > a:before{
-    border-color: #777777 transparent transparent transparent;
+    border-color: rgb(0 0 0 / 0%) transparent transparent transparent;
 }
 .gray #main-menu > li.active > a,
 .gray #main-menu > li > a:hover{
@@ -105,10 +104,16 @@ a{
 
 /*	footer   */
 .gray .mod-footer .footer-top{
-	padding-top: 60px;
-	margin:0;
-	background: url(../images/bk-footer-dark.png) repeat center center;
-	background-size: cover;
+	position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  color: white;
+  height:0px;
+  text-align: center;
+	background: url("../fttr.jpg") repeat center center;
+
 }
 .gray .mod-footer .foot-copyright{
 	background-color: #000;
