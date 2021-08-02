@@ -149,7 +149,7 @@ session_start();
                                         <a href="ind_home.php">Home</a>
                                     </li>
                                     <li>
-                                        <a href="belarus_brand.php">Brands</a>
+                                        <a href="ind_brand.php">Brands</a>
                                     </li>
                                     <li>
                                         <a href="reviews.php">Reviews</a>
@@ -219,7 +219,7 @@ session_start();
                       <a href="ind_home.php">Home</a>
                     </li>
                     <li>
-                      <a href="belarus_brand.php">Brands</a>
+                      <a href="ind_brand.php">Brands</a>
                     </li>
                     <li>
                       <a href="reviews.php">Reviews</a>
