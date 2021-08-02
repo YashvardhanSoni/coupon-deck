@@ -157,13 +157,13 @@ session_start();
                             <nav class="main-nav">
                                 <ul id="main-menu" class="nav nav-horizontal clearfix">
                                     <li class="active">
-                                        <a href="index.php">Home</a>
+                                        <a href="thailand_home.php">Home</a>
                                     </li>
                                     <li>
-                                        <a href="coupon.php">Brands</a>
+                                        <a href="thailand_brand.php">Brands</a>
                                     </li>
                                     <li>
-                                        <a href="coupon.php">Reviews</a>
+                                        <a href="reviews.php">Reviews</a>
                                     </li>
 
                                     <li>
@@ -200,16 +200,16 @@ session_start();
                                       <li class="has-sub" style="background: rgba(5,167,201,1); color: white; border-radius: 25px;">
                                           <a style="color: white;">Change<br>Region</a>
                                           <ul class="sub-menu" style="background: skyblue; border-radius: 25px;">
-                                              <li><a href="india-coupon.php" style="background: skyblue; border-radius: 25px;">India</a></li>
-                                              <li><a href="uae-coupon.php" style="background: skyblue; border-radius: 25px;">UAE </a></li>
-                                              <li><a href="singapore-coupon.php" style="background: skyblue; border-radius: 25px;">Singapore</a></li>
-                                              <li><a href="indonesia-coupon.php" style="background: skyblue; border-radius: 25px;">Indonesia</a></li>
-                                              <li><a href="saudiarab-coupon.php" style="background: skyblue; border-radius: 25px;">Saudi Arab</a></li>
-                                              <li><a href="thailand-coupon.php" style="background: skyblue; border-radius: 25px;">Thailand</a></li>
-                                              <li><a href="vietnam-coupon.php" style="background: skyblue; border-radius: 25px;">Vietnam</a></li>
-                                              <li><a href="malaysia-coupon.php" style="background: skyblue; border-radius: 25px;">Malaysia</a></li>
-                                              <li><a href="russia-coupon.php" style="background: skyblue; border-radius: 25px;">Russia</a></li>
-                                              <li><a href="belarus-coupon.php" style="background: skyblue; border-radius: 25px;">Belarus</a></li>
+                                              <li><a href="ind_home.php" style="background: skyblue; border-radius: 25px;">India</a></li>
+                                              <li><a href="uae_home.php" style="background: skyblue; border-radius: 25px;">UAE </a></li>
+                                              <li><a href="singapore_home.php" style="background: skyblue; border-radius: 25px;">Singapore</a></li>
+                                              <li><a href="indonesia_home.php" style="background: skyblue; border-radius: 25px;">Indonesia</a></li>
+                                              <li><a href="saudiarab_home.php" style="background: skyblue; border-radius: 25px;">Saudi Arab</a></li>
+                                              <li><a href="thailand_home.php" style="background: skyblue; border-radius: 25px;">Thailand</a></li>
+                                              <li><a href="vietnam_home.php" style="background: skyblue; border-radius: 25px;">Vietnam</a></li>
+                                              <li><a href="malaysia_home.php" style="background: skyblue; border-radius: 25px;">Malaysia</a></li>
+                                              <li><a href="russia_home.php" style="background: skyblue; border-radius: 25px;">Russia</a></li>
+                                              <li><a href="belarus_home.php" style="background: skyblue; border-radius: 25px;">Belarus</a></li>
                                           </ul>
                                       </li>
                                     </li>
@@ -227,13 +227,13 @@ session_start();
                 <h2>Menu</h2>
                 <ul>
                     <li>
-                      <a href="index.php">Home</a>
+                      <a href="thailand_home.php">Home</a>
                     </li>
                     <li>
-                      <a href="brand-list.php">Brands</a>
+                      <a href="thailand_brand.php">Brands</a>
                     </li>
                     <li>
-                      <a href="contact.php">Reviews</a>
+                      <a href="reviews.php">Reviews</a>
                     </li>
                     <li>
                       <a href="contact.php">Contact Us</a>
@@ -267,16 +267,16 @@ session_start();
                     <li class="has-sub">
                         <a>Change<br>Region</a>
                         <ul class="sub-menu">
-                            <li><a href="india-coupon.php">India</a></li>
-                            <li><a href="uae-coupon.php">UAE </a></li>
-                            <li><a href="singapore-coupon.php">Singapore</a></li>
-                            <li><a href="indonesia-coupon.php">Indonesia</a></li>
-                            <li><a href="saudiarab-coupon.php">Saudi Arab</a></li>
-                            <li><a href="thailand-coupon.php">Thailand</a></li>
-                            <li><a href="vietnam-coupon.php">Vietnam</a></li>
-                            <li><a href="malaysia-coupon.php">Malaysia</a></li>
-                            <li><a href="russia-coupon.php">Russia</a></li>
-                            <li><a href="belarus-coupon.php">Belarus</a></li>
+                            <li><a href="ind_home.php">India</a></li>
+                            <li><a href="uae_home.php">UAE </a></li>
+                            <li><a href="singapore_home.php">Singapore</a></li>
+                            <li><a href="indonesia_home.php">Indonesia</a></li>
+                            <li><a href="saudiarab_home.php">Saudi Arab</a></li>
+                            <li><a href="thailand_home.php">Thailand</a></li>
+                            <li><a href="vietnam_home.php">Vietnam</a></li>
+                            <li><a href="malaysia_home.php">Malaysia</a></li>
+                            <li><a href="russia_home.php">Russia</a></li>
+                            <li><a href="belarus_home.php">Belarus</a></li>
                         </ul>
                     </li>
                   </ul>
@@ -418,7 +418,7 @@ session_start();
 
 
         <p class="footer-links">
-          <a href="new_index.php">Home</a>
+          <a href="thailand_home.php">Home</a>
           |
           <a href="contact.php">Contact</a>
         </p>

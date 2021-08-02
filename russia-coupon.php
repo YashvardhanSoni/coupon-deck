@@ -155,50 +155,24 @@ session_start();
                             <nav class="main-nav">
                                 <ul id="main-menu" class="nav nav-horizontal clearfix">
                                     <li class="active">
-                                        <a href="index.php">Home</a>
+                                        <a href="russia_home.php">Home</a>
                                     </li>
                                     <li>
-                                        <a href="coupon.php">Coupons</a>
-                                    </li>
-                                    <li class="has-sub">
-                                        <a>Coupons Category</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="category-fashion.php">Fashion </a></li>
-                                            <li><a href="category-electronics.php">Electronics </a></li>
-                                            <li><a href="coupon-category.php">Furniture </a></li>
-                                            <li><a href="coupon-category.php">Grocery </a></li>
-                                            <li><a href="coupon-category.php">Household </a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-sub">
-                                        <a>Regional Offers</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="india-coupon.php">Indian Offers </a></li>
-                                            <li><a href="uae-coupon.php">UAE Offers </a></li>
-                                            <li><a href="singapore-coupon.php">Singapore Offers </a></li>
-                                            <li><a href="indonesia-coupon.php">Indonesia Offers </a></li>
-                                            <li><a href="saudiarab-coupon.php">Saudi Arab Offers </a></li>
-                                            <li><a href="thailand-coupon.php">Thailand Offers </a></li>
-                                            <li><a href="vietnam-coupon.php">Vietnam Offers </a></li>
-                                            <li><a href="malaysia-coupon.php">Malaysia Offers </a></li>
-                                            <li><a href="russia-coupon.php">Russia Offers </a></li>
-                                            <li><a href="belarus-coupon.php">Belarus Offers </a></li>
-                                        </ul>
+                                        <a href="russia_brand.php">Brands</a>
                                     </li>
                                     <li>
-                                        <a href="brand-list.php">Brands</a>
+                                        <a href="reviews.php">Reviews</a>
                                     </li>
+
                                     <li>
                                         <a href="contact.php">Contact Us</a>
                                     </li>
-                                    <!-- <li>
-                                      <a id="sys_head_login" class="btn btn-green type-login btn-login" href="login.php"></a>
-                                    </li> -->
+
                                     <?php
                                       if (isset($_SESSION['username'])){
                                         ?>
                                     <li class="has-sub">
-                                        <a href="coupon-code-2.php" class="btn btn-green type-login btn-login">
+                                        <a class="btn btn-green type-login btn-login">
                                           <?php
                                           echo $_SESSION['username'];
                                           }
@@ -215,14 +189,30 @@ session_start();
                                     <?php
                                       if (!isset($_SESSION['username'])){
                                         ?>
+
                                     <li>
-                                        <a href="login.php" class="btn btn-green type-login btn-login">Login</a>
+                                        <a href="login.php" class="btn btn-green type-login btn-login" style="border-radius:25px;">Login</a>
                                     </li>
                                     <?php } ?>
+
+                                      <li class="has-sub" style="background: rgba(5,167,201,1); color: white; border-radius: 25px;">
+                                          <a style="color: white;">Change<br>Region</a>
+                                          <ul class="sub-menu" style="background: skyblue; border-radius: 25px;">
+                                              <li><a href="ind_home.php" style="background: skyblue; border-radius: 25px;">India</a></li>
+                                              <li><a href="uae_home.php" style="background: skyblue; border-radius: 25px;">UAE </a></li>
+                                              <li><a href="singapore_home.php" style="background: skyblue; border-radius: 25px;">Singapore</a></li>
+                                              <li><a href="indonesia_home.php" style="background: skyblue; border-radius: 25px;">Indonesia</a></li>
+                                              <li><a href="saudiarab_home.php" style="background: skyblue; border-radius: 25px;">Saudi Arab</a></li>
+                                              <li><a href="thailand_home.php" style="background: skyblue; border-radius: 25px;">Thailand</a></li>
+                                              <li><a href="vietnam_home.php" style="background: skyblue; border-radius: 25px;">Vietnam</a></li>
+                                              <li><a href="malaysia_home.php" style="background: skyblue; border-radius: 25px;">Malaysia</a></li>
+                                              <li><a href="russia_home.php" style="background: skyblue; border-radius: 25px;">Russia</a></li>
+                                              <li><a href="belarus_home.php" style="background: skyblue; border-radius: 25px;">Belarus</a></li>
+                                          </ul>
+                                      </li>
+                                    </li>
                                   </ul>
                                 <a id="sys_btn_toogle_menu" class="btn-toogle-res-menu" href="#alternate-menu"></a>
-
-
                             </nav>
                         </div>
                     </div>
@@ -234,46 +224,24 @@ session_start();
             <div class="mp-level">
                 <h2>Menu</h2>
                 <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="coupon.php">Coupons</a></li>
-                    <li class="has-sub">
-                        <a>Coupons Category</a>
-                        <ul class="sub-menu">
-                            <li><a href="category-fashion.php">Fashion </a></li>
-                            <li><a href="category-electronics.php">Electronics </a></li>
-                            <li><a href="coupon-category.php">Furniture </a></li>
-                            <li><a href="coupon-category.php">Grocery </a></li>
-                            <li><a href="coupon-category.php">Household </a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a>Regional Offers</a>
-                        <ul class="sub-menu">
-                            <li><a href="india-coupon.php">Indian Offers </a></li>
-                            <li><a href="uae-coupon.php">UAE Offers </a></li>
-                            <li><a href="singapore-coupon.php">Singapore Offers </a></li>
-                            <li><a href="indonesia-coupon.php">Indonesia Offers </a></li>
-                            <li><a href="saudiarab-coupon.php">Saudi Arab Offers </a></li>
-                            <li><a href="thailand-coupon.php">Thailand Offers </a></li>
-                            <li><a href="vietnam-coupon.php">Vietnam Offers </a></li>
-                            <li><a href="malaysia-coupon.php">Malaysia Offers </a></li>
-                            <li><a href="russia-coupon.php">Russia Offers </a></li>
-                            <li><a href="belarus-coupon.php">Belarus Offers </a></li>
-                        </ul>
+                    <li>
+                      <a href="russia_home.php">Home</a>
                     </li>
                     <li>
-                        <a href="brand-list.php">Brands</a>
+                      <a href="russia_brand.php">Brands</a>
+                    </li>
+                    <li>
+                      <a href="reviews.php">Reviews</a>
+                    </li>
+                    <li>
+                      <a href="contact.php">Contact Us</a>
+                    </li>
 
-                    </li>
-                    <li>
-                        <a href="contact.php">Contact Us</a>
-                    </li>
                     <?php
                       if (isset($_SESSION['username'])){
                         ?>
                     <li class="has-sub">
-                        <a href="coupon-code-2.php" class="btn btn-green type-login btn-login">
-                          Welcome
+                        <a class="btn btn-green type-login btn-login">
                           <?php
                           echo $_SESSION['username'];
                           }
@@ -291,9 +259,24 @@ session_start();
                       if (!isset($_SESSION['username'])){
                         ?>
                     <li>
-                        <a href="login.php" class="btn btn-green type-login btn-login">Login</a>
+                        <a href="login.php" class="btn btn-green type-login btn-login" >Login</a>
                     </li>
                     <?php } ?>
+                    <li class="has-sub">
+                        <a>Change<br>Region</a>
+                        <ul class="sub-menu">
+                            <li><a href="ind_home.php">India</a></li>
+                            <li><a href="uae_home.php">UAE </a></li>
+                            <li><a href="singapore_home.php">Singapore</a></li>
+                            <li><a href="indonesia_home.php">Indonesia</a></li>
+                            <li><a href="saudiarab_home.php">Saudi Arab</a></li>
+                            <li><a href="thailand_home.php">Thailand</a></li>
+                            <li><a href="vietnam_home.php">Vietnam</a></li>
+                            <li><a href="malaysia_home.php">Malaysia</a></li>
+                            <li><a href="russia_home.php">Russia</a></li>
+                            <li><a href="belarus_home.php">Belarus</a></li>
+                        </ul>
+                    </li>
                   </ul>
 
             </div>
@@ -691,7 +674,7 @@ session_start();
                 <div class="grid_frame">
                     <div class="container_grid clearfix">
                         <div class="left-link">
-                            <a href="index.php">Home</a>
+                            <a href="russia_home.php">Home</a>
                             <a href="#">Contact</a>
                         </div>
 
