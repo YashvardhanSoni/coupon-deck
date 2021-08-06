@@ -3,7 +3,7 @@
     session_start();
     if (isset($_SESSION['username'])) {
         $_SESSION['msg'] = "You have to log in first";
-        header('location: New_index.php');
+        header('location: index.php');
     }
     include('config.php');
     if (isset($_POST['login'])) {
@@ -298,7 +298,7 @@ background-size:100% auto;
     <!-- #endregion Jssor Slider End -->
 
     <br><br><h3 align="center" style="font-size:4.8vw; "><b>Welcome To<br><span style="color:rgba(5,167,201,1);">Coupon</span> <span style="color: orange;">Deck</span></b></h3>
-    <center><br>
+    <center>
       <a style="background:LimeGreen; text-color: white; text-decoration: none;" class="login-trigger" href="#" data-target="#login" data-toggle="modal">Login</a>
 
 <div id="login" class="modal fade" role="dialog">

@@ -163,6 +163,9 @@ $apiData = getOffersList($method, $url);
                                         <a href="ind_brand.php">Brands</a>
                                     </li>
                                     <li>
+                                        <a href="Offers.php">Offers</a>
+                                    </li>
+                                    <li>
                                         <a href="reviews.php">Reviews</a>
                                     </li>
 
@@ -231,6 +234,9 @@ $apiData = getOffersList($method, $url);
                     </li>
                     <li>
                       <a href="ind_brand.php">Brands</a>
+                    </li>
+                    <li>
+                        <a href="Offers.php">Offers</a>
                     </li>
                     <li>
                       <a href="reviews.php">Reviews</a>
