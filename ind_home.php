@@ -168,6 +168,9 @@ session_start();
                                         <a href="ind_brand.php">Brands</a>
                                     </li>
                                     <li>
+                                        <a href="offers.php">Offers</a>
+                                    </li>
+                                    <li>
                                         <a href="reviews.php">Reviews</a>
                                     </li>
 
@@ -236,6 +239,9 @@ session_start();
                     </li>
                     <li>
                       <a href="ind_brand.php">Brands</a>
+                    </li>
+                    <li>
+                        <a href="offers.php">Offers</a>
                     </li>
                     <li>
                       <a href="reviews.php">Reviews</a>
@@ -357,8 +363,8 @@ session_start();
       </div><!--end: .coupon-item -->
     </div>
     <center>
-      <form action="ind_brand.php" style="background:white;">
-        <input class="btn btn-green type-login btn-login" style="padding:10px 40px 10px 40px ;" type="submit" value="View all Brands" />
+      <form action="offers.php" style="background:white;">
+        <input class="btn btn-green type-login btn-login" style="padding:10px 40px 10px 40px ;" type="submit" value="View all Offers" />
       </form>
     </center>
 </div>

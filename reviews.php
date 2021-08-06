@@ -326,7 +326,7 @@ session_start();
         <div class="col">
           <div class="testimonial">
             <img src="https://img.icons8.com/material-rounded/96/000000/user-male-circle.png"/>
-            <div class="name"><?php   echo $_SESSION['username']; ?></div>
+            <div class="name">User Name</div>
 
             <p>
               CouponDeck is awesome platform to find various offers and coupons WorldWide.
