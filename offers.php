@@ -38,6 +38,21 @@ $apiData = getOffersList($method, $url);
         <script type="text/javascript" src="js/html5.js"></script>
     <![endif]-->
 <style>
+
+.blinking{
+    animation:blinkingText 1.2s infinite;
+    font-weight: bold;
+    font-size: 15px;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+
+
     .slides img{
         border-radius: 0px;
     }
@@ -315,7 +330,7 @@ $apiData = getOffersList($method, $url);
                                         <p class="rs coupon-desc" class="offer_desc"><?php echo $index['description_lang'];?></p>
 
                                         <div>
-                                         <center><a href="#popup<?php echo $i;?>" class="offerpopup">Learn More!</a></center>
+                                         <center><a href="#popup<?php echo $i;?>" class="offerpopup" style="font-weight:bold;">Learn More!</a></center>
 
                                         </div>
 
@@ -333,7 +348,7 @@ $apiData = getOffersList($method, $url);
                                         </div>
 
                                         <div class="bottom-action">
-                                        <br><br><br><a href="<?php echo $index['preview_url'];?>" target="_blank">Redirect to Offer Site</a></center>
+                                        <br><br><br><a href="<?php echo $index['preview_url'];?>" target="_blank"><div style="background-color:#a1c44e; border-radius:25px;"><span class="blinking">Redirect to Offer Site</span></div></a></center>
                                         </div>
                                     </div>
                                 </div>
