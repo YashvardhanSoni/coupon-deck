@@ -138,7 +138,7 @@ background-size:100% auto;
   <button onclick="myFunction()" class="dropbtn" style="border-radius: 25px; height: 50px; width: 100px;"><img height="15px" width="15px" src="https://img.icons8.com/color/48/000000/globe--v1.png"/> Regions</button>
   <div id="myDropdown" class="dropdown-content">
   <a href="ind_home.php" style="color:white; text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;"><img height="15px" width="15px" src="https://img.icons8.com/color/48/000000/india-circular.png"/> <b><big>India</big></b></a>
-  <a href="uae_home.php" style="color:white; text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;"><img height="15px" width="15px" src="https://img.icons8.com/color/48/000000/united-arab-emirates-circular.png"/> <b><big>UAE</big></b></a>
+  <!-- <a href="uae_home.php" style="color:white; text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;"><img height="15px" width="15px" src="https://img.icons8.com/color/48/000000/united-arab-emirates-circular.png"/> <b><big>UAE</big></b></a>
   <a href="singapore_home.php" style="color:white; text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;"><img height="15px" width="15px" src="https://img.icons8.com/color/48/000000/singapore-circular.png"/> <b><big>Singapore</big></b></a>
   <a href="russia_home.php" style="color:white; text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;"><img height="15px" width="15px" src="https://img.icons8.com/emoji/48/000000/russia-emoji.png"/> <b><big>Russia</big></b></a>
   <a href="vietnam_home.php" style="color:white; text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;"><img height="15px" width="15px" src="https://img.icons8.com/color/48/000000/vietnam-circular.png"/> <b><big>Vietnam</big></b></a>
@@ -146,7 +146,7 @@ background-size:100% auto;
   <a href="belarus_home.php" style="color:white; text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;"><img height="15px" width="15px" src="https://img.icons8.com/color/48/000000/belarus-circular.png"/> <b><big>Belarus</big></b></a>
   <a href="malaysia_home.php" style="color:white; text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;"><img height="15px" width="15px" src="https://img.icons8.com/color/48/000000/malaysia-circular.png"/> <b><big>Malaysia</big></b></a>
   <a href="indonesia_home.php" style="color:white; text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;"><img height="15px" width="15px" src="https://img.icons8.com/color/48/000000/indonesia-circular.png"/> <b><big>Indonesia</big></b></a>
-  <a href="thailand_home.php" style="color:white; text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;"><img height="15px" width="15px" src="https://img.icons8.com/color/48/000000/thailand-circular.png"/> <b><big>Thailand</big></b></a>
+  <a href="thailand_home.php" style="color:white; text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;"><img height="15px" width="15px" src="https://img.icons8.com/color/48/000000/thailand-circular.png"/> <b><big>Thailand</big></b></a> -->
   </div>
 </center>
 

@@ -160,7 +160,7 @@ session_start();
                                   </li>
                                   <?php } ?>
 
-                                    <li class="has-sub" style="background: rgba(5,167,201,1); color: white; border-radius: 25px;">
+                                    <!-- <li class="has-sub" style="background: rgba(5,167,201,1); color: white; border-radius: 25px;">
                                         <a style="color: white;">Change<br>Region</a>
                                         <ul class="sub-menu" style="background: skyblue; border-radius: 25px;">
                                             <li><a href="ind_home.php" style="background: skyblue; border-radius: 25px;">India</a></li>
@@ -174,7 +174,7 @@ session_start();
                                             <li><a href="russia_home.php" style="background: skyblue; border-radius: 25px;">Russia</a></li>
                                             <li><a href="belarus_home.php" style="background: skyblue; border-radius: 25px;">Belarus</a></li>
                                         </ul>
-                                    </li>
+                                    </li> -->
                                   </li>
                                 </ul>
                               <a id="sys_btn_toogle_menu" class="btn-toogle-res-menu" href="#alternate-menu"></a>
@@ -230,7 +230,7 @@ session_start();
                       <a href="login.php" class="btn btn-green type-login btn-login" >Login</a>
                   </li>
                   <?php } ?>
-                  <li class="has-sub">
+                  <!-- <li class="has-sub">
                       <a>Change<br>Region</a>
                       <ul class="sub-menu">
                           <li><a href="ind_home.php">India</a></li>
@@ -244,7 +244,7 @@ session_start();
                           <li><a href="russia_home.php">Russia</a></li>
                           <li><a href="belarus_home.php">Belarus</a></li>
                       </ul>
-                  </li>
+                  </li> -->
                 </ul>
 
           </div>
