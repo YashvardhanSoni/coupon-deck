@@ -401,7 +401,7 @@ session_start();
   </div>
 </div>
 <br>
-<footer class="footer-distributed">
+<!-- <footer class="footer-distributed">
 
 			<div class="footer-left">
           <img src="images/logo-gray.png">
@@ -441,7 +441,7 @@ session_start();
 				  <a href="#"><i class="fa fa-linkedin"></i></a>
 				</div>
 			</div>
-		</footer>
+		</footer> -->
 
     </div>
 </div>

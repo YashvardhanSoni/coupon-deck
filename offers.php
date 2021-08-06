@@ -413,7 +413,7 @@ $apiData = getOffersList($method, $url);
             </div>
         </div>
         <br>
-        <footer class="footer-distributed">
+        <!-- <footer class="footer-distributed">
 
         			<div class="footer-left">
                   <img src="images/logo-gray.png">
@@ -447,13 +447,13 @@ $apiData = getOffersList($method, $url);
         			<div class="footer-right">
         				<p class="footer-company-about">
         					<span>About Us</span>
-        					MMIPL is a premium Ad-network connected globally with Direct Apps and Ad-Tech client's.</p>
+        					MMIPL is a premium Ad-network connected globally with Direct Apps and Ad-Tech client's.</p> -->
         				<!-- <div class="footer-icons">
         					<a href="#"><i class="fa fa-facebook"></i></a>
         				  <a href="#"><i class="fa fa-linkedin"></i></a>
         				</div> -->
-        			</div>
-        		</footer>
+        			<!-- </div>
+        		</footer> -->
     </div>
 </div>
 
