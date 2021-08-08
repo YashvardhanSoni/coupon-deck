@@ -1,14 +1,11 @@
 <?php
     session_start();
     include('config.php');
-    require __DIR__.'/helper/common.php';
-    $region = activeCountries();
     if (isset($_POST['register'])) {
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
         $review = $_POST['review'];
-        $region = $_POST['region'];
         $password_hash = password_hash($password, PASSWORD_BCRYPT);
         $query = $connection->prepare("SELECT * FROM users WHERE email=:email");
         $query->bindParam("email", $email, PDO::PARAM_STR);
@@ -17,11 +14,10 @@
             echo '<p class="error">The email address is already registered!</p>';
         }
         if ($query->rowCount() == 0) {
-            $query = $connection->prepare("INSERT INTO users(username,password,email,region) VALUES (:username,:password,:email,:region)");
+            $query = $connection->prepare("INSERT INTO users(username,password,email) VALUES (:username,:password,:email)");
             $query->bindParam("username", $username, PDO::PARAM_STR);
             $query->bindParam("password", $password, PDO::PARAM_STR);
             $query->bindParam("email", $email, PDO::PARAM_STR);
-            $query->bindParam("region", $region, PDO::PARAM_STR);
             $result = $query->execute();
             if ($result) {
                 echo '<p class="success">Your registration was successful!</p>';
@@ -72,15 +68,6 @@ input {
     font-family: 'Lato';
     padding: 10px;
       border-radius: 25px;
-}
-select {
-    border: none;
-    font-size: 1.5rem;
-    font-weight: 100;
-    font-family: 'Lato';
-    padding: 10px;
-      border-radius: 25px;
-      background: #d3d3d3;
 }
 
 input[type=button]{
@@ -172,16 +159,6 @@ button[type=submit]{
 <div class="form-element">
   <i class="fa fa-key icon"></i>
 <input type="password" name="password"  placeholder="Password" required />
-</div>
-<div class="form-element">
-  <i class="fa fa-globe icon"></i>
-    <select name="region" id="region" style="width:310px;">
-        <option value="">Select Region</option>
-        <?php if(!empty($region['results'])){
-            foreach($region['results'] as $index){ ?>
-            <option value="<?php echo $index['code']; ?>"><?php echo $index['country']; ?></option>
-        <?php   } } ?>
-    </select>
 </div>
 <button type="submit" name="register" value="register">Sign up</button>
 <br><br><a align="left" href="login.php" style="color:orange;">Already Registered? Login Here</a>

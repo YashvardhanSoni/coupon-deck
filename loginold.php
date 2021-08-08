@@ -23,9 +23,8 @@
                 $_SESSION['user_id'] = $result['id'];
                 $_SESSION['username'] = $result['username'];
                 $_SESSION['email'] = $result['email'];
-                $_SESSION['region'] = $result['region'];
                 session_set_cookie_params(0);
-                header("Location: ind_home.php");
+                header("Location: select_region.php");
             } else {
                 echo '<p class="error">Username/Password is wrong!</p>';
             }

@@ -1,28 +1,9 @@
 <?php
 session_start();
 require __DIR__.'/apiController.php';
-require __DIR__.'/helper/common.php';
-$region = '';
-
-$change_region = '';
-if(isset($_GET['region']) && $_GET['region'] != ''){
-    $change_region = $_GET['region'];
-    $_SESSION['region'] = $change_region;
-    if(isset($_SESSION['user_id'])){
-        updateUserRegion($change_region, $_SESSION['user_id']);
-    }
-}
-if(isset($_SESSION) && !empty($_SESSION['region'])){
-    $region = $_SESSION['region'];
-}
 $method = 'GET';
-if($region != ''){
-    $url = 'https://api-mtrack.affise.com/3.0/partner/offers?api-key=9a5057e1103b54ea0bb5f4f16cbe1a62&countries[]='.$region;
-}else{
-    $url = 'https://api-mtrack.affise.com/3.0/partner/offers?api-key=9a5057e1103b54ea0bb5f4f16cbe1a62';
-}
+$url = 'https://api-mtrack.affise.com/3.0/offers?API-Key=9a5057e1103b54ea0bb5f4f16cbe1a62';
 $apiData = getOffersList($method, $url);
-$activeRegion = activeCountries();
 ?>
 
 <!DOCTYPE html>
@@ -234,18 +215,21 @@ $activeRegion = activeCountries();
                                     </li>
                                     <?php } ?>
 
-                                      <li class="has-sub" style="background: rgba(5,167,201,1); color: white; border-radius: 25px;">
+                                      <!-- <li class="has-sub" style="background: rgba(5,167,201,1); color: white; border-radius: 25px;">
                                           <a style="color: white;">Change<br>Region</a>
                                           <ul class="sub-menu" style="background: skyblue; border-radius: 25px;">
-                                              <?php if(!empty($activeRegion['results'])){
-                                                    foreach($activeRegion['results'] as $index){ 
-                                                        if($index['code'] == $region){?>
-                                              <li><a href="offers.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
-                                              <?php }else{?>
-                                                <li><a href="offers.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
-                                              <?php }}}?>
+                                              <li><a href="ind_home.php" style="background: skyblue; border-radius: 25px;">India</a></li>
+                                              <li><a href="uae_home.php" style="background: skyblue; border-radius: 25px;">UAE </a></li>
+                                              <li><a href="singapore_home.php" style="background: skyblue; border-radius: 25px;">Singapore</a></li>
+                                              <li><a href="indonesia_home.php" style="background: skyblue; border-radius: 25px;">Indonesia</a></li>
+                                              <li><a href="saudiarab_home.php" style="background: skyblue; border-radius: 25px;">Saudi Arab</a></li>
+                                              <li><a href="thailand_home.php" style="background: skyblue; border-radius: 25px;">Thailand</a></li>
+                                              <li><a href="vietnam_home.php" style="background: skyblue; border-radius: 25px;">Vietnam</a></li>
+                                              <li><a href="malaysia_home.php" style="background: skyblue; border-radius: 25px;">Malaysia</a></li>
+                                              <li><a href="russia_home.php" style="background: skyblue; border-radius: 25px;">Russia</a></li>
+                                              <li><a href="belarus_home.php" style="background: skyblue; border-radius: 25px;">Belarus</a></li>
                                           </ul>
-                                      </li>
+                                      </li> -->
                                     </li>
                                   </ul>
                                 <a id="sys_btn_toogle_menu" class="btn-toogle-res-menu" href="#alternate-menu"></a>

@@ -363,8 +363,8 @@ session_start();
       </div><!--end: .coupon-item -->
     </div>
     <center>
-      <form action="offers.php" style="background:white;">
-        <input class="btn btn-green type-login btn-login" style="padding:10px 40px 10px 40px ;" type="submit" value="View all Offers" />
+      <form action="ind_brand.php" style="background:white;">
+        <input class="btn btn-green type-login btn-login" style="padding:10px 40px 10px 40px ;" type="submit" value="View all Brands" />
       </form>
     </center>
 </div>
