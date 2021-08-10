@@ -692,7 +692,7 @@ b {
     border-color: transparent transparent transparent #777777;
 }
 .block .block-content{
-    padding-top: 18px;
+    padding-top: 1px;
     clear: both;
 }
 /*style for table (coupon.html)*/

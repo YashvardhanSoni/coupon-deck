@@ -1,15 +1,29 @@
 <?php
 session_start();
-// if (!isset($_SESSION['username'])) {
-//     $_SESSION['msg'] = "You have to log in first";
-//     header('location: login.php');
-// }
-// if (isset($_GET['logout'])) {
-//     session_destroy();
-//     unset($_SESSION['username']);
-//     header("location: login.php");
-//
-// }
+require __DIR__.'/apiController.php';
+require __DIR__.'/helper/common.php';
+$region = '';
+
+$change_region = '';
+if(isset($_GET['region']) && $_GET['region'] != ''){
+    $change_region = $_GET['region'];
+    $_SESSION['region'] = $change_region;
+    if(isset($_SESSION['user_id'])){
+        updateUserRegion($change_region, $_SESSION['user_id']);
+    }
+}
+if(isset($_SESSION) && !empty($_SESSION['region'])){
+    $region = $_SESSION['region'];
+}
+$method = 'GET';
+if($region != ''){
+    $url = 'https://api-mtrack.affise.com/3.0/partner/offers?api-key=9a5057e1103b54ea0bb5f4f16cbe1a62&countries[]='.$region;
+}else{
+    $url = 'https://api-mtrack.affise.com/3.0/partner/offers?api-key=9a5057e1103b54ea0bb5f4f16cbe1a62';
+}
+$apiData = getOffersList($method, $url);
+$activeRegion = activeCountries();
+$activeBrands = activeBrands($method, $url);
 ?>
 
 <!DOCTYPE html>
@@ -161,7 +175,7 @@ session_start();
 
                             <nav class="main-nav">
                                 <ul id="main-menu" class="nav nav-horizontal clearfix">
-                                    <li class="active">
+                                    <li>
                                         <a href="ind_home.php">Home</a>
                                     </li>
                                     <li>
@@ -205,21 +219,18 @@ session_start();
                                     </li>
                                     <?php } ?>
 
-                                      <!-- <li class="has-sub" style="background: rgba(5,167,201,1); color: white; border-radius: 25px;">
+                                      <li class="has-sub" style="background: rgba(5,167,201,1); color: white; border-radius: 25px;">
                                           <a style="color: white;">Change<br>Region</a>
                                           <ul class="sub-menu" style="background: skyblue; border-radius: 25px;">
-                                              <li><a href="ind_home.php" style="background: skyblue; border-radius: 25px;">India</a></li>
-                                              <li><a href="uae_home.php" style="background: skyblue; border-radius: 25px;">UAE </a></li>
-                                              <li><a href="singapore_home.php" style="background: skyblue; border-radius: 25px;">Singapore</a></li>
-                                              <li><a href="indonesia_home.php" style="background: skyblue; border-radius: 25px;">Indonesia</a></li>
-                                              <li><a href="saudiarab_home.php" style="background: skyblue; border-radius: 25px;">Saudi Arab</a></li>
-                                              <li><a href="thailand_home.php" style="background: skyblue; border-radius: 25px;">Thailand</a></li>
-                                              <li><a href="vietnam_home.php" style="background: skyblue; border-radius: 25px;">Vietnam</a></li>
-                                              <li><a href="malaysia_home.php" style="background: skyblue; border-radius: 25px;">Malaysia</a></li>
-                                              <li><a href="russia_home.php" style="background: skyblue; border-radius: 25px;">Russia</a></li>
-                                              <li><a href="belarus_home.php" style="background: skyblue; border-radius: 25px;">Belarus</a></li>
+                                            <?php if(!empty($activeRegion['results'])){
+                                                    foreach($activeRegion['results'] as $index){
+                                                        if($index['code'] == $region){?>
+                                              <li><a href="ind_home.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
+                                              <?php }else{?>
+                                                <li><a href="ind_home.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
+                                              <?php }}}?>
                                           </ul>
-                                      </li> -->
+                                      </li>
                                     </li>
                                   </ul>
                                 <a id="sys_btn_toogle_menu" class="btn-toogle-res-menu" href="#alternate-menu"></a>
@@ -313,54 +324,23 @@ session_start();
 
 <div class="box2">
     <div class="text gridtable" style="padding-top: 10px;">
-      <div class="coupon-item grid_3">
-          <div class="coupon-content">
-              <div class="img-thumb-center">
-                  <div class="wrap-img-thumb">
-                      <span class="ver_hold"></span>
-                      <a href="#" class="ver_container"><img src="images/br/amazon.png" alt="$COUPON_TITLE"></a>
-                  </div>
-              </div>
+    <?php if(!empty($activeBrands)){
+      $i = 0;
+            foreach($activeBrands as $index){
+              if($i < 4){?>
+                <div class="coupon-item grid_3">
+                    <div class="coupon-content">
+                        <div class="img-thumb-center">
+                            <div class="wrap-img-thumb">
+                                <span class="ver_hold"></span>
+                                <a href="offers.php?brand=<?php echo $index['title'];?>" class="ver_container"><img src="<?php echo $index['logo'];?>" alt="<?php echo $index['title'];?>"></a>
+                            </div>
+                        </div>
 
-          </div>
+                    </div>
 
-      </div><!--end: .coupon-item -->
-      <div class="coupon-item grid_3">
-          <div class="coupon-content">
-              <div class="img-thumb-center">
-                  <div class="wrap-img-thumb">
-                      <span class="ver_hold"></span>
-                      <a href="#" class="ver_container"><img src="images/br/rizzle.png" alt="$COUPON_TITLE"></a>
-                  </div>
-              </div>
-
-          </div>
-
-      </div><!--end: .coupon-item -->
-      <div class="coupon-item grid_3">
-          <div class="coupon-content">
-              <div class="img-thumb-center">
-                  <div class="wrap-img-thumb">
-                      <span class="ver_hold"></span>
-                      <a href="#" class="ver_container"><img src="images/br/moj.png" alt="$COUPON_TITLE"></a>
-                  </div>
-              </div>
-
-          </div>
-
-      </div><!--end: .coupon-item -->
-      <div class="coupon-item grid_3">
-          <div class="coupon-content">
-              <div class="img-thumb-center">
-                  <div class="wrap-img-thumb">
-                      <span class="ver_hold"></span>
-                      <a href="#" class="ver_container"><img src="images/br/zee 5.png" alt="$COUPON_TITLE"></a>
-                  </div>
-              </div>
-
-          </div>
-
-      </div><!--end: .coupon-item -->
+                </div><!--end: .coupon-item -->
+        <?php $i++;}}}?>
     </div>
     <center>
       <form action="ind_brand.php" style="background:white;">

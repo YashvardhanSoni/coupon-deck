@@ -5,6 +5,10 @@ require __DIR__.'/helper/common.php';
 $region = '';
 
 $change_region = '';
+$brand = '';
+if(isset($_GET['brand']) && $_GET['brand'] != ''){
+    $brand = $_GET['brand'];
+}
 if(isset($_GET['region']) && $_GET['region'] != ''){
     $change_region = $_GET['region'];
     $_SESSION['region'] = $change_region;
@@ -21,7 +25,7 @@ if($region != ''){
 }else{
     $url = 'https://api-mtrack.affise.com/3.0/partner/offers?api-key=9a5057e1103b54ea0bb5f4f16cbe1a62';
 }
-$apiData = getOffersList($method, $url);
+$apiData = getOffersList($method, $url, $brand);
 $activeRegion = activeCountries();
 ?>
 
@@ -190,7 +194,7 @@ $activeRegion = activeCountries();
 
                             <nav class="main-nav">
                                 <ul id="main-menu" class="nav nav-horizontal clearfix">
-                                    <li class="active">
+                                    <li>
                                         <a href="ind_home.php">Home</a>
                                     </li>
                                     <li>
@@ -238,11 +242,11 @@ $activeRegion = activeCountries();
                                           <a style="color: white;">Change<br>Region</a>
                                           <ul class="sub-menu" style="background: skyblue; border-radius: 25px;">
                                               <?php if(!empty($activeRegion['results'])){
-                                                    foreach($activeRegion['results'] as $index){ 
+                                                    foreach($activeRegion['results'] as $index){
                                                         if($index['code'] == $region){?>
-                                              <li><a href="offers.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
+                                              <li><a href="offers.php?region=<?php echo ($brand == '')? $index['code'] : $index['code'].'&brand='.$brand;?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
                                               <?php }else{?>
-                                                <li><a href="offers.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
+                                                <li><a href="offers.php?region=<?php echo ($brand == '')? $index['code'] : $index['code'].'&brand='.$brand;?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
                                               <?php }}}?>
                                           </ul>
                                       </li>
@@ -327,7 +331,7 @@ $activeRegion = activeCountries();
                     <div class="grid_8 content">
                         <div class="mod-coupons-code">
                             <div class="wrap-list">
-                                <h1><a style="background-color:rgba(5,167,201,1); color:white; border-radius:25px; text-decoration: none;">&nbsp Offers &nbsp<br></a></h1>
+                                <h1><a style="background-color:rgba(5,167,201,1); color:white; border-radius:25px; text-decoration: none;">&nbsp Offers <?php echo ($brand != '')? ' : '.$brand : ' : All';?> &nbsp<br></a></h1>
                                 <?php if(!empty($apiData)){
                                   $i = 1;
                                   foreach($apiData as $index){
@@ -364,7 +368,7 @@ $activeRegion = activeCountries();
                                         </div>
 
                                         <div class="bottom-action">
-                                        <br><br><br><a href="<?php echo $index['preview_url'];?>" target="_blank"><div style="background-color:#a1c44e; border-radius:25px;"><span class="blinking">Redirect to Offer Site</span></div></a></center>
+                                        <br><br><br><a href="<?php echo $index['preview_url'];?>" target="_blank"><div style="background-color:#a1c44e; border-radius:25px;"><span class="blinking">Visit Site</span></div></a></center>
                                         </div>
                                     </div>
                                 </div>

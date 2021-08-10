@@ -15,7 +15,7 @@ function getDataThroughCurl($method, $url) {
         CURLOPT_SSL_VERIFYPEER => false
     );
     curl_setopt_array($curl, $options);
-    $result = curl_exec($curl); 
+    $result = curl_exec($curl);
     $data_set = json_decode($result,true) ;
     if (curl_errno($curl)){
         $res['status'] = 400;
@@ -26,12 +26,18 @@ function getDataThroughCurl($method, $url) {
         $res['msg'] = 'Data Found.';
         $res['data'] = $data_set;
     }
-    curl_close($curl); 
+    curl_close($curl);
     return $res;
 }
 
+
+function multi_unique($src){
+    $output = array_map("unserialize",
+    array_unique(array_map("serialize", $src)));
+  return $output;
+}
 // function CallAPI($method, $url, $data = false)
-// {   
+// {
 //     $curl = curl_init();
 //     switch ($method){
 //         case "POST":

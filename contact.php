@@ -116,7 +116,7 @@ session_start();
 
                           <nav class="main-nav">
                               <ul id="main-menu" class="nav nav-horizontal clearfix">
-                                  <li class="active">
+                                  <li>
                                       <a href="ind_home.php">Home</a>
                                   </li>
                                   <li>

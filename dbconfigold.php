@@ -9,7 +9,7 @@ class Database {
     function __construct(){
         $this->connect();
       }
-   
+
     // protected 'connect()' method
     public  function connect(){
 
@@ -19,7 +19,7 @@ class Database {
         // }
 
         // // select database
-        // if(!mysql_select_db($this->db, $this->connLink)) { 
+        // if(!mysql_select_db($this->db, $this->connLink)) {
         //     throw new Exception('Error selecting database: '.mysqli_error());
         // }
         try {
@@ -37,21 +37,21 @@ class Database {
 
     // }
     public function queryAll($sql) {
-		$this->isempty ( $sql );		
+		$this->isempty ( $sql );
 		$return = array ();
 		$return ['results'] = array ();
 		$return ['total'] = 0;
 		$returnRes = array ();
-		$resource = $this->connection->query( $sql )->fetchAll();				
-		$i = 0;				
+		$resource = $this->connection->query( $sql )->fetchAll();
+		$i = 0;
 		$return ['results'] = $resource;
 		$return ['total'] = count($resource);
 		return $return;
 	}
     public function queryRow($sql) {
-		$this->isempty ( $sql );		
-		$returnRes = array ();		
-		$resource = $this->connection->query( $sql )->fetch();				
+		$this->isempty ( $sql );
+		$returnRes = array ();
+		$resource = $this->connection->query( $sql )->fetch();
 		return $resource;
 	}
     public function isempty($sql) {
@@ -62,12 +62,12 @@ class Database {
 	}
     public function execute($sql) {
 		$this->isempty ( $sql );
-		try{			
+		try{
             $stmt = $this->connection->exec($sql);
 		}
 		catch(PDOException $e){
 			die("<br>" . $e->getMessage());
-		}		
+		}
         return $stmt;
 	}
 }
