@@ -154,11 +154,11 @@ button[type=submit]{
 <form autocomplete="off" method="post" action="" name="signin-form">
   <div class="form-element">
     <i class="fa fa-user icon"></i>
-    <input autocomplete="false" type="text" name="username" pattern="[a-zA-Z0-9]+"  placeholder="Username"  required />
+    <input autocomplete="off" type="text" name="username" pattern="[a-zA-Z0-9]+"  placeholder="Username"  required />
   </div>
   <div class="form-element">
     <i class="fa fa-key icon"></i>
-    <input autocomplete="false" type="password" name="password"  placeholder="Password"  required />
+    <input autocomplete="off" type="password" name="password"  placeholder="Password"  required />
   </div>
   <button type="submit" name="login" value="login">Sign In</button>
   <br><br><a align="left" href="register.php" style="color:orange;">New User, Register Here</a>

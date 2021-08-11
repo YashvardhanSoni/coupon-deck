@@ -270,8 +270,8 @@ background-size:100% auto;
 
         <h4>Login</h4>
         <form autocomplete="off" method="post" action="" name="signin-form">
-          <input autocomplete="false" style="background-color:transparent; padding-left: 10px;" type="text" name="username" class="username form-control" pattern="[a-zA-Z0-9]+" placeholder="Username"/>
-          <input autocomplete="false" style="background-color:transparent; padding-left: 10px;" type="password" name="password" class="password form-control" placeholder="password"/>
+          <input autocomplete="off" style="background-color:transparent; padding-left: 10px;" type="text" name="username" class="username form-control" pattern="[a-zA-Z0-9]+" placeholder="Username"/>
+          <input autocomplete="off" style="background-color:transparent; padding-left: 10px;" type="password" name="password" class="password form-control" placeholder="password"/>
           <button  class="btn login" type="submit" name="login" value="login" />Login</button>
           <br>
         <br><a align="left" href="register.php" style="color:white;">New User, Register Here</a>
