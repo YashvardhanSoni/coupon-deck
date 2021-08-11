@@ -7,15 +7,15 @@
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $review = $_POST['review'];
+        // $review = $_POST['review'];
         $region = $_POST['region'];
         $password_hash = password_hash($password, PASSWORD_BCRYPT);
         $query = $connection->prepare("SELECT * FROM users WHERE email=:email");
         $query->bindParam("email", $email, PDO::PARAM_STR);
         $query->execute();
         if ($query->rowCount() > 0) {
-            echo '<p class="error">The email address is already registered!</p>';
-              header('location: register.php');
+            echo '<p class="error">The email address is already registered!<br>The Page will now Reload in <b>few sec</b>..</p>';
+              header("refresh: 2; url = register.php");
         }
         if ($query->rowCount() == 0) {
             $query = $connection->prepare("INSERT INTO users(username,password,email,region) VALUES (:username,:password,:email,:region)");
@@ -83,6 +83,7 @@ select {
     padding: 10px;
       border-radius: 25px;
       background: #d3d3d3;
+      outline:none;
 }
 
 input[type=button]{
@@ -110,6 +111,7 @@ button {
     background: yellowgreen;
     color: white;
     border: none;
+    outline:none;
 }
 p.success,
 p.error {
@@ -142,6 +144,7 @@ input[type=email]{
 button[type=submit]{
   border-radius: 25px;
   background: orange;
+  outline:none;
 }
 .form_align{ }
 
