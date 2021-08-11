@@ -168,15 +168,15 @@ button[type=submit]{
 <form method="post" action="" name="signup-form">
 <div class="form-element">
   <i class="fa fa-user icon"></i>
-<input type="text" name="username" pattern="[a-zA-Z0-9]+"  placeholder="Username" required />
+<input autocomplete="false" type="text" name="username" pattern="[a-zA-Z0-9]+"  placeholder="Username" required />
 </div>
 <div class="form-element">
 <i class="fas fa-envelope"></i>
-<input type="email" name="email"  placeholder="Email" required />
+<input autocomplete="false" type="email" name="email"  placeholder="Email" required />
 </div>
 <div class="form-element">
   <i class="fa fa-key icon"></i>
-<input type="password" name="password"  placeholder="Password" required />
+<input autocomplete="false" type="password" name="password"  placeholder="Password" required />
 </div>
 <div class="form-element">
   <i class="fa fa-globe icon"></i>
