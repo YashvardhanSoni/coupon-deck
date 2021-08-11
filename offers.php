@@ -68,11 +68,11 @@ $activeRegion = activeCountries();
     font-size: 15px;
 }
 @keyframes blinkingText{
-    0%{     color: #000;    }
-    49%{    color: #000; }
+    0%{     color: white;    }
+    49%{    color: white; }
     60%{    color: transparent; }
     99%{    color:transparent;  }
-    100%{   color: #000;    }
+    100%{   color: white;    }
 }
 
 
@@ -239,7 +239,7 @@ $activeRegion = activeCountries();
                                     <?php } ?>
 
                                       <li class="has-sub" style="background: rgba(5,167,201,1); color: white; border-radius: 25px;">
-                                          <a style="color: white;">Change<br>Region</a>
+                                          <a style="color: white;">Change Region</a>
                                           <ul class="sub-menu" style="background: skyblue; border-radius: 25px;">
                                               <?php if(!empty($activeRegion['results'])){
                                                     foreach($activeRegion['results'] as $index){
@@ -306,7 +306,7 @@ $activeRegion = activeCountries();
                     </li>
                     <?php } ?>
                     <!-- <li class="has-sub">
-                        <a>Change<br>Region</a>
+                        <a>Change Region</a>
                         <ul class="sub-menu">
                             <li><a href="ind_home.php">India</a></li>
                             <li><a href="uae_home.php">UAE </a></li>
@@ -341,7 +341,7 @@ $activeRegion = activeCountries();
                                         <div class="wrap-logo">
                                             <div class="center-img">
                                                 <span class="ver_hold"></span>
-                                                <a href="#" class="ver_container"><img src="<?php echo $index['logo'];?>" alt="Amazon"></a>
+                                                <a class="ver_container"><img src="<?php echo $index['logo'];?>" alt="Amazon"></a>
                                             </div>
                                         </div>
                                     </div>
@@ -381,7 +381,7 @@ $activeRegion = activeCountries();
                     <div class="grid_4 sidebar">
                         <!--end: .mod-search -->
                         <div class="mod-list-store block">
-                          <h1><a href="" style="background-color:rgba(5,167,201,1); color:white; border-radius:25px;">&nbsp Popular Brands &nbsp</a></h1>
+                          <h1><a style="background-color:rgba(5,167,201,1); color:white; border-radius:25px;">&nbsp Popular Brands &nbsp</a></h1>
                           <div class="block-content">
                               <div class="wrap-list-store clearfix">
                                   <a class="brand-logo" href="#" >

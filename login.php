@@ -75,6 +75,7 @@ input {
     font-family: 'Lato';
     padding: 10px;
     border-radius: 25px;
+    outline:none;
 }
 form {
     margin: 25px auto;

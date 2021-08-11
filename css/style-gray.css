@@ -1,5 +1,6 @@
 a{
 	color: #888888;
+	text-decoration: none;
 }
 /*		Theme-gray     */
 .gray .container-page{
@@ -30,7 +31,7 @@ a{
     background: #eee;
 }
 .gray #main-menu > li.has-sub:hover > a{
-    color: #04BFBF;
+    color: white;
 }
 .gray #main-menu > li.has-sub:hover,
 .gray #main-menu > li > .sub-menu,
@@ -237,6 +238,9 @@ a{
 }
 
 /*	login	*/
+input{
+	outline:none;
+}
 .gray.pop-login .mod-register .left-form .input-txt:focus,.gray .mod-register .left-form .input-txt:focus{
 	box-shadow: none;
 }
@@ -263,7 +267,8 @@ a{
 }
 /*	blog   */
 p,.gray .article-item .art-desc{
-	color: #A6A6A6;
+	color: black;
+    font-weight: normal;
 }
 .gray .article-item .wrap-date-post .btn-more{
 	background-color: #023550;

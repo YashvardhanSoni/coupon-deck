@@ -36,6 +36,7 @@ html{
 
 input {
     text-align: center;
+    outline:none;
 }
 
 body{
@@ -232,7 +233,7 @@ a{
 	color: #777777;
 	text-decoration: none;
 }
-a:hover{text-decoration: underline;}
+a:hover{text-decoration: none;}
 a:hover, a:active{outline: 0;}
 a.be-fc-default:hover{color: #43aa99;text-decoration: none}
 

@@ -13,7 +13,7 @@ function getOffersList($method, $url, $brand = ''){
                     $return[$i]['id'] = $index['id'];
                     $return[$i]['title'] = $index['title'];
                     $return[$i]['description_lang'] = $index['description_lang']['en'];
-                    $return[$i]['preview_url'] = $index['preview_url'];
+                    $return[$i]['preview_url'] = $index['link'];
                     $return[$i]['logo'] = $index['logo'];
                     $return[$i]['kpi'] = $index['kpi']['en'];
                 }
@@ -21,7 +21,7 @@ function getOffersList($method, $url, $brand = ''){
                 $return[$i]['id'] = $index['id'];
                 $return[$i]['title'] = $index['title'];
                 $return[$i]['description_lang'] = $index['description_lang']['en'];
-                $return[$i]['preview_url'] = $index['preview_url'];
+                $return[$i]['preview_url'] = $index['link'];
                 $return[$i]['logo'] = $index['logo'];
                 $return[$i]['kpi'] = $index['kpi']['en'];
             }

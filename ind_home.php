@@ -105,7 +105,7 @@ $activeBrands = activeBrands($method, $url);
    .core {width: 100%; display: table;}
 
  .box1{
-     background-color: gray;
+     background-color: white;
      width: 15%;
      float:none;
      display: table-cell;
@@ -124,7 +124,7 @@ $activeBrands = activeBrands($method, $url);
      border-radius:0px;
      }
  .box3{
-     background-color: gray;
+     background-color: white;
      width: 15%;
      float:none;
      display: table-cell;
@@ -220,7 +220,7 @@ $activeBrands = activeBrands($method, $url);
                                     <?php } ?>
 
                                       <li class="has-sub" style="background: rgba(5,167,201,1); color: white; border-radius: 25px;">
-                                          <a style="color: white;">Change<br>Region</a>
+                                          <a style="color: white;">Change Region</a>
                                           <ul class="sub-menu" style="background: skyblue; border-radius: 25px;">
                                             <?php if(!empty($activeRegion['results'])){
                                                     foreach($activeRegion['results'] as $index){
@@ -318,7 +318,7 @@ $activeBrands = activeBrands($method, $url);
 
 <div class="core">
 <div class="box1">
-    <div class="text">Ad: Left Side</div>
+    <!-- <div class="text">Ad: Left Side</div> -->
 </div>
 
 
@@ -351,7 +351,7 @@ $activeBrands = activeBrands($method, $url);
 
 
 <div class="box3">
-    <div class="text">Ad: Right Side</div>
+    <!-- <div class="text">Ad: Right Side</div> -->
 </div>
 </div>
 <br><br>
