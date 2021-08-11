@@ -151,7 +151,7 @@ button[type=submit]{
 <img src="images/logo.png" alt="CouponDeck"/>
 </a>
 </h1>
-<form method="post" action="" name="signin-form">
+<form autocomplete="off" method="post" action="" name="signin-form">
   <div class="form-element">
     <i class="fa fa-user icon"></i>
     <input autocomplete="false" type="text" name="username" pattern="[a-zA-Z0-9]+"  placeholder="Username"  required />

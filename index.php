@@ -269,7 +269,7 @@ background-size:100% auto;
       <div class="modal-body">
 
         <h4>Login</h4>
-        <form method="post" action="" name="signin-form">
+        <form autocomplete="off" method="post" action="" name="signin-form">
           <input autocomplete="false" style="background-color:transparent; padding-left: 10px;" type="text" name="username" class="username form-control" pattern="[a-zA-Z0-9]+" placeholder="Username"/>
           <input autocomplete="false" style="background-color:transparent; padding-left: 10px;" type="password" name="password" class="password form-control" placeholder="password"/>
           <button  class="btn login" type="submit" name="login" value="login" />Login</button>
