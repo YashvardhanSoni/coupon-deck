@@ -15,6 +15,7 @@
         $query->execute();
         if ($query->rowCount() > 0) {
             echo '<p class="error">The email address is already registered!</p>';
+              header('location: register.php');
         }
         if ($query->rowCount() == 0) {
             $query = $connection->prepare("INSERT INTO users(username,password,email,region) VALUES (:username,:password,:email,:region)");
