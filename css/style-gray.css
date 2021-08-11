@@ -31,7 +31,7 @@ a{
     background: #eee;
 }
 .gray #main-menu > li.has-sub:hover > a{
-    color: white;
+    color: black;
 }
 .gray #main-menu > li.has-sub:hover,
 .gray #main-menu > li > .sub-menu,
