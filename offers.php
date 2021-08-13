@@ -315,6 +315,19 @@ $activeRegion = activeCountries();
                                       <a href="contact.php">Contact Us</a>
                                   </li>
 
+                                  <li class="has-sub" style="background: rgb(0 0 0 / 0%); color: white; border-radius: 5px;">
+                                      <a style="color: black;">Region</a>
+                                      <ul class="sub-menu" style="background: skyblue; border-radius: 25px;">
+                                        <?php if(!empty($activeRegion['results'])){
+                                                foreach($activeRegion['results'] as $index){
+                                                    if($index['code'] == $region){?>
+                                          <li><a href="ind_home.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
+                                          <?php }else{?>
+                                            <li><a href="ind_home.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
+                                          <?php }}}?>
+                                      </ul>
+                                  </li>
+
                                   <?php
                                     if (isset($_SESSION['username'])){
                                       ?>
@@ -342,18 +355,7 @@ $activeRegion = activeCountries();
                                   </li>
                                   <?php } ?>
 
-                                    <li class="has-sub" style="background: rgb(0 0 0 / 0%); color: white; border-radius: 5px;">
-                                        <a style="color: black;">Region</a>
-                                        <ul class="sub-menu" style="background: skyblue; border-radius: 25px;">
-                                          <?php if(!empty($activeRegion['results'])){
-                                                  foreach($activeRegion['results'] as $index){
-                                                      if($index['code'] == $region){?>
-                                            <li><a href="ind_home.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
-                                            <?php }else{?>
-                                              <li><a href="ind_home.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
-                                            <?php }}}?>
-                                        </ul>
-                                    </li>
+
                                   </li>
                                 </ul>
                               <a id="sys_btn_toogle_menu" class="btn-toogle-res-menu" href="#alternate-menu"></a>
