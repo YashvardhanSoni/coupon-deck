@@ -349,11 +349,11 @@
 
   <p id="con_info">
   <big><strong>CONTACT US</strong></big><br>
-  <i class="fa fa-map-marker"></i>&nbsp;  The Ithum, Tower A, 1131, Noida, UP
+  <i class="fa fa-map-marker"></i>&nbsp;  1131, Tower A, The-iThum, Sector-62, Noida , UP
   <br>
-  <i class="fa fa-phone"></i>&nbsp; +91-9643117230
+  <i class="fa fa-phone"></i>&nbsp; +91-9540291981
   <br>
-  <i class="fa fa-envelope"></i>&nbsp; info@mitraksh.in
+  <i class="fa fa-envelope"></i>&nbsp; support@coupondeck.co.in
   <br>
 </p></span>
 
