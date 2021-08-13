@@ -52,7 +52,7 @@ session_start();
 
   .bg {
     /* The image used */
-    background-image: url("ct.png");
+    background:#e7e7e7;
 
     /* Full height */
     height: 100%;
@@ -82,18 +82,18 @@ session_start();
     cursor: pointer;
   }
   #con_info, #social_info{
-    color:white;line-height: 2.6;font-weight: bold;margin-left:20px;margin-right: 20px;font-size: 1.05em;
+    color:black;line-height: 2.6;font-weight: bold;margin-left:20px;margin-right: 20px;font-size: 1.05em;
   }
   @media only screen and (max-width: 600px) {
   .bg {
-    background-image: url("ctr.jpg");
+    background:#e7e7e7;
   }
   .button{
     margin-left: 65px;
     margin-top: 20px;
   }
   #con_info, #social_info{
-    color:white;line-height: 2.6;font-weight: bold;margin-left:20px;margin-right: 20px;text-align: center;font-size: 1.05em;
+    color:black;line-height: 2.6;font-weight: bold;margin-left:20px;margin-right: 20px;text-align: center;font-size: 1.05em;
   }
 }
 
@@ -101,21 +101,28 @@ session_start();
 </head>
 <body class="gray"  onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false"><!--<div class="alert_w_p_u"></div>-->
 
-  <div class="container-page">
+  <div class="container-page" style="background: #f7f7f7;">
   <div class="mp-pusher" id="mp-pusher">
       <header class="mod-header">
           <div class="grid_frame">
               <div class="container_grid clearfix">
                   <div class="grid_12">
-                      <div class="header-content clearfix">
-                          <h1 id="logo" class="rs">
-                              <a href="index.php">
-                                  <img src="images/logo.png" alt="CouponDeck"/>
-                              </a>
-                          </h1>
+                      <div class="header-content clearfix" style="padding-right:90px;">
+
 
                           <nav class="main-nav">
                               <ul id="main-menu" class="nav nav-horizontal clearfix">
+                                <!-- <li style="background:transparent;"> -->
+                                  <div id="logo">
+                                          <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="CouponDeck"/>
+                                  </div>
+                                <!-- </li> -->
+                                <li>
+                                  <form action="/action_page.php">
+                                    <input type="text" placeholder="" name="search">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                  </form>
+                                </li>
                                   <li>
                                       <a href="ind_home.php">Home</a>
                                   </li>
@@ -156,23 +163,20 @@ session_start();
                                       ?>
 
                                   <li>
-                                      <a href="login.php" class="btn btn-green type-login btn-login" style="border-radius:25px;">Login</a>
+                                      <a href="login.php" class="btn btn-green type-login btn-login">Login</a>
                                   </li>
                                   <?php } ?>
 
-                                    <!-- <li class="has-sub" style="background: rgba(5,167,201,1); color: white; border-radius: 25px;">
-                                        <a style="color: white;">Change<br>Region</a>
+                                    <!-- <li class="has-sub" style="background: rgb(0 0 0 / 0%); color: white; border-radius: 5px;">
+                                        <a style="color: black;">Region</a>
                                         <ul class="sub-menu" style="background: skyblue; border-radius: 25px;">
-                                            <li><a href="ind_home.php" style="background: skyblue; border-radius: 25px;">India</a></li>
-                                            <li><a href="uae_home.php" style="background: skyblue; border-radius: 25px;">UAE </a></li>
-                                            <li><a href="singapore_home.php" style="background: skyblue; border-radius: 25px;">Singapore</a></li>
-                                            <li><a href="indonesia_home.php" style="background: skyblue; border-radius: 25px;">Indonesia</a></li>
-                                            <li><a href="saudiarab_home.php" style="background: skyblue; border-radius: 25px;">Saudi Arab</a></li>
-                                            <li><a href="thailand_home.php" style="background: skyblue; border-radius: 25px;">Thailand</a></li>
-                                            <li><a href="vietnam_home.php" style="background: skyblue; border-radius: 25px;">Vietnam</a></li>
-                                            <li><a href="malaysia_home.php" style="background: skyblue; border-radius: 25px;">Malaysia</a></li>
-                                            <li><a href="russia_home.php" style="background: skyblue; border-radius: 25px;">Russia</a></li>
-                                            <li><a href="belarus_home.php" style="background: skyblue; border-radius: 25px;">Belarus</a></li>
+                                          <?php if(!empty($activeRegion['results'])){
+                                                  foreach($activeRegion['results'] as $index){
+                                                      if($index['code'] == $region){?>
+                                            <li><a href="ind_home.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
+                                            <?php }else{?>
+                                              <li><a href="ind_home.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
+                                            <?php }}}?>
                                         </ul>
                                     </li> -->
                                   </li>
@@ -185,6 +189,12 @@ session_start();
           </div>
 
       </header><!--end: header.mod-header -->
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin-top: -70px; background:#f7f7f7;"><path fill="#e0e0e0" fill-opacity="1" d="M0,320L48,288C96,256,192,192,288,186.7C384,181,480,235,576,245.3C672,256,768,224,864,224C960,224,1056,256,1152,261.3C1248,267,1344,245,1392,234.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+
+
+
+
       <nav id="mp-menu" class="mp-menu alternate-menu">
           <div class="mp-level">
               <h2>Menu</h2>
@@ -249,37 +259,37 @@ session_start();
 
           </div>
       </nav><!--end: .mp-menu -->
-        <div style="background: orange; font-family: Times new roman; color: white;">
-            <div class="grid_frame">
-                <div class="container_grid clearfix">
-                    <div class="grid_12">
-                        <h2 class="page-title"><h1><b><CENTER><span style="text-decoration: line-through;">&nbsp&nbsp&nbsp&nbsp</span> CONTACT US <span style="text-decoration: line-through;">&nbsp&nbsp&nbsp&nbsp</span></CENTER></b></h1></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div style="background: #f7f7f7; text-color:black; font-weight:bold; font-size: 1em;">
+          <div class="grid_frame">
+              <div class="container_grid clearfix">
+                  <div class="grid_12">
+                    <h1 class="page-title" style="padding-top:1px;"><b>CONTACT US</b></h1>
+                  </div>
+              </div>
+          </div>
+      </div>
         <div class="bg">
-
-<button class="button" value="Contact Info" name="address" style=""><i class="fa fa-user icon"></i> Contact Info</button>
+<center>
+<button class="button" value="Contact Info" name="address" style="pointer-events: none;"> Contact Info</button>
 
 <p id="con_info">
-Address: The ithum, Tower A, 1131, Noida, UP
+Address: 1131, Tower A, The-iThum, Sector-62, Noida , UP
 <br>
-Telephone: 9643117230
+Telephone: +91-9540291981
 <br>
-E-Mail: info@mitraksh.in
+E-Mail: support@coupondeck.co.in
 <br>
 </p>
 
-<!-- <button class="button" value="Contact Info" name="address" >Follow Us :</button>
+<button class="button" value="Contact Info" name="address" style="pointer-events: none;" >Follow Us :</button>
 
 <p id="social_info">
 <i class="fab fa-facebook" style="font-size: 2em;"></i>&nbsp&nbsp&nbsp
 <i class="fab fa-linkedin" style="font-size: 2em;"></i>
-</p> -->
-
+</p>
+</center>
 <br><br><br><br>
-<br><br>
+
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14008.476314600606!2d77.372795!3d28.626193!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa4a968baca30d045!2sIThum%20Tower%20B%20-%20Lift%20Entry!5e0!3m2!1sen!2sin!4v1627282968605!5m2!1sen!2sin" width="100%" height="250" style="border:0; margin-bottom:-5px; bottom:0;" allowfullscreen="" loading="lazy"></iframe>
 </div>
 

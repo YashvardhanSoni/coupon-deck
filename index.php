@@ -37,6 +37,7 @@
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="bootstrap.css"/>
       <link rel="icon" href="images/logo.ico" type="image/icon type">
       <link rel="stylesheet" href="bootstrap.min.css"/>
@@ -112,26 +113,14 @@
       background: #FAB87F;
       color: #fff;
     }
-    #footer {
-   position: absolute;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-image: "C:\xampp\htdocs\mmipl\images\ex\fbanner.jpg";
-   color: white;
-   height:0px;
-   text-align: center;
-}
-#footer img{
-  max-width: 100%;
-background-size:100% auto;
-}
+
+
 .login-button {
     margin-bottom:10px;
   }
   body {
-    background-image: url('bg.png');
-    background-repeat: no-repeat;
+    background-image: url('bg.jpg');
+    background-repeat: repeat;
     background-size: cover;
   }
 
@@ -147,9 +136,7 @@ background-size:100% auto;
     transition: 1s ease;
     background-color: transparent;
   }
-  #footer:hover .overlay {
-  opacity: 1;
-}
+
 
 .icon {
   font-size: 100px;
@@ -159,7 +146,76 @@ background-size:100% auto;
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
-    </style>
+
+.footer {
+    background: #05a7c9;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* height: 20%; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cd{
+
+            float:left;
+             background:transparent;
+             width:40%;
+             height:100%;
+             border: transparent;
+             box-shadow: 2px 0px 16px 13px #dee2e6;
+             outline: none;
+}
+.cdl{
+                float:left;
+                background:transparent;
+                width:30%;
+                height:100%;
+}
+.cdr{
+                float:right;
+                background:transparent;
+                width:30%;
+                height:100%;
+            }
+
+#con_info{
+  color:white;line-height: 2.6;font-weight:normal;margin-left:20px;margin-right: 20px;font-size: 0.8em; padding: 20px 50px 10px 10px; line-height: 2.0em;
+}
+#social_info{
+  color:white;line-height: 2.6;font-weight: bold;margin-left:20px;margin-right: 20px;font-size: 1.05em; padding: 30px 50px 50px 30px;
+}
+
+  @media only screen and (max-width: 600px) {
+  .cdl {
+    visibility: hidden;
+    display:none;
+  }
+  .cdr{
+    visibility: hidden;
+    display:none;
+  }
+  .cd{
+    width:50%;
+    border: none;
+    box-shadow: 0px 0 0px 0px;
+    outline: none;
+    margin-left: 26%;
+  }
+  #con_info{
+    color:white;line-height: 2.6;font-weight: bold;margin-left:20px;margin-right: 20px;text-align: center;font-size: 1.05em;
+  }
+  #social_info{
+    color:white;line-height: 2.6;font-weight: bold;margin-left:20px;margin-right: 20px;font-size: 1.05em; padding: 30px 50px 50px 30px;
+  }
+  .footer{
+    height: auto;
+    flex-direction: column;
+  }
+}
+</style>
 </head>
 <body style="padding:0px; margin:0px; background-color:#fff;font-family:arial,helvetica,sans-serif,verdana,'Open Sans'">
 
@@ -255,12 +311,16 @@ background-size:100% auto;
         .jssora093.jssora093dn {opacity:.6;}
         .jssora093.jssora093ds {opacity:.3;pointer-events:none;}
   </style>
-
-
-    <br><br><h3 align="center" style="font-size:4.8vw;"><b>Welcome To<br><span style="color:rgba(5,167,201,1);">Coupon</span> <span style="color: orange;">Deck</span></b></h3>
+  <div id = "boxes">
+<div class="cdl"></div>
+    <div class="cd">
+    <div><center><img src="cd_blank.png" width="40%" height="auto" style="vertical-align: middle;
+    width: 80%; padding-top:55px; padding-bottom: 55px;"></center></div>
     <center><br>
-      <a style="background:LimeGreen; text-color: white; text-decoration: none;" class="login-trigger" href="#" data-target="#login" data-toggle="modal">Login</a>
-        <br><br><a align="left" href="register.php" target="_blank" style="color:black;"><b>New User, Register Here</b></a>
+      <div><a style="background:#ee9f09; text-color: #f7f7f7; text-decoration: none; border-radius:5px; font-weght:none; color:white;" class="login-trigger" href="#" data-target="#login" data-toggle="modal">Login</a></div>
+      <br>
+        <div><a style="background:#e5e5e5; text-color: #535353; text-decoration: none; border-radius:5px; font-weght:none; color:gray;" class="login-trigger" href="register.php" target="_blank" >Register</a></div>
+
 
 <div id="login" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -280,9 +340,29 @@ background-size:100% auto;
     </div>
   </div>
 </div>
-    </center>
-<br><br>
-    <div id="footer" style="color:#1c5b6b;">
-      <img src="fbanner1.jpeg" >
+</center>
+</div>
+<div class="cdr"></div>
+</div>
+<div class="footer">
+ <span style="float:right">
 
-    </div>
+  <p id="con_info">
+  <big><strong>CONTACT US</strong></big><br>
+  <i class="fa fa-map-marker"></i>&nbsp;  The Ithum, Tower A, 1131, Noida, UP
+  <br>
+  <i class="fa fa-phone"></i>&nbsp; +91-9643117230
+  <br>
+  <i class="fa fa-envelope"></i>&nbsp; info@mitraksh.in
+  <br>
+</p></span>
+
+  <div><p id="social_info">
+    <img src="mmipl.png"> &nbsp; <span><B>MITRAKSH MEDIA</B> India Pvt. Ltd.</span>
+
+  <!-- <p id="social_info">
+  <i class="fab fa-facebook" style="font-size: 2em;"></i>&nbsp&nbsp&nbsp
+  <i class="fab fa-linkedin" style="font-size: 2em;"></i>
+  </p> -->
+</div>
+</div>
