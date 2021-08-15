@@ -3,7 +3,7 @@
     session_start();
     if (isset($_SESSION['username'])) {
         $_SESSION['msg'] = "You have to log in first";
-        header('location: New_index.php');
+        header('location: ind_home.php');
     }
     include('config.php');
     if (isset($_POST['login'])) {
@@ -37,7 +37,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    
+
 
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="bootstrap.css"/>
