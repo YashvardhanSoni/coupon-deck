@@ -290,9 +290,9 @@ $activeBrands = activeBrands($method, $url);
                                           <?php if(!empty($activeRegion['results'])){
                                                   foreach($activeRegion['results'] as $index){
                                                       if($index['code'] == $region){?>
-                                            <li><a href="ind_home.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
+                                            <li><a href="ind_brand.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
                                             <?php }else{?>
-                                              <li><a href="ind_home.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
+                                              <li><a href="ind_brand.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
                                             <?php }}}?>
                                         </ul>
                                     </li>
