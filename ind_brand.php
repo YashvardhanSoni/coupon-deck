@@ -285,7 +285,7 @@ $activeBrands = activeBrands($method, $url);
                                     </form>
                                   </li>
                                     <li>
-                                        <a href="index.php">Home</a>
+                                        <a href="ind_home.php">Home</a>
                                     </li>
                                     <li>
                                         <a href="ind_brand.php">Brands</a>
@@ -314,7 +314,7 @@ $activeBrands = activeBrands($method, $url);
                                         </ul>
                                     </li>
 
-                                    <!-- <?php
+                                    <?php
                                       if (isset($_SESSION['username'])){
                                         ?>
                                     <li class="has-sub">
@@ -339,7 +339,7 @@ $activeBrands = activeBrands($method, $url);
                                     <li>
                                         <a href="login.php" class="btn btn-green type-login btn-login">Login</a>
                                     </li>
-                                    <?php } ?> -->
+                                    <?php } ?>
 
 
                                     </li>
@@ -363,7 +363,7 @@ $activeBrands = activeBrands($method, $url);
                 <h2>Menu</h2>
                 <ul>
                     <li>
-                      <a href="index.php">Home</a>
+                      <a href="ind_home.php">Home</a>
                     </li>
                     <li>
                       <a href="ind_brand.php">Brands</a>
@@ -378,7 +378,7 @@ $activeBrands = activeBrands($method, $url);
                       <a href="contact.php">Contact Us</a>
                     </li>
 
-                    <!-- <?php
+                    <?php
                       if (isset($_SESSION['username'])){
                         ?>
                     <li class="has-sub">
@@ -402,7 +402,7 @@ $activeBrands = activeBrands($method, $url);
                     <li>
                         <a href="login.php" class="btn btn-green type-login btn-login" >Login</a>
                     </li>
-                    <?php } ?> -->
+                    <?php } ?>
                     <!-- <li class="has-sub">
                         <a>Change<br>Region</a>
                         <ul class="sub-menu">
