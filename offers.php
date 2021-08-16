@@ -37,7 +37,7 @@ $activeRegion = activeCountries();
     <link rel="icon" href="images/logo.ico" type="image/icon type">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
-    
+
 
 
     <link rel="stylesheet" href="css/font.css"/>
@@ -302,7 +302,7 @@ $activeRegion = activeCountries();
                                   </form>
                                 </li>
                                   <li>
-                                      <a href="ind_home.php">Home</a>
+                                      <a href="index.php">Home</a>
                                   </li>
                                   <li>
                                       <a href="ind_brand.php">Brands</a>
@@ -331,7 +331,7 @@ $activeRegion = activeCountries();
                                       </ul>
                                   </li>
 
-                                  <?php
+                                  <!-- <?php
                                     if (isset($_SESSION['username'])){
                                       ?>
                                   <li class="has-sub">
@@ -356,7 +356,7 @@ $activeRegion = activeCountries();
                                   <li>
                                       <a href="login.php" class="btn btn-green type-login btn-login">Login</a>
                                   </li>
-                                  <?php } ?>
+                                  <?php } ?> -->
 
 
                                   </li>
@@ -376,7 +376,7 @@ $activeRegion = activeCountries();
                 <h2>Menu</h2>
                 <ul>
                     <li>
-                      <a href="ind_home.php">Home</a>
+                      <a href="index.php">Home</a>
                     </li>
                     <li>
                       <a href="ind_brand.php">Brands</a>
@@ -391,7 +391,7 @@ $activeRegion = activeCountries();
                       <a href="contact.php">Contact Us</a>
                     </li>
 
-                    <?php
+                    <!-- <?php
                       if (isset($_SESSION['username'])){
                         ?>
                     <li class="has-sub">
@@ -415,7 +415,7 @@ $activeRegion = activeCountries();
                     <li>
                         <a href="login.php" class="btn btn-green type-login btn-login" >Login</a>
                     </li>
-                    <?php } ?>
+                    <?php } ?> -->
                     <!-- <li class="has-sub">
                         <a>Change Region</a>
                         <ul class="sub-menu">

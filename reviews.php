@@ -21,7 +21,7 @@ session_start();
     <link rel="icon" href="images/logo.ico" type="image/icon type">
     <meta charset="utf-8">
 
-  
+
 
 
     <meta name="viewport" content="width=device-width" />
@@ -287,7 +287,7 @@ session_start();
                                       </form>
                                     </li>
                                       <li>
-                                          <a href="ind_home.php">Home</a>
+                                          <a href="index.php">Home</a>
                                       </li>
                                       <li>
                                           <a href="ind_brand.php">Brands</a>
@@ -303,7 +303,7 @@ session_start();
                                           <a href="contact.php">Contact Us</a>
                                       </li>
 
-                                      <?php
+                                      <!-- <?php
                                         if (isset($_SESSION['username'])){
                                           ?>
                                       <li class="has-sub">
@@ -328,7 +328,7 @@ session_start();
                                       <li>
                                           <a href="login.php" class="btn btn-green type-login btn-login">Login</a>
                                       </li>
-                                      <?php } ?>
+                                      <?php } ?> -->
 
                                         <!-- <li class="has-sub" style="background: rgb(0 0 0 / 0%); color: white; border-radius: 5px;">
                                             <a style="color: black;">Region</a>
@@ -363,7 +363,7 @@ session_start();
                   <h2>Menu</h2>
                   <ul>
                       <li>
-                        <a href="ind_home.php">Home</a>
+                        <a href="index.php">Home</a>
                       </li>
                       <li>
                         <a href="ind_brand.php">Brands</a>
@@ -378,7 +378,7 @@ session_start();
                         <a href="contact.php">Contact Us</a>
                       </li>
 
-                      <?php
+                      <!-- <?php
                         if (isset($_SESSION['username'])){
                           ?>
                       <li class="has-sub">
@@ -402,7 +402,7 @@ session_start();
                       <li>
                           <a href="login.php" class="btn btn-green type-login btn-login" >Login</a>
                       </li>
-                      <?php } ?>
+                      <?php } ?> -->
                       <!-- <li class="has-sub">
                           <a>Change<br>Region</a>
                           <ul class="sub-menu">
