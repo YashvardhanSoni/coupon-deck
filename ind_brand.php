@@ -318,7 +318,7 @@ $activeBrands = activeBrands($method, $url);
                                       if (isset($_SESSION['username'])){
                                         ?>
                                     <li class="has-sub">
-                                        <a class="btn btn-green type-login btn-login">
+                                        <a class="btn btn-green type-login btn-login"style="margin-top: -5px;">
                                           <?php
                                           echo $_SESSION['username'];
                                           }
@@ -337,7 +337,7 @@ $activeBrands = activeBrands($method, $url);
                                         ?>
 
                                     <li>
-                                        <a href="login.php" class="btn btn-green type-login btn-login">Login</a>
+                                        <a href="login.php" class="btn btn-green type-login btn-login"style="margin-top: -5px;">Login</a>
                                     </li>
                                     <?php } ?>
 
@@ -353,7 +353,7 @@ $activeBrands = activeBrands($method, $url);
 
         </header><!--end: header.mod-header -->
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin-top: -70px; background:#f7f7f7;"><path fill="#e0e0e0" fill-opacity="1" d="M0,320L48,288C96,256,192,192,288,186.7C384,181,480,235,576,245.3C672,256,768,224,864,224C960,224,1056,256,1152,261.3C1248,267,1344,245,1392,234.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin-top: -125px; background:#f7f7f7;"><path fill="#e0e0e0" fill-opacity="1" d="M0,320L48,288C96,256,192,192,288,186.7C384,181,480,235,576,245.3C672,256,768,224,864,224C960,224,1056,256,1152,261.3C1248,267,1344,245,1392,234.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
 
 
 
@@ -533,7 +533,7 @@ $activeBrands = activeBrands($method, $url);
 
 			<div class="footer-center"style="margin-top: 25px;">
 
-				<div>
+				<div style="margin-top: 15px;">
 
 					<p style="font-size:1.89em; font-weight:bold;letter-spacing: 0.05em;">Earn Money</p><br>
           <p style="font-size:1em;letter-spacing: 0.1em;">Just by completing Simple Tasks</p>
@@ -545,7 +545,7 @@ $activeBrands = activeBrands($method, $url);
 				<div>
 
 				  <a href="https://play.google.com/store/apps/details?id=mTrack.droid.pocketpennyapp" target="_blank">
-            <img src="gp.png" width="60%" style="margin-left: 50px;margin-top: 20px;">
+            <img src="gp.png" width="60%" style="margin-left: 50px;margin-top: 35px;">
           </a>
 				</div>
 			</div>

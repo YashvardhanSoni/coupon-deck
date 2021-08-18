@@ -73,7 +73,7 @@ session_start();
 
   .bg {
     /* The image used */
-    background:#e7e7e7;
+    background:#f7f7f7;
 
     /* Full height */
     height: 100%;
@@ -107,7 +107,7 @@ session_start();
   }
   @media only screen and (max-width: 600px) {
   .bg {
-    background:#e7e7e7;
+    background:#f7f7f7;
   }
   .button{
     margin-left: 65px;
@@ -165,7 +165,7 @@ session_start();
                                     if (isset($_SESSION['username'])){
                                       ?>
                                   <li class="has-sub">
-                                      <a class="btn btn-green type-login btn-login">
+                                      <a class="btn btn-green type-login btn-login"style="margin-top: -5px;">
                                         <?php
                                         echo $_SESSION['username'];
                                         }
@@ -184,7 +184,7 @@ session_start();
                                       ?>
 
                                   <li>
-                                      <a href="login.php" class="btn btn-green type-login btn-login">Login</a>
+                                      <a href="login.php" class="btn btn-green type-login btn-login"style="margin-top: -5px;">Login</a>
                                   </li>
                                   <?php } ?>
 
@@ -211,7 +211,7 @@ session_start();
 
       </header><!--end: header.mod-header -->
 
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin-top: -70px; background:#f7f7f7;"><path fill="#e0e0e0" fill-opacity="1" d="M0,320L48,288C96,256,192,192,288,186.7C384,181,480,235,576,245.3C672,256,768,224,864,224C960,224,1056,256,1152,261.3C1248,267,1344,245,1392,234.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin-top: -125px; background:#f7f7f7;"><path fill="#e0e0e0" fill-opacity="1" d="M0,320L48,288C96,256,192,192,288,186.7C384,181,480,235,576,245.3C672,256,768,224,864,224C960,224,1056,256,1152,261.3C1248,267,1344,245,1392,234.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
 
 
 
@@ -280,40 +280,78 @@ session_start();
 
           </div>
       </nav><!--end: .mp-menu -->
-      <div style="background: #f7f7f7; text-color:black; font-weight:bold; font-size: 1em;">
+      <!-- <div style="background: #f7f7f7; text-color:black; font-weight:bold; font-size: 1em;">
           <div class="grid_frame">
               <div class="container_grid clearfix">
-                  <div class="grid_12">
-                    <h1 class="page-title" style="padding-top:1px;"><b>CONTACT US</b></h1>
-                  </div>
+
               </div>
           </div>
-      </div>
-        <div class="bg">
-<center>
-<button class="button" value="Contact Info" name="address" style="pointer-events: none;"> Contact Info</button>
-
+      </div> -->
+<div class="bg" style="margin-left: 80px; line-height:1;">
 <p id="con_info">
-Address: 1131, Tower A, The-iThum, Sector-62, Noida , UP
+  <div class="grid_12">
+    <h1 class="page-title" style="padding-top:0px;font-size:3em;"><b>CONTACT US</b></h1><br>
+    <br>
+  </div>
+
+<img src="pin.png" style="width: 15px;padding-left: 20px;">&nbsp; 1131, Tower A, The-iThum, Sector-62, Noida , UP
 <br>
-Telephone: +91-9540291981
 <br>
-E-Mail: support@coupondeck.co.in
+<img src="phone.png" style="width: 15px;padding-left: 20px;">&nbsp; +91-9540291981
+
 <br>
+<br>
+<img src="mail.png" style="width: 15px;padding-left: 20px;">&nbsp; support@coupondeck.co.in
+
+<span style="float:right; margin-right: 110px;">
+<img src="fb.png" style="width: 40px;">&nbsp&nbsp&nbsp
+<img src="lin.png" style="width: 40px;">
+</span>
+<br>
+
 </p>
 
-<button class="button" value="Contact Info" name="address" style="pointer-events: none;" >Follow Us :</button>
+<!-- <p id="social_info"></p> -->
 
-<p id="social_info">
-<i class="fab fa-facebook" style="font-size: 2em;"></i>&nbsp&nbsp&nbsp
-<i class="fab fa-linkedin" style="font-size: 2em;"></i>
-</p>
-</center>
-<br><br><br><br>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14008.476314600606!2d77.372795!3d28.626193!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa4a968baca30d045!2sIThum%20Tower%20B%20-%20Lift%20Entry!5e0!3m2!1sen!2sin!4v1627282968605!5m2!1sen!2sin" width="100%" height="250" style="border:0; margin-bottom:-5px; bottom:0;" allowfullscreen="" loading="lazy"></iframe>
+
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14008.476314600606!2d77.372795!3d28.626193!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa4a968baca30d045!2sIThum%20Tower%20B%20-%20Lift%20Entry!5e0!3m2!1sen!2sin!4v1627282968605!5m2!1sen!2sin" width="100%" height="250" style="border:0; margin-bottom:-5px; bottom:0;" allowfullscreen="" loading="lazy"></iframe> -->
 </div>
 
+
+<div><img src="tp.png" width="100%" height="auto"></div>
+<br><br>
+
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+          <img src="pp.png" width="100%" height="100%" style="margin-left: 0px;margin-top: 0px; width: 70%; ">
+
+
+
+
+
+			</div>
+
+			<div class="footer-center"style="margin-top: 25px;">
+
+				<div style="margin-top: 15px;">
+
+					<p style="font-size:1.89em; font-weight:bold;letter-spacing: 0.05em;">Earn Money</p><br>
+          <p style="font-size:1em;letter-spacing: 0.1em;">Just by completing Simple Tasks</p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+
+				<div>
+
+				  <a href="https://play.google.com/store/apps/details?id=mTrack.droid.pocketpennyapp" target="_blank">
+            <img src="gp.png" width="60%" style="margin-left: 50px;margin-top: 35px;">
+          </a>
+				</div>
+			</div>
+		</footer>
     </div>
 </div>
 
