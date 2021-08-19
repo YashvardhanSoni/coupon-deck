@@ -418,8 +418,8 @@ input {
           <center>
           <h4>Sign In</h4>
           <form autocomplete="off" method="post" action="" name="signin-form">
-            <input autocomplete="off" style="border-color: white;border-style: solid;background-color:transparent; padding-left: 10px;" type="text" name="username" class="username form-control" pattern="[a-zA-Z0-9]+" placeholder="Username"/>
-            <input autocomplete="off" style="border-color: white;border-style: solid;background-color:transparent; padding-left: 10px;" type="password" name="password" class="password form-control" placeholder="Password"/>
+            <input autocomplete="off" style="border-color: white;color: white;border-style: solid;background-color:transparent; padding-left: 10px;" type="text" name="username" class="username form-control" pattern="[a-zA-Z0-9]+" placeholder="Username"/>
+            <input autocomplete="off" style="border-color: white;color: white;border-style: solid;background-color:transparent; padding-left: 10px;" type="password" name="password" class="password form-control" placeholder="Password"/>
             <button  class="btn login" type="submit" name="login" value="login" style="color: black;" />Sign In</button>
             <!-- <br>
           <br><a align="left" href="register.php" style="color:white;">New User, Register Here</a> -->
