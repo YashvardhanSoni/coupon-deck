@@ -1,11 +1,41 @@
 <?php
-
     session_start();
     if (isset($_SESSION['username'])) {
         $_SESSION['msg'] = "You have to log in first";
         header('location: ind_home.php');
     }
     include('config.php');
+    require __DIR__.'/helper/common.php';
+    $region = activeCountries();
+    if (isset($_POST['register'])) {
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        // $review = $_POST['review'];
+        $region = $_POST['region'];
+        $password_hash = password_hash($password, PASSWORD_BCRYPT);
+        $query = $connection->prepare("SELECT * FROM users WHERE email=:email");
+        $query->bindParam("email", $email, PDO::PARAM_STR);
+        $query->execute();
+        if ($query->rowCount() > 0) {
+            echo '<p class="error">The email address is already registered!<br>The Page will now Reload in <b>few sec</b>..</p>';
+              header("refresh: 2; url = register.php");
+        }
+        if ($query->rowCount() == 0) {
+            $query = $connection->prepare("INSERT INTO users(username,password,email,region) VALUES (:username,:password,:email,:region)");
+            $query->bindParam("username", $username, PDO::PARAM_STR);
+            $query->bindParam("password", $password, PDO::PARAM_STR);
+            $query->bindParam("email", $email, PDO::PARAM_STR);
+            $query->bindParam("region", $region, PDO::PARAM_STR);
+            $result = $query->execute();
+            if ($result) {
+                echo '<p class="success">Your registration was successful!</p>';
+                header('location: index.php');
+            } else {
+                echo '<p class="error">Something went wrong!</p>';
+            }
+        }
+    }
     if (isset($_POST['login'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -31,6 +61,7 @@
             }
         }
     }
+
 ?>
 
 <head>
@@ -92,7 +123,7 @@
       top: 50%;
       left: 50%;
       font-weight: bold;
-      background: linear-gradient(to bottom right,#F87E7B,#B05574);
+      background: #035465;
       border-radius: 5px 50px 5px 50px;
     }
     .form-control {
@@ -141,6 +172,7 @@
     background-image: url('bg.jpg');
     background-repeat: repeat;
     background-size: cover;
+    font-family: roboto;
   }
 
   .overlay {
@@ -213,15 +245,12 @@
     display:none;
   }
   .cdr{
-    visibility: hidden;
-    display:none;
+    /* visibility: hidden;
+    display:none; */
   }
   .cd{
-    width:50%;
-    border: none;
-    box-shadow: 0px 0 0px 0px;
-    outline: none;
-    margin-left: 26%;
+    visibility: hidden;
+    display:none;
   }
   #con_info{
     color:white;line-height: 2.6;font-weight: bold;margin-left:20px;margin-right: 20px;text-align: center;font-size: 1.05em;
@@ -233,6 +262,44 @@
     height: auto;
     flex-direction: column;
   }
+}
+
+input[type=text]{
+
+    border: none;
+    background: white;
+    color:black;
+    border-radius: 25px;
+}
+input[type=password]{
+
+    border: none;
+    color:black;
+    background: white;
+    border-radius: 25px;
+
+}
+input[type=email]{
+
+    border: none;
+    color:black;
+    background: white;
+    border-radius: 25px;
+
+}
+button[type=submit]{
+  border-radius: 25px;
+  background: orange;
+  outline:none;
+}
+input {
+    border: 2px solid #ccc;
+    font-size: 1.5rem;
+    font-weight: 100;
+    font-family: 'roboto';
+    padding: 10px;
+    border-radius: 25px;
+    outline:none;
 }
 </style>
 </head>
@@ -330,40 +397,147 @@
         .jssora093.jssora093dn {opacity:.6;}
         .jssora093.jssora093ds {opacity:.3;pointer-events:none;}
   </style>
-  <div id = "boxes">
-<div class="cdl"></div>
-    <div class="cd">
-    <div><center><img src="cd_blank.png" width="40%" height="auto" style="vertical-align: middle;
-    width: 80%; padding-top:55px; padding-bottom: 55px;"></center></div>
-    <center><br>
-      <div><a style="background:#ee9f09; text-color: #f7f7f7; text-decoration: none; border-radius:5px; font-weght:none; color:white;" class="login-trigger" href="#" data-target="#login" data-toggle="modal">Login</a></div>
-      <br>
-        <div><a style="background:#e5e5e5; text-color: #535353; text-decoration: none; border-radius:5px; font-weght:none; color:gray;" class="login-trigger" href="register.php" target="_blank" >Register</a></div>
+  <header style="background-color:#f7f7f7;">
+    <span><img src="cd_blank.png" width="250px" style="padding: 20px 20px 20px 20px;"></span>
+    <span style="float:right;padding: 10px 15px 10px 10px; margin-top:38px;"><a style="background:none; text-decoration:none; color:black; font-weight:bold;font-size: 1.5em;" class="login-trigger" href="#" data-target="#login" data-toggle="modal"> <img src="user-dark.png" width="30px" style="margin-top: -15px;"> &nbspSign In</a></span>
+  </header>
+  <div style="width:100%; height: 130px; background:orange;">
+    <center>
+      <p style="color:white;vertical-align:middle;padding-top: 25px;font-weight:bold;font-size: 1.5em;">Join Our Site</p>
+
+      <button style="font-size:24px; border-radius:25px; background:#f7f7f7;color:orange; border-color: transparent;margin-top: -10px; padding-right: 25px;padding-left: 25px;" href="#" data-target="#video" data-toggle="modal"><i class="fa fa-play"></i>&nbsp; Watch Video</button>
+    </center>
+  </div>
 
 
-<div id="login" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+  <div id="login" class="modal fade" role="dialog">
+    <div class="modal-dialog">
 
-    <div class="modal-content">
-      <div class="modal-body">
-
-        <h4>Login</h4>
-        <form autocomplete="off" method="post" action="" name="signin-form">
-          <input autocomplete="off" style="background-color:transparent; padding-left: 10px;" type="text" name="username" class="username form-control" pattern="[a-zA-Z0-9]+" placeholder="Username"/>
-          <input autocomplete="off" style="background-color:transparent; padding-left: 10px;" type="password" name="password" class="password form-control" placeholder="password"/>
-          <button  class="btn login" type="submit" name="login" value="login" />Login</button>
-          <br>
-        <br><a align="left" href="register.php" style="color:white;">New User, Register Here</a>
-        </form>
+      <div class="modal-content">
+        <div class="modal-body">
+          <center>
+          <h4>Sign In</h4>
+          <form autocomplete="off" method="post" action="" name="signin-form">
+            <input autocomplete="off" style="border-color: white;border-style: solid;background-color:transparent; padding-left: 10px;" type="text" name="username" class="username form-control" pattern="[a-zA-Z0-9]+" placeholder="Username"/>
+            <input autocomplete="off" style="border-color: white;border-style: solid;background-color:transparent; padding-left: 10px;" type="password" name="password" class="password form-control" placeholder="Password"/>
+            <button  class="btn login" type="submit" name="login" value="login" style="color: black;" />Sign In</button>
+            <!-- <br>
+          <br><a align="left" href="register.php" style="color:white;">New User, Register Here</a> -->
+          </form>
+        </center>
+        </div>
       </div>
     </div>
   </div>
-</div>
+
+
+  <div id="video" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <div class="modal-content" style="background:transparent;border-color:transparent;margin-left: -50px;">
+        <div class="modal-body">
+          <center>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FJhbOgZwjzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <!-- <iframe width="540" height="320" src="https://www.youtube.com/embed/MUnk6NuVPQQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        </center>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id = "boxes" style="height: 100%;margin-top: 80px;margin-bottom: 80px;">
+    <div class="cdl"style="margin-left: 15%;background:orange;width: 35%;">
+
+      <p style="margin-top:150px;margin-right:60px;margin-left:60px;">
+
+    <span style=" font-family: Roboto, sans-serif;
+                  font-size: 4em;
+                  font-weight: bold;
+                  color: rgba(255, 255, 255, 1);
+                  text-transform: none;
+                  font-style: italic;
+                  text-decoration: none;
+                  line-height: 1em;
+                  letter-spacing: 0.5px;">
+                  WE OFFER DISCOUNT COUPONS
+    </span>
+        <br><br>
+
+    <span style=" font-family: Roboto, sans-serif;
+                  font-size: 2em;
+                  font-weight: bold;
+                  color: rgba(255, 255, 255, 1);
+                  text-transform: none;
+                  font-style: italic;
+                  text-decoration: none;
+                  line-height: 1em;
+                  letter-spacing: 0.5px;">
+                  SO YOU CAN BUY MORE WITH YOUR BUDGET
+    </span>
+      </p>
+    </div>
+
+<div class="cdr"style="margin-right: 15%;background:#f7f7f7;width: 35%;padding: 63px 50px 25px 50px;">
+
+
+    <p align="right" style=" font-family: Roboto, sans-serif;
+    margin-right: 30px;
+    font-size: 2em;
+    font-weight: bold;
+    color: orange;
+    text-transform: none;
+    font-style: italic;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 0.5px;">
+    Sign Up
+  </p>
+  <br>
+
+  <form autocomplete="off" method="post" action="" name="signup-form">
+    <center>
+  <div class="form-element">
+    <br>
+  <img src="user.png" width="30px">&nbsp;
+  <input style="box-shadow: 0px 5px 7px 0px rgb(211 211 211);" autocomplete="off" type="text" name="username" pattern="[a-zA-Z0-9]+"  placeholder="Username" required />
+  </div>
+  <div class="form-element"><br>
+  <img src="email.png" width="30px">&nbsp;
+  <input style="box-shadow: 0px 5px 7px 0px rgb(211 211 211);" autocomplete="off" type="email" name="email"  placeholder="Email" required />
+  </div>
+  <div class="form-element"><br>
+    <img src="key.png" width="30px">&nbsp;
+  <input style="box-shadow: 0px 5px 7px 0px rgb(211 211 211);" autocomplete="off" type="password" name="password"  placeholder="Password" required />
+  </div>
+  <div class="form-element"><br>
+    <img src="maps.png" width="30px">&nbsp;
+      <select name="region" id="region" style="height: 50px;
+    width: 307px;;border: none;
+      background: white;
+      border-radius: 25px;box-shadow: 0px 5px 7px 0px rgb(211 211 211); font-family: roboto;
+    font-size: 1.5em;">
+          <option value="">Select Region</option>
+          <?php if(!empty($region['results'])){
+              foreach($region['results'] as $index){ ?>
+              <option value="<?php echo $index['code']; ?>"><?php echo $index['country']; ?></option>
+          <?php   } } ?>
+      </select>
+  </div><br>
+  <span style="float:right;"><button type="submit" name="register" value="register" style="margin-right: 35px;
+    height: 50px;
+    width: 150px;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: roboto;
+    outline: none;
+    border: none;
+    ">Submit</button></span>
 </center>
+  </form>
+
 </div>
-<div class="cdr"></div>
 </div>
-<div class="footer">
+<div class="footer"style="position: relative;">
  <span style="float:right">
 
   <p id="con_info">
