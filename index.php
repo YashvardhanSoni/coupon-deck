@@ -222,14 +222,21 @@
 .cdl{
                 float:left;
                 background:transparent;
-                width:30%;
+                /* width:30%; */
                 height:100%;
+                margin-left: 15%;
+                background:orange;
+                width: 35%;
 }
 .cdr{
                 float:right;
                 background:transparent;
-                width:30%;
+                /* width:30%; */
                 height:100%;
+                margin-right: 15%;
+                background: #f7f7f7;
+                width: 35%;
+                padding: 63px 50px 25px 50px;
             }
 
 #con_info{
@@ -240,13 +247,18 @@
 }
 
   @media only screen and (max-width: 600px) {
+    header{
+      align-items: center;
+    }
   .cdl {
     visibility: hidden;
     display:none;
   }
   .cdr{
-    /* visibility: hidden;
-    display:none; */
+    margin-right: 0%;
+    background: #f7f7f7;
+    width: 100%;
+    padding: 10px 0px 0px 0px;
   }
   .cd{
     visibility: hidden;
@@ -398,7 +410,7 @@ input {
         .jssora093.jssora093ds {opacity:.3;pointer-events:none;}
   </style>
   <header style="background-color:#f7f7f7;">
-    <span><img src="cd_blank.png" width="250px" style="padding: 20px 20px 20px 20px;"></span>
+    <span id="logoo"><img src="cd_blank.png" width="250px" style="padding: 20px 20px 20px 20px;"></span>
     <span style="float:right;padding: 10px 15px 10px 10px; margin-top:38px;"><a style="background:none; text-decoration:none; color:black; font-weight:bold;font-size: 1.5em;" class="login-trigger" href="#" data-target="#login" data-toggle="modal"> <img src="user-dark.png" width="30px" style="margin-top: -15px;"> &nbspSign In</a></span>
   </header>
   <div style="width:100%; height: 130px; background:orange;">
@@ -447,7 +459,7 @@ input {
     </div>
   </div>
   <div id = "boxes" style="height: 100%;margin-top: 80px;margin-bottom: 80px;">
-    <div class="cdl"style="margin-left: 15%;background:orange;width: 35%;">
+    <div class="cdl">
 
       <p style="margin-top:150px;margin-right:60px;margin-left:60px;">
 
@@ -478,7 +490,7 @@ input {
       </p>
     </div>
 
-<div class="cdr"style="margin-right: 15%;background:#f7f7f7;width: 35%;padding: 63px 50px 25px 50px;">
+<div class="cdr">
 
 
     <p align="right" style=" font-family: Roboto, sans-serif;
