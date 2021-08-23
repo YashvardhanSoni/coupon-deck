@@ -256,7 +256,7 @@
   }
   .cdr{
     margin-right: 0%;
-    background: #f7f7f7;
+    background: transparent;
     width: 100%;
     padding: 10px 0px 0px 0px;
   }
