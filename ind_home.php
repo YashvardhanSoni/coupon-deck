@@ -22,7 +22,7 @@ if($region != ''){
     $url = 'https://api-mtrack.affise.com/3.0/partner/offers?api-key=9a5057e1103b54ea0bb5f4f16cbe1a62';
 }
 $apiData = getOffersList($method, $url);
-$activeRegion = activeCountries();
+$activeRegion = activeRegion($method, $url);
 $activeBrands = activeBrands($method, $url);
 ?>
 
