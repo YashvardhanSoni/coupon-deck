@@ -512,22 +512,19 @@ input {
   <div class="form-element">
     <br>
   <img src="user.png" width="30px">&nbsp;
-  <input style="box-shadow: 0px 5px 7px 0px rgb(211 211 211);" autocomplete="off" type="text" name="username" pattern="[a-zA-Z0-9]+"  placeholder="Username" required />
+  <input style="box-shadow: 0px 5px 7px 0px rgb(211 211 211);width: 250px;" autocomplete="off" type="text" name="username" pattern="[a-zA-Z0-9]+"  placeholder="Username" required />
   </div>
   <div class="form-element"><br>
   <img src="email.png" width="30px">&nbsp;
-  <input style="box-shadow: 0px 5px 7px 0px rgb(211 211 211);" autocomplete="off" type="email" name="email"  placeholder="Email" required />
+  <input style="box-shadow: 0px 5px 7px 0px rgb(211 211 211);width: 250px;" autocomplete="off" type="email" name="email"  placeholder="Email" required />
   </div>
   <div class="form-element"><br>
     <img src="key.png" width="30px">&nbsp;
-  <input style="box-shadow: 0px 5px 7px 0px rgb(211 211 211);" autocomplete="off" type="password" name="password"  placeholder="Password" required />
+  <input style="box-shadow: 0px 5px 7px 0px rgb(211 211 211);width: 250px;" autocomplete="off" type="password" name="password"  placeholder="Password" required />
   </div>
   <div class="form-element"><br>
     <img src="maps.png" width="30px">&nbsp;
-      <select name="region" id="region" style="height: 50px;
-    width: 307px;;border: none;
-      background: white;
-      border-radius: 25px;box-shadow: 0px 5px 7px 0px rgb(211 211 211); font-family: roboto;
+      <select name="region" id="region" style="height: 50px;width: 250px;border: none;background: white;border-radius: 25px;box-shadow: 0px 5px 7px 0px rgb(211 211 211); font-family: roboto;
     font-size: 1.5em;">
           <option value="">Select Region</option>
           <?php if(!empty($region['results'])){
