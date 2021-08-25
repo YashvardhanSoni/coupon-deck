@@ -346,7 +346,7 @@ session_start();
                                           ?>
 
                                       <li>
-                                          <a href="login.php" class="btn btn-green type-login btn-login"style="margin-top: -5px;">Login</a>
+                                          <a href="index.php" class="btn btn-green type-login btn-login"style="margin-top: -5px;">Login</a>
                                       </li>
                                       <?php } ?>
 
@@ -423,7 +423,7 @@ session_start();
                         if (!isset($_SESSION['username'])){
                           ?>
                       <li>
-                          <a href="login.php" class="btn btn-green type-login btn-login" >Login</a>
+                          <a href="index.php" class="btn btn-green type-login btn-login" >Login</a>
                       </li>
                       <?php } ?>
                       <!-- <li class="has-sub">
