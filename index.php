@@ -68,6 +68,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WLV7EVE0E"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7WLV7EVE0E');
+    </script>
+    
+    
+    <!-- Global site tag (gtag.js) - Google Ads: 365647794 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-365647794"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-365647794');
+    </script>
+    
+    
     <!-- Facebook Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
