@@ -21,9 +21,10 @@ if($region != ''){
 }else{
     $url = 'https://api-mtrack.affise.com/3.0/partner/offers?api-key=9a5057e1103b54ea0bb5f4f16cbe1a62';
 }
+$activeRegion = activeRegion($method, $url);
 $apiData = getOffersList($method, $url);
-$activeRegion = activeCountries();
-$activeBrands = activeBrands($method, $url);
+// $activeRegion = activeCountries();
+$activeCategories = activeCategories($method, $url);
 ?>
 
 <!DOCTYPE html>
@@ -291,6 +292,9 @@ $activeBrands = activeBrands($method, $url);
                                         <a href="ind_brand.php">Brands</a>
                                     </li>
                                     <li>
+                                      <a href="category.php">Categories</a>
+                                    </li>
+                                    <li>
                                         <a href="offers.php">Offers</a>
                                     </li>
                                     <li>
@@ -307,9 +311,9 @@ $activeBrands = activeBrands($method, $url);
                                           <?php if(!empty($activeRegion['results'])){
                                                   foreach($activeRegion['results'] as $index){
                                                       if($index['code'] == $region){?>
-                                            <li><a href="ind_brand.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
+                                            <li><a href="category.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
                                             <?php }else{?>
-                                              <li><a href="ind_brand.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
+                                              <li><a href="category.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
                                             <?php }}}?>
                                         </ul>
                                     </li>
@@ -367,6 +371,9 @@ $activeBrands = activeBrands($method, $url);
                     </li>
                     <li>
                       <a href="ind_brand.php">Brands</a>
+                    </li>
+                    <li>
+                      <a href="category.php">Categories</a>
                     </li>
                     <li>
                         <a href="offers.php">Offers</a>
@@ -443,14 +450,14 @@ $activeBrands = activeBrands($method, $url);
 <div class="box2" style="background: #f7f7f7;">
     <div class="text gridtable"  style="padding-top: 10px;">
       <p style="text-color:black; font-weight:bold; font-size: 2em; margin-left: 25px;margin-top: -30px;">Categories</p>
-      <?php if(!empty($activeBrands)){
-            foreach($activeBrands as $index){ ?>
+      <?php if(!empty($activeCategories)){
+            foreach($activeCategories as $index => $list){ ?>
                 <div class="coupon-item grid_3">
                     <div class="coupon-content">
                         <div class="img-thumb-center">
                             <div class="wrap-img-thumb">
                                 <span class="ver_hold"></span>
-                                <a href="category.php?brand=<?php echo $index['title'];?>" class="ver_container"><img src="<?php echo $index['logo'];?>" alt="<?php echo $index['title'];?>"></a>
+                                <a href="offers.php?category=<?php echo $index;?>" class="ver_container"><img src="<?php echo $list;?>" alt="<?php echo $index;?>"></a>
                             </div>
                         </div>
 

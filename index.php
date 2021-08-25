@@ -19,7 +19,7 @@
         $query->execute();
         if ($query->rowCount() > 0) {
             echo '<p class="error">The email address is already registered!<br>The Page will now Reload in <b>few sec</b>..</p>';
-              header("refresh: 2; url = register.php");
+              header("refresh: 2; url = index.php");
         }
         if ($query->rowCount() == 0) {
             $query = $connection->prepare("INSERT INTO users(username,password,email,region) VALUES (:username,:password,:email,:region)");
@@ -434,7 +434,7 @@ input {
             <input autocomplete="off" style="border-color: white;color: white;border-style: solid;background-color:transparent; padding-left: 10px;" type="password" name="password" class="password form-control" placeholder="Password"/>
             <button  class="btn login" type="submit" name="login" value="login" style="color: black;" />Sign In</button>
             <!-- <br>
-          <br><a align="left" href="register.php" style="color:white;">New User, Register Here</a> -->
+          <br><a align="left" href="index.php" style="color:white;">New User, Register Here</a> -->
           </form>
         </center>
         </div>
@@ -512,19 +512,22 @@ input {
   <div class="form-element">
     <br>
   <img src="user.png" width="30px">&nbsp;
-  <input style="box-shadow: 0px 5px 7px 0px rgb(211 211 211);width: 250px;" autocomplete="off" type="text" name="username" pattern="[a-zA-Z0-9]+"  placeholder="Username" required />
+  <input style="box-shadow: 0px 5px 7px 0px rgb(211 211 211);" autocomplete="off" type="text" name="username" pattern="[a-zA-Z0-9]+"  placeholder="Username" required />
   </div>
   <div class="form-element"><br>
   <img src="email.png" width="30px">&nbsp;
-  <input style="box-shadow: 0px 5px 7px 0px rgb(211 211 211);width: 250px;" autocomplete="off" type="email" name="email"  placeholder="Email" required />
+  <input style="box-shadow: 0px 5px 7px 0px rgb(211 211 211);" autocomplete="off" type="email" name="email"  placeholder="Email" required />
   </div>
   <div class="form-element"><br>
     <img src="key.png" width="30px">&nbsp;
-  <input style="box-shadow: 0px 5px 7px 0px rgb(211 211 211);width: 250px;" autocomplete="off" type="password" name="password"  placeholder="Password" required />
+  <input style="box-shadow: 0px 5px 7px 0px rgb(211 211 211);" autocomplete="off" type="password" name="password"  placeholder="Password" required />
   </div>
   <div class="form-element"><br>
     <img src="maps.png" width="30px">&nbsp;
-      <select name="region" id="region" style="height: 50px;width: 250px;border: none;background: white;border-radius: 25px;box-shadow: 0px 5px 7px 0px rgb(211 211 211); font-family: roboto;
+      <select name="region" id="region" style="height: 50px;
+    width: 307px;;border: none;
+      background: white;
+      border-radius: 25px;box-shadow: 0px 5px 7px 0px rgb(211 211 211); font-family: roboto;
     font-size: 1.5em;">
           <option value="">Select Region</option>
           <?php if(!empty($region['results'])){

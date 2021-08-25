@@ -151,6 +151,9 @@ session_start();
                                       <a href="ind_brand.php">Brands</a>
                                   </li>
                                   <li>
+                                    <a href="category.php">Categories</a>
+                                  </li>
+                                  <li>
                                       <a href="offers.php">Offers</a>
                                   </li>
                                   <li>
@@ -225,6 +228,9 @@ session_start();
                   </li>
                   <li>
                     <a href="ind_brand.php">Brands</a>
+                  </li>
+                  <li>
+                    <a href="category.php">Categories</a>
                   </li>
                   <li>
                       <a href="offers.php">Offers</a>

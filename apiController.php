@@ -16,18 +16,16 @@ function getOffersList($method, $url, $brand = '', $category = ''){
                     $return[$i]['id'] = $index['id'];
                     $return[$i]['title'] = $index['title'];
                     $return[$i]['description_lang'] = $index['description_lang']['en'];
-                    $return[$i]['preview_url'] = $index['preview_url'];
+                    $return[$i]['preview_url'] = $index['link'];
                     $return[$i]['logo'] = $index['logo'];
                     $return[$i]['kpi'] = $index['kpi']['en'];
                 }
             }else if($category != ''){
-                // print_r(rawurldecode($category));
-                $category = (strpos($category, '%20') != false)? str_ireplace("%20"," ",$category): $category;
-                if(urldecode($category) == $index['categories'][0]){
+                if(!empty($index['categories']) && $category == $index['categories'][0]){
                     $return[$i]['id'] = $index['id'];
                     $return[$i]['title'] = $index['title'];
                     $return[$i]['description_lang'] = $index['description_lang']['en'];
-                    $return[$i]['preview_url'] = $index['preview_url'];
+                    $return[$i]['preview_url'] = $index['link'];
                     $return[$i]['logo'] = $index['logo'];
                     $return[$i]['kpi'] = $index['kpi']['en'];
                 }
@@ -35,7 +33,7 @@ function getOffersList($method, $url, $brand = '', $category = ''){
                 $return[$i]['id'] = $index['id'];
                 $return[$i]['title'] = $index['title'];
                 $return[$i]['description_lang'] = $index['description_lang']['en'];
-                $return[$i]['preview_url'] = $index['preview_url'];
+                $return[$i]['preview_url'] = $index['link'];
                 $return[$i]['logo'] = $index['logo'];
                 $return[$i]['kpi'] = $index['kpi']['en'];
             }
@@ -48,17 +46,30 @@ function getOffersList($method, $url, $brand = '', $category = ''){
 }
 
 
-function activeBrands($method, $url){
+function activeBrands($method, $url, $category = '', $title=''){
     $data = getDataThroughCurl($method, $url);
     $return = array();
     if($data['status'] == 200){
         $i = 0;
-        foreach($data['data']['offers'] as $index){
-            $return[$i]['title'] = $index['title'];
-            $return[$i]['logo'] = $index['logo'];
-            $i++;
+        if($category != ''){
+            foreach($data['data']['offers'] as $index){
+                if($category != 'nill'){
+                    if(!empty($index['categories']) && $category == $index['categories'][0] && $title != $index['title']){
+                        $return[$index['title']] = $index['logo'];
+                    }
+                }else{
+                    $return[$index['title']] = $index['logo'];
+                }
+            }
+        }else{
+            foreach($data['data']['offers'] as $index){
+                $return[$i]['title'] = $index['title'];
+                $return[$i]['logo'] = $index['logo'];
+                $i++;
+            }
+            $return = multi_unique($return);
         }
-        $return = multi_unique($return);
+
     }
     return $return;
 }
@@ -76,10 +87,6 @@ function activeCategories($method, $url){
                 $return[$index['categories'][0]] = $index['logo'];
             }
         }
-        // foreach($return as $index){
-        //     if($index[])
-        // }
-        // echo '<pre>';print_r($return);exit;
         $return = multi_unique($return);
     }
     return $return;
@@ -108,7 +115,7 @@ function activeRegion($method, $url){
     return $return;
 }
 
-function getCategoryName($name=''){
+function getCategoryName($url, $name='', $brand_name = ''){
     global $sqlDB;
     $category_name = '';
     if($name != ''){
@@ -116,6 +123,19 @@ function getCategoryName($name=''){
         $result = $sqlDB->queryRow($query);
         if(!empty($result)){
             $category_name = $result['category_name'];
+        }
+    }else if($brand_name != ''){
+        $category_name = 'nill';
+        $data = getDataThroughCurl('GET', $url);
+        $return = array();
+        if($data['status'] == 200){
+            $i = 0;
+            foreach($data['data']['offers'] as $index){
+                if(!empty($index['categories']) && $brand_name == $index['title']){
+                    $category_name = $index['categories'][0];
+                    break;
+                }
+            }
         }
     }
     return $category_name;

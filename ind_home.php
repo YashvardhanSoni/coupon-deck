@@ -1,7 +1,7 @@
 <?php
 session_start();
-require __DIR__.'/apiController.php';
 require __DIR__.'/helper/common.php';
+require __DIR__.'/apiController.php';
 $region = '';
 
 $change_region = '';
@@ -24,6 +24,7 @@ if($region != ''){
 $apiData = getOffersList($method, $url);
 $activeRegion = activeRegion($method, $url);
 $activeBrands = activeBrands($method, $url);
+$activeCategories = activeCategories($method, $url);
 ?>
 
 <!DOCTYPE html>
@@ -314,6 +315,9 @@ $activeBrands = activeBrands($method, $url);
                                         <a href="ind_brand.php">Brands</a>
                                     </li>
                                     <li>
+                                      <a href="category.php">Categories</a>
+                                    </li>
+                                    <li>
                                         <a href="offers.php">Offers</a>
                                     </li>
                                     <li>
@@ -415,6 +419,9 @@ $activeBrands = activeBrands($method, $url);
                       <a href="ind_brand.php">Brands</a>
                     </li>
                     <li>
+                      <a href="category.php">Categories</a>
+                    </li>
+                    <li>
                         <a href="offers.php">Offers</a>
                     </li>
                     <li>
@@ -500,28 +507,28 @@ $activeBrands = activeBrands($method, $url);
                         </div><!--end: .coupon-item -->
                 <?php $i++;}}}?>
             </div>
-            <center>
-              <form action="ind_brand.php" style="background:#f7f7f7;">
-                <input class="btn btn-green type-login btn-login" style="padding:10px 40px 10px 40px ;" type="submit" value="View all Brands" />
-              </form>
-            </center>
-        </div>
 
+        </div>
+        <center>
+          <form action="ind_brand.php" target="_blank" style="background:#f7f7f7;">
+            <input class="btn btn-green type-login btn-login" style="padding:10px 40px 10px 40px ;" type="submit" value="View all Brands" />
+          </form>
+        </center>
 <br>
 
 <div class="box2">
     <div class="text gridtable" style="padding-top: 10px;">
       <p style="text-color:black; font-weight:bold; font-size: 2em; margin-left: 25px;">Category</p>
-    <?php if(!empty($activeBrands)){
+    <?php if(!empty($activeCategories)){
       $i = 0;
-            foreach($activeBrands as $index){
+            foreach($activeCategories as $index => $list){
               if($i < 4){?>
                 <div class="coupon-item grid_3">
                     <div class="coupon-content">
                         <div class="img-thumb-center">
                             <div class="wrap-img-thumb">
                                 <span class="ver_hold"></span>
-                                <a href="offers.php?brand=<?php echo $index['title'];?>" class="ver_container"><img src="<?php echo $index['logo'];?>" alt="<?php echo $index['title'];?>"></a>
+                                <a href="offers.php?category=<?php echo $index;?>" class="ver_container"><img src="<?php echo $list;?>" alt="<?php echo $index;?>"></a>
                             </div>
                         </div>
 
@@ -531,7 +538,43 @@ $activeBrands = activeBrands($method, $url);
         <?php $i++;}}}?>
     </div>
 
+
 </div>
+<center>
+  <form action="category.php" target="_blank" style="background:#f7f7f7;">
+    <input class="btn btn-green type-login btn-login" style="padding:10px 40px 10px 40px ;" type="submit" value="View all Categories" />
+  </form>
+</center>
+<br>
+<div class="box2">
+    <div class="text gridtable" style="padding-top: 10px;">
+      <p style="text-color:black; font-weight:bold; font-size: 2em; margin-left: 25px;">Hot Offers</p>
+    <?php if(!empty($activeCategories)){
+      $i = 0;
+            foreach($activeCategories as $index => $list){
+              if($i < 4){?>
+                <div class="coupon-item grid_3">
+                    <div class="coupon-content">
+                        <div class="img-thumb-center">
+                            <div class="wrap-img-thumb">
+                                <span class="ver_hold"></span>
+                                <a href="offers.php?category=<?php echo $index;?>" class="ver_container"><img src="<?php echo $list;?>" alt="<?php echo $index;?>"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div><!--end: .coupon-item -->
+        <?php $i++;}}}?>
+    </div>
+
+
+</div>
+<center>
+  <form action="hotoffer.php" target="_blank" style="background:#f7f7f7;">
+    <input class="btn btn-green type-login btn-login" style="padding:10px 40px 10px 40px ;" type="submit" value="View all Hot Offers" />
+  </form>
+</center>
 <br>
 <br>
 

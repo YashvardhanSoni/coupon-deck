@@ -6,9 +6,7 @@ $region = '';
 
 $change_region = '';
 $brand = '';
-if(isset($_GET['brand']) && $_GET['brand'] != ''){
-    $brand = $_GET['brand'];
-}
+
 if(isset($_GET['region']) && $_GET['region'] != ''){
     $change_region = $_GET['region'];
     $_SESSION['region'] = $change_region;
@@ -25,8 +23,23 @@ if($region != ''){
 }else{
     $url = 'https://api-mtrack.affise.com/3.0/partner/offers?api-key=9a5057e1103b54ea0bb5f4f16cbe1a62';
 }
-$apiData = getOffersList($method, $url, $brand);
-$activeRegion = activeCountries();
+if(isset($_GET['brand']) && $_GET['brand'] != ''){
+  $brand = $_GET['brand'];
+  $category = getCategoryName($url, '', $brand);
+  // print_r($category);exit;
+  $apiData = getOffersList($method, $url, $brand, '');
+  $othersData = activeBrands($method, $url, $category, $brand);
+
+}else{
+  $get_category = (isset($_GET['category'])) ? $_GET['category'] : '';
+  $category = getCategoryName($url, $get_category, '');
+  $apiData = getOffersList($method, $url, '', $category);
+  $othersData = activeCategories($method, $url);
+}
+
+
+$activeRegion = activeRegion($method, $url);
+// $activeBrands = activeBrands($method, $url);
 ?>
 
 <!DOCTYPE html>
@@ -325,6 +338,9 @@ $activeRegion = activeCountries();
                                       <a href="ind_brand.php">Brands</a>
                                   </li>
                                   <li>
+                                    <a href="category.php">Categories</a>
+                                  </li>
+                                  <li>
                                       <a href="offers.php">Offers</a>
                                   </li>
                                   <li>
@@ -352,7 +368,7 @@ $activeRegion = activeCountries();
                                     if (isset($_SESSION['username'])){
                                       ?>
                                   <li class="has-sub">
-                                      <a class="btn btn-green type-login btn-login"style="margin-top: -5px;">
+                                      <a class="btn btn-green type-login btn-login">
                                         <?php
                                         echo $_SESSION['username'];
                                         }
@@ -371,7 +387,7 @@ $activeRegion = activeCountries();
                                       ?>
 
                                   <li>
-                                      <a href="login.php" class="btn btn-green type-login btn-login"style="margin-top: -5px;">Login</a>
+                                      <a href="login.php" class="btn btn-green type-login btn-login">Login</a>
                                   </li>
                                   <?php } ?>
 
@@ -387,7 +403,7 @@ $activeRegion = activeCountries();
 
       </header><!--end: header.mod-header -->
 
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin-top: -125px; background:#f7f7f7;"><path fill="#e0e0e0" fill-opacity="1" d="M0,320L48,288C96,256,192,192,288,186.7C384,181,480,235,576,245.3C672,256,768,224,864,224C960,224,1056,256,1152,261.3C1248,267,1344,245,1392,234.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin-top: -70px; background:#f7f7f7;"><path fill="#e0e0e0" fill-opacity="1" d="M0,320L48,288C96,256,192,192,288,186.7C384,181,480,235,576,245.3C672,256,768,224,864,224C960,224,1056,256,1152,261.3C1248,267,1344,245,1392,234.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
         <nav id="mp-menu" class="mp-menu alternate-menu">
             <div class="mp-level">
                 <h2>Menu</h2>
@@ -397,6 +413,9 @@ $activeRegion = activeCountries();
                     </li>
                     <li>
                       <a href="ind_brand.php">Brands</a>
+                    </li>
+                    <li>
+                      <a href="category.php">Categories</a>
                     </li>
                     <li>
                         <a href="offers.php">Offers</a>
@@ -507,62 +526,33 @@ $activeRegion = activeCountries();
                     <div class="grid_4 sidebar">
                         <!--end: .mod-search -->
                         <div class="mod-list-store block">
-                          <p style="text-color:black; font-weight:bold; font-size: 2em; margin-left: 0px;margin-top: -10px;">Other Brands</p>
+                          <p style="text-color:black; font-weight:bold; font-size: 2em; margin-left: 0px;margin-top: -10px;"><?php echo (isset($_GET['brand'])) ? 'Other Brands' : 'Category'?></p>
                           <div class="block-content">
                               <div class="wrap-list-store clearfix">
-                                  <a class="brand-logo" href="#" >
+                                  <!-- <a class="brand-logo" href="#" >
                                       <span class="wrap-logo">
                                           <span class="center-img">
                                               <span class="ver_hold"></span>
                                               <span class="ver_container"><img src="images/br/smg.png" alt="$BRAND_NAME"></span>
                                           </span>
                                       </span>
-                                  </a>
-
-                                  <a class="brand-logo" href="#" >
-                                      <span class="wrap-logo">
-                                          <span class="center-img">
-                                              <span class="ver_hold"></span>
-                                              <span class="ver_container"><img src="images/br/ab.png" alt="$BRAND_NAME"></span>
-                                          </span>
-                                      </span>
-                                  </a>
-
-                                  <a class="brand-logo" href="#" >
-                                      <span class="wrap-logo">
-                                          <span class="center-img">
-                                              <span class="ver_hold"></span>
-                                              <span class="ver_container"><img src="images/br/amazon.png" alt="$BRAND_NAME"></span>
-                                          </span>
-                                      </span>
-                                  </a>
-
-                                  <a class="brand-logo" href="#" >
-                                      <span class="wrap-logo">
-                                          <span class="center-img">
-                                              <span class="ver_hold"></span>
-                                              <span class="ver_container"><img src="images/br/nvpn.png" alt="$BRAND_NAME"></span>
-                                          </span>
-                                      </span>
-                                  </a>
-
-                                  <!-- <a class="brand-logo" href="#" >
-                                      <span class="wrap-logo">
-                                          <span class="center-img">
-                                              <span class="ver_hold"></span>
-                                              <span class="ver_container"><img src="images/br/ab.png" alt="$BRAND_NAME"></span>
-                                          </span>
-                                      </span>
                                   </a> -->
 
-                                  <!-- <a class="brand-logo" href="#" >
-                                      <span class="wrap-logo">
-                                          <span class="center-img">
-                                              <span class="ver_hold"></span>
-                                              <span class="ver_container"><img src="images/br/rizzle.png" alt="$BRAND_NAME"></span>
-                                          </span>
-                                      </span>
-                                  </a> -->
+                                  <?php if(!empty($othersData)){
+                                   $i = 0;
+                                   $rediect_url = (isset($_GET['brand'])) ? 'offers.php?brand=' : 'offers.php?category=';
+                                    foreach($othersData as $index => $list){
+                                        if($i < 6){
+                                          $display_url = $rediect_url.$index ; ?>
+                                        <a class="brand-logo" href="<?php echo $display_url; ?>" >
+                                            <span class="wrap-logo">
+                                                <span class="center-img">
+                                                    <span class="ver_hold"></span>
+                                                    <span class="ver_container"><img src="<?php echo $list;?>" alt="$BRAND_NAME"></span>
+                                                </span>
+                                            </span>
+                                        </a>
+                                <?php $i++;}}}?>
                               </div>
                           </div>
                       </div><!--end: .mod-list-store -->
@@ -637,7 +627,7 @@ $activeRegion = activeCountries();
 
         			<div class="footer-center"style="margin-top: 25px;">
 
-        				<div style="margin-top: 15px;">
+        				<div>
 
         					<p style="font-size:1.89em; font-weight:bold;letter-spacing: 0.05em;">Earn Money</p><br>
                   <p style="font-size:1em;letter-spacing: 0.1em;">Just by completing Simple Tasks</p>
@@ -649,7 +639,7 @@ $activeRegion = activeCountries();
         				<div>
 
         				  <a href="https://play.google.com/store/apps/details?id=mTrack.droid.pocketpennyapp" target="_blank">
-                    <img src="gp.png" width="60%" style="margin-left: 50px;margin-top: 35px;">
+                    <img src="gp.png" width="60%" style="margin-left: 50px;margin-top: 20px;">
                   </a>
         				</div>
         			</div>
