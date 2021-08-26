@@ -1,7 +1,7 @@
 <?php
 session_start();
-require __DIR__.'/apiController.php';
 require __DIR__.'/helper/common.php';
+require __DIR__.'/apiController.php';
 $region = '';
 
 $change_region = '';
@@ -24,6 +24,7 @@ if($region != ''){
 $apiData = getOffersList($method, $url);
 $activeRegion = activeRegion($method, $url);
 $activeBrands = activeBrands($method, $url);
+$activeCategories = activeCategories($method, $url);
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +32,9 @@ $activeBrands = activeBrands($method, $url);
 
 <head>
     <title>CouponDeck</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
     <link rel="icon" href="images/logo.ico" type="image/icon type">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
@@ -53,7 +57,6 @@ $activeBrands = activeBrands($method, $url);
     src="https://www.facebook.com/tr?id=303511618102911&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
-
 
     <link rel="stylesheet" href="css/font.css"/>
     <link rel="stylesheet" href="css/font-awesome.css"/>
@@ -102,6 +105,15 @@ $activeBrands = activeBrands($method, $url);
     <!-- end Google ad -->
 <style>
 
+    body{
+      background: #f7f7f7;
+    }
+    .gray .mod-header {
+    background-color: #e0e0e0;
+    padding-top: 46px;
+    padding-bottom: 0px;
+    }
+
    .header-content clearfix{
        background-color: aqua;
    }
@@ -110,7 +122,7 @@ $activeBrands = activeBrands($method, $url);
    .box {
      width: 40%;
      margin: 0 auto;
-     background: rgba(255,255,255,0.2);
+     background: #f7f7f7;
      padding: 35px;
      border: 2px solid #fff;
      border-radius: 20px/50px;
@@ -127,41 +139,53 @@ $activeBrands = activeBrands($method, $url);
 
  .box1{
      background-color: white;
-     padding-top: 32px;
-     padding-left: 6px;
      width: 15%;
      float:none;
      display: table-cell;
      border-radius:0px;
      height: 100px;
-     vertical-align: top;
+     vertical-align: middle;
      text-align: center;
      color: white;
      }
 
  .box2{
-     background-color: white;
-     width: 39%;
+     background-color: #f7f7f7;
+     width: 70%;
      float:none;
      display: table-cell;
      border-radius:0px;
      }
  .box3{
      background-color: white;
-     padding-top: 32px;
-         padding-right: 6px;
      width: 15%;
      float:none;
      display: table-cell;
      border-radius:0px;
-     vertical-align: top;
+     vertical-align: middle;
      text-align: center;
      color: white;
      }
-#banner-ad[body]{
-  background:white;
-}
 
+     .gridtable {
+     width: 100%;
+   }
+   @media screen and (max-width:320px) {
+     .gridtable, .gridtable thead, .gridtable tbody {
+       display: block;
+       width: 100%;
+     }
+     .gridtable tr {
+       display: grid;
+       width: 100%;
+       grid-template-columns: auto auto auto;
+     }
+     /* .core {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left:50px;
+  } */
+   }
 
 </style>
 </head>
@@ -268,11 +292,11 @@ $activeBrands = activeBrands($method, $url);
             <div class="grid_frame">
                 <div class="container_grid clearfix">
                     <div class="grid_12">
-                        <div class="header-content clearfix">
+                        <div class="header-content clearfix" style="padding-right: 60px;">
 
 
                             <nav class="main-nav">
-                                <ul id="main-menu" class="nav nav-horizontal clearfix" style="padding-right: 60px;">
+                                <ul id="main-menu" class="nav nav-horizontal clearfix">
                                   <!-- <li style="background:transparent;"> -->
                                     <div id="logo">
                                             <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="CouponDeck"/>
@@ -285,7 +309,7 @@ $activeBrands = activeBrands($method, $url);
                                     </form>
                                   </li>
                                     <li>
-                                        <a href="index.php">Home</a>
+                                        <a href="ind_home.php">Home</a>
                                     </li>
                                     <li>
                                         <a href="ind_brand.php">Brands</a>
@@ -310,14 +334,14 @@ $activeBrands = activeBrands($method, $url);
                                           <?php if(!empty($activeRegion['results'])){
                                                   foreach($activeRegion['results'] as $index){
                                                       if($index['code'] == $region){?>
-                                            <li><a href="ind_brand.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
+                                            <li><a href="ind_home.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
                                             <?php }else{?>
-                                              <li><a href="ind_brand.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
+                                              <li><a href="ind_home.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
                                             <?php }}}?>
                                         </ul>
                                     </li>
 
-                                    <!-- <?php
+                                    <?php
                                       if (isset($_SESSION['username'])){
                                         ?>
                                     <li class="has-sub">
@@ -342,12 +366,12 @@ $activeBrands = activeBrands($method, $url);
                                     <li>
                                         <a href="index.php" class="btn btn-green type-login btn-login"style="margin-top: -5px;">Login</a>
                                     </li>
-                                    <?php } ?> -->
+                                    <?php } ?>
 
 
                                     </li>
                                   </ul>
-                                <a id="sys_btn_toogle_menu" class="btn-toogle-res-menu" href="#alternate-menu" style="margin: -45px 20px 0 0;"></a>
+                                <a id="sys_btn_toogle_menu" class="btn-toogle-res-menu" href="#alternate-menu" style="margin: -45px -37px 0 0;"></a>
                             </nav>
                         </div>
                     </div>
@@ -358,7 +382,30 @@ $activeBrands = activeBrands($method, $url);
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin-top: -125px; background:#f7f7f7;"><path fill="#e0e0e0" fill-opacity="1" d="M0,320L48,288C96,256,192,192,288,186.7C384,181,480,235,576,245.3C672,256,768,224,864,224C960,224,1056,256,1152,261.3C1248,267,1344,245,1392,234.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
 
+        <p style=" font-family: Galada, cursive;
+        font-size: 149px;
+        font-weight: 100;
+        color: rgba(5, 167, 201, 1);
+        text-transform: none;
+        font-style: normal;
+        margin-top: 1px;
+        text-align: center;
+        text-decoration: none;
+        line-height: 1em;
+        transform: rotate(355deg);
+        letter-spacing: 1px;">Buy More</p>
 
+        <p style=" font-family: Arsenal, sans-serif;
+        font-size: 80px;
+        font-weight: 100;
+        color: #ee9f09;
+        margin-top: -150px;
+        text-transform: none;
+        font-style: normal;
+        text-align: center;
+        text-decoration: none;
+        line-height: 1em;
+        letter-spacing: 1px;">Spend Less</p>
 
 
         <nav id="mp-menu" class="mp-menu alternate-menu">
@@ -366,7 +413,7 @@ $activeBrands = activeBrands($method, $url);
                 <h2>Menu</h2>
                 <ul>
                     <li>
-                      <a href="index.php">Home</a>
+                      <a href="ind_home.php">Home</a>
                     </li>
                     <li>
                       <a href="ind_brand.php">Brands</a>
@@ -384,7 +431,7 @@ $activeBrands = activeBrands($method, $url);
                       <a href="contact.php">Contact Us</a>
                     </li>
 
-                    <!-- <?php
+                    <?php
                       if (isset($_SESSION['username'])){
                         ?>
                     <li class="has-sub">
@@ -408,11 +455,11 @@ $activeBrands = activeBrands($method, $url);
                     <li>
                         <a href="index.php" class="btn btn-green type-login btn-login" >Login</a>
                     </li>
-                    <?php } ?> -->
+                    <?php } ?>
                     <!-- <li class="has-sub">
                         <a>Change<br>Region</a>
                         <ul class="sub-menu">
-                            <li><a href="index.php">India</a></li>
+                            <li><a href="ind_home.php">India</a></li>
                             <li><a href="uae_home.php">UAE </a></li>
                             <li><a href="singapore_home.php">Singapore</a></li>
                             <li><a href="indonesia_home.php">Indonesia</a></li>
@@ -428,56 +475,110 @@ $activeBrands = activeBrands($method, $url);
 
             </div>
         </nav><!--end: .mp-menu -->
-        <!-- Google Advertisement
-        <center>
+        <!-- Google Advertisement -->
+        <!-- <center>
           <div id="banner-ad" style="width: 100% auto; height: 100px;">
             <script>
               googletag.cmd.push(function() { googletag.display('banner-ad'); });
             </script>
           </div>
+        </center> -->
+        <!-- End_Google Advertisement -->
+
+
+        <div class="box2">
+            <div class="text gridtable" style="padding-top: 10px;">
+              <p style="text-color:black; font-weight:bold; font-size: 2em; margin-left: 25px;margin-top: -30px;">Brands</p>
+            <?php if(!empty($activeBrands)){
+              $i = 0;
+                    foreach($activeBrands as $index){
+                      if($i < 4){?>
+                        <div class="coupon-item grid_3">
+                            <div class="coupon-content">
+                                <div class="img-thumb-center">
+                                    <div class="wrap-img-thumb">
+                                        <span class="ver_hold"></span>
+                                        <a href="offers.php?brand=<?php echo $index['title'];?>" class="ver_container"><img src="<?php echo $index['logo'];?>" alt="<?php echo $index['title'];?>"></a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div><!--end: .coupon-item -->
+                <?php $i++;}}}?>
+            </div>
+
+        </div>
+        <center>
+          <form action="ind_brand.php" target="_blank" style="background:#f7f7f7;">
+            <input class="btn btn-green type-login btn-login" style="padding:10px 40px 10px 40px ;" type="submit" value="View all Brands" />
+          </form>
         </center>
-        End_Google Advertisement -->
+<br>
 
-
-<div class="core">
-<div class="box1" style="background: #f7f7f7;">
-    <div><img src="ad1.jpg"></div><br>
-    <div><img src="ad2.jpg"></div><br>
-</div>
-
-
-<div class="box2" style="background: #f7f7f7;">
-    <div class="text gridtable"  style="padding-top: 10px;">
-      <p style="text-color:black; font-weight:bold; font-size: 2em; margin-left: 25px;margin-top: -30px;">Brands</p>
-      <?php if(!empty($activeBrands)){
-            foreach($activeBrands as $index){ ?>
+<div class="box2">
+    <div class="text gridtable" style="padding-top: 10px;">
+      <p style="text-color:black; font-weight:bold; font-size: 2em; margin-left: 25px;">Category</p>
+    <?php if(!empty($activeCategories)){
+      $i = 0;
+            foreach($activeCategories as $index => $list){
+              if($i < 4){?>
                 <div class="coupon-item grid_3">
                     <div class="coupon-content">
                         <div class="img-thumb-center">
                             <div class="wrap-img-thumb">
                                 <span class="ver_hold"></span>
-                                <a href="offers.php?brand=<?php echo $index['title'];?>" class="ver_container"><img src="<?php echo $index['logo'];?>" alt="<?php echo $index['title'];?>"></a>
+                                <a href="offers.php?category=<?php echo $index;?>" class="ver_container"><img src="<?php echo $list;?>" alt="<?php echo $index;?>"></a>
                             </div>
                         </div>
 
                     </div>
 
                 </div><!--end: .coupon-item -->
-        <?php }}?>
-
-
+        <?php $i++;}}}?>
     </div>
 
+
 </div>
+<center>
+  <form action="category.php" target="_blank" style="background:#f7f7f7;">
+    <input class="btn btn-green type-login btn-login" style="padding:10px 40px 10px 40px ;" type="submit" value="View all Categories" />
+  </form>
+</center>
+<br>
+<div class="box2">
+    <div class="text gridtable" style="padding-top: 10px;">
+      <p style="text-color:black; font-weight:bold; font-size: 2em; margin-left: 25px;">Hot Offers</p>
+    <?php if(!empty($activeCategories)){
+      $i = 0;
+            foreach($activeCategories as $index => $list){
+              if($i < 4){?>
+                <div class="coupon-item grid_3">
+                    <div class="coupon-content">
+                        <div class="img-thumb-center">
+                            <div class="wrap-img-thumb">
+                                <span class="ver_hold"></span>
+                                <a href="offers.php?category=<?php echo $index;?>" class="ver_container"><img src="<?php echo $list;?>" alt="<?php echo $index;?>"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div><!--end: .coupon-item -->
+        <?php $i++;}}}?>
+    </div>
 
 
-<div class="box3" style="background:#f7f7f7;">
-  <div><img src="ad3.jpg"></div><br>
-  <div><img src="ad4.jpg"></div><br>
 </div>
-</div>
+<center>
+  <form action="hotoffer.php" target="_blank" style="background:#f7f7f7;">
+    <input class="btn btn-green type-login btn-login" style="padding:10px 40px 10px 40px ;" type="submit" value="View all Hot Offers" />
+  </form>
+</center>
 <br>
 <br>
+
+
 <div id="jssor_1" style="position:relative;margin:0 auto 25px;top:-25px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
     <!-- Loading Screen -->
     <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">

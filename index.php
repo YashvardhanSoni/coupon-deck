@@ -1,72 +1,43 @@
 <?php
-    session_start();
-    if (isset($_SESSION['username'])) {
-        $_SESSION['msg'] = "You have to log in first";
-        header('location: ind_home.php');
-    }
-    include('config.php');
-    require __DIR__.'/helper/common.php';
-    $region = activeCountries();
-    if (isset($_POST['register'])) {
-        $username = $_POST['username'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        // $review = $_POST['review'];
-        $region = $_POST['region'];
-        $password_hash = password_hash($password, PASSWORD_BCRYPT);
-        $query = $connection->prepare("SELECT * FROM users WHERE email=:email");
-        $query->bindParam("email", $email, PDO::PARAM_STR);
-        $query->execute();
-        if ($query->rowCount() > 0) {
-            echo '<p class="error">The email address is already registered!<br>The Page will now Reload in <b>few sec</b>..</p>';
-              header("refresh: 2; url = index.php");
-        }
-        if ($query->rowCount() == 0) {
-            $query = $connection->prepare("INSERT INTO users(username,password,email,region) VALUES (:username,:password,:email,:region)");
-            $query->bindParam("username", $username, PDO::PARAM_STR);
-            $query->bindParam("password", $password, PDO::PARAM_STR);
-            $query->bindParam("email", $email, PDO::PARAM_STR);
-            $query->bindParam("region", $region, PDO::PARAM_STR);
-            $result = $query->execute();
-            if ($result) {
-                echo '<p class="success">Your registration was successful!</p>';
-                header('location: index.php');
-            } else {
-                echo '<p class="error">Something went wrong!</p>';
-            }
-        }
-    }
-    if (isset($_POST['login'])) {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $query = $connection->prepare("SELECT * FROM users WHERE username=:username");
-        $query->bindParam("username", $username, PDO::PARAM_STR);
-        $query->execute();
-        $result = $query->fetch(PDO::FETCH_ASSOC);
-        echo $result['password'];
-        echo (password_verify($password, $result['password']));
+session_start();
+require __DIR__.'/helper/common.php';
+require __DIR__.'/apiController.php';
+$region = '';
 
-        if (!$result) {
-            echo '<p class="error">Username/Password is wrong!</p>' ;
-        } else {
-            if ($password == $result['password']) {
-                $_SESSION['user_id'] = $result['id'];
-                $_SESSION['username'] = $result['username'];
-                $_SESSION['email'] = $result['email'];
-                $_SESSION['region'] = $result['region'];
-                session_set_cookie_params(0);
-                header("Location: ind_home.php");
-            } else {
-                echo '<p class="error">Username/Password is wrong!</p>';
-            }
-        }
+$change_region = '';
+if(isset($_GET['region']) && $_GET['region'] != ''){
+    $change_region = $_GET['region'];
+    $_SESSION['region'] = $change_region;
+    if(isset($_SESSION['user_id'])){
+        updateUserRegion($change_region, $_SESSION['user_id']);
     }
-
+}
+if(isset($_SESSION) && !empty($_SESSION['region'])){
+    $region = $_SESSION['region'];
+}
+$method = 'GET';
+if($region != ''){
+    $url = 'https://api-mtrack.affise.com/3.0/partner/offers?api-key=9a5057e1103b54ea0bb5f4f16cbe1a62&countries[]='.$region;
+}else{
+    $url = 'https://api-mtrack.affise.com/3.0/partner/offers?api-key=9a5057e1103b54ea0bb5f4f16cbe1a62';
+}
+$apiData = getOffersList($method, $url);
+$activeRegion = activeRegion($method, $url);
+$activeBrands = activeBrands($method, $url);
+$activeCategories = activeCategories($method, $url);
 ?>
 
+<!DOCTYPE html>
+<html>
+
 <head>
+    <title>CouponDeck</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.ico" type="image/icon type">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7WLV7EVE0E"></script>
@@ -77,8 +48,8 @@
 
     gtag('config', 'G-7WLV7EVE0E');
     </script>
-    
-    
+
+
     <!-- Global site tag (gtag.js) - Google Ads: 365647794 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-365647794"></script>
     <script>
@@ -88,8 +59,8 @@
 
     gtag('config', 'AW-365647794');
     </script>
-    
-    
+
+
     <!-- Facebook Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -109,488 +80,632 @@
     /></noscript>
     <!-- End Facebook Pixel Code -->
 
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="bootstrap.css"/>
-      <link rel="icon" href="images/logo.ico" type="image/icon type">
-      <link rel="stylesheet" href="bootstrap.min.css"/>
-      <link rel="stylesheet" href="css/dropdown.css"/>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <title>Welcome to Coupon Deck!</title>
-    <style>
-    /*Trigger Button*/
-    .login-trigger {
-      font-weight: bold;
-      color: #fff;
-      background: linear-gradient(to bottom right, #B05574, #F87E7B);
-      padding: 9px 20px;
-      border-radius: 30px;
-      position: relative;
-      top: 50%;
+    <link rel="stylesheet" href="css/font.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <!--css plugin-->
+    <link rel="stylesheet" href="css/flexslider.css"/>
+    <link rel="stylesheet" href="css/jquery.nouislider.css"/>
+
+
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style-dark.css">
+    <link rel="stylesheet" href="css/style-gray.css">
+    <!--[if IE 9]>
+    <link rel="stylesheet" href="css/ie9.css"/>
+    <![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/ie8.css"/>
+    <![endif]-->
+
+    <link rel="stylesheet" href="css/res-menu.css"/>
+    <link rel="stylesheet" href="css/responsive.css"/>
+    <!--[if lte IE 8]>
+        <script type="text/javascript" src="js/html5.js"></script>
+    <![endif]-->
+
+    <!-- Google Ad -->
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script>
+      window.googletag = window.googletag || {cmd: []};
+      var personalizedAdsDisabled = 1;
+
+      googletag.cmd.push(function() {
+        // Personalized ad serving is enabled by default. Set "request
+        // non-personalized ads" to 1 to disable.
+        //
+        // To ensure personalization is disabled for all ad requests, place this
+        // call before any calls to enableServices or display.
+        googletag.pubads().setRequestNonPersonalizedAds(personalizedAdsDisabled);
+
+        googletag
+            .defineSlot('/6355419/Travel/Europe/France',[728, 90], 'banner-ad')
+            .addService(googletag.pubads());
+        googletag.enableServices();
+      });
+    </script>
+    <!-- end Google ad -->
+<style>
+
+    body{
+      background: #f7f7f7;
     }
-    /*Modal*/
-    h4 {
-      font-weight: bold;
-      color: #fff;
-    }
-    .close {
-      color: #fff;
-      transform: scale(1.2)
-    }
-    .modal-content {
-      -webkit-transform: translate(50%,-50%);
-      transform: translate(-50%,50%);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      font-weight: bold;
-      background: #035465;
-      border-radius: 5px 50px 5px 50px;
-    }
-    .form-control {
-      margin: 1em 0;
-    }
-    .form-control:hover, .form-control:focus {
-      box-shadow: none;
-      border-color: #fff;
-    }
-    .username, .password {
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
-      border-bottom: 2px solid #eee;
-      padding-left: 0;
-      font-weight: normal;
-      background: transparent;
-    }
-    .form-control::-webkit-input-placeholder {
-      color: #eee;
-    }
-    .form-control:focus::-webkit-input-placeholder {
-      font-weight: bold;
-      color: #fff;
-    }
-    .login {
-      padding: 6px 20px;
-      border-radius: 20px;
-      background: none;
-      border: 2px solid #FAB87F;
-      color: #FAB87F;
-      font-weight: bold;
-      transition: all .5s;
-      margin-top: 1em;
-    }
-    .login:hover {
-      background: #FAB87F;
-      color: #fff;
+    .gray .mod-header {
+    background-color: #e0e0e0;
+    padding-top: 46px;
+    padding-bottom: 0px;
     }
 
-
-.login-button {
-    margin-bottom:10px;
-  }
-  body {
-    background-image: url('bg.jpg');
-    background-repeat: repeat;
-    background-size: cover;
-    font-family: roboto;
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: 1s ease;
-    background-color: transparent;
-  }
+   .header-content clearfix{
+       background-color: aqua;
+   }
 
 
-.icon {
-  font-size: 100px;
-  position: absolute;
+   .box {
+     width: 40%;
+     margin: 0 auto;
+     background: #f7f7f7;
+     padding: 35px;
+     border: 2px solid #fff;
+     border-radius: 20px/50px;
+     background-clip: padding-box;
+     text-align: center;
+   }
+   input[type=submit]{
+     border-radius: 25px;
+     background: orange;
+     padding: 0px 25px 0px 25px;
+   }
 
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
+   .core {width: 100%; display: table;}
 
-.footer {
-    background: #05a7c9;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* height: 20%; */
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+ .box1{
+     background-color: white;
+     width: 15%;
+     float:none;
+     display: table-cell;
+     border-radius:0px;
+     height: 100px;
+     vertical-align: middle;
+     text-align: center;
+     color: white;
+     }
 
-.cd{
+ .box2{
+     background-color: #f7f7f7;
+     width: 70%;
+     float:none;
+     display: table-cell;
+     border-radius:0px;
+     }
+ .box3{
+     background-color: white;
+     width: 15%;
+     float:none;
+     display: table-cell;
+     border-radius:0px;
+     vertical-align: middle;
+     text-align: center;
+     color: white;
+     }
 
-            float:left;
-             background:transparent;
-             width:40%;
-             height:100%;
-             border: transparent;
-             box-shadow: 2px 0px 16px 13px #dee2e6;
-             outline: none;
-}
-.cdl{
-                float:left;
-                background:transparent;
-                /* width:30%; */
-                height:100%;
-                margin-left: 15%;
-                background:orange;
-                width: 35%;
-}
-.cdr{
-                float:right;
-                background:transparent;
-                /* width:30%; */
-                height:100%;
-                margin-right: 15%;
-                background: #f7f7f7;
-                width: 35%;
-                padding: 63px 50px 25px 50px;
-            }
+     .gridtable {
+     width: 100%;
+   }
+   @media screen and (max-width:320px) {
+     .gridtable, .gridtable thead, .gridtable tbody {
+       display: block;
+       width: 100%;
+     }
+     .gridtable tr {
+       display: grid;
+       width: 100%;
+       grid-template-columns: auto auto auto;
+     }
+     /* .core {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left:50px;
+  } */
+   }
 
-#con_info{
-  color:white;line-height: 2.6;font-weight:normal;margin-left:20px;margin-right: 20px;font-size: 0.8em; padding: 20px 50px 10px 10px; line-height: 2.0em;
-}
-#social_info{
-  color:white;line-height: 2.6;font-weight: bold;margin-left:20px;margin-right: 20px;font-size: 1.05em; padding: 30px 50px 50px 30px;
-}
-
-  @media only screen and (max-width: 600px) {
-    header{
-      align-items: center;
-    }
-  .cdl {
-    visibility: hidden;
-    display:none;
-  }
-  .cdr{
-    margin-right: 0%;
-    background: transparent;
-    width: 100%;
-    padding: 10px 0px 0px 0px;
-  }
-  .cd{
-    visibility: hidden;
-    display:none;
-  }
-  #con_info{
-    color:white;line-height: 2.6;font-weight: bold;margin-left:20px;margin-right: 20px;text-align: center;font-size: 1.05em;
-  }
-  #social_info{
-    color:white;line-height: 2.6;font-weight: bold;margin-left:20px;margin-right: 20px;font-size: 1.05em; padding: 30px 50px 50px 30px;
-  }
-  .footer{
-    height: auto;
-    flex-direction: column;
-  }
-}
-
-input[type=text]{
-
-    border: none;
-    background: white;
-    color:black;
-    border-radius: 25px;
-}
-input[type=password]{
-
-    border: none;
-    color:black;
-    background: white;
-    border-radius: 25px;
-
-}
-input[type=email]{
-
-    border: none;
-    color:black;
-    background: white;
-    border-radius: 25px;
-
-}
-button[type=submit]{
-  border-radius: 25px;
-  background: orange;
-  outline:none;
-}
-input {
-    border: 2px solid #ccc;
-    font-size: 1.5rem;
-    font-weight: 100;
-    font-family: 'roboto';
-    padding: 10px;
-    border-radius: 25px;
-    outline:none;
-}
 </style>
 </head>
-<body style="padding:0px; margin:0px; background-color:#fff;font-family:arial,helvetica,sans-serif,verdana,'Open Sans'">
+<body class="gray"  onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false"><!--<div class="alert_w_p_u"></div>-->
+<!-- Pre-Loader -->
+    <div id="pre-loader"></div>
+<!-- Pre-Loader End -->
+<!-- #region Jssor Slider Begin -->
+<!-- Generator: Jssor Slider Composer -->
+<!-- Source: https://www.jssor.com/demos/banner-rotator.slider/=edit -->
+<script src="js/jssor.slider-28.1.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    window.jssor_1_slider_init = function() {
 
-    <!-- #region Jssor Slider Begin -->
-    <!-- Generator: Jssor Slider Composer -->
-    <!-- Source: https://www.jssor.com/demos/banner-rotator.slider/=edit -->
-    <script src="js/jssor.slider-28.1.0.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        window.jssor_1_slider_init = function() {
+        var jssor_1_SlideshowTransitions = [
+          {$Duration:500,$Delay:12,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:2049,$Easing:$Jease$.$OutQuad},
+          {$Duration:500,$Delay:40,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$SlideOut:true,$Easing:$Jease$.$OutQuad},
+          {$Duration:1000,x:-0.2,$Delay:20,$Cols:16,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Assembly:260,$Easing:{$Left:$Jease$.$InOutExpo,$Opacity:$Jease$.$InOutQuad},$Opacity:2,$Outside:true,$Round:{$Top:0.5}},
+          {$Duration:1600,y:-1,$Delay:40,$Cols:24,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:$Jease$.$OutJump,$Round:{$Top:1.5}},
+          {$Duration:1200,x:0.2,y:-0.1,$Delay:16,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InWave,$Top:$Jease$.$InWave,$Clip:$Jease$.$OutQuad},$Round:{$Left:1.3,$Top:2.5}},
+          {$Duration:1500,x:0.3,y:-0.3,$Delay:20,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$During:{$Left:[0.2,0.8],$Top:[0.2,0.8]},$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InJump,$Top:$Jease$.$InJump,$Clip:$Jease$.$OutQuad},$Round:{$Left:0.8,$Top:2.5}},
+          {$Duration:1500,x:0.3,y:-0.3,$Delay:20,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$During:{$Left:[0.1,0.9],$Top:[0.1,0.9]},$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InJump,$Top:$Jease$.$InJump,$Clip:$Jease$.$OutQuad},$Round:{$Left:0.8,$Top:2.5}}
+        ];
 
-            var jssor_1_SlideshowTransitions = [
-              {$Duration:500,$Delay:12,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:2049,$Easing:$Jease$.$OutQuad},
-              {$Duration:500,$Delay:40,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$SlideOut:true,$Easing:$Jease$.$OutQuad},
-              {$Duration:1000,x:-0.2,$Delay:20,$Cols:16,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Assembly:260,$Easing:{$Left:$Jease$.$InOutExpo,$Opacity:$Jease$.$InOutQuad},$Opacity:2,$Outside:true,$Round:{$Top:0.5}},
-              {$Duration:1600,y:-1,$Delay:40,$Cols:24,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:$Jease$.$OutJump,$Round:{$Top:1.5}},
-              {$Duration:1200,x:0.2,y:-0.1,$Delay:16,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InWave,$Top:$Jease$.$InWave,$Clip:$Jease$.$OutQuad},$Round:{$Left:1.3,$Top:2.5}},
-              {$Duration:1500,x:0.3,y:-0.3,$Delay:20,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$During:{$Left:[0.2,0.8],$Top:[0.2,0.8]},$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InJump,$Top:$Jease$.$InJump,$Clip:$Jease$.$OutQuad},$Round:{$Left:0.8,$Top:2.5}},
-              {$Duration:1500,x:0.3,y:-0.3,$Delay:20,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$During:{$Left:[0.1,0.9],$Top:[0.1,0.9]},$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InJump,$Top:$Jease$.$InJump,$Clip:$Jease$.$OutQuad},$Round:{$Left:0.8,$Top:2.5}}
-            ];
-
-            var jssor_1_options = {
-              $AutoPlay: 1,
-              $SlideshowOptions: {
-                $Class: $JssorSlideshowRunner$,
-                $Transitions: jssor_1_SlideshowTransitions,
-                $TransitionsOrder: 1
-              },
-              $ArrowNavigatorOptions: {
-                $Class: $JssorArrowNavigator$
-              },
-              $BulletNavigatorOptions: {
-                $Class: $JssorBulletNavigator$,
-                $SpacingX: 16,
-                $SpacingY: 16
-              }
-            };
-
-            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-            /*#region responsive code begin*/
-
-            var MAX_WIDTH = 980;
-
-            function ScaleSlider() {
-                var containerElement = jssor_1_slider.$Elmt.parentNode;
-                var containerWidth = containerElement.clientWidth;
-
-                if (containerWidth) {
-
-                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
-
-                    jssor_1_slider.$ScaleWidth(expectedWidth);
-                }
-                else {
-                    window.setTimeout(ScaleSlider, 30);
-                }
-            }
-
-            ScaleSlider();
-
-            $Jssor$.$AddEvent(window, "load", ScaleSlider);
-            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
-            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
-            /*#endregion responsive code end*/
+        var jssor_1_options = {
+          $AutoPlay: 1,
+          $SlideshowOptions: {
+            $Class: $JssorSlideshowRunner$,
+            $Transitions: jssor_1_SlideshowTransitions,
+            $TransitionsOrder: 1
+          },
+          $ArrowNavigatorOptions: {
+            $Class: $JssorArrowNavigator$
+          },
+          $BulletNavigatorOptions: {
+            $Class: $JssorBulletNavigator$,
+            $SpacingX: 16,
+            $SpacingY: 16
+          }
         };
-    </script>
-    <style>
-        /*jssor slider loading skin spin css*/
-        .jssorl-009-spin img {
-            animation-name: jssorl-009-spin;
-            animation-duration: 1.6s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
+
+        var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+        /*#region responsive code begin*/
+
+        var MAX_WIDTH = 980;
+
+        function ScaleSlider() {
+            var containerElement = jssor_1_slider.$Elmt.parentNode;
+            var containerWidth = containerElement.clientWidth;
+
+            if (containerWidth) {
+
+                var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                jssor_1_slider.$ScaleWidth(expectedWidth);
+            }
+            else {
+                window.setTimeout(ScaleSlider, 30);
+            }
         }
 
-        @keyframes jssorl-009-spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
+        ScaleSlider();
 
-        /*jssor slider bullet skin 053 css*/
-        .jssorb053 .i {position:absolute;cursor:pointer;}
-        .jssorb053 .i .b {fill:#fff;fill-opacity:0.3;}
-        .jssorb053 .i:hover .b {fill-opacity:.7;}
-        .jssorb053 .iav .b {fill-opacity: 1;}
-        .jssorb053 .i.idn {opacity:.3;}
+        $Jssor$.$AddEvent(window, "load", ScaleSlider);
+        $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+        $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+        /*#endregion responsive code end*/
+    };
+</script>
+<style>
+    /*jssor slider loading skin spin css*/
+    .jssorl-009-spin img {
+        animation-name: jssorl-009-spin;
+        animation-duration: 1.6s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
 
-        /*jssor slider arrow skin 093 css*/
-        .jssora093 {display:block;position:absolute;cursor:pointer;}
-        .jssora093 .c {fill:none;stroke:#fff;stroke-width:400;stroke-miterlimit:10;}
-        .jssora093 .a {fill:none;stroke:#fff;stroke-width:400;stroke-miterlimit:10;}
-        .jssora093:hover {opacity:.8;}
-        .jssora093.jssora093dn {opacity:.6;}
-        .jssora093.jssora093ds {opacity:.3;pointer-events:none;}
-  </style>
-  <header style="background-color:#f7f7f7;">
-    <span id="logoo"><img src="cd_blank.png" width="250px" style="padding: 20px 20px 20px 20px;"></span>
-    <span style="float:right;padding: 10px 15px 10px 10px; margin-top:38px;"><a style="background:none; text-decoration:none; color:black; font-weight:bold;font-size: 1.5em;" class="login-trigger" href="#" data-target="#login" data-toggle="modal"> <img src="user-dark.png" width="30px" style="margin-top: -15px;"> &nbspSign In</a></span>
-  </header>
-  <div style="width:100%; height: 130px; background:orange;">
-    <center>
-      <p style="color:white;vertical-align:middle;padding-top: 25px;font-weight:bold;font-size: 1.5em;">Join Our Site</p>
+    @keyframes jssorl-009-spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
 
-      <button style="font-size:24px; border-radius:25px; background:#f7f7f7;color:orange; border-color: transparent;margin-top: -10px; padding-right: 25px;padding-left: 25px;" href="#" data-target="#video" data-toggle="modal"><i class="fa fa-play"></i>&nbsp; Watch Video</button>
-    </center>
-  </div>
+    /*jssor slider bullet skin 053 css*/
+    .jssorb053 .i {position:absolute;cursor:pointer;}
+    .jssorb053 .i .b {fill:#fff;fill-opacity:0.3;}
+    .jssorb053 .i:hover .b {fill-opacity:.7;}
+    .jssorb053 .iav .b {fill-opacity: 1;}
+    .jssorb053 .i.idn {opacity:.3;}
+
+    /*jssor slider arrow skin 093 css*/
+    .jssora093 {display:block;position:absolute;cursor:pointer;}
+    .jssora093 .c {fill:none;stroke:#fff;stroke-width:400;stroke-miterlimit:10;}
+    .jssora093 .a {fill:none;stroke:#fff;stroke-width:400;stroke-miterlimit:10;}
+    .jssora093:hover {opacity:.8;}
+    .jssora093.jssora093dn {opacity:.6;}
+    .jssora093.jssora093ds {opacity:.3;pointer-events:none;}
+</style>
+
+    <div class="container-page" style="background: #f7f7f7;">
+    <div class="mp-pusher" id="mp-pusher">
+        <header class="mod-header">
+            <div class="grid_frame">
+                <div class="container_grid clearfix">
+                    <div class="grid_12">
+                        <div class="header-content clearfix" style="padding-right: 60px;">
 
 
-  <div id="login" class="modal fade" role="dialog">
-    <div class="modal-dialog">
+                            <nav class="main-nav">
+                                <ul id="main-menu" class="nav nav-horizontal clearfix">
+                                  <!-- <li style="background:transparent;"> -->
+                                    <div id="logo">
+                                            <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="CouponDeck"/>
+                                    </div>
+                                  <!-- </li> -->
+                                  <li>
+                                    <form action="/action_page.php">
+                                      <input type="text" placeholder="" name="search">
+                                      <button type="submit"><i class="fa fa-search"></i></button>
+                                    </form>
+                                  </li>
+                                    <li>
+                                        <a href="index.php">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="ind_brand.php">Brands</a>
+                                    </li>
+                                    <li>
+                                      <a href="category.php">Categories</a>
+                                    </li>
+                                    <li>
+                                        <a href="offers.php">Offers</a>
+                                    </li>
+                                    <li>
+                                        <a href="reviews.php">Reviews</a>
+                                    </li>
 
-      <div class="modal-content">
-        <div class="modal-body">
-          <center>
-          <h4>Sign In</h4>
-          <form autocomplete="off" method="post" action="" name="signin-form">
-            <input autocomplete="off" style="border-color: white;color: white;border-style: solid;background-color:transparent; padding-left: 10px;" type="text" name="username" class="username form-control" pattern="[a-zA-Z0-9]+" placeholder="Username"/>
-            <input autocomplete="off" style="border-color: white;color: white;border-style: solid;background-color:transparent; padding-left: 10px;" type="password" name="password" class="password form-control" placeholder="Password"/>
-            <button  class="btn login" type="submit" name="login" value="login" style="color: black;" />Sign In</button>
-            <!-- <br>
-          <br><a align="left" href="index.php" style="color:white;">New User, Register Here</a> -->
+                                    <li>
+                                        <a href="contact.php">Contact Us</a>
+                                    </li>
+
+                                    <li class="has-sub" style="background: rgb(0 0 0 / 0%); color: white; border-radius: 5px;">
+                                        <a style="color: black;">Region</a>
+                                        <ul class="sub-menu" style="background: skyblue; border-radius: 25px;">
+                                          <?php if(!empty($activeRegion['results'])){
+                                                  foreach($activeRegion['results'] as $index){
+                                                      if($index['code'] == $region){?>
+                                            <li><a href="index.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
+                                            <?php }else{?>
+                                              <li><a href="index.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
+                                            <?php }}}?>
+                                        </ul>
+                                    </li>
+
+                                    <!-- <?php
+                                      if (isset($_SESSION['username'])){
+                                        ?>
+                                    <li class="has-sub">
+                                        <a class="btn btn-green type-login btn-login"style="margin-top: -5px;">
+                                          <?php
+                                          echo $_SESSION['username'];
+                                          }
+                                          ?>
+                                        </a>  <?php
+                                            if (isset($_SESSION['username'])){
+                                              ?>
+                                        <ul class="sub-menu">
+                                            <li><a href="logout.php">Logout</a></li>
+                                        </ul>
+
+                                    </li>
+                                    <?php } ?>
+                                    <?php
+                                      if (!isset($_SESSION['username'])){
+                                        ?>
+
+                                    <li>
+                                        <a href="index.php" class="btn btn-green type-login btn-login"style="margin-top: -5px;">Login</a>
+                                    </li>
+                                    <?php } ?> -->
+
+
+                                    </li>
+                                  </ul>
+                                <a id="sys_btn_toogle_menu" class="btn-toogle-res-menu" href="#alternate-menu" style="margin: -45px -37px 0 0;"></a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header><!--end: header.mod-header -->
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin-top: -125px; background:#f7f7f7;"><path fill="#e0e0e0" fill-opacity="1" d="M0,320L48,288C96,256,192,192,288,186.7C384,181,480,235,576,245.3C672,256,768,224,864,224C960,224,1056,256,1152,261.3C1248,267,1344,245,1392,234.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+
+        <p style=" font-family: Galada, cursive;
+        font-size: 149px;
+        font-weight: 100;
+        color: rgba(5, 167, 201, 1);
+        text-transform: none;
+        font-style: normal;
+        margin-top: 1px;
+        text-align: center;
+        text-decoration: none;
+        line-height: 1em;
+        transform: rotate(355deg);
+        letter-spacing: 1px;">Buy More</p>
+
+        <p style=" font-family: Arsenal, sans-serif;
+        font-size: 80px;
+        font-weight: 100;
+        color: #ee9f09;
+        margin-top: -150px;
+        text-transform: none;
+        font-style: normal;
+        text-align: center;
+        text-decoration: none;
+        line-height: 1em;
+        letter-spacing: 1px;">Spend Less</p>
+
+
+        <nav id="mp-menu" class="mp-menu alternate-menu">
+            <div class="mp-level">
+                <h2>Menu</h2>
+                <ul>
+                    <li>
+                      <a href="index.php">Home</a>
+                    </li>
+                    <li>
+                      <a href="ind_brand.php">Brands</a>
+                    </li>
+                    <li>
+                      <a href="category.php">Categories</a>
+                    </li>
+                    <li>
+                        <a href="offers.php">Offers</a>
+                    </li>
+                    <li>
+                      <a href="reviews.php">Reviews</a>
+                    </li>
+                    <li>
+                      <a href="contact.php">Contact Us</a>
+                    </li>
+
+                    <!-- <?php
+                      if (isset($_SESSION['username'])){
+                        ?>
+                    <li class="has-sub">
+                        <a class="btn btn-green type-login btn-login">
+                          <?php
+                          echo $_SESSION['username'];
+                          }
+                          ?>
+                        </a>  <?php
+                            if (isset($_SESSION['username'])){
+                              ?>
+                        <ul class="sub-menu">
+                            <li><a href="logout.php">Logout</a></li>
+                        </ul>
+
+                    </li>
+                    <?php } ?>
+                    <?php
+                      if (!isset($_SESSION['username'])){
+                        ?>
+                    <li>
+                        <a href="index.php" class="btn btn-green type-login btn-login" >Login</a>
+                    </li>
+                    <?php } ?> -->
+                    <!-- <li class="has-sub">
+                        <a>Change<br>Region</a>
+                        <ul class="sub-menu">
+                            <li><a href="index.php">India</a></li>
+                            <li><a href="uae_home.php">UAE </a></li>
+                            <li><a href="singapore_home.php">Singapore</a></li>
+                            <li><a href="indonesia_home.php">Indonesia</a></li>
+                            <li><a href="saudiarab_home.php">Saudi Arab</a></li>
+                            <li><a href="thailand_home.php">Thailand</a></li>
+                            <li><a href="vietnam_home.php">Vietnam</a></li>
+                            <li><a href="malaysia_home.php">Malaysia</a></li>
+                            <li><a href="russia_home.php">Russia</a></li>
+                            <li><a href="belarus_home.php">Belarus</a></li>
+                        </ul>
+                    </li> -->
+                  </ul>
+
+            </div>
+        </nav><!--end: .mp-menu -->
+        <!-- Google Advertisement -->
+        <!-- <center>
+          <div id="banner-ad" style="width: 100% auto; height: 100px;">
+            <script>
+              googletag.cmd.push(function() { googletag.display('banner-ad'); });
+            </script>
+          </div>
+        </center> -->
+        <!-- End_Google Advertisement -->
+
+
+        <div class="box2">
+            <div class="text gridtable" style="padding-top: 10px;">
+              <p style="text-color:black; font-weight:bold; font-size: 2em; margin-left: 25px;margin-top: -30px;">Brands</p>
+            <?php if(!empty($activeBrands)){
+              $i = 0;
+                    foreach($activeBrands as $index){
+                      if($i < 4){?>
+                        <div class="coupon-item grid_3">
+                            <div class="coupon-content">
+                                <div class="img-thumb-center">
+                                    <div class="wrap-img-thumb">
+                                        <span class="ver_hold"></span>
+                                        <a href="offers.php?brand=<?php echo $index['title'];?>" class="ver_container"><img src="<?php echo $index['logo'];?>" alt="<?php echo $index['title'];?>"></a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div><!--end: .coupon-item -->
+                <?php $i++;}}}?>
+            </div>
+
+        </div>
+        <center>
+          <form action="ind_brand.php" target="_blank" style="background:#f7f7f7;">
+            <input class="btn btn-green type-login btn-login" style="padding:10px 40px 10px 40px ;" type="submit" value="View all Brands" />
           </form>
         </center>
-        </div>
-      </div>
-    </div>
-  </div>
+<br>
 
+<div class="box2">
+    <div class="text gridtable" style="padding-top: 10px;">
+      <p style="text-color:black; font-weight:bold; font-size: 2em; margin-left: 25px;">Category</p>
+    <?php if(!empty($activeCategories)){
+      $i = 0;
+            foreach($activeCategories as $index => $list){
+              if($i < 4){?>
+                <div class="coupon-item grid_3">
+                    <div class="coupon-content">
+                        <div class="img-thumb-center">
+                            <div class="wrap-img-thumb">
+                                <span class="ver_hold"></span>
+                                <a href="offers.php?category=<?php echo $index;?>" class="ver_container"><img src="<?php echo $list;?>" alt="<?php echo $index;?>"></a>
+                            </div>
+                        </div>
 
-  <div id="video" class="modal fade" role="dialog">
-    <div class="modal-dialog">
+                    </div>
 
-      <div class="modal-content" style="background:transparent;border-color:transparent;margin-left: -50px;">
-        <div class="modal-body">
-          <center>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Pvzn6YlZVQk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/FJhbOgZwjzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-          <!-- <iframe width="540" height="320" src="https://www.youtube.com/embed/MUnk6NuVPQQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-        </center>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <div id = "boxes" style="height: 100%;margin-top: 80px;margin-bottom: 80px;">
-    <div class="cdl">
-
-      <p style="margin-top:150px;margin-right:60px;margin-left:60px;">
-
-    <span style=" font-family: Roboto, sans-serif;
-                  font-size: 4em;
-                  font-weight: bold;
-                  color: rgba(255, 255, 255, 1);
-                  text-transform: none;
-                  font-style: italic;
-                  text-decoration: none;
-                  line-height: 1em;
-                  letter-spacing: 0.5px;">
-                  WE OFFER DISCOUNT COUPONS
-    </span>
-        <br><br>
-
-    <span style=" font-family: Roboto, sans-serif;
-                  font-size: 2em;
-                  font-weight: bold;
-                  color: rgba(255, 255, 255, 1);
-                  text-transform: none;
-                  font-style: italic;
-                  text-decoration: none;
-                  line-height: 1em;
-                  letter-spacing: 0.5px;">
-                  SO YOU CAN BUY MORE WITH YOUR BUDGET
-    </span>
-      </p>
+                </div><!--end: .coupon-item -->
+        <?php $i++;}}}?>
     </div>
 
-<div class="cdr">
 
-
-    <p align="right" style=" font-family: Roboto, sans-serif;
-    margin-right: 30px;
-    font-size: 2em;
-    font-weight: bold;
-    color: orange;
-    text-transform: none;
-    font-style: italic;
-    text-decoration: none;
-    line-height: 1em;
-    letter-spacing: 0.5px;">
-    Sign Up
-  </p>
-  <br>
-
-  <form autocomplete="off" method="post" action="" name="signup-form">
-    <center>
-  <div class="form-element">
-    <br>
-  <img src="user.png" width="30px">&nbsp;
-  <input style="box-shadow: 0px 5px 7px 0px rgb(211 211 211);" autocomplete="off" type="text" name="username" pattern="[a-zA-Z0-9]+"  placeholder="Username" required />
-  </div>
-  <div class="form-element"><br>
-  <img src="email.png" width="30px">&nbsp;
-  <input style="box-shadow: 0px 5px 7px 0px rgb(211 211 211);" autocomplete="off" type="email" name="email"  placeholder="Email" required />
-  </div>
-  <div class="form-element"><br>
-    <img src="key.png" width="30px">&nbsp;
-  <input style="box-shadow: 0px 5px 7px 0px rgb(211 211 211);" autocomplete="off" type="password" name="password"  placeholder="Password" required />
-  </div>
-  <div class="form-element"><br>
-    <img src="maps.png" width="30px">&nbsp;
-      <select name="region" id="region" style="height: 50px;
-    width: 307px;;border: none;
-      background: white;
-      border-radius: 25px;box-shadow: 0px 5px 7px 0px rgb(211 211 211); font-family: roboto;
-    font-size: 1.5em;">
-          <option value="">Select Region</option>
-          <?php if(!empty($region['results'])){
-              foreach($region['results'] as $index){ ?>
-              <option value="<?php echo $index['code']; ?>"><?php echo $index['country']; ?></option>
-          <?php   } } ?>
-      </select>
-  </div><br>
-  <span style="float:right;"><button type="submit" name="register" value="register" style="margin-right: 35px;
-    height: 50px;
-    width: 150px;
-    font-size: 1.5em;
-    font-weight: bold;
-    font-family: roboto;
-    outline: none;
-    border: none;
-    ">Submit</button></span>
-</center>
+</div>
+<center>
+  <form action="category.php" target="_blank" style="background:#f7f7f7;">
+    <input class="btn btn-green type-login btn-login" style="padding:10px 40px 10px 40px ;" type="submit" value="View all Categories" />
   </form>
+</center>
+<br>
+<div class="box2">
+    <div class="text gridtable" style="padding-top: 10px;">
+      <p style="text-color:black; font-weight:bold; font-size: 2em; margin-left: 25px;">Hot Offers</p>
+    <?php if(!empty($activeCategories)){
+      $i = 0;
+            foreach($activeCategories as $index => $list){
+              if($i < 4){?>
+                <div class="coupon-item grid_3">
+                    <div class="coupon-content">
+                        <div class="img-thumb-center">
+                            <div class="wrap-img-thumb">
+                                <span class="ver_hold"></span>
+                                <a href="offers.php?category=<?php echo $index;?>" class="ver_container"><img src="<?php echo $list;?>" alt="<?php echo $index;?>"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div><!--end: .coupon-item -->
+        <?php $i++;}}}?>
+    </div>
+
 
 </div>
-</div>
-<div class="footer"style="position: relative;">
- <span style="float:right">
+<center>
+  <form action="hotoffer.php" target="_blank" style="background:#f7f7f7;">
+    <input class="btn btn-green type-login btn-login" style="padding:10px 40px 10px 40px ;" type="submit" value="View all Hot Offers" />
+  </form>
+</center>
+<br>
+<br>
 
-  <p id="con_info">
-  <big><strong>CONTACT US</strong></big><br>
-  <i class="fa fa-map-marker"></i>&nbsp;  1131, Tower A, The-iThum, Sector-62, Noida , UP
-  <br>
-  <i class="fa fa-phone"></i>&nbsp; +91-9540291981
-  <br>
-  <i class="fa fa-envelope"></i>&nbsp; support@coupondeck.co.in
-  <br>
-</p></span>
 
-  <div><p id="social_info">
-    <img src="mmipl.png"> &nbsp; <span><B>MITRAKSH MEDIA</B> India Pvt. Ltd.</span>
+<div id="jssor_1" style="position:relative;margin:0 auto 25px;top:-25px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
+    <!-- Loading Screen -->
+    <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+        <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+    </div>
+    <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
+        <div>
+            <img data-u="image" src="img/011.jpg" />
+        </div>
+        <div>
+            <img data-u="image" src="img/012.jpg" />
+        </div>
+        <div>
+            <img data-u="image" src="img/013.jpg" />
+        </div>
+        <div>
+            <img data-u="image" src="img/014.jpg" />
+        </div>
 
-  <!-- <p id="social_info">
-  <i class="fab fa-facebook" style="font-size: 2em;"></i>&nbsp&nbsp&nbsp
-  <i class="fab fa-linkedin" style="font-size: 2em;"></i>
-  </p> -->
+    </div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">responsive slider</a>
+    <!-- Bullet Navigator -->
+    <div data-u="navigator" class="jssorb053" style="position:absolute;bottom:16px;right:16px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+        <div data-u="prototype" class="i" style="width:12px;height:12px;">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <path class="b" d="M11400,13800H4600c-1320,0-2400-1080-2400-2400V4600c0-1320,1080-2400,2400-2400h6800 c1320,0,2400,1080,2400,2400v6800C13800,12720,12720,13800,11400,13800z"></path>
+            </svg>
+        </div>
+    </div>
+    <!-- Arrow Navigator -->
+    <div data-u="arrowleft" class="jssora093" style="width:50px;height:50px;top:0px;left:30px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+            <circle class="c" cx="8000" cy="8000" r="5920"></circle>
+            <polyline class="a" points="7777.8,6080 5857.8,8000 7777.8,9920 "></polyline>
+            <line class="a" x1="10142.2" y1="8000" x2="5857.8" y2="8000"></line>
+        </svg>
+    </div>
+    <div data-u="arrowright" class="jssora093" style="width:50px;height:50px;top:0px;right:30px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+            <circle class="c" cx="8000" cy="8000" r="5920"></circle>
+            <polyline class="a" points="8222.2,6080 10142.2,8000 8222.2,9920 "></polyline>
+            <line class="a" x1="5857.8" y1="8000" x2="10142.2" y2="8000"></line>
+        </svg>
+    </div>
 </div>
+<script type="text/javascript">jssor_1_slider_init();
+</script>
+<!-- #endregion Jssor Slider End -->
+
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+          <img src="pp.png" width="100%" height="100%" style="margin-left: 0px;margin-top: 0px; width: 70%; ">
+
+
+
+
+
+			</div>
+
+			<div class="footer-center"style="margin-top: 25px;">
+
+				<div style="margin-top: 15px;">
+
+					<p style="font-size:1.89em; font-weight:bold;letter-spacing: 0.05em;">Earn Money</p><br>
+          <p style="font-size:1em;letter-spacing: 0.1em;">Just by completing Simple Tasks</p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+
+				<div>
+
+				  <a href="https://play.google.com/store/apps/details?id=mTrack.droid.pocketpennyapp" target="_blank">
+            <img src="gp.png" width="60%" style="margin-left: 50px;margin-top: 35px;">
+          </a>
+				</div>
+			</div>
+		</footer>
+
+
+    </div>
 </div>
+
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="js/jquery.nouislider.js"></script>
+
+<script type="text/javascript" src="js/html5lightbox.js"></script>
+<!--//js for responsive menu-->
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+<script type="text/javascript" src="js/classie.js"></script>
+<script type="text/javascript" src="js/mlpushmenu.js"></script>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+<script type="text/javascript" src="js/copy_text.js"></script>
+
+<!-- Pre-Loader -->
+<script>
+    var loader = document.getElementById("pre-loader");
+    window.addEventListener("load", function(){
+        loader.style.display="none";
+    })
+</script>
+<!-- Pre-Loader End -->
+
+</body>
+</html>

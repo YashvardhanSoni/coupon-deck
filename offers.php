@@ -332,7 +332,7 @@ $activeRegion = activeRegion($method, $url);
                                   </form>
                                 </li>
                                   <li>
-                                      <a href="ind_home.php">Home</a>
+                                      <a href="index.php">Home</a>
                                   </li>
                                   <li>
                                       <a href="ind_brand.php">Brands</a>
@@ -364,7 +364,7 @@ $activeRegion = activeRegion($method, $url);
                                       </ul>
                                   </li>
 
-                                  <?php
+                                  <!-- <?php
                                     if (isset($_SESSION['username'])){
                                       ?>
                                   <li class="has-sub">
@@ -389,7 +389,7 @@ $activeRegion = activeRegion($method, $url);
                                   <li>
                                       <a href="index.php" class="btn btn-green type-login btn-login">Login</a>
                                   </li>
-                                  <?php } ?>
+                                  <?php } ?> -->
 
 
                                   </li>
@@ -409,7 +409,7 @@ $activeRegion = activeRegion($method, $url);
                 <h2>Menu</h2>
                 <ul>
                     <li>
-                      <a href="ind_home.php">Home</a>
+                      <a href="index.php">Home</a>
                     </li>
                     <li>
                       <a href="ind_brand.php">Brands</a>
@@ -427,7 +427,7 @@ $activeRegion = activeRegion($method, $url);
                       <a href="contact.php">Contact Us</a>
                     </li>
 
-                    <?php
+                    <!-- <?php
                       if (isset($_SESSION['username'])){
                         ?>
                     <li class="has-sub">
@@ -451,11 +451,11 @@ $activeRegion = activeRegion($method, $url);
                     <li>
                         <a href="index.php" class="btn btn-green type-login btn-login" >Login</a>
                     </li>
-                    <?php } ?>
+                    <?php } ?> -->
                     <!-- <li class="has-sub">
                         <a>Change Region</a>
                         <ul class="sub-menu">
-                            <li><a href="ind_home.php">India</a></li>
+                            <li><a href="index.php">India</a></li>
                             <li><a href="uae_home.php">UAE </a></li>
                             <li><a href="singapore_home.php">Singapore</a></li>
                             <li><a href="indonesia_home.php">Indonesia</a></li>

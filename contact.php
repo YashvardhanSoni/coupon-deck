@@ -145,7 +145,7 @@ session_start();
                                   </form>
                                 </li>
                                   <li>
-                                      <a href="ind_home.php">Home</a>
+                                      <a href="index.php">Home</a>
                                   </li>
                                   <li>
                                       <a href="ind_brand.php">Brands</a>
@@ -164,7 +164,7 @@ session_start();
                                       <a href="contact.php">Contact Us</a>
                                   </li>
 
-                                  <?php
+                                  <!-- <?php
                                     if (isset($_SESSION['username'])){
                                       ?>
                                   <li class="has-sub">
@@ -189,7 +189,7 @@ session_start();
                                   <li>
                                       <a href="index.php" class="btn btn-green type-login btn-login"style="margin-top: -5px;">Login</a>
                                   </li>
-                                  <?php } ?>
+                                  <?php } ?> -->
 
                                     <!-- <li class="has-sub" style="background: rgb(0 0 0 / 0%); color: white; border-radius: 5px;">
                                         <a style="color: black;">Region</a>
@@ -197,9 +197,9 @@ session_start();
                                           <?php if(!empty($activeRegion['results'])){
                                                   foreach($activeRegion['results'] as $index){
                                                       if($index['code'] == $region){?>
-                                            <li><a href="ind_home.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
+                                            <li><a href="index.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
                                             <?php }else{?>
-                                              <li><a href="ind_home.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
+                                              <li><a href="index.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
                                             <?php }}}?>
                                         </ul>
                                     </li> -->
@@ -224,7 +224,7 @@ session_start();
               <h2>Menu</h2>
               <ul>
                   <li>
-                    <a href="ind_home.php">Home</a>
+                    <a href="index.php">Home</a>
                   </li>
                   <li>
                     <a href="ind_brand.php">Brands</a>
@@ -242,7 +242,7 @@ session_start();
                     <a href="contact.php">Contact Us</a>
                   </li>
 
-                  <?php
+                  <!-- <?php
                     if (isset($_SESSION['username'])){
                       ?>
                   <li class="has-sub">
@@ -266,11 +266,11 @@ session_start();
                   <li>
                       <a href="index.php" class="btn btn-green type-login btn-login" >Login</a>
                   </li>
-                  <?php } ?>
+                  <?php } ?> -->
                   <!-- <li class="has-sub">
                       <a>Change<br>Region</a>
                       <ul class="sub-menu">
-                          <li><a href="ind_home.php">India</a></li>
+                          <li><a href="index.php">India</a></li>
                           <li><a href="uae_home.php">UAE </a></li>
                           <li><a href="singapore_home.php">Singapore</a></li>
                           <li><a href="indonesia_home.php">Indonesia</a></li>
