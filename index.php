@@ -570,7 +570,7 @@ $hotOffers = hotOffers($method, $url);
                         <div class="img-thumb-center">
                             <div class="wrap-img-thumb">
                                 <span class="ver_hold"></span>
-                                <a href="offers.php?category=<?php echo $index;?>" class="ver_container"><img src="<?php echo $list;?>" alt="<?php echo $index;?>">
+                                <a href="offers.php?category=<?php echo $index;?>" class="ver_container"><img src="<?php echo $list;?>" width="177px" height="185px" alt="<?php echo $index;?>">
                                   <center><div class="overlaycat"><p style="color:white; font-weight:bold;"><?php echo $index;?></p></div></center>
                                 </a>
                             </div>
