@@ -214,6 +214,32 @@ $activeRegion = activeRegion($method, $url);
        margin-right: 0px;
    }
 
+   .login {
+     padding: 6px 20px;
+     border-radius: 20px;
+     background: none;
+     border: 2px solid #FAB87F;
+     color: #FAB87F;
+     font-weight: bold;
+     transition: all .5s;
+     margin-top: 1em;
+   }
+   .login:hover {
+     background: #FAB87F;
+     color: #fff;
+   }
+
+   .modal-content {
+     -webkit-transform: translate(50%,-50%);
+     transform: translate(-50%,50%);
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     font-weight: bold;
+     background: #035465;
+     border-radius: 5px 50px 5px 50px;
+   }
+
 </style>
 </head>
 <body style="background: #f7f7f7;" class="gray"  onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false"><!--<div class="alert_w_p_u"></div>-->
@@ -502,8 +528,7 @@ $activeRegion = activeRegion($method, $url);
                                         </div>
 
                                         <div id="popup<?php echo $i;?>" class="overlay">
-                                        <div class="popup"
-                                        aria-modal="true">
+                                        <div class="popup" aria-modal="true">
                                           <center><h2>OFFER<br>DESCRIPTION</h2></center>
                                           <a class="close" href="#">&times;</a>
                                           <div class="content">
@@ -513,6 +538,22 @@ $activeRegion = activeRegion($method, $url);
                                           </div>
                                         </div>
                                         </div>
+
+
+
+                                        <!-- <div id="login" class="modal fade" role="dialog">
+                                          <div class="modal-dialog">
+
+                                            <div class="modal-content">
+                                              <div class="modal-body">
+                                                <center>
+                                                <h4>Description</h4>
+
+                                              </center>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div> -->
 
 
                                     </div>

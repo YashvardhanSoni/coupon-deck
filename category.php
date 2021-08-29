@@ -21,9 +21,7 @@ if($region != ''){
 }else{
     $url = 'https://api-mtrack.affise.com/3.0/partner/offers?api-key=9a5057e1103b54ea0bb5f4f16cbe1a62';
 }
-$activeRegion = activeRegion($method, $url);
-$apiData = getOffersList($method, $url);
-// $activeRegion = activeCountries();
+$activeRegion = activeCountries();
 $activeCategories = activeCategories($method, $url);
 ?>
 
@@ -102,6 +100,25 @@ $activeCategories = activeCategories($method, $url);
     </script>
     <!-- end Google ad -->
 <style>
+
+.overlaycat {
+  position: absolute;
+  bottom: 40px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 89%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 2.0em;
+  padding: 7px;
+  text-align: center;
+}
+
+.wrap-img-thumb:hover .overlaycat {
+opacity: 0.5;
+}
 
    .header-content clearfix{
        background-color: aqua;
@@ -457,7 +474,9 @@ $activeCategories = activeCategories($method, $url);
                         <div class="img-thumb-center">
                             <div class="wrap-img-thumb">
                                 <span class="ver_hold"></span>
-                                <a href="offers.php?category=<?php echo $index;?>" class="ver_container"><img src="<?php echo $list;?>" alt="<?php echo $index;?>"></a>
+                                <a href="offers.php?category=<?php echo $index;?>" class="ver_container"><img src="<?php echo $list;?>" alt="<?php echo $index;?>">
+                                  <div class="overlaycat"><p style="color:white; font-weight:bold;"><?php echo $index;?></p></div>
+                                </a>
                             </div>
                         </div>
 
@@ -470,6 +489,7 @@ $activeCategories = activeCategories($method, $url);
     </div>
 
 </div>
+
 
 
 <div class="box3" style="background:#f7f7f7;">
