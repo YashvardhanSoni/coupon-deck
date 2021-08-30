@@ -540,8 +540,8 @@ $activeRegion = activeRegion($method, $url);
                                 $display = 'Hot Offers';
                                 $rediect_url = 'offers.php?hotoffers=';
                               }else{
-                                $display = 'Other Categories';
-                                $rediect_url = 'offers.php?brand=';
+                                $display = 'Other Offers';
+                                $rediect_url = 'offers.php?category=';
                               }
                           ?>
                           <p style="text-color:black; font-weight:bold; font-size: 2em; margin-left: 0px;margin-top: -10px;"><?= $display; ?></p>
