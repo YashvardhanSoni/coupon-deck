@@ -341,6 +341,9 @@ $activeRegion = activeRegion($method, $url);
                                       <a href="ind_brand.php">Brands</a>
                                   </li>
                                   <li>
+                                    <a href="category.php">Categories</a>
+                                  </li>
+                                  <li>
                                       <a href="offers.php">Offers</a>
                                   </li>
                                   <li>
@@ -413,6 +416,9 @@ $activeRegion = activeRegion($method, $url);
                     </li>
                     <li>
                       <a href="ind_brand.php">Brands</a>
+                    </li>
+                    <li>
+                      <a href="category.php">Categories</a>
                     </li>
                     <li>
                         <a href="offers.php">Offers</a>
