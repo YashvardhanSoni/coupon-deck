@@ -531,16 +531,17 @@ $activeRegion = activeRegion($method, $url);
                         <div class="mod-list-store block">
                           <?php
                               if(isset($_GET['brand'])){
-                                $display = 'Other Brands';
+                                $display = 'Similar Brands';
                                 $rediect_url = 'offers.php?brand=';
                               }else if(isset($_GET['category'])){
-                                $display = 'Category';
+                                $display = 'Other Categories';
                                 $rediect_url =  'offers.php?category=';
-
-                              }else{
+                              }else if(isset($_GET['Hot Offers'])){
                                 $display = 'Hot Offers';
                                 $rediect_url = 'offers.php?hotoffers=';
-
+                              }else{
+                                $display = 'Other Categories';
+                                $rediect_url = 'offers.php?brand=';
                               }
                           ?>
                           <p style="text-color:black; font-weight:bold; font-size: 2em; margin-left: 0px;margin-top: -10px;"><?= $display; ?></p>
