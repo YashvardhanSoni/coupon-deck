@@ -18,6 +18,7 @@ if(isset($_SESSION) && !empty($_SESSION['region'])){
     $region = $_SESSION['region'];
 }
 $method = 'GET';
+$category = (isset($_GET['category'])) ? $_GET['category'] : '';
 if($region != ''){
     $url = 'https://api-mtrack.affise.com/3.0/partner/offers?api-key=9a5057e1103b54ea0bb5f4f16cbe1a62&countries[]='.$region;
 }else{
@@ -26,17 +27,19 @@ if($region != ''){
 if(isset($_GET['brand']) && $_GET['brand'] != ''){
   $brand = $_GET['brand'];
   $category = getCategoryName($url, '', $brand);
-  // print_r($category);exit;
   $apiData = getOffersList($method, $url, $brand, '');
   $othersData = activeBrands($method, $url, $category, $brand);
 
+}else if(isset($_GET['hotoffers']) && $_GET['hotoffers'] != ''){
+  $hotoffers = $_GET['hotoffers'];
+  $apiData = getOffersList($method, $url, '', '', $hotoffers);
+  $othersData = hotOffers($method, $url);
+
 }else{
-  $get_category = (isset($_GET['category'])) ? $_GET['category'] : '';
-  $category = getCategoryName($url, $get_category, '');
+  $category = getCategoryName($url, $category, '');
   $apiData = getOffersList($method, $url, '', $category);
   $othersData = activeCategories($method, $url);
 }
-
 
 $activeRegion = activeRegion($method, $url);
 // $activeBrands = activeBrands($method, $url);
@@ -214,32 +217,6 @@ $activeRegion = activeRegion($method, $url);
        margin-right: 0px;
    }
 
-   .login {
-     padding: 6px 20px;
-     border-radius: 20px;
-     background: none;
-     border: 2px solid #FAB87F;
-     color: #FAB87F;
-     font-weight: bold;
-     transition: all .5s;
-     margin-top: 1em;
-   }
-   .login:hover {
-     background: #FAB87F;
-     color: #fff;
-   }
-
-   .modal-content {
-     -webkit-transform: translate(50%,-50%);
-     transform: translate(-50%,50%);
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     font-weight: bold;
-     background: #035465;
-     border-radius: 5px 50px 5px 50px;
-   }
-
 </style>
 </head>
 <body style="background: #f7f7f7;" class="gray"  onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false"><!--<div class="alert_w_p_u"></div>-->
@@ -364,9 +341,6 @@ $activeRegion = activeRegion($method, $url);
                                       <a href="ind_brand.php">Brands</a>
                                   </li>
                                   <li>
-                                    <a href="category.php">Categories</a>
-                                  </li>
-                                  <li>
                                       <a href="offers.php">Offers</a>
                                   </li>
                                   <li>
@@ -413,7 +387,7 @@ $activeRegion = activeRegion($method, $url);
                                       ?>
 
                                   <li>
-                                      <a href="index.php" class="btn btn-green type-login btn-login">Login</a>
+                                      <a href="login.php" class="btn btn-green type-login btn-login">Login</a>
                                   </li>
                                   <?php } ?> -->
 
@@ -439,9 +413,6 @@ $activeRegion = activeRegion($method, $url);
                     </li>
                     <li>
                       <a href="ind_brand.php">Brands</a>
-                    </li>
-                    <li>
-                      <a href="category.php">Categories</a>
                     </li>
                     <li>
                         <a href="offers.php">Offers</a>
@@ -475,7 +446,7 @@ $activeRegion = activeRegion($method, $url);
                       if (!isset($_SESSION['username'])){
                         ?>
                     <li>
-                        <a href="index.php" class="btn btn-green type-login btn-login" >Login</a>
+                        <a href="login.php" class="btn btn-green type-login btn-login" >Login</a>
                     </li>
                     <?php } ?> -->
                     <!-- <li class="has-sub">
@@ -528,7 +499,8 @@ $activeRegion = activeRegion($method, $url);
                                         </div>
 
                                         <div id="popup<?php echo $i;?>" class="overlay">
-                                        <div class="popup" aria-modal="true">
+                                        <div class="popup"
+                                        aria-modal="true">
                                           <center><h2>OFFER<br>DESCRIPTION</h2></center>
                                           <a class="close" href="#">&times;</a>
                                           <div class="content">
@@ -538,22 +510,6 @@ $activeRegion = activeRegion($method, $url);
                                           </div>
                                         </div>
                                         </div>
-
-
-
-                                        <!-- <div id="login" class="modal fade" role="dialog">
-                                          <div class="modal-dialog">
-
-                                            <div class="modal-content">
-                                              <div class="modal-body">
-                                                <center>
-                                                <h4>Description</h4>
-
-                                              </center>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div> -->
 
 
                                     </div>
@@ -567,7 +523,21 @@ $activeRegion = activeRegion($method, $url);
                     <div class="grid_4 sidebar">
                         <!--end: .mod-search -->
                         <div class="mod-list-store block">
-                          <p style="text-color:black; font-weight:bold; font-size: 2em; margin-left: 0px;margin-top: -10px;"><?php echo (isset($_GET['brand'])) ? 'Other Brands' : 'Category'?></p>
+                          <?php
+                              if(isset($_GET['brand'])){
+                                $display = 'Other Brands';
+                                $rediect_url = 'offers.php?brand=';
+                              }else if(isset($_GET['category'])){
+                                $display = 'Category';
+                                $rediect_url =  'offers.php?category=';
+
+                              }else{
+                                $display = 'Hot Offers';
+                                $rediect_url = 'offers.php?hotoffers=';
+
+                              }
+                          ?>
+                          <p style="text-color:black; font-weight:bold; font-size: 2em; margin-left: 0px;margin-top: -10px;"><?= $display; ?></p>
                           <div class="block-content">
                               <div class="wrap-list-store clearfix">
                                   <!-- <a class="brand-logo" href="#" >
@@ -581,7 +551,6 @@ $activeRegion = activeRegion($method, $url);
 
                                   <?php if(!empty($othersData)){
                                    $i = 0;
-                                   $rediect_url = (isset($_GET['brand'])) ? 'offers.php?brand=' : 'offers.php?category=';
                                     foreach($othersData as $index => $list){
                                         if($i < 6){
                                           $display_url = $rediect_url.$index ; ?>
