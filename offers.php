@@ -53,24 +53,14 @@ $activeRegion = activeRegion($method, $url);
     <link rel="icon" href="images/logo.ico" type="image/icon type">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
-    <!-- Facebook Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '303511618102911');
-    fbq('track', 'PageView');
 
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=303511618102911&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel Code -->
+
+    <!--Offer Conversion: coupondeck -->
+    <img src="https://www.trackingmtrack.co.in/success.jpg?offer_id=314&afgoal={goal}&afstatus=1" height="1" width="1" alt=""/>
+    <!-- End Offer Conversion -->
+
+
+  
 
 
     <link rel="stylesheet" href="css/font.css"/>
@@ -536,12 +526,9 @@ $activeRegion = activeRegion($method, $url);
                               }else if(isset($_GET['category'])){
                                 $display = 'Other Categories';
                                 $rediect_url =  'offers.php?category=';
-                              }else if(isset($_GET['Hot Offers'])){
+                              }else{
                                 $display = 'Hot Offers';
                                 $rediect_url = 'offers.php?hotoffers=';
-                              }else{
-                                $display = 'Other Offers';
-                                $rediect_url = 'offers.php?category=';
                               }
                           ?>
                           <p style="text-color:black; font-weight:bold; font-size: 2em; margin-left: 0px;margin-top: -10px;"><?= $display; ?></p>
