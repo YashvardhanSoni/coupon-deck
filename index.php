@@ -39,7 +39,7 @@ $hotOffers = hotOffers($method, $url);
     <link rel="icon" href="images/logo.ico" type="image/icon type">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="CouponDeck is the best site for online shopping which offer discount coupons in India on any kind of shopping with the best deals and get 50% offers on every shopping." />
+    
     
 
     <!--Offer Conversion: coupondeck -->
@@ -308,7 +308,7 @@ $hotOffers = hotOffers($method, $url);
                                 <ul id="main-menu" class="nav nav-horizontal clearfix">
                                   <!-- <li style="background:transparent;"> -->
                                     <div id="logo">
-                                            <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="coupon code for online shopping | CouponDeck"/>
+                                            <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="CouponDeck"/>
                                     </div>
                                   <!-- </li> -->
                                   <li>
