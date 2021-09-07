@@ -32,15 +32,13 @@ $hotOffers = hotOffers($method, $url);
 <html>
 
 <head>
-    <title>Online Shopping with Discount Coupons in India | CouponDeck</title>
+    <title>CouponDeck</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
     <link rel="icon" href="images/logo.ico" type="image/icon type">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
-    
-    
 
     <!--Offer Conversion: coupondeck -->
     <img src="https://www.trackingmtrack.co.in/success.jpg?offer_id=314&afstatus=1" height="1" width="1" alt=""/>
