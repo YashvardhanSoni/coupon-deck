@@ -200,7 +200,7 @@ $hotOffers = hotOffers($method, $url);
 
 </style>
 </head>
-<body class="gray"  onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false"><!--<div class="alert_w_p_u"></div>-->
+<body class="gray"  onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false">
 <!-- Pre-Loader -->
     <div id="pre-loader"></div>
 <!-- Pre-Loader End -->
