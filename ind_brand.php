@@ -30,10 +30,12 @@ $activeBrands = activeBrands($method, $url);
 <html>
 
 <head>
-    <title>CouponDeck</title>
+    <title>Best Brand Discount Coupons for Online Shopping in India | CouponDeck</title>
     <link rel="icon" href="images/logo.ico" type="image/icon type">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
+	<meta name="keywords" content="best brand coupons for online shopping in india, coupon code for online shopping in india">
+	<meta name="description" content="Now shop online whatever you want at affordable prices from our discount coupon site. CouponDeck provides best brand discount coupons for online shopping in India.">
 
     
 
@@ -258,7 +260,7 @@ $activeBrands = activeBrands($method, $url);
                                 <ul id="main-menu" class="nav nav-horizontal clearfix" style="padding-right: 60px;">
                                   <!-- <li style="background:transparent;"> -->
                                     <div id="logo">
-                                            <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="CouponDeck"/>
+                                            <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="coupon code for online shopping in india"/>
                                     </div>
                                   <!-- </li> -->
                                   <li>
