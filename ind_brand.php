@@ -30,12 +30,13 @@ $activeBrands = activeBrands($method, $url);
 <html>
 
 <head>
-    <title>Best Brand Discount Coupons for Online Shopping in India | CouponDeck</title>
+<!--     <title>Best Brand Discount Coupons for Online Shopping in India | CouponDeck</title> -->
+	<title>CouponDeck</title>
     <link rel="icon" href="images/logo.ico" type="image/icon type">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
-	<meta name="keywords" content="best brand coupons for online shopping in india, coupon code for online shopping in india">
-	<meta name="description" content="Now shop online whatever you want at affordable prices from our discount coupon site. CouponDeck provides best brand discount coupons for online shopping in India.">
+<!-- 	<meta name="keywords" content="best brand coupons for online shopping in india, coupon code for online shopping in india"> -->
+<!-- 	<meta name="description" content="Now shop online whatever you want at affordable prices from our discount coupon site. CouponDeck provides best brand discount coupons for online shopping in India."> -->
 
     
 
@@ -260,7 +261,7 @@ $activeBrands = activeBrands($method, $url);
                                 <ul id="main-menu" class="nav nav-horizontal clearfix" style="padding-right: 60px;">
                                   <!-- <li style="background:transparent;"> -->
                                     <div id="logo">
-                                            <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="coupon code for online shopping in india"/>
+                                            <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="coupondeck"/>
                                     </div>
                                   <!-- </li> -->
                                   <li>
@@ -423,7 +424,7 @@ $activeBrands = activeBrands($method, $url);
         </center>
         End_Google Advertisement -->
 
-	    <h1 style=" font-family: Arsenal, sans-serif;
+<!-- 	    <h1 style=" font-family: Arsenal, sans-serif;
         font-size: 40px;
         font-weight: 100;
         color: #ee9f09;
@@ -434,7 +435,7 @@ $activeBrands = activeBrands($method, $url);
         text-align: center;
         text-decoration: none;
         line-height: 1em;
-        letter-spacing: 1px;">Best Brand Discount Coupons for Online Shopping in India</h1>
+        letter-spacing: 1px;">Best Brand Discount Coupons for Online Shopping in India</h1> -->
 
 <div class="core">
 <div class="box1" style="background: #f7f7f7;">
