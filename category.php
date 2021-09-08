@@ -29,13 +29,13 @@ $activeCategories = activeCategories($method, $url);
 <html>
 
 <head>
-<!--     <title>Discount Coupons on Online Shopping Categories in India</title> -->
-	<title>CouponDeck</title>
+    <title>Discount Coupons on Online Shopping Categories in India</title>
+	
     <link rel="icon" href="images/logo.ico" type="image/icon type">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
-<!-- 	<meta name="description" content="Looking for the discount coupons on every shopping? We offers the best deals with discount coupons on online shopping categories in India. Scratch you coupon code now."> -->
-<!--   	<meta name="keywords" content="Discount Coupons on Online Shopping Categories in India, coupon code for online shopping"> -->
+	<meta name="description" content="Looking for the discount coupons on every shopping? We offers the best deals with discount coupons on online shopping categories in India. Scratch you coupon code now.">
+  	<meta name="keywords" content="Discount Coupons on Online Shopping Categories in India, coupon code for online shopping">
 
   
 
@@ -279,7 +279,7 @@ opacity: 0.5;
                                 <ul id="main-menu" class="nav nav-horizontal clearfix" style="padding-right: 60px;">
                                   <!-- <li style="background:transparent;"> -->
                                     <div id="logo">
-                                            <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="CouponDeck"/>
+                                            <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="coupon code for online shopping"/>
                                     </div>
                                   <!-- </li> -->
                                   <li>
@@ -442,7 +442,7 @@ opacity: 0.5;
         </center>
         End_Google Advertisement -->
 
-<!-- 	    <h1 style=" font-family: Arsenal, sans-serif;
+	    <h1 style=" font-family: Arsenal, sans-serif;
         font-size: 40px;
         font-weight: 100;
         color: #ee9f09;
@@ -453,7 +453,7 @@ opacity: 0.5;
         text-align: center;
         text-decoration: none;
         line-height: 1em;
-        letter-spacing: 1px;">Discount Coupons on Online Shopping Categories in India</h1> -->
+        letter-spacing: 1px;">Discount Coupons on Online Shopping Categories in India</h1>
 
 <div class="core">
 <div class="box1" style="background: #f7f7f7;">
