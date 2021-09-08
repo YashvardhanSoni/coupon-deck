@@ -423,6 +423,18 @@ $activeBrands = activeBrands($method, $url);
         </center>
         End_Google Advertisement -->
 
+	    <h1 style=" font-family: Arsenal, sans-serif;
+        font-size: 40px;
+        font-weight: 100;
+        color: #ee9f09;
+        margin-bottom:50px;
+        margin-top: -10px;
+        text-transform: none;
+        font-style: normal;
+        text-align: center;
+        text-decoration: none;
+        line-height: 1em;
+        letter-spacing: 1px;">Best Brand Discount Coupons for Online Shopping in India</h1>
 
 <div class="core">
 <div class="box1" style="background: #f7f7f7;">
