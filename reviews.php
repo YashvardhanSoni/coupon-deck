@@ -16,7 +16,7 @@ session_start();
 <html>
 
 <head>
-    <title>Reviews</title>
+    <title>CouponDeck Customer Review on Online Shopping with Discount Coupons</title>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="icon" href="images/logo.ico" type="image/icon type">
     <meta charset="utf-8">
@@ -25,6 +25,11 @@ session_start();
 
 
     <meta name="viewport" content="width=device-width" />
+	<meta name="description" content="You can see here our customers reviews which have used our discount coupons for online shopping in India and you can get 50% off on any shopping categories.">
+  	<meta name="keywords" content="CouponDeck Customer Review on Online Shopping with Discount Coupons, customer review for discount coupons in india">
+	
+	
+	
     <link rel="stylesheet" href="css/font.css"/>
     <link rel="stylesheet" href="css/font-awesome.css"/>
     <link rel="stylesheet" href="css/normalize.css"/>
@@ -277,7 +282,7 @@ session_start();
                                   <ul id="main-menu" class="nav nav-horizontal clearfix" style="padding-right: 60px;">
                                     <!-- <li style="background:transparent;"> -->
                                       <div id="logo">
-                                              <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="CouponDeck"/>
+                                              <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="customer review for discount coupons in india"/>
                                       </div>
                                     <!-- </li> -->
                                     <li>
@@ -428,6 +433,20 @@ session_start();
 
               </div>
           </nav><!--end: .mp-menu -->
+	      
+	      <h1 style=" font-family: Arsenal, sans-serif;
+          font-size: 40px;
+          font-weight: 100;
+          color: #ee9f09;
+          margin-bottom:50px;
+          margin-top: -10px;
+          text-transform: none;
+          font-style: normal;
+          text-align: center;
+          text-decoration: none;
+          line-height: 1em;
+          letter-spacing: 1px;">CouponDeck Customer Review on Online Shopping with Discount Coupons</h1><br>
+	      
         <div style="background: #f7f7f7; text-color:black; font-weight:bold; font-size: 1em;">
             <div class="grid_frame">
                 <div class="container_grid clearfix">
