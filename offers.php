@@ -49,10 +49,12 @@ $activeRegion = activeRegion($method, $url);
 <html>
 
 <head>
-    <title>CouponDeck</title>
+    <title>Online Shopping Offers with Discount Coupons in India | CouponDeck</title>
     <link rel="icon" href="images/logo.ico" type="image/icon type">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="CouponDeck is the best discount coupon selling website where you can get online shopping offers with discount coupons in India. Hurry up & grab your coupon code.">
+    <meta name="keywords" content="Online Shopping Offers with Discount Coupons in India, best offers on online shopping with discount coupons in India">
 
 
     <!--Offer Conversion: coupondeck -->
@@ -315,7 +317,7 @@ $activeRegion = activeRegion($method, $url);
                               <ul id="main-menu" class="nav nav-horizontal clearfix">
                                 <!-- <li style="background:transparent;"> -->
                                   <div id="logo">
-                                          <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="CouponDeck"/>
+                                          <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="best offers on online shopping with discount coupons in India"/>
                                   </div>
                                 <!-- </li> -->
                                 <li>
@@ -464,6 +466,19 @@ $activeRegion = activeRegion($method, $url);
 
             </div>
         </nav><!--end: .mp-menu -->
+        <br>
+        <h1 style=" font-family: Arsenal, sans-serif;
+        font-size: 40px;
+        font-weight: 100;
+        color: #ee9f09;
+        margin-bottom:50px;
+        margin-top: -10px;
+        text-transform: none;
+        font-style: normal;
+        text-align: center;
+        text-decoration: none;
+        line-height: 1em;
+        letter-spacing: 1px;">Online Shopping Offers with Discount Coupons in India</h1>
         <br>
         <div class="grid_frame page-content">
             <div class="container_grid">
