@@ -16,11 +16,13 @@ session_start();
 <html>
 
 <head>
-    <title>Contact US</title>
+    <title>Best Discount Coupons Selling Websites in India | Contact CouponDeck</title>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="icon" href="images/logo.ico" type="image/icon type">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
+	<meta name="description" content="Conatact CouponDeck which is the best discount coupons selling website in India for best discount coupons & get online offers on online shopping on every categories.">
+  	<meta name="keywords" content="Best Discount Coupons Selling Websites in India, best site for discount coupons in india">
 
   
 
@@ -118,7 +120,7 @@ session_start();
                               <ul id="main-menu" class="nav nav-horizontal clearfix">
                                 <!-- <li style="background:transparent;"> -->
                                   <div id="logo">
-                                          <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="CouponDeck"/>
+                                          <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="best site for discount coupons in india"/>
                                   </div>
                                 <!-- </li> -->
                                 <li>
@@ -279,6 +281,18 @@ session_start();
 <div class="bg" style="margin-left: 80px; line-height:1;">
 <p id="con_info">
   <div class="grid_12">
+	  <h1 style=" font-family: Arsenal, sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    color: #ee9f09;
+    margin-bottom:50px;
+    margin-top: -10px;
+    text-transform: none;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 1px;">Best Discount Coupons Selling Websites in India</h1>
     <h1 class="page-title" style="padding-top:0px;font-size:3em;"><b>CONTACT US</b></h1><br>
     <br>
   </div>
