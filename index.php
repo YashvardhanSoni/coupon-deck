@@ -32,16 +32,16 @@ $hotOffers = hotOffers($method, $url);
 <html>
 
 <head>
-<!--     <title>Online Shopping with Discount Coupons in India | CouponDeck</title> -->
-	<title>CouponDeck</title>
+    <title>Online Shopping with Discount Coupons in India | CouponDeck</title>
+	
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
     <link rel="icon" href="images/logo.ico" type="image/icon type">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
-<!--     <meta name="keywords" content="discount coupons for online shopping, best site for discount coupons in india, coupon code for online shopping">
-<!--     <meta name="description" content="CouponDeck is the best site for online shopping which offer discount coupons in India on any kind of shopping with the best deals and get 50% offers on every shopping."> -->
+     <meta name="keywords" content="discount coupons for online shopping, best site for discount coupons in india, coupon code for online shopping">
+    <meta name="description" content="CouponDeck is the best site for online shopping which offer discount coupons in India on any kind of shopping with the best deals and get 50% offers on every shopping.">
 	
 	
     <!--Offer Conversion: coupondeck -->
@@ -310,7 +310,7 @@ $hotOffers = hotOffers($method, $url);
                                 <ul id="main-menu" class="nav nav-horizontal clearfix">
                                   <!-- <li style="background:transparent;"> -->
                                     <div id="logo">
-                                            <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="coupondeck"/>
+                                            <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="coupon code for online shopping"/>
                                     </div>
                                   <!-- </li> -->
                                   <li>
@@ -418,7 +418,7 @@ $hotOffers = hotOffers($method, $url);
         line-height: 1em;
         letter-spacing: 1px;">Spend Less</p>
 	    <br>
-<!-- 	      <br><br>
+	      <br><br>
         <h1 style=" font-family: Arsenal, sans-serif;
         font-size: 40px;
         font-weight: 100;
@@ -429,7 +429,7 @@ $hotOffers = hotOffers($method, $url);
         text-align: center;
         text-decoration: none;
         line-height: 1em;
-        letter-spacing: 1px;">Online Shopping with Discount Coupons in India</h1> -->
+        letter-spacing: 1px;">Online Shopping with Discount Coupons in India</h1>
 
 
         <nav id="mp-menu" class="mp-menu alternate-menu">
