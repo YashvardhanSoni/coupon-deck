@@ -31,6 +31,17 @@ $hotOffers = hotOffers($method, $url);
 <!DOCTYPE html>
 <html>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ML187CX99"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4ML187CX99');
+</script>
+	
+	
 <head>
     <title>Online Shopping with Discount Coupons in India | CouponDeck</title>
 	
