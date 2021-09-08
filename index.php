@@ -41,7 +41,7 @@ $hotOffers = hotOffers($method, $url);
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
 <!--     <meta name="keywords" content="discount coupons for online shopping, best site for discount coupons in india, coupon code for online shopping">
-<!--     <meta name="description" content="CouponDeck is the best site for online shopping which offer discount coupons in India on any kind of shopping with the best deals and get 50% offers on every shopping."> --> -->
+<!--     <meta name="description" content="CouponDeck is the best site for online shopping which offer discount coupons in India on any kind of shopping with the best deals and get 50% offers on every shopping."> -->
 	
 	
     <!--Offer Conversion: coupondeck -->
