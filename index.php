@@ -47,6 +47,8 @@ $hotOffers = hotOffers($method, $url);
     <meta name="description" content="CouponDeck is the best site for online shopping which offer discount coupons in India on any kind of shopping with the best deals and get 50% offers on every shopping.">
 	
 	
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7943358352183789" crossorigin="anonymous"></script>
+	
     <!--Offer Conversion: coupondeck -->
     <img src="https://www.trackingmtrack.co.in/success.jpg?offer_id=314&afstatus=1" height="1" width="1" alt=""/>
     <!-- End Offer Conversion -->
