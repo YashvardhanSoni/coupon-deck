@@ -305,6 +305,9 @@ opacity: 0.5;
                                     </li>
 
                                     <li>
+                                        <a href="blog.php">Blog</a>
+                                    </li>
+                                    <li>
                                         <a href="contact.php">Contact Us</a>
                                     </li>
 
@@ -383,6 +386,10 @@ opacity: 0.5;
                     </li>
                     <li>
                       <a href="reviews.php">Reviews</a>
+                    </li>
+			
+                    <li>
+                      <a href="blog.php">Blog</a>
                     </li>
                     <li>
                       <a href="contact.php">Contact Us</a>
