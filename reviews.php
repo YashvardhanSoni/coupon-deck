@@ -308,6 +308,9 @@ session_start();
                                       </li>
 
                                       <li>
+                                          <a href="blog.php">Blog</a>
+                                      </li>
+                                      <li>
                                           <a href="contact.php">Contact Us</a>
                                       </li>
 
@@ -384,6 +387,10 @@ session_start();
                       </li>
                       <li>
                         <a href="reviews.php">Reviews</a>
+                      </li>
+			  
+                      <li>
+                        <a href="blog.php">Blog</a>
                       </li>
                       <li>
                         <a href="contact.php">Contact Us</a>
