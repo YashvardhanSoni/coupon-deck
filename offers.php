@@ -344,6 +344,9 @@ $activeRegion = activeRegion($method, $url);
                                   </li>
 
                                   <li>
+                                      <a href="blog.php">Blog</a>
+                                  </li>
+                                  <li>
                                       <a href="contact.php">Contact Us</a>
                                   </li>
 
@@ -419,6 +422,9 @@ $activeRegion = activeRegion($method, $url);
                     <li>
                       <a href="reviews.php">Reviews</a>
                     </li>
+                    <li>
+                                      <a href="blog.php">Blog</a>
+                                  </li>
                     <li>
                       <a href="contact.php">Contact Us</a>
                     </li>
