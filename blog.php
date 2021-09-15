@@ -16,7 +16,7 @@ session_start();
 <html>
 
 <head>
-    <title>Blog</title>
+    <title>Benefits of A Discount Coupon for Online Shopping</title>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="icon" href="images/logo.ico" type="image/icon">
     <meta charset="utf-8">
