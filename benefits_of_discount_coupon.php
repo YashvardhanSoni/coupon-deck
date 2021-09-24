@@ -128,8 +128,8 @@ session_start();
   justify-content: center;
 }
 .col{
-  flex: 33.33%;
-  max-width: 33.33%;
+  flex: 100%;
+  max-width: 100%;
   box-sizing: border-box;
   padding: 15px;
 }
@@ -140,12 +140,12 @@ session_start();
 .testimonial img{
   width: 100px;
   height: 100px;
-  border-radius: 50%;
 }
 .name{
   font-size: 20px;
   text-transform: uppercase;
   margin: 20px 0;
+  line-height: 1;
 }
 .stars{
   color: #6ab04c;
@@ -439,8 +439,8 @@ session_start();
                 <div class="container_grid clearfix">
                     <div class="grid_12">
                         <h1 class="page-title" style="padding-top:1px;"><b>Blog</b></h1>
-                        <hr/>
                     </div>
+                    <hr/>
                 </div>
             </div>
         </div>
@@ -448,76 +448,45 @@ session_start();
   <div class="testimonials">
     <div class="inner">
       <div class="row">
-        <div class="col">
+        <div class="col card">
           <div class="testimonial">
             <img src="coupon.png"/>
-            <div class="name"><h3>Benefits of A Discount Coupon for Online Shopping</h3></div>
-
+            <div class="name"><h1>Benefits of A Discount Coupon for Online Shopping</h1></div>
             <p style="text-align:justify; font-size:1rem;">
               Discount coupons are getting popular in today's time among seasonal and regular shoppers out there. While buying from an online store rather than a physical one, you can use them.
-              <span class="dots">...</span>
-              <br>
-                <center><button onclick="window.location.href = 'benefits_of_discount_coupon.php';" formtarget="_blank" class="myBtn" style="border: none;border-radius: 5px;background: transparent;color: orange;font-weight: bold;">Read More</button></center>
+              People are price-conscious, and it is natural because of the economic comedown. <b>Discount coupons for online shopping</b> are available with every online shopping platform. They come with numerous advantages. So, are you interested in knowing what discount coupons could bring you? If yes, then in this article, we are going to talk about some benefits of a discount coupon. Undoubtedly, you will love to hear about them.
+              <br><br><span style="font-size:2rem;"><b>Top Benefits Of A Discount Coupon</b></span>
+              <br><br><span style="font-size:1rem;"><b>1. You Can Buy More Items</b></span><br><br>
+              <img src="img/blog/blog (1).jpg" style="width: 100%;height: 100%;">
+              <br><br>There are <span><b>coupon selling websites</b></span> that allow you to make the most out of online shopping. Many items you cannot buy at regular prices can be purchased with the help of these websites.  Shopping coupons are active for a limited period. For your long-shelf products, like soaps, shampoos and other cosmetics, you can use them. Browse the internet, and you will find the best offers with rebates. It will help you save a lot while purchasing.
+              <br><br><span style="font-size:1rem;"><b>2. Save More Money</b></span>
+              <br><br>When you realize a significant price reduction, you get an opportunity to save time, as well as money. You save time with these coupons because these offers stay for a few days. If you get the best brand offers together with discounts in India, you do much better shopping. Even a 10% discount is enough when the topmost online retailers allow them. Online shoppers should not overlook discount coupons at all. Neglecting them will let buyers miss out on some of the excellent offers open at reasonable prices
+              <br><br><span style="font-size:1rem;"><b>3. You Come Across Rare Deals</b></span><br><br>
+              <img src="img/blog/blog (3).jpg" style="width: 100%;height: 100%;">
+              <br><br>If you visit an online shopping platform without a discount coupon, you fail to reach exceptional deals. But you may find coupon codes working for many things. For example, some shopping coupons can act as your multi-purpose ticket to choose from more than one item. You may not get such an opportunity as a regular customer. Therefore, shop more to receive the best deals in a short time. Following the boom in the online business, you can easily explore what lies behind the doors as an opportunity.
+              <br><br><span style="font-size:1rem;"><b>4. Benefit With Seasonal Offers</b></span>
+              <br><br>You indeed get closer to the best seasonal offers while visiting the websites that are offering rebates. Many tourism companies partner with online shopping platforms to reach people. Select from a range of shopping offers, and you will end up receiving coupons for many holiday packages apart from the <b>best shopping deals with discount coupons in India.</b>. The top retailers forever offer all that you are looking for. Make sure you grab deals when they get added.
+              <br><br><span style="font-size:1rem;"><b>Final Thoughts</b></span><br><br>
+              So, these are the benefits of a discount coupon. Shoppers in India can come across the most suitable <b>coupon deals website for online shopping</b> as there are hundreds of platforms competing to give their best. Discount coupons really influence both buyers and business owners. Finally, I would like to say that you should look for a platform and coupons worthy of acquiring. Then only you will get an outstanding shopping experience.
+        </span>
+            </p>
           </div>
         </div>
 
-        <div class="col">
-          <div class="testimonial">
-            <img src="promo.jpg"/>
-            <div class="name"><h3>Discount Coupons: The Best Deals for your Online Shopping</h3></div>
-            <p style="text-align:justify; font-size:1rem;">
-              In today’s time, whenever you obtain discount coupons and approach online shopping platforms, you make the most out of the opportunities.
-              <span class="dots">...</span>
-              <br>
-                <center><button onclick="window.location.href = 'discount_coupons.php';" formtarget="_blank" class="myBtn" style="border: none;border-radius: 5px;background: transparent;color: orange;font-weight: bold;">Read More</button></center>
-          </div>
-        </div>
 
         <!-- <div class="col">
           <div class="testimonial">
             <img src="https://img.icons8.com/material-rounded/96/000000/user-male-circle.png"/>
             <div class="name">User Name</div>
-
-            <p>
-              CouponDeck is awesome platform to find various offers and coupons WorldWide.
-            </p>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="testimonial">
-            <img src="https://img.icons8.com/material-rounded/96/000000/user-male-circle.png"/>
-            <div class="name">User Name</div>
-
             <p>
               CouponDeck is awesome platform to find various offers and coupons WorldWide.
             </p>
           </div>
         </div> -->
-
       </div>
     </div>
   </div>
 </div>
-
-<script>
-function readMore(city) {
-    let dots = document.querySelector(`.card[data-city="${city}"] .dots`);
-    let moreText = document.querySelector(`.card[data-city="${city}"] .more`);
-    let btnText = document.querySelector(`.card[data-city="${city}"] .myBtn`);
-
-    if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.textContent = "Read more";
-        moreText.style.display = "none";
-    } else {
-        dots.style.display = "none";
-        btnText.textContent = "Read less";
-        moreText.style.display = "inline";
-    }
-}
-</script>
-
 
 <br>
 <br>

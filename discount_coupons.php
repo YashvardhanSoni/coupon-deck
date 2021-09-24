@@ -128,8 +128,8 @@ session_start();
   justify-content: center;
 }
 .col{
-  flex: 33.33%;
-  max-width: 33.33%;
+  flex: 100%;
+  max-width: 100%;
   box-sizing: border-box;
   padding: 15px;
 }
@@ -140,12 +140,12 @@ session_start();
 .testimonial img{
   width: 100px;
   height: 100px;
-  border-radius: 50%;
 }
 .name{
   font-size: 20px;
   text-transform: uppercase;
   margin: 20px 0;
+  line-height: 1;
 }
 .stars{
   color: #6ab04c;
@@ -439,8 +439,8 @@ session_start();
                 <div class="container_grid clearfix">
                     <div class="grid_12">
                         <h1 class="page-title" style="padding-top:1px;"><b>Blog</b></h1>
-                        <hr/>
                     </div>
+                    <hr/>
                 </div>
             </div>
         </div>
@@ -448,76 +448,47 @@ session_start();
   <div class="testimonials">
     <div class="inner">
       <div class="row">
-        <div class="col">
-          <div class="testimonial">
-            <img src="coupon.png"/>
-            <div class="name"><h3>Benefits of A Discount Coupon for Online Shopping</h3></div>
-
-            <p style="text-align:justify; font-size:1rem;">
-              Discount coupons are getting popular in today's time among seasonal and regular shoppers out there. While buying from an online store rather than a physical one, you can use them.
-              <span class="dots">...</span>
-              <br>
-                <center><button onclick="window.location.href = 'benefits_of_discount_coupon.php';" formtarget="_blank" class="myBtn" style="border: none;border-radius: 5px;background: transparent;color: orange;font-weight: bold;">Read More</button></center>
-          </div>
-        </div>
-
-        <div class="col">
+        <div class="col card">
           <div class="testimonial">
             <img src="promo.jpg"/>
-            <div class="name"><h3>Discount Coupons: The Best Deals for your Online Shopping</h3></div>
+            <div class="name"><h1>Discount Coupons: The Best Deals for your Online Shopping</h1></div>
             <p style="text-align:justify; font-size:1rem;">
               In today’s time, whenever you obtain discount coupons and approach online shopping platforms, you make the most out of the opportunities.
-              <span class="dots">...</span>
-              <br>
-                <center><button onclick="window.location.href = 'discount_coupons.php';" formtarget="_blank" class="myBtn" style="border: none;border-radius: 5px;background: transparent;color: orange;font-weight: bold;">Read More</button></center>
+            Everyone loves to shop online. Hence, shoppers come across a plethora of discounts by showing more and more interaction. Yes, the best deals you get have a relation with these coupons. You cannot have your luck go big many times by shopping without them. To reach the best deals, you should know about <b>discount coupons for online shopping.</b> In this article, I will tell you how you can find them while looking for a platform.
+              <br><br><span style="font-size:2rem;"><b>Finding Discount Coupons For The Best Deals</b></span>
+              <br><br>The first thing you can do while shopping online is to look for a discount-offering platform. Now, because there are hundreds of sites, it is challenging to reach the <b>best site for discount coupons in India.</b> What can you do about that? Are there independent reviews available so that you do not break more sweat? Yes! Google has all the honest opinions regarding any class of business. Online shoppers can browse through many reviews for every type of offer they want. Besides Google, there exist several talks on honest coupon review websites. Do your homework! Search for them!
+              <br><br>
+              <img src="img/blog/blog (7).jpg" style="width: 100%;height: 100%;">
+              <br><br>
+              On the next side, platform owners attract thousands of customers while providing promotional codes. Many times as a shopper, you expect promo codes and discounts. The best dealers award you with discount offers because they want to boost their business. Even if hundreds of customers approach a day, it is a significant achievement. However, one challenge exists on the way. During the initial phases, platform owners may fail to offer the best online deals. But with time, they do.
+              <br><br>
+              <img src="img/blog/blog (6).jpg" style="width: 100%;height: 100%;">
+              <br><br>
+              <b>Best brand coupons for online shopping in India</b> could come in many shapes and sizes. Online shopping platforms here compete with each other. You remain in power to pull deals. If your research on reviews goes nice, you are closer to the most satisfying offers having promo codes. A crucial thing to note is that having patience is necessary if you are not successfully analyzing these sites. Do not hurry! Take your time! Lacking patience takes you to many useless online shopping platforms. No customer dreams ending up there for sure.
+              <br><br>
+              <img src="img/blog/blog (5).jpg" style="width: 100%;height: 100%;">
+              <br><br><span style="font-size:2rem;"><b>Conclusion</b></span><br><br>
+
+              With every promotional code with the best discount comes the best online shopping deal. I have explained how you can easily analyze discount coupons for online shopping. At first, you may look for simplicity, but that is not going to work while being an online shopper in India. Some people buy credit cards for cashback. That isn't recommended because the value you get is not more than the charges you pay. Follow the steps given! Reach the results! Then any <b>coupon code for online shopping in India</b> can bring a feeling of worthiness to you. Finally, make sure you grab excellent coupons. It will boost your savings with the best deal.
+        </span>
+            </p>
           </div>
         </div>
+
 
         <!-- <div class="col">
           <div class="testimonial">
             <img src="https://img.icons8.com/material-rounded/96/000000/user-male-circle.png"/>
             <div class="name">User Name</div>
-
-            <p>
-              CouponDeck is awesome platform to find various offers and coupons WorldWide.
-            </p>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="testimonial">
-            <img src="https://img.icons8.com/material-rounded/96/000000/user-male-circle.png"/>
-            <div class="name">User Name</div>
-
             <p>
               CouponDeck is awesome platform to find various offers and coupons WorldWide.
             </p>
           </div>
         </div> -->
-
       </div>
     </div>
   </div>
 </div>
-
-<script>
-function readMore(city) {
-    let dots = document.querySelector(`.card[data-city="${city}"] .dots`);
-    let moreText = document.querySelector(`.card[data-city="${city}"] .more`);
-    let btnText = document.querySelector(`.card[data-city="${city}"] .myBtn`);
-
-    if (dots.style.display === "none") {
-        dots.style.display = "inline";
-        btnText.textContent = "Read more";
-        moreText.style.display = "none";
-    } else {
-        dots.style.display = "none";
-        btnText.textContent = "Read less";
-        moreText.style.display = "inline";
-    }
-}
-</script>
-
 
 <br>
 <br>
