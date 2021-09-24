@@ -472,6 +472,8 @@ session_start();
               With every promotional code with the best discount comes the best online shopping deal. I have explained how you can easily analyze discount coupons for online shopping. At first, you may look for simplicity, but that is not going to work while being an online shopper in India. Some people buy credit cards for cashback. That isn't recommended because the value you get is not more than the charges you pay. Follow the steps given! Reach the results! Then any <b>coupon code for online shopping in India</b> can bring a feeling of worthiness to you. Finally, make sure you grab excellent coupons. It will boost your savings with the best deal.
         </span>
             </p>
+            <br>
+                                        <center><button onclick="window.location.href = 'blog.php';" formtarget="_blank" class="myBtn" style="border: none;border-radius: 5px;background: transparent;color: orange;font-weight: bold;">Go Back</button></center>
           </div>
         </div>
 

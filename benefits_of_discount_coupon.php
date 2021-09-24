@@ -470,6 +470,8 @@ session_start();
               So, these are the benefits of a discount coupon. Shoppers in India can come across the most suitable <b>coupon deals website for online shopping</b> as there are hundreds of platforms competing to give their best. Discount coupons really influence both buyers and business owners. Finally, I would like to say that you should look for a platform and coupons worthy of acquiring. Then only you will get an outstanding shopping experience.
         </span>
             </p>
+            <br>
+                            <center><button onclick="window.location.href = 'blog.php';" formtarget="_blank" class="myBtn" style="border: none;border-radius: 5px;background: transparent;color: orange;font-weight: bold;">Go Back</button></center>
           </div>
         </div>
 
