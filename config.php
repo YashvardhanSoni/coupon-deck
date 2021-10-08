@@ -1,6 +1,6 @@
 <?php
     define('USER', 'root');
-    define('PASSWORD', 'Root@123');
+    define('PASSWORD', '');
     define('HOST', 'localhost');
     define('DATABASE', 'coupondeck');
     try {
