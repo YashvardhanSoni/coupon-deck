@@ -2,7 +2,7 @@
 class Database {
     private $hostname = 'localhost';
     private $username = 'root';
-    private $password = '';
+    private $password = 'Mmipl@root';
     private $db = 'coupondeck';
     protected $connLink;
 
