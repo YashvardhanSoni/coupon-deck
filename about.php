@@ -49,6 +49,10 @@ $activeCategories = activeCategories($method, $url);
 $hotOffers = hotOffers($method, $url);
 ?>
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,11 +65,11 @@ $hotOffers = hotOffers($method, $url);
 	<!-- set the HandheldFriendly -->
 	<meta name="HandheldFriendly" content="True">
 	<!-- set the description -->
-	<meta name="description" content="CouponDeck-Coupons, Affiliates, Offers, Deals, Discounts &amp; Marketplace HTML Template">
+	<meta name="description" content="Coupmy-Coupons, Affiliates, Offers, Deals, Discounts &amp; Marketplace HTML Template">
 	<!-- set the Keyword -->
 	<meta name="keywords" content="">
-	<meta name="author" content="CouponDeck-Coupons, Affiliates, Offers, Deals, Discounts &amp; Marketplace HTML Template">
-	<title>CouponDeck-Coupons, Affiliates, Offers, Deals, Discounts &amp; Marketplace HTML Template</title>
+	<meta name="author" content="Coupmy-Coupons, Affiliates, Offers, Deals, Discounts &amp; Marketplace HTML Template">
+	<title>About us</title>
 	<!-- include the site stylesheet -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CPoppins:300,400,500,600,900%7CLily+Script+One" rel="stylesheet">
 	<!-- include the site stylesheet -->
@@ -136,14 +140,13 @@ $hotOffers = hotOffers($method, $url);
 						<div class="search-cart">
 							<form action="#" class="search-form">
 								<fieldset>
-								<select id="category">
-										<option value="">Select Category</option>
-										<?php foreach($othersData as $index => $values){?>
-											<option value="<?php echo $index?>"><?php echo $index?></option>
-										<?php } ?>
+									<select>
+										<option value="0">Select Category</option>
+										<option value="1">Select Category</option>
+										<option value="2">Select Category</option>
 									</select>
-									<input type="search" class="form-control" id="search_value" placeholder="Enter Keyword . . .">
-									<button type="submit" id="search_btn" class="sub-btn"><i class="icon-search"></i></button>
+									<input type="search" class="form-control" placeholder="Enter Keyword . . .">
+									<button type="submit" class="sub-btn"><i class="icon-search"></i></button>
 								</fieldset>
 							</form>
 							<!-- <a href="#" class="cart"><i class="icon-cart"></i> <span class="num round">2</span></a> -->
@@ -191,247 +194,273 @@ $hotOffers = hotOffers($method, $url);
 		<!-- main of the page -->
 		<main id="main">
 			<!-- banner of the page -->
-			<section class="banner bg-full overlay" style="background-image: url(bg.jpg);">
+			<section class="banner banner3 bg-full overlay" style="background-image: url('abt.jpg');">
 				<div class="holder">
 					<div class="container">
 						<div class="row">
-							<div class="col-xs-12 text-left">
-								<h1 class="text-uppercase">It looks like it's <br class="hidden-xs">been furnished <br class="hidden-xs">by <span class="clr">discount</span> <br class="hidden-xs">stores.</h1>
-								<form action="#" class="search-form lg-round">
-									<fieldset>
-										<label for="search"><i class="icon icon-search"></i></label>
-										<input type="search" class="form-control" id="search" placeholder="Search coupons & deals">
-										<button type="submit" class="btn-icon"><i class="icon-right-arrow"></i></button>
-									</fieldset>
-								</form>
+							<div class="col-xs-12 text-center">
+								<h1>About Us</h1>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- latest coupon of the page -->
-			<section class="latest-coupon container pad-top-lg pad-bottom-md">
+			<!-- abt sec of the page -->
+			<section class="abt-sec container pad-top-lg pad-bottom-lg">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<div class="img-holder" style="vertical-align:middle;">
+							<img src="images/logo.png" alt="image description" class="img-responsive">
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<div class="abt-txt">
+							<strong class="title text-uppercase">Who We are</strong>
+							<h3 class="heading">About CouponDeck</h3>
+							<p>
+								While buying from an online store rather than a physical one, you can use discount coupons. People are price conscious and its natural because of the economic comedown. 
+							  It will give you the best way to save money while shopping online.
+							You can visit the coupon deck website directly to see what deals and special promotions are happening right now.
+							A few places you can find discounts include Amazon, Myntra, Flipkart, Ustraa, Wow Skin, Ajio, Samsung etc. 
+							So you can buy more items, save more money, come across rare deals and benefit with seasonal offers by visiting our coupon deck website.
+							</p>
+							<a href="contact.html" class="btn-primary text-center text-uppercase md-round">Contact Us</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- service sec of the page -->
+			<section class="service-sec style2 container pad-bottom-md">
+				<div class="row">
+					<div class="col-xs-12 col-sm-4">
+						<!-- service of the page -->
+						<div class="service mar-bottom-xs">
+							<span class="icon"><i class="icon-responsive"></i></span>
+							<h3 class="heading5">Who we are</h3>
+							Coupon Deck is one of the best places to find Latest Coupons & Offers for Online Shopping Sites in India.</p>
+							<a href="https://mitraksh.in/#" class="read-more text-uppercase">Learn More</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<!-- service of the page -->
+						<div class="service mar-bottom-xs">
+							<span class="icon"><i class="icon-reload"></i></span>
+							<h3 class="heading5">What we do</h3>
+							Coupon Deck will help you get the right Coupon Codes, Promo Codes & Deals for 2021.
+							We can find various coupons and offers in categories like Health, Food, Shopping, Electronics, Fashion etc. and many more.</p>
+							<a href="https://mitraksh.in/#" class="read-more text-uppercase">Learn More</a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<!-- service of the page -->
+						<div class="service mar-bottom-xs">
+							<span class="icon"><i class="icon-comments"></i></span>
+							<h3 class="heading5">How we do</h3>
+							Shop your favourite brand products at cheapest rates with our discount coupons. Coupon Deck offers discount coupons for grocery shopping as well.
+							Get your Coupon code now and enjoy shopping with Coupon Deck.​</p>
+							<a href="https://mitraksh.in/#" class="read-more text-uppercase">Learn More</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- counter sec of the page -->
+			<!-- <section class="counter-sec bg-full overlay pad-top-sm pad-bottom-xs" style="background-image: url(http://placehold.it/1920x305);">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-3 text-center mar-bottom-xs">
+							<span class="icon"><i class="icon-user2"></i></span>
+							<strong class="counter">300</strong>
+							<span class="sub-title">Users Registered</span>
+						</div>
+						<div class="col-xs-12 col-sm-3 text-center mar-bottom-xs">
+							<span class="icon"><i class="icon-scissors"></i></span>
+							<strong class="counter">2900</strong>
+							<span class="sub-title">Coupons Used Last Month</span>
+						</div>
+						<div class="col-xs-12 col-sm-3 text-center mar-bottom-xs">
+							<span class="icon"><i class="icon-add"></i></span>
+							<strong class="counter">150</strong>
+							<span class="sub-title">Coupons Added</span>
+						</div>
+						<div class="col-xs-12 col-sm-3 text-center mar-bottom-xs">
+							<span class="icon"><i class="icon-store"></i></span>
+							<strong class="counter">3500</strong>
+							<span class="sub-title">Stores In Coupay</span>
+						</div>
+					</div>
+				</div>
+			</section> -->
+			<!-- team sec of the page -->
+			<section class="team-sec container pad-top-lg pad-bottom-md">
 				<div class="row">
 					<header class="col-xs-12 text-center header">
-						<h2 class="heading">Latest Coupon Codes &amp; Deals</h2>
+						<h4 class="heading">Meet Our Great Team</h4>
 					</header>
 				</div>
 				<div class="row">
-				<?php if(!empty($hotOffers)){
-              		$i = 0;
-                    foreach($hotOffers as $index ){
-						$desc = getFirstPara($index['description_lang']);
-                      if($i < 4){?>
-					<div class="col-xs-12 col-sm-6 col-md-3">
-						<!-- coupon box of the page -->
-						<div class="coupon-box mar-bottom-xs"  style="min-height:450px;">
+					<div class="col-xs-12 col-sm-6 col-md-3 mar-bottom-xs">
+						<!-- team of the page -->
+						<div class="team">
 							<div class="img-holder">
-								<img src="<?php echo $index['logo'];?>" alt="<?php echo $index['id'];?>" style="padding:20px;"  height="190px" width="260" class="img-resposnive">
+								<img src="img/icons/employee.png" alt="image description" class="img-responsive">
+								<!-- <div class="over">
+									<ul class="list-unstyled socail-network">
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+									</ul>
+								</div> -->
 							</div>
-							<div class="txt-holder">
-								<strong class="heading6">Name: <?php echo $index['title'];?></strong>
-								<p><strong class="heading6"> </strong><?php echo $desc;?></p>
-								<!-- <ul class="list-unstyled list-show">
-									<li><a href="#"><i class="icon icon-smile"></i> Verified</a></li>
-									<li><a href="#"><i class="icon icon-user"></i> Used</a></li>
-								</ul> -->
-								<a href="coupon1.php?hotoffers=<?php echo $index['id'];?>" class="btn-primary md-round text-center text-uppercase">View Offer</a>
-								<!-- <time class="time text-center" datetime="2017-02-03 20:00">Expires On : 03 Sep, 2017</time> -->
-							</div>
+							<strong class="heading4">Mithlesh Sharma</strong>
+							<span class="sub-title">CEO &amp; Founder</span>
 						</div>
 					</div>
-					<?php $i++;}}}?>
-					
+					<div class="col-xs-12 col-sm-6 col-md-3 mar-bottom-xs">
+						<!-- team of the page -->
+						<div class="team">
+							<div class="img-holder">
+								<img src="img/icons/employee.png" alt="image description" class="img-responsive">
+								<!-- <div class="over">
+									<ul class="list-unstyled socail-network">
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+									</ul>
+								</div> -->
+							</div>
+							<strong class="heading4">Shivam</strong>
+							<span class="sub-title">Co-Founder</span>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-3 mar-bottom-xs">
+						<!-- team of the page -->
+						<div class="team">
+							<div class="img-holder">
+								<img src="img/icons/employee.png" alt="image description" class="img-responsive">
+								<!-- <div class="over">
+									<ul class="list-unstyled socail-network">
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+									</ul>
+								</div> -->
+							</div>
+							<strong class="heading4">Yashvardhan Soni</strong>
+							<span class="sub-title">Support</span>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-3 mar-bottom-xs">
+						<!-- team of the page -->
+						<div class="team">
+							<div class="img-holder">
+								<img src="img/icons/employee.png" alt="image description" class="img-responsive">
+								<!-- <div class="over">
+									<ul class="list-unstyled socail-network">
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+									</ul>
+								</div> -->
+							</div>
+							<strong class="heading4">Anushka</strong>
+							<span class="sub-title">Marketing</span>
+						</div>
+					</div>
 				</div>
 			</section>
-			<!-- store sec of the page -->
-			<section class="store-sec bg-grey pad-top-lg pad-bottom-lg">
+			<!-- testimonail sec of the page -->
+			<section class="testimonail-sec overlay bg-full pad-top-lg pad-bottom-lg" style="background-image: url('wfc.jpg');">
 				<div class="container">
 					<div class="row">
-					
-						<header class="col-xs-12 text-center header">
-							<h3 class="heading">More Than <span class="clr">3000+ Stores</span> In One Place!</h3>
-							<p>Search your favourite store &amp; get many deals</p>
+						<header class="header col-xs-12 text-center">
+							<h2 class="heading">Words From Our Customers</h2>
 						</header>
 					</div>
-					
 					<div class="row">
-					
 						<div class="col-xs-12">
-						
-							<ul class="list-unstyled store-logo">
-							<?php if(!empty($activeBrands)){
-              			$i = 0;
-                    	foreach($activeBrands as $index){
-                      	if($i < 10){?>
-								<li><a href="coupon1.php?brand=<?php echo $index['title'];?>"><img src="<?php echo $index['logo'];?>" style="padding:20px;" width="150" height="65" alt="<?php echo $index['title'];?>" class="img-responsive"></a></li>
-								<?php $i++; }}}?>	
-							</ul>
-							<div class="text-center">
-								<a href="store.php" class="btn-primary text-center text-uppercase md-round">Visit all stores</a>
+							<!-- testimonail slider of the page -->
+							<div class="testimonail-slider">
+								<!-- slide of the page -->
+								<blockquote class="slide md-round">
+									<q>“ CouponDeck is awesome platform to find various offers and coupons WorldWide. ”</q>
+									<cite>
+										<!-- <span class="img-holder round">
+											<img src="http://placehold.it/70x70" alt="image description" class="img-responsive">
+										</span> -->
+										<span class="align-left">
+											<strong>User</strong>
+											<span class="sub-title">Happy Customer</span>
+										</span>
+									</cite>
+								</blockquote>
+								<!-- slide of the page -->
+								<blockquote class="slide md-round">
+								<q>“ CouponDeck is awesome platform to find various offers and coupons WorldWide. ”</q>
+									<cite>
+										<!-- <span class="img-holder round">
+											<img src="http://placehold.it/70x70" alt="image description" class="img-responsive">
+										</span> -->
+										<span class="align-left">
+											<strong>User</strong>
+											<span class="sub-title">Happy Customer</span>
+										</span>
+									</cite>
+								</blockquote>
+								<!-- slide of the page -->
+								<blockquote class="slide md-round">
+								<q>“ CouponDeck is awesome platform to find various offers and coupons WorldWide. ”</q>
+									<cite>
+										<!-- <span class="img-holder round">
+											<img src="http://placehold.it/70x70" alt="image description" class="img-responsive">
+										</span> -->
+										<span class="align-left">
+											<strong>User</strong>
+											<span class="sub-title">Happy Customer</span>
+										</span>
+									</cite>
+								</blockquote>
+								<!-- slide of the page -->
+								<blockquote class="slide md-round">
+								<q>“ CouponDeck is awesome platform to find various offers and coupons WorldWide. ”</q>
+									<cite>
+										<!-- <span class="img-holder round">
+											<img src="http://placehold.it/70x70" alt="image description" class="img-responsive">
+										</span> -->
+										<span class="align-left">
+											<strong>User</strong>
+											<span class="sub-title">Happy Customer</span>
+										</span>
+									</cite>
+								</blockquote>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- feature sec of the page -->
-			<section class="feature-sec container pad-top-lg pad-bottom-md">
+			<!-- brand sec of the page -->
+			<section class="brand-sec container pad-top-lg pad-bottom-md">
 				<div class="row">
-					<header class="col-xs-12 text-center header">
-						<h4 class="heading">CouponDeck Featured Category</h4>
-						<p>Explore the popular categories in CouponDeck</p>
-					</header>
-				</div>
-				<div class="row">
-				<?php if(!empty($activeCategories)){
-            		foreach($activeCategories as $index => $list){ ?>
-					<div class="col-xs-12 col-sm-4">
-						<!-- Feature Box of the page -->
-						 <div class="feature-box">
-							<span class="icon round text-center"><span class="border round"><i class="icon-restaurant"></i></span></span>
-							<div class="img-holder overlay">
-							<img src="<?php echo $list;?>" alt="<?php echo $index;?>" class="img-responsive">
-								<div class="over text-center">
-									<h2 class="heading2"><?php echo $index;?></h2>
-								</div>
-							</div>
-							<a href="coupon1.php?category=<?php echo $index;?>" class="btn-primary text-center text-uppercase">
-                                See Offers
-                            </a>
-						</div>
-					</div>
-					<?php }}?>
-					
-			</section>
-			<!-- call out sec of the page -->
-			<section class="callout-sec pad-top-sm pad-bottom-sm">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-8 col-lg-offset-1">
-							<h3>Want To List Your Store In Our <strong>CouponDeck!</strong></h3>
-						</div>
-						<div class="col-xs-12 col-sm-3">
-							<a href="#" class="btn-primary text-center text-uppercase md-round">Register Now</a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- offer sec of the page -->
-			<section class="offer-sec container pad-top-lg pad-bottom-md">
-				<div class="row">
-					<header class="col-xs-12 text-center header">
-						<h2 class="heading">Today’s Best Offers And Coupons</h2>
-						<!-- <ul class="list-unstyled filter-list">
-							<li class="active"><a href="#" data-filter=".health">Medical</a></li>
-							<li><a href="#" data-filter=".kitchen">Food &amp; Drink</a></li>
-							<li><a href="#" data-filter=".res">Shopping</a></li>
-							
-						</ul> -->
+					<header class="col-xs-12 header text-center">
+						<h2 class="heading">Our Trusted Brands</h2>
 					</header>
 				</div>
 				<div class="row">
 					<div class="col-xs-12">
-						<!-- offer holder of the page -->
-						<div class="offer-holder" id="offer_holder">
-							<!-- col of the page -->
-							<?php if(!empty($apiData)){
- 								$i = 0;
-								 foreach($apiData as $index){
-									 $desc = getFirstPara($index['description_lang']);
-             					 if($i < 6){?>
-							<div class="col mar-bottom-xs health">
-								<div class="header">
-									<div class="c-logo" style="width: 200px; min-height: 125px; float: left; margin: 0 0px 0 0;"><img src="<?php echo $index['logo'];?>" alt="logo" class="img-responsive"></div>
-									<!-- <span class="offer">25% Off</span> -->
-								</div>
-								<strong class="heading6">Name: <?php echo $index['title'];?></strong>
-								<p><strong class="heading6"> </strong><?php echo $desc;?></p>
-								<div class="text-center">
-									<a href="<?php echo $index['preview_url'];?>" class="btn-primary text-center text-uppercase md-round">Visit Site</a>
-									<!-- <time class="time" datetime="2017-02-03 20:00">Expires On : 29 Oct, 2017</time> -->
-								</div>
+						<ul class="list-unstyled brand-list">
+						<?php if(!empty($activeBrands)){
+              			$i = 0;
+                    	foreach($activeBrands as $index){
+                      	if($i < 10){?>
+							<li><a href="coupon1.php?brand=<?php echo $index['title'];?>"><img src="<?php echo $index['logo'];?>" style="padding:35px;" alt="<?php echo $index['title'];?>" class="img-responsive"></a></li>
+							<?php $i++; }}}?>
+						</ul>
+						<div class="text-center">
+								<a href="brands.php" class="btn-primary text-center text-uppercase md-round">Visit all stores</a>
 							</div>
-							<?php $i++;}}}?>
-							
-							
-							
-							</div>
-						</div>
-					</div>
-				</div>
-				<input type="hidden" id="pageid" value="index">
-			</section>
-			<!-- app sec of the page -->
-			<section class="app-sec pad-top-lg">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-5">
-							<div class="img-holder">
-								<img src="ppy.png" alt="image description" class="img-responsive">
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-7">
-							<div class="txt-holder">
-								<h3 class="heading">Download Our PocketPenny App Now!</h3>
-								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
-								<div class="btn-holder">
-									<a href="https://play.google.com/store/apps/details?id=mTrack.droid.pocketpennyapp" target="_blank" class="pull-left"><img src="images/g-btn.png" alt="image description" class="img-resposnive"></a>
-									<!-- <a href="#" class="pull-left"><img src="images/app-btn.png" alt="image description" class="img-resposnive"></a> -->
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- blog sec of the page -->
-			<section class="blog-sec container pad-top-lg pad-bottom-md">
-				<div class="row">
-					<div class="header col-xs-12 header text-center">
-						<h3 class="heading">Latest Updates From CouponDeck</h3>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 col-sm-4">
-						<!-- blog holder of the page -->
-						<div class="blog-holder mar-bottom-xs">
-							<div class="img-holder">
-								<a href="benefits_of_discount_coupon.php"><img src="blog/blog1s.jpg" alt="image description" class="img-resposnive"></a>
-								<time class="time text-center" datetime="2021-09-15 20:00">15 <span class="txt">Sep</span></time>
-							</div>
-							<h4 class="heading3"><a href="benefits_of_discount_coupon.php">Benefits of A Discount Coupon for Online Shopping</a></h4>
-							<p>Discount coupons are getting popular in today's time among seasonal and regular shoppers out there.</p>
-							<a href="benefits_of_discount_coupon.php" class="btn-primary text-center text-uppercase">read more</a>
-						</div>
-					</div>
-					<div class="col-xs-12 col-sm-4">
-						<!-- blog holder of the page -->
-						<div class="blog-holder mar-bottom-xs">
-							<div class="img-holder">
-								<a href="discount_coupons.php"><img src="blog/blog2s.jpg" alt="image description" class="img-resposnive"></a>
-								<time class="time text-center" datetime="2021-09-16 20:00">16 <span class="txt">Sep</span></time>
-							</div>
-							<h4 class="heading3"><a href="discount_coupons.php">Discount Coupons: The Best Deals for your Online Shopping</a></h4>
-							<p>In today’s time, whenever you obtain discount coupons and approach online shopping platforms,</p>
-							<a href="discount_coupons.php" class="btn-primary text-center text-uppercase">read more</a>
-						</div>
-					</div>
-					
-			</section>
-			<!-- subscribe sec of the page -->
-			<section class="subscribe-sec bg-full" style="background-image: url('news.jpg');">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-6 text-center">
-							<h5>Subscribe To Our Newsletter</h5>
-						</div>
-						<div class="col-xs-12 col-sm-6">
-							<form action="#" class="subscribe-form">
-								<fieldset>
-									<input type="email" class="form-control" placeholder="Email Address">
-									<button type="submit" class="sub-btn"><i class="icon-airoplane"></i></button>
-								</fieldset>
-							</form>
-						</div>
 					</div>
 				</div>
 			</section>
@@ -475,7 +504,7 @@ $hotOffers = hotOffers($method, $url);
 							<ul class="list-unstyled tags">
 							<?php if(!empty($activeCategories)){
             					foreach($activeCategories as $index => $list){ ?>
-								<li><a href="coupon1.php?category=<?php echo $index;?>"><?php echo $index;?></a></li>
+								<li><a href="offers.php?category=<?php echo $index;?>"><?php echo $index;?></a></li>
 								<?php }}?>
 							</ul>
 							<h3 class="text-uppercase">Follow us</h3>
@@ -542,7 +571,5 @@ $hotOffers = hotOffers($method, $url);
 	<!-- include jQuery -->
 	<script src="js/jquery.main.js"></script>
 	<div id="style-changer" data-src="style-changer.html"></div>
-	<script src="js/custom.js"></script>
-
 </body>
 </html>

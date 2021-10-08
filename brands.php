@@ -1,37 +1,34 @@
 <?php
+session_start();
+require __DIR__.'/apiController.php';
+require __DIR__.'/helper/common.php';
+$region = '';
 
-    session_start();
-    if (isset($_SESSION['username'])) {
-        $_SESSION['msg'] = "You have to log in first";
-        header('location: index.php');
+$change_region = '';
+if(isset($_GET['region']) && $_GET['region'] != ''){
+    $change_region = $_GET['region'];
+    $_SESSION['region'] = $change_region;
+    if(isset($_SESSION['user_id'])){
+        updateUserRegion($change_region, $_SESSION['user_id']);
     }
-    include('config.php');
-    if (isset($_POST['login'])) {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $query = $connection->prepare("SELECT * FROM users WHERE username=:username");
-        $query->bindParam("username", $username, PDO::PARAM_STR);
-        $query->execute();
-        $result = $query->fetch(PDO::FETCH_ASSOC);
-        echo $result['password'];
-        echo (password_verify($password, $result['password']));
-
-        if (!$result) {
-            echo '<p class="error">Username/Password is wrong!</p>' ;
-        } else {
-            if ($password == $result['password']) {
-                $_SESSION['user_id'] = $result['id'];
-                $_SESSION['username'] = $result['username'];
-                $_SESSION['email'] = $result['email'];
-                $_SESSION['region'] = $result['region'];
-                session_set_cookie_params(0);
-                header("Location: index.php");
-            } else {
-                echo '<p class="error">Username/Password is wrong!</p>';
-            }
-        }
-    }
+}
+if(isset($_SESSION) && !empty($_SESSION['region'])){
+    $region = $_SESSION['region'];
+}
+$method = 'GET';
+if($region != ''){
+    $url = 'https://api-mtrack.affise.com/3.0/partner/offers?api-key=9a5057e1103b54ea0bb5f4f16cbe1a62&countries[]='.$region;
+}else{
+    $url = 'https://api-mtrack.affise.com/3.0/partner/offers?api-key=9a5057e1103b54ea0bb5f4f16cbe1a62';
+}
+$apiData = getOffersList($method, $url);
+$activeRegion = activeRegion($method, $url);
+$activeCategories = activeCategories($method, $url);
+$activeBrands = activeBrands($method, $url);
+$othersData = activeCategories($method, $url);
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -50,7 +47,7 @@
 	<!-- set the Keyword -->
 	<meta name="keywords" content="">
 	<meta name="author" content="Coupmy-Coupons, Affiliates, Offers, Deals, Discounts &amp; Marketplace HTML Template">
-	<title>Login</title>
+	<title>Brands</title>
 	<!-- include the site stylesheet -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CPoppins:300,400,500,600,900%7CLily+Script+One" rel="stylesheet">
 	<!-- include the site stylesheet -->
@@ -121,13 +118,14 @@
 						<div class="search-cart">
 							<form action="#" class="search-form">
 								<fieldset>
-									<select>
+									<select id="category">
 										<option value="0">Select Category</option>
-										<option value="1">Select Category</option>
-										<option value="2">Select Category</option>
+										<?php foreach($othersData as $index => $values){?>
+											<option value="<?php echo $index?>"><?php echo $index?></option>
+										<?php } ?>
 									</select>
-									<input type="search" class="form-control" placeholder="Enter Keyword . . .">
-									<button type="submit" class="sub-btn"><i class="icon-search"></i></button>
+									<input type="search" class="form-control" id="search_value" placeholder="Enter Keyword . . .">
+									<button type="submit" id="search_btn" class="sub-btn"><i class="icon-search"></i></button>
 								</fieldset>
 							</form>
 							<!-- <a href="#" class="cart"><i class="icon-cart"></i> <span class="num round">2</span></a> -->
@@ -175,12 +173,12 @@
 		<!-- main of the page -->
 		<main id="main">
 			<!-- banner of the page -->
-			<section class="banner banner3 bg-full overlay" style="background-image: url('reg.jpg');">
+			<section class="banner banner3 bg-full overlay" style="background-image: url('brands.jpg');">
 				<div class="holder">
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-12 text-center">
-								<h1>Login</h1>
+								<h1>Stores</h1>
 							</div>
 						</div>
 					</div>
@@ -191,30 +189,124 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12">
-							<!-- Register holder of the page -->
-							<div class="register-holder">
-								<div class="txt-holder">
-									<h3 class="heading2">Login Now!</h3>
-									<p>Enter your details for login</p>
-									<form action="#" method="post" class="register-form">
-										<fieldset>
-											<input type="text" class="form-control" name="username" placeholder="Username *">
-											<input type="password" class="form-control" name="password" placeholder="Password *">
-											<!-- <div class="form-check">
-												<input type="checkbox" name="vehicle" value="Car"> Remember Me
-											</div> -->
-											<button type="submit" class="btn-primary text-center text-uppercase" name="login">Sign In</button>
-										</fieldset>
-									</form>
-									<!-- <div class="btn-holder">
-										<a href="#" class="google-btn"><i class="fa fa-google-plus"></i> Sign in with Goolge</a>
-										<a href="#" class="fb-btn"><i class="fa fa-facebook"></i> Sign in with Facebook</a>
+							<!-- Content of the page -->
+							<article id="content">
+								<!-- header of the page -->
+								<header class="header">
+									<h3 class="heading2">Store List</h3>
+									<!-- <ul class="list-unstyled abc-list">
+										<li><a href="#">A</a></li>
+										<li><a href="#">B</a></li>
+										<li><a href="#">C</a></li>
+										<li><a href="#">D</a></li>
+										<li><a href="#">E</a></li>
+										<li><a href="#">F</a></li>
+										<li><a href="#">G</a></li>
+										<li><a href="#">H</a></li>
+										<li><a href="#">I</a></li>
+										<li><a href="#">J</a></li>
+										<li><a href="#">K</a></li>
+									</ul> -->
+								</header>
+								<!-- holder of the page -->
+								<div class="holder">
+									<!-- <div class="header-holder">
+										<span class="txt pull-left text-uppercase">A</span>
+										<a href="#" class="store-txt pull-right">4 Stores Available</a>
 									</div> -->
+									<ul class="list-unstyled store-logo" id="offer_holder">
+									<?php if(!empty($activeBrands)){
+            							foreach($activeBrands as $index){ ?>
+										<li><p><b><?php echo $index['title'];?></b></p><a href="coupon1.php?brand=<?php echo $index['title'];?>"><img src="<?php echo $index['logo'];?>" style="padding:25px;" alt="<?php echo $index['title'];?>" class="img-responsive"></a></li>
+									<?php }}?>
+										<!-- <li><a href="#"><img src="http://placehold.it/100x50" alt="RedCart" class="img-responsive"></a></li>
+										<li><a href="#"><img src="http://placehold.it/100x50" alt="RedCart" class="img-responsive"></a></li>
+										<li><a href="#"><img src="http://placehold.it/100x50" alt="RedCart" class="img-responsive"></a></li> -->
+									</ul>
 								</div>
-								<div class="img-holder">
-									<img src="login.jpg" alt="image description" class="img-responsive">
-								</div>
-							</div>
+								<input type="hidden" id="pageid" value="brands">
+								
+							</article>
+							<!-- Sidebar of the page -->
+							<aside id="sidebar">
+								<!-- Widget of the page -->
+								<section class="widget coupon-submit-widget overlay bg-full text-center" style="background-image: url(http://placehold.it/270x205);">
+									<span class="icon"><i class="icon-speaker"></i></span>
+									<strong class="title text-uppercase">Submit Your Coupon</strong>
+									<a href="#" class="btn-primary text-center text-uppercase">Submit now</a>
+								</section>
+								<!-- Widget of the page -->
+								<section class="widget category-widget">
+									<h3 class="heading4">Blog Categories</h3>
+									<ul class="list-unstyled category-list">
+										<li><a href="#"><span class="pull-left">All Categories</span><span class="pull-right">(10)</span></a></li>
+										<li><a href="#"><span class="pull-left">Beauty</span><span class="pull-right">(07)</span></a></li>
+										<li><a href="#"><span class="pull-left">Health</span><span class="pull-right">(15)</span></a></li>
+										<li><a href="#"><span class="pull-left">Fitness</span><span class="pull-right">(13)</span></a></li>
+										<li><a href="#"><span class="pull-left">Watches</span><span class="pull-right">(05)</span></a></li>
+									</ul>
+								</section>
+								<!-- Widget of the page -->
+								<section class="widget popular-widget">
+									<h3 class="heading4">Popular Stores</h3>
+									<ul class="list-unstyled popular-list">
+										<li><a href="#"><img src="http://placehold.it/85x85" alt="image description" class="img-responsive"></a></li>
+										<li><a href="#"><img src="http://placehold.it/85x85" alt="image description" class="img-responsive"></a></li>
+										<li><a href="#"><img src="http://placehold.it/85x85" alt="image description" class="img-responsive"></a></li>
+										<li><a href="#"><img src="http://placehold.it/85x85" alt="image description" class="img-responsive"></a></li>
+										<li><a href="#"><img src="http://placehold.it/85x85" alt="image description" class="img-responsive"></a></li>
+										<li><a href="#"><img src="http://placehold.it/85x85" alt="image description" class="img-responsive"></a></li>
+										<li><a href="#" class="text-uppercase">View All Stores</a></li>
+									</ul>
+								</section>
+								<!-- Widget of the page -->
+								<section class="widget news-widget">
+									<h3 class="heading4">Latest News</h3>
+									<ul class="list-unstyled latest-news-list">
+										<li>
+											<div class="img-holder round">
+												<a href="#"><img src="http://placehold.it/70x70" alt="image description" class="img-responsive"></a>
+											</div>
+											<div class="txt-holder">
+												<h3><a href="#">Veritatis Euas Arch Beatae Vitae</a></h3>
+												<ul class="list-unstyled news-nav">
+													<li>By <a href="#">Admin</a></li>
+													<li>|</li>
+													<li><time datetime="2017-02-03 20:00">Sep 07, 2017</time></li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<div class="img-holder round">
+												<a href="#"><img src="http://placehold.it/70x70" alt="image description" class="img-responsive"></a>
+											</div>
+											<div class="txt-holder">
+												<h3><a href="#">Numquam Eius Modi Tempora Incid</a></h3>
+												<ul class="list-unstyled news-nav">
+													<li>By <a href="#">Admin</a></li>
+													<li>|</li>
+													<li><time datetime="2017-02-03 20:00">Sep 07, 2017</time></li>
+												</ul>
+											</div>
+										</li>
+										<li>
+											<div class="img-holder round">
+												<a href="#"><img src="http://placehold.it/70x70" alt="image description" class="img-responsive"></a>
+											</div>
+											<div class="txt-holder">
+												<h3><a href="#">Vel Illum Qui Dolore Eum Fugiat</a></h3>
+												<ul class="list-unstyled news-nav">
+													<li>By <a href="#">Admin</a></li>
+													<li>|</li>
+													<li><time datetime="2017-02-03 20:00">Sep 07, 2017</time></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</section>
+								<!-- Widget of the page -->
+								
+							</aside>
 						</div>
 					</div>
 				</div>
@@ -255,9 +347,12 @@
 							</ul>
 						</div>
 						<div class="col3">
-							<h3 class="text-uppercase">Quick Link</h3>
+							<h3 class="text-uppercase">Categories</h3>
 							<ul class="list-unstyled tags">
-							<li><a href="index.php">Home</a></li>
+							<?php if(!empty($activeCategories)){
+            					foreach($activeCategories as $index => $list){ ?>
+								<li><a href="coupon1.php?category=<?php echo $index;?>"><?php echo $index;?></a></li>
+								<?php }}?>
 							</ul>
 							<h3 class="text-uppercase">Follow us</h3>
 							<ul class="list-unstyled socail-network">
@@ -323,5 +418,7 @@
 	<!-- include jQuery -->
 	<script src="js/jquery.main.js"></script>
 	<div id="style-changer" data-src="style-changer.html"></div>
+	<script src="js/custom.js"></script>
+
 </body>
 </html>

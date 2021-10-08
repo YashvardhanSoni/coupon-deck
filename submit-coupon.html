@@ -1,16 +1,6 @@
-<?php
-session_start();
-?>
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Icon -->
-	<link rel="icon" href="logo.ico" type="image/icon">
 	<!-- set the encoding of your site -->
 	<meta charset="utf-8">
 	<!-- set the viewport width and initial-scale on mobile devices -->
@@ -22,7 +12,7 @@ session_start();
 	<!-- set the Keyword -->
 	<meta name="keywords" content="">
 	<meta name="author" content="Coupmy-Coupons, Affiliates, Offers, Deals, Discounts &amp; Marketplace HTML Template">
-	<title>Blogs</title>
+	<title>Coupmy-Coupons, Affiliates, Offers, Deals, Discounts &amp; Marketplace HTML Template</title>
 	<!-- include the site stylesheet -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CPoppins:300,400,500,600,900%7CLily+Script+One" rel="stylesheet">
 	<!-- include the site stylesheet -->
@@ -52,32 +42,11 @@ session_start();
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12">
-							<span class="txt">Welcome to CouponDeck</span>
+							<span class="txt">Welcome to Coupmy Save More With Our Deals</span>
 							<ul class="align-left list-unstyled">
-								<li><a href="mailto:support@coupondeck.co.in">Support</a></li>
-								<?php
-                                    	if (isset($_SESSION['username'])){
-                                    ?>
-                                    <li>
-                                        <a>
-                                          <?php
-                                          echo 'Not '.$_SESSION['username'].' ?';
-                                          }
-                                          ?>
-                                        </a>  
-									<?php
-                                        if (isset($_SESSION['username'])){
-                                    ?>
-                                    <li>
-										<a href="logout.php">Logout</a></li>
-                                    </li>
-                                    <?php } ?>
-                                    <?php
-										if (!isset($_SESSION['username'])){
-                                    ?>
-								<li><a href="login.php"><i class="fa fa-unlock-alt"></i> Login</a></li>
-								<?php } ?>
-								<li><a href="register.php"><i class="fa fa-user"></i> Register</a></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="login.html"><i class="fa fa-unlock-alt"></i> Login</a></li>
+								<li><a href="register.html"><i class="fa fa-user"></i> Register</a></li>
 							</ul>
 						</div>
 					</div>
@@ -88,7 +57,7 @@ session_start();
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="logo">
-							<a href="index.php"><img src="images/logo.png" alt="CouponDeck" class="img-responsive"></a>
+							<a href="home.html"><img src="images/logo.png" alt="Coupmy" class="img-resposnive"></a>
 						</div>
 						<div class="search-cart">
 							<form action="#" class="search-form">
@@ -102,7 +71,7 @@ session_start();
 									<button type="submit" class="sub-btn"><i class="icon-search"></i></button>
 								</fieldset>
 							</form>
-							<!-- <a href="#" class="cart"><i class="icon-cart"></i> <span class="num round">2</span></a> -->
+							<a href="#" class="cart"><i class="icon-cart"></i> <span class="num round">2</span></a>
 						</div>
 					</div>
 				</div>
@@ -116,25 +85,40 @@ session_start();
 							<!-- nav of the page -->
 							<nav id="nav">
 								<ul class="list-unstyled">
-									<li class="active">
-										<a href="index.php">Home</a>
-									</li>
 									<li>
-										<a href="brands.php">Brands</a>
-									</li>
-									<li><a href="category.php">Category</a></li>
-									<li>
-									<a href="coupon1.php">Coupon</a>
-									</li>
-									<li>
-										<a href="#">More</a>
+										<a href="#">Home</a>
 										<ul class="drop-down list-unstyled">
-											<li><a href="blog.php">Blog</a></li>
-											<li><a href="about.php">About Us</a></li>
-											<li><a href="contact.php">Contact Us</a></li>
+											<li><a href="home.html">Homepage 1</a></li>
+											<li><a href="home2.html">Homepage 2</a></li>
 										</ul>
 									</li>
-									
+									<li><a href="about.html">About Us</a></li>
+									<li>
+										<a href="#">Blog</a>
+										<ul class="drop-down list-unstyled">
+											<li><a href="blog.html">Blog</a></li>
+											<li><a href="blog-detail.html">Blog Detail</a></li>
+										</ul>
+									</li>
+									<li class="active">
+										<a href="#">Page</a>
+										<ul class="drop-down list-unstyled">
+											<li><a href="coupon1.html">Coupon</a></li>
+											<li><a href="coupon-detail.html">Coupon Detail</a></li>
+											<li><a href="category.html">Category</a></li>
+											<li><a href="login.html">Login</a></li>
+											<li><a href="register.html">Register</a></li>
+											<li><a href="store.html">Store</a></li>
+											<li><a href="submit-coupon.html">Submit Coupon</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Contact Us</a>
+										<ul class="drop-down list-unstyled">
+											<li><a href="contact.html">Contact Us</a></li>
+											<li><a href="contact2.html">Contact Us2</a></li>
+										</ul>
+									</li>
 								</ul>
 							</nav>
 							<a href="submit-coupon.html" class="btn-primary text-center text-uppercase">Submit Coupon</a>
@@ -147,12 +131,12 @@ session_start();
 		<!-- main of the page -->
 		<main id="main">
 			<!-- banner of the page -->
-			<section class="banner banner3 bg-full overlay" style="background-image: url('news.jpg');">
+			<section class="banner banner3 bg-full overlay" style="background-image: url(http://placehold.it/1920x320);">
 				<div class="holder">
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-12 text-center">
-								<h1>Latest News</h1>
+								<h1>Submit Coupon</h1>
 							</div>
 						</div>
 					</div>
@@ -163,40 +147,80 @@ session_start();
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12">
-							<!-- content of the page -->
+							<!-- Content of the page -->
 							<article id="content">
-								<!-- post block of the page -->
-								<div class="post-block">
-									<div class="img-holder">
-										<a href="benefits_of_discount_coupon.php"><img src="blog/blog1b.jpg" alt="image description" class="img-responsive"></a>
-										<time class="time text-center" datetime="2021-09-15 20:00">15 <span>Sep</span></time>
-									</div>
-									<div class="txt-holder">
-										<h4 class="heading3"><a href="benefits_of_discount_coupon.php">Benefits of A Discount Coupon for Online Shopping</a></h4>
-										<p> 
-											Discount coupons are getting popular in today's time among seasonal and regular shoppers out there. While buying from an online store rather than a physical one, you can use them.
-										</p>
-										<a href="benefits_of_discount_coupon.php" target="_blank" class="btn-primary text-center text-uppercase">read more</a>
-									</div>
-								</div>
-								<!-- post block of the page -->
-								<div class="post-block">
-									<div class="img-holder">
-										<a href="discount_coupons.php"><img src="blog/blog2b.jpg" alt="image description" class="img-responsive"></a>
-										<time class="time text-center" datetime="2021-09-16 20:00">16 <span>Sep</span></time>
-									</div>
-									<div class="txt-holder">
-										<h4 class="heading3"><a href="discount_coupons.php">Discount Coupons: The Best Deals for your Online Shopping</a></h4>
-										<p>
-											In today’s time, whenever you obtain discount coupons and approach online shopping platforms, you make the most out of the opportunities.
-										</p>
-										<a href="discount_coupons.php" target="_blank" class="btn-primary text-center text-uppercase">read more</a>
-									</div>
-								</div>
-								
-								
+								<!-- header content of the page -->
+								<header class="header-content">
+									<h2 class="heading3">Submit Your Coupon</h2>
+									<p><i>Fill the form to list your Coupon now!</i></p>
+								</header>
+								<!-- Sub Form of the page -->
+								<form action="#" class="sub-form">
+									<fieldset>
+										<div class="form-group">
+											<div class="col">
+												<label for="text">First Name <span class="clr">*</span></label>
+												<input type="text" id="text" class="form-control">
+											</div>
+											<div class="col">
+												<label for="text2">Last Name <span class="clr">*</span></label>
+												<input type="text" id="text2" class="form-control">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col">
+												<label for="email">Email Address <span class="clr">*</span></label>
+												<input type="email" id="email" class="form-control">
+											</div>
+											<div class="col">
+												<label for="phone">Phone <span class="clr">*</span></label>
+												<input type="tel" id="phone" class="form-control">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="store">Store Name <span class="clr">*</span></label>
+											<input type="text" id="store" class="form-control">
+										</div>
+										<div class="form-group">
+											<label for="abt">About Your Store <span class="clr">*</span></label>
+											<textarea id="abt"></textarea>
+										</div>
+										<div class="form-group">
+											<input type="file" class="form-control">
+										</div>
+										<div class="form-group">
+											<label for="address">Store Address <span class="clr">*</span></label>
+											<textarea id="address"></textarea>
+										</div>
+										<div class="form-group">
+											<div class="col">
+												<label for="city">City <span class="clr">*</span></label>
+												<input type="text" id="city" class="form-control">
+											</div>
+											<div class="col">
+												<label for="state">State <span class="clr">*</span></label>
+												<input type="text" id="state" class="form-control">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col">
+												<label for="country">Country <span class="clr">*</span></label>
+												<input type="text" id="country" class="form-control">
+											</div>
+											<div class="col">
+												<label for="zip">Postcode/Zip <span class="clr">*</span></label>
+												<input type="text" id="zip" class="form-control">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="msg">Message To Your Customer</label>
+											<textarea id="msg"></textarea>
+										</div>
+										<button class="btn-primary text-center text-uppercase">Submit Details</button>
+									</fieldset>
+								</form>
 							</article>
-							<!-- sidebar of the page -->
+							<!-- Sidebar of the page -->
 							<aside id="sidebar">
 								<!-- Widget of the page -->
 								<section class="widget search-widget">
@@ -208,7 +232,7 @@ session_start();
 									</form>
 								</section>
 								<!-- Widget of the page -->
-								<!-- <section class="widget category-widget">
+								<section class="widget category-widget">
 									<h3 class="heading4">Blog Categories</h3>
 									<ul class="list-unstyled category-list">
 										<li><a href="#"><span class="pull-left">All Categories</span><span class="pull-right">(10)</span></a></li>
@@ -217,7 +241,7 @@ session_start();
 										<li><a href="#"><span class="pull-left">Fitness</span><span class="pull-right">(13)</span></a></li>
 										<li><a href="#"><span class="pull-left">Watches</span><span class="pull-right">(05)</span></a></li>
 									</ul>
-								</section> -->
+								</section>
 								<!-- Widget of the page -->
 								<section class="widget popular-widget">
 									<h3 class="heading4">Popular Stores</h3>
@@ -237,7 +261,7 @@ session_start();
 									<ul class="list-unstyled latest-news-list">
 										<li>
 											<div class="img-holder round">
-												<a href="#"><img src="http://placehold.it/75x75" alt="image description" class="img-responsive"></a>
+												<a href="#"><img src="http://placehold.it/70x70" alt="image description" class="img-responsive"></a>
 											</div>
 											<div class="txt-holder">
 												<h3><a href="#">Veritatis Euas Arch Beatae Vitae</a></h3>
@@ -250,7 +274,7 @@ session_start();
 										</li>
 										<li>
 											<div class="img-holder round">
-												<a href="#"><img src="http://placehold.it/75x75" alt="image description" class="img-responsive"></a>
+												<a href="#"><img src="http://placehold.it/70x70" alt="image description" class="img-responsive"></a>
 											</div>
 											<div class="txt-holder">
 												<h3><a href="#">Numquam Eius Modi Tempora Incid</a></h3>
@@ -263,7 +287,7 @@ session_start();
 										</li>
 										<li>
 											<div class="img-holder round">
-												<a href="#"><img src="http://placehold.it/75x75" alt="image description" class="img-responsive"></a>
+												<a href="#"><img src="http://placehold.it/70x70" alt="image description" class="img-responsive"></a>
 											</div>
 											<div class="txt-holder">
 												<h3><a href="#">Vel Illum Qui Dolore Eum Fugiat</a></h3>
@@ -276,17 +300,6 @@ session_start();
 										</li>
 									</ul>
 								</section>
-								<!-- Widget of the page -->
-								<!-- <section class="widget tags-widget">
-									<h3 class="heading4">Popular Tags</h3>
-									<ul class="list-unstyled tags-list text-center">
-										<li><a href="#">Accessories</a></li>
-										<li><a href="#">Watches</a></li>
-										<li><a href="#">Sports</a></li>
-										<li><a href="#">Beauty &amp; Fitness</a></li>
-										<li><a href="#">Fashion</a></li>
-									</ul>
-								</section> -->
 							</aside>
 						</div>
 					</div>
@@ -301,36 +314,45 @@ session_start();
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="col1">
-							<h3 class="text-uppercase">Contact CouponDeck</h3>
+							<h3 class="text-uppercase">Contact Coupmy</h3>
 							<ul class="list-unstyled contact-list">
 								<li>
 									<span class="icon icon-location"></span>
-									<address>A - 153, BLOCK - A ANSAL TOWN SHAMSHABAD ROAD Agra-283125 Uttar Pradesh</address>
+									<address>824 Bel Meadow Drive, California, USA</address>
 								</li>
 								<li>
 									<span class="icon icon-phone"></span>
-									<span class="tel"><a href="tel:919540291981">+91-9540291981</a></span>
+									<span class="tel"><a href="tel:112345678520">(+11) 234 567 8520</a><a href="tel:112345678520">(+11) 234 567 8520</a></span>
 								</li>
 								<li>
 									<span class="icon icon-email"></span>
-									<span class="mail"><a href="mailto:support@coupondeck.co.in">support@coupondeck.co.in</a></span>
+									<span class="mail"><a href="mailto:Info@Coupmy.Com">Info@Coupmy.Com</a><a href="mailto:Mail@Coupmy.Com">Mail@Coupmy.Com</a></span>
 								</li>
 							</ul>
 						</div>
 						<div class="col2">
 							<h3 class="text-uppercase">Quick Links</h3>
 							<ul class="list-unstyled f-nav">
-								<li><a href="about.php">About Us</a></li>
-								<li><a href="coupon1.php">Coupons</a></li>
-								<li><a href="blog.php">Latest News</a></li>
-								<li><a href="mailto:support@coupondeck.co.in">Support</a></li>
-								<li><a href="contact.php">Contact Us</a></li>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Coupons</a></li>
+								<li><a href="#">Offers</a></li>
+								<li><a href="#">Deals</a></li>
+								<li><a href="#">Latest News</a></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Contact Us</a></li>
 							</ul>
 						</div>
 						<div class="col3">
-							<h3 class="text-uppercase">Quick Link</h3>
+							<h3 class="text-uppercase">Categories</h3>
 							<ul class="list-unstyled tags">
-							<li><a href="index.php">Home</a></li>
+								<li><a href="#">Restaurant</a></li>
+								<li><a href="#">Health</a></li>
+								<li><a href="#">Fitness</a></li>
+								<li><a href="#">Events</a></li>
+								<li><a href="#">Beauty</a></li>
+								<li><a href="#">Sports</a></li>
+								<li><a href="#">Electronics</a></li>
+								<li><a href="#">Watches</a></li>
 							</ul>
 							<h3 class="text-uppercase">Follow us</h3>
 							<ul class="list-unstyled socail-network">
@@ -346,15 +368,15 @@ session_start();
 								<li>
 									<span class="icon"><i class="fa fa-twitter"></i></span>
 									<div class="txt-holder">
-										<p><a href="https://twitter.com/CDeck21">@CDeck21</a> Coupondeck provides one of the best brands coupons for online shopping in India offering online shoppers more offers, deals and discounts whether it may be shopping from online brands. </p>
-										<time datetime="2021-09-24 20:00" class="time">Posted on 24 Sep 2021</time>
+										<p><a href="#">@Micheal Doe</a> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accu santium dolo remque laudan tium, </p>
+										<time datetime="2018-02-03 20:00" class="time">Posted on 29 Sep</time>
 									</div>
 								</li>
 								<li>
 									<span class="icon"><i class="fa fa-twitter"></i></span>
 									<div class="txt-holder">
-										<p><a href="https://twitter.com/CDeck21">@CDeck21</a> Whenever you do online shopping make sure you are getting the best deals and offers on all of your shopping products. Hurry up and get your discount coupons right now by visiting our website. </p>
-										<time datetime="2021-09-17 20:00" class="time">Posted on 17 Sep 2021</time>
+										<p><a href="#">@Micheal Doe</a> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accu santium dolo remque laudan tium, </p>
+										<time datetime="2018-02-03 20:00" class="time">Posted on 29 Sep</time>
 									</div>
 								</li>
 							</ul>
@@ -367,12 +389,13 @@ session_start();
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-5">
-							<p>© 2021 CouponDeck-All rights reserved</p>
+							<p>© 2017 All rights reserved. Created by Htmlbeans</p>
 						</div>
 						<div class="col-xs-12 col-sm-7">
 							<ul class="list-unstyled footer-nav">
-								<li><a href="index.php">Home</a></li>
-								<li><a href="about.php">About</a></li>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Services</a></li>
 								<li><a href="#">Privacy Policy</a></li>
 								<li><a href="#">Terms&amp;Conditions</a></li>
 							</ul>

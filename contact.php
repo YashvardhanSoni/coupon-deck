@@ -1,394 +1,315 @@
 <?php
 session_start();
-// if (!isset($_SESSION['username'])) {
-//     $_SESSION['msg'] = "You have to log in first";
-//     header('location: login.php');
-// }
-// if (isset($_GET['logout'])) {
-//     session_destroy();
-//     unset($_SESSION['username']);
-//     header("location: login.php");
-//
-// }
 ?>
 
+
+
+
+
+
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Best Discount Coupons Selling Websites in India | Contact CouponDeck</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="images/logo.ico" type="image/icon type">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width" />
-	<meta name="description" content="Conatact CouponDeck which is the best discount coupons selling website in India for best discount coupons & get online offers on online shopping on every categories.">
-  	<meta name="keywords" content="Best Discount Coupons Selling Websites in India, best site for discount coupons in india">
-
-  
-
-
-    <link rel="stylesheet" href="css/font.css"/>
-    <link rel="stylesheet" href="css/font-awesome.css"/>
-    <link rel="stylesheet" href="css/normalize.css"/>
-    <!--css plugin-->
-    <link rel="stylesheet" href="css/flexslider.css"/>
-    <link rel="stylesheet" href="css/jquery.nouislider.css"/>
-    <link rel="stylesheet" href="css/jquery.popupcommon.css"/>
-
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/style-dark.css">
-    <link rel="stylesheet" href="css/style-gray.css">
-    <!--[if IE 9]>
-    <link rel="stylesheet" href="css/ie9.css"/>
-    <![endif]-->
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="css/ie8.css"/>
-    <![endif]-->
-
-    <link rel="stylesheet" href="css/res-menu.css"/>
-    <link rel="stylesheet" href="css/responsive.css"/>
-    <!--[if lte IE 8]>
-        <script type="text/javascript" src="js/html5.js"></script>
-    <![endif]-->
-    <style>
-    body, html {
-    height: 100%;
-    margin: 0;
-  }
-
-  .bg {
-    /* The image used */
-    background:#f7f7f7;
-
-    /* Full height */
-    height: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .button {
-  margin-left: 20px;
-  margin-top: 20px;
-  border-radius: 40px;
-    position: relative;
-    background-color: orange;
-    border: none;
-    font-size: 15px;
-    color: white;
-    padding: 10px;
-    padding-left: 5px;
-    width: 200px;
-    text-align: center;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    text-decoration: none;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  #con_info, #social_info{
-    color:black;line-height: 2.6;font-weight: bold;margin-left:20px;margin-right: 20px;font-size: 1.05em;
-  }
-  @media only screen and (max-width: 600px) {
-  .bg {
-    background:#f7f7f7;
-  }
-  .button{
-    margin-left: 65px;
-    margin-top: 20px;
-  }
-  #con_info, #social_info{
-    color:black;line-height: 2.6;font-weight: bold;margin-left:20px;margin-right: 20px;text-align: center;font-size: 1.05em;
-  }
-}
-
-    </style>
+	<!-- Icon -->
+	<link rel="icon" href="logo.ico" type="image/icon">
+	<!-- set the encoding of your site -->
+	<meta charset="utf-8">
+	<!-- set the viewport width and initial-scale on mobile devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- set the HandheldFriendly -->
+	<meta name="HandheldFriendly" content="True">
+	<!-- set the description -->
+	<meta name="description" content="Coupmy-Coupons, Affiliates, Offers, Deals, Discounts &amp; Marketplace HTML Template">
+	<!-- set the Keyword -->
+	<meta name="keywords" content="">
+	<meta name="author" content="Coupmy-Coupons, Affiliates, Offers, Deals, Discounts &amp; Marketplace HTML Template">
+	<title>Contact Us</title>
+	<!-- include the site stylesheet -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CPoppins:300,400,500,600,900%7CLily+Script+One" rel="stylesheet">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/plugins.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/icofont.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="style.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/colors.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- include the site stylesheet -->
+	<style class="color_css"></style>
 </head>
-<body class="gray"  onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false"><!--<div class="alert_w_p_u"></div>-->
-
-  <div class="container-page" style="background: #f7f7f7;">
-  <div class="mp-pusher" id="mp-pusher">
-      <header class="mod-header">
-          <div class="grid_frame">
-              <div class="container_grid clearfix">
-                  <div class="grid_12">
-                      <div class="header-content clearfix" style="padding-right:90px;">
-
-
-                          <nav class="main-nav">
-                              <ul id="main-menu" class="nav nav-horizontal clearfix">
-                                <!-- <li style="background:transparent;"> -->
-                                  <div id="logo">
-                                          <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="best site for discount coupons in india"/>
-                                  </div>
-                                <!-- </li> -->
-                                <li>
-                                  <form action="/action_page.php">
-                                    <input type="text" placeholder="" name="search">
-                                    <button type="submit"><i class="fa fa-search"></i></button>
-                                  </form>
-                                </li>
-                                  <li>
-                                      <a href="index.php">Home</a>
-                                  </li>
-                                  <li>
-                                      <a href="ind_brand.php">Brands</a>
-                                  </li>
-                                  <li>
-                                    <a href="category.php">Categories</a>
-                                  </li>
-                                  <li>
-                                      <a href="offers.php">Offers</a>
-                                  </li>
-                                  <li>
-                                      <a href="reviews.php">Reviews</a>
-                                  </li>
-				      
-                                  <li>
-                                      <a href="blog.php">Blog</a>
-                                  </li>
-
-                                  <li>
-                                      <a href="contact.php">Contact Us</a>
-                                  </li>
-
-                                  <!-- <?php
-                                    if (isset($_SESSION['username'])){
-                                      ?>
-                                  <li class="has-sub">
-                                      <a class="btn btn-green type-login btn-login"style="margin-top: -5px;">
-                                        <?php
-                                        echo $_SESSION['username'];
-                                        }
-                                        ?>
-                                      </a>  <?php
-                                          if (isset($_SESSION['username'])){
-                                            ?>
-                                      <ul class="sub-menu">
-                                          <li><a href="logout.php">Logout</a></li>
-                                      </ul>
-
-                                  </li>
-                                  <?php } ?>
-                                  <?php
-                                    if (!isset($_SESSION['username'])){
-                                      ?>
-
-                                  <li>
-                                      <a href="index.php" class="btn btn-green type-login btn-login"style="margin-top: -5px;">Login</a>
-                                  </li>
-                                  <?php } ?> -->
-
-                                    <!-- <li class="has-sub" style="background: rgb(0 0 0 / 0%); color: white; border-radius: 5px;">
-                                        <a style="color: black;">Region</a>
-                                        <ul class="sub-menu" style="background: skyblue; border-radius: 25px;">
-                                          <?php if(!empty($activeRegion['results'])){
-                                                  foreach($activeRegion['results'] as $index){
-                                                      if($index['code'] == $region){?>
-                                            <li><a href="index.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
-                                            <?php }else{?>
-                                              <li><a href="index.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
-                                            <?php }}}?>
-                                        </ul>
-                                    </li> -->
-                                  </li>
-                                </ul>
-                              <a id="sys_btn_toogle_menu" class="btn-toogle-res-menu" href="#alternate-menu"></a>
-                          </nav>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-      </header><!--end: header.mod-header -->
-
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin-top: -125px; background:#f7f7f7;"><path fill="#e0e0e0" fill-opacity="1" d="M0,320L48,288C96,256,192,192,288,186.7C384,181,480,235,576,245.3C672,256,768,224,864,224C960,224,1056,256,1152,261.3C1248,267,1344,245,1392,234.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
-
-
-
-
-      <nav id="mp-menu" class="mp-menu alternate-menu">
-          <div class="mp-level">
-              <h2>Menu</h2>
-              <ul>
-                  <li>
-                    <a href="index.php">Home</a>
-                  </li>
-                  <li>
-                    <a href="ind_brand.php">Brands</a>
-                  </li>
-                  <li>
-                    <a href="category.php">Categories</a>
-                  </li>
-                  <li>
-                      <a href="offers.php">Offers</a>
-                  </li>
-                  <li>
-                    <a href="reviews.php">Reviews</a>
-                  </li>
-		      
-                                  <li>
-                                      <a href="blog.php">Blog</a>
-                                  </li>
-                  <li>
-                    <a href="contact.php">Contact Us</a>
-                  </li>
-
-                  <!-- <?php
-                    if (isset($_SESSION['username'])){
-                      ?>
-                  <li class="has-sub">
-                      <a class="btn btn-green type-login btn-login">
-                        <?php
-                        echo $_SESSION['username'];
-                        }
-                        ?>
-                      </a>  <?php
-                          if (isset($_SESSION['username'])){
-                            ?>
-                      <ul class="sub-menu">
-                          <li><a href="logout.php">Logout</a></li>
-                      </ul>
-
-                  </li>
-                  <?php } ?>
-                  <?php
-                    if (!isset($_SESSION['username'])){
-                      ?>
-                  <li>
-                      <a href="index.php" class="btn btn-green type-login btn-login" >Login</a>
-                  </li>
-                  <?php } ?> -->
-                  <!-- <li class="has-sub">
-                      <a>Change<br>Region</a>
-                      <ul class="sub-menu">
-                          <li><a href="index.php">India</a></li>
-                          <li><a href="uae_home.php">UAE </a></li>
-                          <li><a href="singapore_home.php">Singapore</a></li>
-                          <li><a href="indonesia_home.php">Indonesia</a></li>
-                          <li><a href="saudiarab_home.php">Saudi Arab</a></li>
-                          <li><a href="thailand_home.php">Thailand</a></li>
-                          <li><a href="vietnam_home.php">Vietnam</a></li>
-                          <li><a href="malaysia_home.php">Malaysia</a></li>
-                          <li><a href="russia_home.php">Russia</a></li>
-                          <li><a href="belarus_home.php">Belarus</a></li>
-                      </ul>
-                  </li> -->
-                </ul>
-
-          </div>
-      </nav><!--end: .mp-menu -->
-      <!-- <div style="background: #f7f7f7; text-color:black; font-weight:bold; font-size: 1em;">
-          <div class="grid_frame">
-              <div class="container_grid clearfix">
-
-              </div>
-          </div>
-      </div> -->
-<div class="bg" style="margin-left: 80px; line-height:1;">
-<p id="con_info">
-  <div class="grid_12">
-	  <h1 style=" font-family: Arsenal, sans-serif;
-    font-size: 40px;
-    font-weight: 100;
-    color: #ee9f09;
-    margin-bottom:50px;
-    margin-top: -10px;
-    text-transform: none;
-    font-style: normal;
-    text-align: center;
-    text-decoration: none;
-    line-height: 1em;
-    letter-spacing: 1px;">Best Discount Coupons Selling Websites in India</h1>
-    <h1 class="page-title" style="padding-top:0px;font-size:3em;"><b>CONTACT US</b></h1><br>
-    <br>
-  </div>
-
-<img src="pin.png" style="width: 15px;padding-left: 20px;">&nbsp; 1131, Tower A, The-iThum, Sector-62, Noida , UP
-<br>
-<br>
-<img src="phone.png" style="width: 15px;padding-left: 20px;">&nbsp; +91-9540291981
-
-<br>
-<br>
-<img src="mail.png" style="width: 15px;padding-left: 20px;">&nbsp; support@coupondeck.co.in
-
-<span style="float:right; margin-right: 110px;">
-<img src="fb.png" style="width: 40px;">&nbsp&nbsp&nbsp
-<img src="lin.png" style="width: 40px;">
-</span>
-<br>
-
-</p>
-
-<!-- <p id="social_info"></p> -->
-
-
-
-<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14008.476314600606!2d77.372795!3d28.626193!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa4a968baca30d045!2sIThum%20Tower%20B%20-%20Lift%20Entry!5e0!3m2!1sen!2sin!4v1627282968605!5m2!1sen!2sin" width="100%" height="250" style="border:0; margin-bottom:-5px; bottom:0;" allowfullscreen="" loading="lazy"></iframe> -->
-</div>
-
-
-<div><img src="tp.png" width="100%" height="auto"></div>
-<br><br>
-
-<footer class="footer-distributed">
-
-			<div class="footer-left">
-          <img src="pp.png" width="100%" height="100%" style="margin-left: 0px;margin-top: 0px; width: 70%; ">
-
-
-
-
-
-			</div>
-
-			<div class="footer-center"style="margin-top: 25px;">
-
-				<div style="margin-top: 15px;">
-
-					<p style="font-size:1.89em; font-weight:bold;letter-spacing: 0.05em;">Earn Money</p><br>
-          <p style="font-size:1em;letter-spacing: 0.1em;">Just by completing Simple Tasks</p>
+<body>
+	<!-- main container of all the page elements -->
+	<div id="wrapper">
+		<!-- header of the page -->
+		<header id="header">
+			<!-- header top of the page -->
+			<div class="header-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<span class="txt">Welcome to CouponDeck</span>
+							<ul class="align-left list-unstyled">
+								<li><a href="mailto:support@coupondeck.co.in">Support</a></li>
+								<?php
+                                    	if (isset($_SESSION['username'])){
+                                    ?>
+                                    <li>
+                                        <a>
+                                          <?php
+                                          echo 'Not '.$_SESSION['username'].' ?';
+                                          }
+                                          ?>
+                                        </a>  
+									<?php
+                                        if (isset($_SESSION['username'])){
+                                    ?>
+                                    <li>
+										<a href="logout.php">Logout</a></li>
+                                    </li>
+                                    <?php } ?>
+                                    <?php
+										if (!isset($_SESSION['username'])){
+                                    ?>
+								<li><a href="login.php"><i class="fa fa-unlock-alt"></i> Login</a></li>
+								<?php } ?>
+								<li><a href="register.php"><i class="fa fa-user"></i> Register</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="footer-right">
-				<p class="footer-company-about">
+			<!-- header holder of the page -->
+			<div class="header-holder container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="logo">
+							<a href="index.php"><img src="images/logo.png" alt="CouponDeck" class="img-responsive"></a>
+						</div>
+						<div class="search-cart">
+							<form action="#" class="search-form">
+								<fieldset>
+									<select>
+										<option value="0">Select Category</option>
+										<option value="1">Select Category</option>
+										<option value="2">Select Category</option>
+									</select>
+									<input type="search" class="form-control" placeholder="Enter Keyword . . .">
+									<button type="submit" class="sub-btn"><i class="icon-search"></i></button>
+								</fieldset>
+							</form>
+							<!-- <a href="#" class="cart"><i class="icon-cart"></i> <span class="num round">2</span></a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- nav holder of the page -->
+			<div class="nav-holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<a href="#" class="nav-opener text-center hidden visible-sm visible-xs"><i class="fa fa-bars"></i></a>
+							<!-- nav of the page -->
+							<nav id="nav">
+								<ul class="list-unstyled">
+									<li class="active">
+										<a href="index.php">Home</a>
+									</li>
+									<li>
+										<a href="brands.php">Brands</a>
+									</li>
+									<li><a href="category.php">Category</a></li>
+									<li>
+									<a href="coupon1.php">Coupon</a>
+									</li>
+									<li>
+										<a href="#">More</a>
+										<ul class="drop-down list-unstyled">
+											<li><a href="blog.php">Blog</a></li>
+											<li><a href="about.php">About Us</a></li>
+											<li><a href="contact.php">Contact Us</a></li>
+										</ul>
+									</li>
+									
+								</ul>
+							</nav>
+							<a href="submit-coupon.html" class="btn-primary text-center text-uppercase">Submit Coupon</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header of the page end -->
+		<!-- main of the page -->
+		<main id="main">
+			<!-- banner of the page -->
+			<section class="banner banner3 bg-full overlay" style="background-image: url('cts.jpg');">
+				<div class="holder">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 text-center">
+								<h1>Contact Us</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- contact sec of the page -->
+			<section class="contact-sec container pad-top-lg pad-bottom-lg">
+				<div class="row">
+					<header class="col-xs-12 header text-center">
+						<h3 class="heading">Feel Free To Connect With Us</h3>
+						<p>Get in touch with our coupay team</p>
+					</header>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<!-- contact list of the page -->
+						<ul class="list-unstyled contact-list">
+							<li>
+								<span class="icon icon-location"></span>
+								<div class="align-left">
+									<strong class="title">Our Location</strong>
+									<address>A - 153, BLOCK - A ANSAL TOWN SHAMSHABAD ROAD Agra-283125 Uttar Pradesh</address>
+								</div>
+							</li>
+							<li>
+								<span class="icon icon-phone"></span>
+								<div class="align-left">
+									<strong class="title">Call Us</strong>
+									<span class="tel"><a href="tel:09540291981">+91-9540291981</a></span>
+								</div>
+							</li>
+							<li>
+								<span class="icon icon-email"></span>
+								<div class="align-left">
+									<strong class="title">Email Address</strong>
+									<span class="mail"><a href="mailto:support@coupondeck.co.in">support@coupondeck.co.in</a></span>
+								</div>
+							</li>
+						</ul>
+						<!-- contact form of the page -->
+						<form action="#" class="contact-form">
+							<fieldset>
+								<img src="cts.jpg">
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</section>
+			<!-- map holder of the page -->
+			<div class="map-holder">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14203.906399107229!2d78.06832500000002!3d27.125547!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6fe699e6230e34a8!2sAnsal%20town%20shamshabad%20road!5e0!3m2!1sen!2sus!4v1632745388902!5m2!1sen!2sus" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
 
-				<div>
-
-				  <a href="https://play.google.com/store/apps/details?id=mTrack.droid.pocketpennyapp" target="_blank">
-            <img src="gp.png" width="60%" style="margin-left: 50px;margin-top: 35px;">
-          </a>
+		</main>
+		<!-- main of the page end -->
+		<!-- footer of the page -->
+		<footer id="footer">
+			<!-- footer holder of the page -->
+			<div class="footer-holder container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="col1">
+							<h3 class="text-uppercase">Contact CouponDeck</h3>
+							<ul class="list-unstyled contact-list">
+								<li>
+									<span class="icon icon-location"></span>
+									<address>A - 153, BLOCK - A ANSAL TOWN SHAMSHABAD ROAD Agra-283125 Uttar Pradesh</address>
+								</li>
+								<li>
+									<span class="icon icon-phone"></span>
+									<span class="tel"><a href="tel:919540291981">+91-9540291981</a></span>
+								</li>
+								<li>
+									<span class="icon icon-email"></span>
+									<span class="mail"><a href="mailto:support@coupondeck.co.in">support@coupondeck.co.in</a></span>
+								</li>
+							</ul>
+						</div>
+						<div class="col2">
+							<h3 class="text-uppercase">Quick Links</h3>
+							<ul class="list-unstyled f-nav">
+								<li><a href="about.php">About Us</a></li>
+								<li><a href="coupon1.php">Coupons</a></li>
+								<li><a href="blog.php">Latest News</a></li>
+								<li><a href="mailto:support@coupondeck.co.in">Support</a></li>
+								<li><a href="contact.php">Contact Us</a></li>
+							</ul>
+						</div>
+						<div class="col3">
+							<h3 class="text-uppercase">Quick Link</h3>
+							<ul class="list-unstyled tags">
+							<li><a href="index.php">Home</a></li>
+							</ul>
+							<h3 class="text-uppercase">Follow us</h3>
+							<ul class="list-unstyled socail-network">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+						</div>
+						<div class="col4">
+							<h3 class="text-uppercase">Recent Tweets</h3>
+							<ul class="list-unstyled recent-tweet">
+								<li>
+									<span class="icon"><i class="fa fa-twitter"></i></span>
+									<div class="txt-holder">
+										<p><a href="https://twitter.com/CDeck21">@CDeck21</a> Coupondeck provides one of the best brands coupons for online shopping in India offering online shoppers more offers, deals and discounts whether it may be shopping from online brands. </p>
+										<time datetime="2021-09-24 20:00" class="time">Posted on 24 Sep 2021</time>
+									</div>
+								</li>
+								<li>
+									<span class="icon"><i class="fa fa-twitter"></i></span>
+									<div class="txt-holder">
+										<p><a href="https://twitter.com/CDeck21">@CDeck21</a> Whenever you do online shopping make sure you are getting the best deals and offers on all of your shopping products. Hurry up and get your discount coupons right now by visiting our website. </p>
+										<time datetime="2021-09-17 20:00" class="time">Posted on 17 Sep 2021</time>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- footer area of the page -->
+			<div class="footer-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-5">
+							<p>© 2021 CouponDeck-All rights reserved</p>
+						</div>
+						<div class="col-xs-12 col-sm-7">
+							<ul class="list-unstyled footer-nav">
+								<li><a href="index.php">Home</a></li>
+								<li><a href="about.php">About</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Terms&amp;Conditions</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</footer>
-    </div>
-</div>
-
-<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="js/jquery.nouislider.js"></script>
-<script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
-<script type="text/javascript" src="js/jquery.popupcommon.js"></script>
-<script type="text/javascript" src="js/html5lightbox.js"></script>
-
-<!--//js for responsive menu-->
-<script type="text/javascript" src="js/modernizr.custom.js"></script>
-<script type="text/javascript" src="js/classie.js"></script>
-<script type="text/javascript" src="js/mlpushmenu.js"></script>
-
-<script type="text/javascript" src="js/script.js"></script>
-<script type="text/javascript" src="js/copy_text.js"></script>
-
-<!--[if lte IE 9]>
-<script type="text/javascript" src="js/jquery.placeholder.js"></script>
-<script type="text/javascript" src="js/create.placeholder.js"></script>
-<![endif]-->
-
-<!--[if lte IE 8]>
-<script type="text/javascript" src="js/ie8.js"></script>
-<![endif]-->
+		<!-- footer of the page end -->
+		<span id="back-top" class="text-center md-round fa fa-angle-up"></span>
+		<!-- loader of the page -->
+		<div id="loader" class="loader-holder">
+			<div class="block"><img src="images/svg/bars.svg" width="60" alt="loader"></div>
+		</div>
+	</div>
+	<!-- main container of all the page elements end -->
+	<!-- include jQuery -->
+	<script src="js/jquery.js"></script>
+	<!-- include jQuery -->
+	<script src="js/plugins.js"></script>
+	<!-- include jQuery -->
+	<script src="js/jquery.main.js"></script>
+	<div id="style-changer" data-src="style-changer.html"></div>
 </body>
-
 </html>

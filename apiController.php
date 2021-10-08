@@ -4,6 +4,10 @@ require __DIR__.'/api/helper.php';
 // require __DIR__.'/dbconfig.php';
 // $sqlDB = new Database();
 
+function index(){
+    echo 'hi';
+}
+
 function getOffersList($method, $url, $brand = '', $category = '', $id = ''){
     $data = getDataThroughCurl($method, $url);
     $return = array();
@@ -163,7 +167,12 @@ function hotOffers($method, $url){
         $i = 0;
         foreach($data['data']['offers'] as $index){
             if(!empty($index['categories']) && in_array('Hot Offers', $index['categories'])){
-                $return[$index['id']] = $index['logo'];
+                $return[$i]['id'] = $index['id'];
+                $return[$i]['title'] = $index['title'];
+                $return[$i]['logo'] = $index['logo'];
+                $return[$i]['description_lang'] = $index['description_lang']['en']; 
+                // $return[$index['id']] = $index['logo'];
+                $i++;
             }
         }  
     }

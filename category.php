@@ -25,590 +25,290 @@ $activeRegion = activeRegion($method, $url);
 $activeCategories = activeCategories($method, $url);
 ?>
 
+
+
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Discount Coupons on Online Shopping Categories in India</title>
-	
-    <link rel="icon" href="images/logo.ico" type="image/icon type">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width" />
-	<meta name="description" content="Looking for the discount coupons on every shopping? We offers the best deals with discount coupons on online shopping categories in India. Scratch you coupon code now.">
-  	<meta name="keywords" content="Discount Coupons on Online Shopping Categories in India, coupon code for online shopping">
-
-  
-
-
-    <link rel="stylesheet" href="css/font.css"/>
-    <link rel="stylesheet" href="css/font-awesome.css"/>
-    <link rel="stylesheet" href="css/normalize.css"/>
-    <!--css plugin-->
-    <link rel="stylesheet" href="css/flexslider.css"/>
-    <link rel="stylesheet" href="css/jquery.nouislider.css"/>
-
-
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/style-dark.css">
-    <link rel="stylesheet" href="css/style-gray.css">
-    <!--[if IE 9]>
-    <link rel="stylesheet" href="css/ie9.css"/>
-    <![endif]-->
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="css/ie8.css"/>
-    <![endif]-->
-
-    <link rel="stylesheet" href="css/res-menu.css"/>
-    <link rel="stylesheet" href="css/responsive.css"/>
-    <!--[if lte IE 8]>
-        <script type="text/javascript" src="js/html5.js"></script>
-    <![endif]-->
-
-    <!-- Google Ad -->
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-    <script>
-      window.googletag = window.googletag || {cmd: []};
-      var personalizedAdsDisabled = 1;
-
-      googletag.cmd.push(function() {
-        // Personalized ad serving is enabled by default. Set "request
-        // non-personalized ads" to 1 to disable.
-        //
-        // To ensure personalization is disabled for all ad requests, place this
-        // call before any calls to enableServices or display.
-        googletag.pubads().setRequestNonPersonalizedAds(personalizedAdsDisabled);
-
-        googletag
-            .defineSlot('/6355419/Travel/Europe/France',[728, 90], 'banner-ad')
-            .addService(googletag.pubads());
-        googletag.enableServices();
-      });
-    </script>
-    <!-- end Google ad -->
-<style>
-
-.overlaycat {
-  position: absolute;
-  bottom: 40px;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
-  color: #f1f1f1;
-  width: 89%;
-  transition: .5s ease;
-  opacity:0;
-  color: white;
-  font-size: 2.0em;
-  padding: 7px;
-  text-align: center;
-}
-
-.wrap-img-thumb:hover .overlaycat {
-opacity: 0.5;
-}
-
-   .header-content clearfix{
-       background-color: aqua;
-   }
-
-
-   .box {
-     width: 40%;
-     margin: 0 auto;
-     background: rgba(255,255,255,0.2);
-     padding: 35px;
-     border: 2px solid #fff;
-     border-radius: 20px/50px;
-     background-clip: padding-box;
-     text-align: center;
-   }
-   input[type=submit]{
-     border-radius: 25px;
-     background: orange;
-     padding: 0px 25px 0px 25px;
-   }
-
-   .core {width: 100%; display: table;}
-
- .box1{
-     background-color: white;
-     padding-top: 32px;
-     padding-left: 6px;
-     width: 15%;
-     float:none;
-     display: table-cell;
-     border-radius:0px;
-     height: 100px;
-     vertical-align: top;
-     text-align: center;
-     color: white;
-     }
-
- .box2{
-     background-color: white;
-     width: 39%;
-     float:none;
-     display: table-cell;
-     border-radius:0px;
-     }
- .box3{
-     background-color: white;
-     padding-top: 32px;
-         padding-right: 6px;
-     width: 15%;
-     float:none;
-     display: table-cell;
-     border-radius:0px;
-     vertical-align: top;
-     text-align: center;
-     color: white;
-     }
-#banner-ad[body]{
-  background:white;
-}
-
-
-</style>
+	<!-- Icon -->
+	<link rel="icon" href="logo.ico" type="image/icon">
+	<!-- set the encoding of your site -->
+	<meta charset="utf-8">
+	<!-- set the viewport width and initial-scale on mobile devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- set the HandheldFriendly -->
+	<meta name="HandheldFriendly" content="True">
+	<!-- set the description -->
+	<meta name="description" content="Coupmy-Coupons, Affiliates, Offers, Deals, Discounts &amp; Marketplace HTML Template">
+	<!-- set the Keyword -->
+	<meta name="keywords" content="">
+	<meta name="author" content="Coupmy-Coupons, Affiliates, Offers, Deals, Discounts &amp; Marketplace HTML Template">
+	<title>Category</title>
+	<!-- include the site stylesheet -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CPoppins:300,400,500,600,900%7CLily+Script+One" rel="stylesheet">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/plugins.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/icofont.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="style.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/colors.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- include the site stylesheet -->
+	<style class="color_css"></style>
 </head>
-<body class="gray"  onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false"><!--<div class="alert_w_p_u"></div>-->
-<!-- Pre-Loader -->
-    <div id="pre-loader"></div>
-<!-- Pre-Loader End -->
-<!-- #region Jssor Slider Begin -->
-<!-- Generator: Jssor Slider Composer -->
-<!-- Source: https://www.jssor.com/demos/banner-rotator.slider/=edit -->
-<script src="js/jssor.slider-28.1.0.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-    window.jssor_1_slider_init = function() {
-
-        var jssor_1_SlideshowTransitions = [
-          {$Duration:500,$Delay:12,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:2049,$Easing:$Jease$.$OutQuad},
-          {$Duration:500,$Delay:40,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$SlideOut:true,$Easing:$Jease$.$OutQuad},
-          {$Duration:1000,x:-0.2,$Delay:20,$Cols:16,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Assembly:260,$Easing:{$Left:$Jease$.$InOutExpo,$Opacity:$Jease$.$InOutQuad},$Opacity:2,$Outside:true,$Round:{$Top:0.5}},
-          {$Duration:1600,y:-1,$Delay:40,$Cols:24,$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraight,$Easing:$Jease$.$OutJump,$Round:{$Top:1.5}},
-          {$Duration:1200,x:0.2,y:-0.1,$Delay:16,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InWave,$Top:$Jease$.$InWave,$Clip:$Jease$.$OutQuad},$Round:{$Left:1.3,$Top:2.5}},
-          {$Duration:1500,x:0.3,y:-0.3,$Delay:20,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$During:{$Left:[0.2,0.8],$Top:[0.2,0.8]},$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InJump,$Top:$Jease$.$InJump,$Clip:$Jease$.$OutQuad},$Round:{$Left:0.8,$Top:2.5}},
-          {$Duration:1500,x:0.3,y:-0.3,$Delay:20,$Cols:10,$Rows:5,$Opacity:2,$Clip:15,$During:{$Left:[0.1,0.9],$Top:[0.1,0.9]},$SlideOut:true,$Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$Jease$.$InJump,$Top:$Jease$.$InJump,$Clip:$Jease$.$OutQuad},$Round:{$Left:0.8,$Top:2.5}}
-        ];
-
-        var jssor_1_options = {
-          $AutoPlay: 1,
-          $SlideshowOptions: {
-            $Class: $JssorSlideshowRunner$,
-            $Transitions: jssor_1_SlideshowTransitions,
-            $TransitionsOrder: 1
-          },
-          $ArrowNavigatorOptions: {
-            $Class: $JssorArrowNavigator$
-          },
-          $BulletNavigatorOptions: {
-            $Class: $JssorBulletNavigator$,
-            $SpacingX: 16,
-            $SpacingY: 16
-          }
-        };
-
-        var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-        /*#region responsive code begin*/
-
-        var MAX_WIDTH = 980;
-
-        function ScaleSlider() {
-            var containerElement = jssor_1_slider.$Elmt.parentNode;
-            var containerWidth = containerElement.clientWidth;
-
-            if (containerWidth) {
-
-                var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
-
-                jssor_1_slider.$ScaleWidth(expectedWidth);
-            }
-            else {
-                window.setTimeout(ScaleSlider, 30);
-            }
-        }
-
-        ScaleSlider();
-
-        $Jssor$.$AddEvent(window, "load", ScaleSlider);
-        $Jssor$.$AddEvent(window, "resize", ScaleSlider);
-        $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
-        /*#endregion responsive code end*/
-    };
-</script>
-<style>
-    /*jssor slider loading skin spin css*/
-    .jssorl-009-spin img {
-        animation-name: jssorl-009-spin;
-        animation-duration: 1.6s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-    }
-
-    @keyframes jssorl-009-spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-    }
-
-    /*jssor slider bullet skin 053 css*/
-    .jssorb053 .i {position:absolute;cursor:pointer;}
-    .jssorb053 .i .b {fill:#fff;fill-opacity:0.3;}
-    .jssorb053 .i:hover .b {fill-opacity:.7;}
-    .jssorb053 .iav .b {fill-opacity: 1;}
-    .jssorb053 .i.idn {opacity:.3;}
-
-    /*jssor slider arrow skin 093 css*/
-    .jssora093 {display:block;position:absolute;cursor:pointer;}
-    .jssora093 .c {fill:none;stroke:#fff;stroke-width:400;stroke-miterlimit:10;}
-    .jssora093 .a {fill:none;stroke:#fff;stroke-width:400;stroke-miterlimit:10;}
-    .jssora093:hover {opacity:.8;}
-    .jssora093.jssora093dn {opacity:.6;}
-    .jssora093.jssora093ds {opacity:.3;pointer-events:none;}
-</style>
-
-    <div class="container-page" style="background: #f7f7f7;">
-    <div class="mp-pusher" id="mp-pusher">
-        <header class="mod-header">
-            <div class="grid_frame">
-                <div class="container_grid clearfix">
-                    <div class="grid_12">
-                        <div class="header-content clearfix">
-
-
-                            <nav class="main-nav">
-                                <ul id="main-menu" class="nav nav-horizontal clearfix" style="padding-right: 60px;">
-                                  <!-- <li style="background:transparent;"> -->
-                                    <div id="logo">
-                                            <img style= "margin-top:-20px; width: 150px; height: auto; background:transparent;" src="cd.png" alt="coupon code for online shopping"/>
-                                    </div>
-                                  <!-- </li> -->
-                                  <li>
-                                    <form action="/action_page.php">
-                                      <input type="text" placeholder="" name="search">
-                                      <button type="submit"><i class="fa fa-search"></i></button>
-                                    </form>
-                                  </li>
+<body>
+	<!-- main container of all the page elements -->
+	<div id="wrapper">
+		<!-- header of the page -->
+		<header id="header">
+			<!-- header top of the page -->
+			<div class="header-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<span class="txt">Welcome to CouponDeck</span>
+							<ul class="align-left list-unstyled">
+								<li><a href="mailto:support@coupondeck.co.in">Support</a></li>
+								<?php
+                                    	if (isset($_SESSION['username'])){
+                                    ?>
                                     <li>
-                                        <a href="index.php">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="ind_brand.php">Brands</a>
-                                    </li>
-                                    <li>
-                                      <a href="category.php">Categories</a>
-                                    </li>
-                                    <li>
-                                        <a href="offers.php">Offers</a>
-                                    </li>
-                                    <li>
-                                        <a href="reviews.php">Reviews</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="blog.php">Blog</a>
-                                    </li>
-                                    <li>
-                                        <a href="contact.php">Contact Us</a>
-                                    </li>
-
-                                    <li class="has-sub" style="background: rgb(0 0 0 / 0%); color: white; border-radius: 5px;">
-                                        <a style="color: black;">Region</a>
-                                        <ul class="sub-menu" style="background: skyblue; border-radius: 25px;">
-                                          <?php if(!empty($activeRegion['results'])){
-                                                  foreach($activeRegion['results'] as $index){
-                                                      if($index['code'] == $region){?>
-                                            <li><a href="category.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
-                                            <?php }else{?>
-                                              <li><a href="category.php?region=<?php echo $index['code'];?>" style="background: skyblue; border-radius: 25px;"><?php echo $index['country'];?></a></li>
-                                            <?php }}}?>
-                                        </ul>
-                                    </li>
-
-                                    <!-- <?php
-                                      if (isset($_SESSION['username'])){
-                                        ?>
-                                    <li class="has-sub">
-                                        <a class="btn btn-green type-login btn-login"style="margin-top: -5px;">
+                                        <a>
                                           <?php
-                                          echo $_SESSION['username'];
+                                          echo 'Not '.$_SESSION['username'].' ?';
                                           }
                                           ?>
-                                        </a>  <?php
-                                            if (isset($_SESSION['username'])){
-                                              ?>
-                                        <ul class="sub-menu">
-                                            <li><a href="logout.php">Logout</a></li>
-                                        </ul>
-
+                                        </a>  
+									<?php
+                                        if (isset($_SESSION['username'])){
+                                    ?>
+                                    <li>
+										<a href="logout.php">Logout</a></li>
                                     </li>
                                     <?php } ?>
                                     <?php
-                                      if (!isset($_SESSION['username'])){
-                                        ?>
-
-                                    <li>
-                                        <a href="index.php" class="btn btn-green type-login btn-login"style="margin-top: -5px;">Login</a>
-                                    </li>
-                                    <?php } ?> -->
-
-
-                                    </li>
-                                  </ul>
-                                <a id="sys_btn_toogle_menu" class="btn-toogle-res-menu" href="#alternate-menu" style="margin: -45px 20px 0 0;"></a>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </header><!--end: header.mod-header -->
-
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin-top: -125px; background:#f7f7f7;"><path fill="#e0e0e0" fill-opacity="1" d="M0,320L48,288C96,256,192,192,288,186.7C384,181,480,235,576,245.3C672,256,768,224,864,224C960,224,1056,256,1152,261.3C1248,267,1344,245,1392,234.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
-
-
-
-
-        <nav id="mp-menu" class="mp-menu alternate-menu">
-            <div class="mp-level">
-                <h2>Menu</h2>
-                <ul>
-                    <li>
-                      <a href="index.php">Home</a>
-                    </li>
-                    <li>
-                      <a href="ind_brand.php">Brands</a>
-                    </li>
-                    <li>
-                      <a href="category.php">Categories</a>
-                    </li>
-                    <li>
-                        <a href="offers.php">Offers</a>
-                    </li>
-                    <li>
-                      <a href="reviews.php">Reviews</a>
-                    </li>
-			
-                    <li>
-                      <a href="blog.php">Blog</a>
-                    </li>
-                    <li>
-                      <a href="contact.php">Contact Us</a>
-                    </li>
-
-                    <!-- <?php
-                      if (isset($_SESSION['username'])){
-                        ?>
-                    <li class="has-sub">
-                        <a class="btn btn-green type-login btn-login">
-                          <?php
-                          echo $_SESSION['username'];
-                          }
-                          ?>
-                        </a>  <?php
-                            if (isset($_SESSION['username'])){
-                              ?>
-                        <ul class="sub-menu">
-                            <li><a href="logout.php">Logout</a></li>
-                        </ul>
-
-                    </li>
-                    <?php } ?>
-                    <?php
-                      if (!isset($_SESSION['username'])){
-                        ?>
-                    <li>
-                        <a href="index.php" class="btn btn-green type-login btn-login" >Login</a>
-                    </li>
-                    <?php } ?> -->
-                    <!-- <li class="has-sub">
-                        <a>Change<br>Region</a>
-                        <ul class="sub-menu">
-                            <li><a href="index.php">India</a></li>
-                            <li><a href="uae_home.php">UAE </a></li>
-                            <li><a href="singapore_home.php">Singapore</a></li>
-                            <li><a href="indonesia_home.php">Indonesia</a></li>
-                            <li><a href="saudiarab_home.php">Saudi Arab</a></li>
-                            <li><a href="thailand_home.php">Thailand</a></li>
-                            <li><a href="vietnam_home.php">Vietnam</a></li>
-                            <li><a href="malaysia_home.php">Malaysia</a></li>
-                            <li><a href="russia_home.php">Russia</a></li>
-                            <li><a href="belarus_home.php">Belarus</a></li>
-                        </ul>
-                    </li> -->
-                  </ul>
-
-            </div>
-        </nav><!--end: .mp-menu -->
-        <!-- Google Advertisement
-        <center>
-          <div id="banner-ad" style="width: 100% auto; height: 100px;">
-            <script>
-              googletag.cmd.push(function() { googletag.display('banner-ad'); });
-            </script>
-          </div>
-        </center>
-        End_Google Advertisement -->
-
-	    <h1 style=" font-family: Arsenal, sans-serif;
-        font-size: 40px;
-        font-weight: 100;
-        color: #ee9f09;
-        margin-bottom:50px;
-        margin-top: -10px;
-        text-transform: none;
-        font-style: normal;
-        text-align: center;
-        text-decoration: none;
-        line-height: 1em;
-        letter-spacing: 1px;">Discount Coupons on Online Shopping Categories in India</h1>
-
-<div class="core">
-<div class="box1" style="background: #f7f7f7;">
-    <div><img src="ad1.jpg"></div><br>
-    <div><img src="ad2.jpg"></div><br>
-</div>
-
-
-<div class="box2" style="background: #f7f7f7;">
-    <div class="text gridtable"  style="padding-top: 10px;">
-      <p style="text-color:black; font-weight:bold; font-size: 2em; margin-left: 25px;margin-top: -30px;">Categories</p>
-      <?php if(!empty($activeCategories)){
-            foreach($activeCategories as $index => $list){ ?>
-                <div class="coupon-item grid_3">
-                    <div class="coupon-content">
-                        <div class="img-thumb-center">
-                            <div class="wrap-img-thumb">
-                                <span class="ver_hold"></span>
-                                <a href="offers.php?category=<?php echo $index;?>" class="ver_container"><img src="<?php echo $list;?>"  width="177px" height="185px" alt="<?php echo $index;?>">
-                                  <div class="overlaycat"><p style="color:white; font-weight:bold;"><?php echo $index;?></p></div>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div><!--end: .coupon-item -->
-        <?php }}?>
-
-
-    </div>
-
-</div>
-
-
-
-<div class="box3" style="background:#f7f7f7;">
-  <div><img src="ad3.jpg"></div><br>
-  <div><img src="ad4.jpg"></div><br>
-</div>
-</div>
-<br>
-<br>
-<div id="jssor_1" style="position:relative;margin:0 auto 25px;top:-25px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
-    <!-- Loading Screen -->
-    <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-        <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
-    </div>
-    <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
-        <div>
-            <img data-u="image" src="img/011.jpg" />
-        </div>
-        <div>
-            <img data-u="image" src="img/012.jpg" />
-        </div>
-        <div>
-            <img data-u="image" src="img/013.jpg" />
-        </div>
-        <div>
-            <img data-u="image" src="img/014.jpg" />
-        </div>
-
-    </div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">responsive slider</a>
-    <!-- Bullet Navigator -->
-    <div data-u="navigator" class="jssorb053" style="position:absolute;bottom:16px;right:16px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
-        <div data-u="prototype" class="i" style="width:12px;height:12px;">
-            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                <path class="b" d="M11400,13800H4600c-1320,0-2400-1080-2400-2400V4600c0-1320,1080-2400,2400-2400h6800 c1320,0,2400,1080,2400,2400v6800C13800,12720,12720,13800,11400,13800z"></path>
-            </svg>
-        </div>
-    </div>
-    <!-- Arrow Navigator -->
-    <div data-u="arrowleft" class="jssora093" style="width:50px;height:50px;top:0px;left:30px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
-        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-            <circle class="c" cx="8000" cy="8000" r="5920"></circle>
-            <polyline class="a" points="7777.8,6080 5857.8,8000 7777.8,9920 "></polyline>
-            <line class="a" x1="10142.2" y1="8000" x2="5857.8" y2="8000"></line>
-        </svg>
-    </div>
-    <div data-u="arrowright" class="jssora093" style="width:50px;height:50px;top:0px;right:30px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
-        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-            <circle class="c" cx="8000" cy="8000" r="5920"></circle>
-            <polyline class="a" points="8222.2,6080 10142.2,8000 8222.2,9920 "></polyline>
-            <line class="a" x1="5857.8" y1="8000" x2="10142.2" y2="8000"></line>
-        </svg>
-    </div>
-</div>
-<script type="text/javascript">jssor_1_slider_init();
-</script>
-<!-- #endregion Jssor Slider End -->
-
-<footer class="footer-distributed">
-
-			<div class="footer-left">
-          <img src="pp.png" width="100%" height="100%" style="margin-left: 0px;margin-top: 0px; width: 70%; ">
-
-
-
-
-
-			</div>
-
-			<div class="footer-center"style="margin-top: 25px;">
-
-				<div style="margin-top: 15px;">
-
-					<p style="font-size:1.89em; font-weight:bold;letter-spacing: 0.05em;">Earn Money</p><br>
-          <p style="font-size:1em;letter-spacing: 0.1em;">Just by completing Simple Tasks</p>
+										if (!isset($_SESSION['username'])){
+                                    ?>
+								<li><a href="login.php"><i class="fa fa-unlock-alt"></i> Login</a></li>
+								<?php } ?>
+								<li><a href="register.php"><i class="fa fa-user"></i> Register</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="footer-right">
-				<p class="footer-company-about">
-
-				<div>
-
-				  <a href="https://play.google.com/store/apps/details?id=mTrack.droid.pocketpennyapp" target="_blank">
-            <img src="gp.png" width="60%" style="margin-left: 50px;margin-top: 35px;">
-          </a>
+			<!-- header holder of the page -->
+			<div class="header-holder container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="logo">
+							<a href="index.php"><img src="images/logo.png" alt="CouponDeck" class="img-responsive"></a>
+						</div>
+						<div class="search-cart">
+							<form action="#" class="search-form">
+								<fieldset>
+									<select id="category">
+										<option value="0">Select Category</option>
+										<?php foreach($othersData as $index => $values){?>
+											<option value="<?php echo $index?>"><?php echo $index?></option>
+										<?php } ?>
+									</select>
+									<input type="search" class="form-control" placeholder="Enter Keyword . . .">
+									<button type="submit" class="sub-btn"><i class="icon-search"></i></button>
+								</fieldset>
+							</form>
+							<!-- <a href="#" class="cart"><i class="icon-cart"></i> <span class="num round">2</span></a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- nav holder of the page -->
+			<div class="nav-holder">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<a href="#" class="nav-opener text-center hidden visible-sm visible-xs"><i class="fa fa-bars"></i></a>
+							<!-- nav of the page -->
+							<nav id="nav">
+								<ul class="list-unstyled">
+									<li class="active">
+										<a href="index.php">Home</a>
+									</li>
+									<li>
+										<a href="brands.php">Brands</a>
+									</li>
+									<li><a href="category.php">Category</a></li>
+									<li>
+									<a href="coupon1.php">Coupon</a>
+									</li>
+									<li>
+										<a href="#">More</a>
+										<ul class="drop-down list-unstyled">
+											<li><a href="blog.php">Blog</a></li>
+											<li><a href="about.php">About Us</a></li>
+											<li><a href="contact.php">Contact Us</a></li>
+										</ul>
+									</li>
+									
+								</ul>
+							</nav>
+							<a href="submit-coupon.html" class="btn-primary text-center text-uppercase">Submit Coupon</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header of the page end -->
+		<!-- main of the page -->
+		<main id="main">
+			<!-- banner of the page -->
+			<section class="banner banner3 bg-full overlay" style="background-image: url('categories.jpg');">
+				<div class="holder">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 text-center">
+								<h1>Category</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- feature sec of the page -->
+			<section class="feature-sec container pad-top-lg pad-bottom-md">
+				<div class="row">
+				<?php if(!empty($activeCategories)){
+            foreach($activeCategories as $index => $list){ ?>
+					<div class="col-xs-12 col-sm-4">
+						<!-- Feature Box of the page -->
+						 <div class="feature-box">
+							<span class="icon round text-center"><span class="border round"><i class="icon-restaurant"></i></span></span>
+							<div class="img-holder overlay">
+							<img src="<?php echo $list;?>" alt="<?php echo $index;?>" class="img-responsive">
+								<div class="over text-center">
+									<h2 class="heading2"><?php echo $index;?></h2>
+								</div>
+							</div>
+							<a href="coupon1.php?category=<?php echo $index;?>" class="btn-primary text-center text-uppercase">
+                                Show Me
+                            </a>
+						</div>
+					</div>
+					<?php }}?>
+					
+			</section>
+		</main>
+		<!-- main of the page end -->
+		<!-- footer of the page -->
+		<footer id="footer">
+			<!-- footer holder of the page -->
+			<div class="footer-holder container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="col1">
+							<h3 class="text-uppercase">Contact CouponDeck</h3>
+							<ul class="list-unstyled contact-list">
+								<li>
+									<span class="icon icon-location"></span>
+									<address>A - 153, BLOCK - A ANSAL TOWN SHAMSHABAD ROAD Agra-283125 Uttar Pradesh</address>
+								</li>
+								<li>
+									<span class="icon icon-phone"></span>
+									<span class="tel"><a href="tel:919540291981">+91-9540291981</a></span>
+								</li>
+								<li>
+									<span class="icon icon-email"></span>
+									<span class="mail"><a href="mailto:support@coupondeck.co.in">support@coupondeck.co.in</a></span>
+								</li>
+							</ul>
+						</div>
+						<div class="col2">
+							<h3 class="text-uppercase">Quick Links</h3>
+							<ul class="list-unstyled f-nav">
+								<li><a href="about.php">About Us</a></li>
+								<li><a href="coupon1.php">Coupons</a></li>
+								<li><a href="blog.php">Latest News</a></li>
+								<li><a href="mailto:support@coupondeck.co.in">Support</a></li>
+								<li><a href="contact.php">Contact Us</a></li>
+							</ul>
+						</div>
+						<div class="col3">
+							<h3 class="text-uppercase">Categories</h3>
+							<ul class="list-unstyled tags">
+							<?php if(!empty($activeCategories)){
+            					foreach($activeCategories as $index => $list){ ?>
+								<li><a href="coupon1.php?category=<?php echo $index;?>"><?php echo $index;?></a></li>
+								<?php }}?>
+							</ul>
+							<h3 class="text-uppercase">Follow us</h3>
+							<ul class="list-unstyled socail-network">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+						</div>
+						<div class="col4">
+							<h3 class="text-uppercase">Recent Tweets</h3>
+							<ul class="list-unstyled recent-tweet">
+								<li>
+									<span class="icon"><i class="fa fa-twitter"></i></span>
+									<div class="txt-holder">
+										<p><a href="https://twitter.com/CDeck21">@CDeck21</a> Coupondeck provides one of the best brands coupons for online shopping in India offering online shoppers more offers, deals and discounts whether it may be shopping from online brands. </p>
+										<time datetime="2021-09-24 20:00" class="time">Posted on 24 Sep 2021</time>
+									</div>
+								</li>
+								<li>
+									<span class="icon"><i class="fa fa-twitter"></i></span>
+									<div class="txt-holder">
+										<p><a href="https://twitter.com/CDeck21">@CDeck21</a> Whenever you do online shopping make sure you are getting the best deals and offers on all of your shopping products. Hurry up and get your discount coupons right now by visiting our website. </p>
+										<time datetime="2021-09-17 20:00" class="time">Posted on 17 Sep 2021</time>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- footer area of the page -->
+			<div class="footer-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-5">
+							<p>© 2021 CouponDeck-All rights reserved</p>
+						</div>
+						<div class="col-xs-12 col-sm-7">
+							<ul class="list-unstyled footer-nav">
+								<li><a href="index.php">Home</a></li>
+								<li><a href="about.php">About</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Terms&amp;Conditions</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</footer>
-
-
-    </div>
-</div>
-
-<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="js/jquery.nouislider.js"></script>
-
-<script type="text/javascript" src="js/html5lightbox.js"></script>
-<!--//js for responsive menu-->
-<script type="text/javascript" src="js/modernizr.custom.js"></script>
-<script type="text/javascript" src="js/classie.js"></script>
-<script type="text/javascript" src="js/mlpushmenu.js"></script>
-
-<script type="text/javascript" src="js/script.js"></script>
-
-<script type="text/javascript" src="js/copy_text.js"></script>
-
-<!-- Pre-Loader -->
-<script>
-    var loader = document.getElementById("pre-loader");
-    window.addEventListener("load", function(){
-        loader.style.display="none";
-    })
-</script>
-<!-- Pre-Loader End -->
-
+		<!-- footer of the page end -->
+		<span id="back-top" class="text-center md-round fa fa-angle-up"></span>
+		<!-- loader of the page -->
+		<div id="loader" class="loader-holder">
+			<div class="block"><img src="images/svg/bars.svg" width="60" alt="loader"></div>
+		</div>
+	</div>
+	<!-- main container of all the page elements end -->
+	<!-- include jQuery -->
+	<script src="js/jquery.js"></script>
+	<!-- include jQuery -->
+	<script src="js/plugins.js"></script>
+	<!-- include jQuery -->
+	<script src="js/jquery.main.js"></script>
+	<div id="style-changer" data-src="style-changer.html"></div>
 </body>
 </html>

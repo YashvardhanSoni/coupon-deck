@@ -1,37 +1,52 @@
 <?php
+session_start();
+require __DIR__.'/apiController.php';
+require __DIR__.'/helper/common.php';
+$region = '';
+$change_region = '';
+$brand = '';
 
-    session_start();
-    if (isset($_SESSION['username'])) {
-        $_SESSION['msg'] = "You have to log in first";
-        header('location: index.php');
+if(isset($_GET['region']) && $_GET['region'] != ''){
+    $change_region = $_GET['region'];
+    $_SESSION['region'] = $change_region;
+    if(isset($_SESSION['user_id'])){
+        updateUserRegion($change_region, $_SESSION['user_id']);
     }
-    include('config.php');
-    if (isset($_POST['login'])) {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $query = $connection->prepare("SELECT * FROM users WHERE username=:username");
-        $query->bindParam("username", $username, PDO::PARAM_STR);
-        $query->execute();
-        $result = $query->fetch(PDO::FETCH_ASSOC);
-        echo $result['password'];
-        echo (password_verify($password, $result['password']));
+}
+if(isset($_SESSION) && !empty($_SESSION['region'])){
+    $region = $_SESSION['region'];
+}
+$method = 'GET';
+$category = (isset($_GET['category'])) ? $_GET['category'] : '';
+if($region != ''){
+    $url = 'https://api-mtrack.affise.com/3.0/partner/offers?api-key=9a5057e1103b54ea0bb5f4f16cbe1a62&countries[]='.$region;
+}else{
+    $url = 'https://api-mtrack.affise.com/3.0/partner/offers?api-key=9a5057e1103b54ea0bb5f4f16cbe1a62';
+}
+if(isset($_GET['brand']) && $_GET['brand'] != ''){
+  $brand = $_GET['brand'];
+  $category = getCategoryName($url, '', $brand);
+  $apiData = getOffersList($method, $url, $brand, '');
+  $othersData = activeBrands($method, $url, $category, $brand);
 
-        if (!$result) {
-            echo '<p class="error">Username/Password is wrong!</p>' ;
-        } else {
-            if ($password == $result['password']) {
-                $_SESSION['user_id'] = $result['id'];
-                $_SESSION['username'] = $result['username'];
-                $_SESSION['email'] = $result['email'];
-                $_SESSION['region'] = $result['region'];
-                session_set_cookie_params(0);
-                header("Location: index.php");
-            } else {
-                echo '<p class="error">Username/Password is wrong!</p>';
-            }
-        }
-    }
+}else if(isset($_GET['hotoffers']) && $_GET['hotoffers'] != ''){
+  $hotoffers = $_GET['hotoffers'];
+  $apiData = getOffersList($method, $url, '', '', $hotoffers);
+  $othersData = hotOffers($method, $url);
+
+}else{
+  $category = getCategoryName($url, $category, '');
+  $apiData = getOffersList($method, $url, '', $category);
+  $othersData = activeCategories($method, $url);
+}
+
+$activeRegion = activeRegion($method, $url);
+$activeCategories = activeCategories($method, $url);
+// $activeBrands = activeBrands($method, $url);
 ?>
+
+
+
 
 
 <!DOCTYPE html>
@@ -50,7 +65,7 @@
 	<!-- set the Keyword -->
 	<meta name="keywords" content="">
 	<meta name="author" content="Coupmy-Coupons, Affiliates, Offers, Deals, Discounts &amp; Marketplace HTML Template">
-	<title>Login</title>
+	<title>Coupons</title>
 	<!-- include the site stylesheet -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CPoppins:300,400,500,600,900%7CLily+Script+One" rel="stylesheet">
 	<!-- include the site stylesheet -->
@@ -121,13 +136,14 @@
 						<div class="search-cart">
 							<form action="#" class="search-form">
 								<fieldset>
-									<select>
-										<option value="0">Select Category</option>
-										<option value="1">Select Category</option>
-										<option value="2">Select Category</option>
+									<select id="category">
+										<option value="">Select Category</option>
+										<?php foreach($othersData as $index => $values){?>
+											<option value="<?php echo $index?>"><?php echo $index?></option>
+										<?php } ?>
 									</select>
-									<input type="search" class="form-control" placeholder="Enter Keyword . . .">
-									<button type="submit" class="sub-btn"><i class="icon-search"></i></button>
+									<input type="search" class="form-control" id="search_value" placeholder="Enter Keyword . . .">
+									<button type="submit" class="sub-btn" id="search_btn"><i class="icon-search"></i></button>
 								</fieldset>
 							</form>
 							<!-- <a href="#" class="cart"><i class="icon-cart"></i> <span class="num round">2</span></a> -->
@@ -175,50 +191,53 @@
 		<!-- main of the page -->
 		<main id="main">
 			<!-- banner of the page -->
-			<section class="banner banner3 bg-full overlay" style="background-image: url('reg.jpg');">
+			<section class="banner banner3 bg-full overlay" style="background-image: url('pd.jpg');">
 				<div class="holder">
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-12 text-center">
-								<h1>Login</h1>
+								<h1>Popular Deals</h1>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- twocolumns of the page -->
-			<div class="twocolumns pad-top-lg pad-bottom-lg">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12">
-							<!-- Register holder of the page -->
-							<div class="register-holder">
-								<div class="txt-holder">
-									<h3 class="heading2">Login Now!</h3>
-									<p>Enter your details for login</p>
-									<form action="#" method="post" class="register-form">
-										<fieldset>
-											<input type="text" class="form-control" name="username" placeholder="Username *">
-											<input type="password" class="form-control" name="password" placeholder="Password *">
-											<!-- <div class="form-check">
-												<input type="checkbox" name="vehicle" value="Car"> Remember Me
-											</div> -->
-											<button type="submit" class="btn-primary text-center text-uppercase" name="login">Sign In</button>
-										</fieldset>
-									</form>
-									<!-- <div class="btn-holder">
-										<a href="#" class="google-btn"><i class="fa fa-google-plus"></i> Sign in with Goolge</a>
-										<a href="#" class="fb-btn"><i class="fa fa-facebook"></i> Sign in with Facebook</a>
-									</div> -->
+			<!-- offer sec of the page -->
+			<section class="offer-sec container pad-top-lg pad-bottom-md">
+				<div class="row">
+					<div class="col-xs-12">
+						<!-- offer holder of the page -->
+						<div class="offer-holder" id="offer_holder">
+							<!-- col of the page -->
+							<?php if(!empty($apiData)){
+                                  $i = 1;
+                                  foreach($apiData as $index){
+									$desc = getFirstPara($index['description_lang']);
+                                ?>
+							<div class="col mar-bottom-xs" id ="p<?php echo $i - 1 ;?>">
+							
+								<div class="header">
+								
+									<div class="c-logo" style="width: 200px;max-height: 120px;float: left;margin: 0 0px 0 0;"><img src="<?php echo $index['logo'];?>" alt="logo" class="img-responsive"></div>
+									<!-- <span class="offer">25% Off</span> -->
 								</div>
-								<div class="img-holder">
-									<img src="login.jpg" alt="image description" class="img-responsive">
+								<!-- <strong class="heading6">Upto 15% + Extra 10% Off On <br class="hidden-xs">Sofa. Furniture &amp; Dining Tables</strong> -->
+								<strong class="heading6">Name: <?php echo $index['title'];?></strong>
+								<p><strong class="heading6"> </strong><?php echo $desc;?></p>
+								<div class="text-center">
+									<a href="coupon-detail.php#popup<?php echo $i;?>" target="_blank" class="btn-primary text-center text-uppercase md-round">view details</a>
+									<!-- <time class="time" datetime="2017-02-03 20:00">Expires On : 29 Oct, 2017</time> -->
+									
 								</div>
+								
 							</div>
+							<?php $i++;} } ?>
 						</div>
+					
 					</div>
 				</div>
-			</div>
+				<input type="hidden" id="pageid" value="index">
+			</section>
 		</main>
 		<!-- main of the page end -->
 		<!-- footer of the page -->
@@ -255,9 +274,12 @@
 							</ul>
 						</div>
 						<div class="col3">
-							<h3 class="text-uppercase">Quick Link</h3>
+							<h3 class="text-uppercase">Categories</h3>
 							<ul class="list-unstyled tags">
-							<li><a href="index.php">Home</a></li>
+							<?php if(!empty($activeCategories)){
+            					foreach($activeCategories as $index => $list){ ?>
+								<li><a href="coupon1.php?category=<?php echo $index;?>"><?php echo $index;?></a></li>
+								<?php }}?>
 							</ul>
 							<h3 class="text-uppercase">Follow us</h3>
 							<ul class="list-unstyled socail-network">
@@ -323,5 +345,7 @@
 	<!-- include jQuery -->
 	<script src="js/jquery.main.js"></script>
 	<div id="style-changer" data-src="style-changer.html"></div>
+	<script src="js/custom.js"></script>
+
 </body>
 </html>
