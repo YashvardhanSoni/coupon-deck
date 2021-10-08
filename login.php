@@ -5,7 +5,7 @@
         $_SESSION['msg'] = "You have to log in first";
         header('location: index.php');
     }
-    include('configg.php');
+    include('config.php');
     if (isset($_POST['login'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
