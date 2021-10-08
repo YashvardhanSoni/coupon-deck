@@ -1,5 +1,5 @@
 <?php
-require __DIR__.'/../configg.php';
+require __DIR__.'/../config.php';
 
 function getDataThroughCurl($method, $url) {
     $curl = curl_init();
