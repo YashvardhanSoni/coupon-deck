@@ -1,5 +1,32 @@
 <?php
 session_start();
+
+require __DIR__.'/apiController.php';
+require __DIR__.'/helper/common.php';
+$region = '';
+
+$change_region = '';
+if(isset($_GET['region']) && $_GET['region'] != ''){
+    $change_region = $_GET['region'];
+    $_SESSION['region'] = $change_region;
+    if(isset($_SESSION['user_id'])){
+        updateUserRegion($change_region, $_SESSION['user_id']);
+    }
+}
+if(isset($_SESSION) && !empty($_SESSION['region'])){
+    $region = $_SESSION['region'];
+}
+$method = 'GET';
+if($region != ''){
+    $url = 'https://api-mtrack.affise.com/3.0/partner/offers?api-key=9a5057e1103b54ea0bb5f4f16cbe1a62&countries[]='.$region;
+}else{
+    $url = 'https://api-mtrack.affise.com/3.0/partner/offers?api-key=9a5057e1103b54ea0bb5f4f16cbe1a62';
+}
+$apiData = getOffersList($method, $url);
+$activeRegion = activeRegion($method, $url);
+$activeCategories = activeCategories($method, $url);
+$activeBrands = activeBrands($method, $url);
+$othersData = activeCategories($method, $url);
 ?>
 
 
@@ -199,36 +226,32 @@ session_start();
 							<!-- sidebar of the page -->
 							<aside id="sidebar">
 								<!-- Widget of the page -->
-								<section class="widget search-widget">
-									<form action="#" class="search-form">
-										<fieldset>
-											<input type="search" class="form-control" placeholder="Enter Keyword">
-											<button type="submit" class="sub-btn text-center text-uppercase">GO</button>
-										</fieldset>
-									</form>
+								<section class="widget coupon-submit-widget overlay bg-full text-center" style="background-image: url(http://placehold.it/270x205);">
+									<span class="icon"><i class="icon-speaker"></i></span>
+									<strong class="title text-uppercase">Submit Your Coupon</strong>
+									<a href="#" class="btn-primary text-center text-uppercase">Submit now</a>
 								</section>
 								<!-- Widget of the page -->
-								<!-- <section class="widget category-widget">
-									<h3 class="heading4">Blog Categories</h3>
+								<section class="widget category-widget">
+									<h3 class="heading4">Offer Categories</h3>
 									<ul class="list-unstyled category-list">
-										<li><a href="#"><span class="pull-left">All Categories</span><span class="pull-right">(10)</span></a></li>
-										<li><a href="#"><span class="pull-left">Beauty</span><span class="pull-right">(07)</span></a></li>
-										<li><a href="#"><span class="pull-left">Health</span><span class="pull-right">(15)</span></a></li>
-										<li><a href="#"><span class="pull-left">Fitness</span><span class="pull-right">(13)</span></a></li>
-										<li><a href="#"><span class="pull-left">Watches</span><span class="pull-right">(05)</span></a></li>
+									<?php if(!empty($activeCategories)){
+            						foreach($activeCategories as $index => $list){ ?>
+										<li><a href="coupon1.php?category=<?php echo $index;?>"><span class="pull-left"><?php echo $index;?></span></a></li>
+										<?php }}?>
 									</ul>
-								</section> -->
+								</section>
 								<!-- Widget of the page -->
 								<section class="widget popular-widget">
 									<h3 class="heading4">Popular Stores</h3>
 									<ul class="list-unstyled popular-list">
-										<li><a href="#"><img src="http://placehold.it/85x85" alt="image description" class="img-responsive"></a></li>
-										<li><a href="#"><img src="http://placehold.it/85x85" alt="image description" class="img-responsive"></a></li>
-										<li><a href="#"><img src="http://placehold.it/85x85" alt="image description" class="img-responsive"></a></li>
-										<li><a href="#"><img src="http://placehold.it/85x85" alt="image description" class="img-responsive"></a></li>
-										<li><a href="#"><img src="http://placehold.it/85x85" alt="image description" class="img-responsive"></a></li>
-										<li><a href="#"><img src="http://placehold.it/85x85" alt="image description" class="img-responsive"></a></li>
-										<li><a href="#" class="text-uppercase">View All Stores</a></li>
+									<?php if(!empty($activeBrands)){
+										$i = 0;
+										foreach($activeBrands as $index){
+										if($i < 6){?>
+										<li><a href="coupon-detail.php?brand=<?php echo $index['title'];?>" target="_blank"><img src="<?php echo $index['logo'];?>" width="85" height="85" alt="image description" class="img-responsive"></a></li>
+										<?php $i++; }}}?>
+										<li><a href="brands.php" class="text-uppercase">View All Stores</a></li>
 									</ul>
 								</section>
 								<!-- Widget of the page -->
@@ -237,56 +260,35 @@ session_start();
 									<ul class="list-unstyled latest-news-list">
 										<li>
 											<div class="img-holder round">
-												<a href="#"><img src="http://placehold.it/75x75" alt="image description" class="img-responsive"></a>
+												<a href="benefits_of_discount_coupon.php" target="_blank"><img src="blog/blog1s.jpg" width="70" height="70" alt="image description" class="img-responsive"></a>
 											</div>
 											<div class="txt-holder">
-												<h3><a href="#">Veritatis Euas Arch Beatae Vitae</a></h3>
+												<h3><a href="benefits_of_discount_coupon.php" target="_blank">Benefits of A Discount Coupon for Online Shopping</a></h3>
 												<ul class="list-unstyled news-nav">
-													<li>By <a href="#">Admin</a></li>
+													<li>By <a>Admin</a></li>
 													<li>|</li>
-													<li><time datetime="2017-02-03 20:00">Sep 07, 2017</time></li>
+													<li><time datetime="2021-09-15 20:00">Sep 15, 2021</time></li>
 												</ul>
 											</div>
 										</li>
 										<li>
 											<div class="img-holder round">
-												<a href="#"><img src="http://placehold.it/75x75" alt="image description" class="img-responsive"></a>
+												<a href="discount_coupons.php" target="_blank"><img src="blog/blog2s.jpg" width="70" height="70" alt="image description" class="img-responsive"></a>
 											</div>
 											<div class="txt-holder">
-												<h3><a href="#">Numquam Eius Modi Tempora Incid</a></h3>
+												<h3><a href="discount_coupons.php" target="_blank">Discount Coupons: The Best Deals for your Online Shopping</a></h3>
 												<ul class="list-unstyled news-nav">
-													<li>By <a href="#">Admin</a></li>
+													<li>By <a>Admin</a></li>
 													<li>|</li>
-													<li><time datetime="2017-02-03 20:00">Sep 07, 2017</time></li>
+													<li><time datetime="2021-09-16 20:00">Sep 16, 2021</time></li>
 												</ul>
 											</div>
 										</li>
-										<li>
-											<div class="img-holder round">
-												<a href="#"><img src="http://placehold.it/75x75" alt="image description" class="img-responsive"></a>
-											</div>
-											<div class="txt-holder">
-												<h3><a href="#">Vel Illum Qui Dolore Eum Fugiat</a></h3>
-												<ul class="list-unstyled news-nav">
-													<li>By <a href="#">Admin</a></li>
-													<li>|</li>
-													<li><time datetime="2017-02-03 20:00">Sep 07, 2017</time></li>
-												</ul>
-											</div>
-										</li>
+										
 									</ul>
 								</section>
 								<!-- Widget of the page -->
-								<!-- <section class="widget tags-widget">
-									<h3 class="heading4">Popular Tags</h3>
-									<ul class="list-unstyled tags-list text-center">
-										<li><a href="#">Accessories</a></li>
-										<li><a href="#">Watches</a></li>
-										<li><a href="#">Sports</a></li>
-										<li><a href="#">Beauty &amp; Fitness</a></li>
-										<li><a href="#">Fashion</a></li>
-									</ul>
-								</section> -->
+								
 							</aside>
 						</div>
 					</div>
