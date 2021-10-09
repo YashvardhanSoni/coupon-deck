@@ -195,8 +195,8 @@ $activeCategories = activeCategories($method, $url);
 									<h2 class="heading2"><?php echo $index;?></h2>
 								</div>
 							</div>
-							<a href="coupon1.php?category=<?php echo $index;?>" class="btn-primary text-center text-uppercase">
-                                Show Me
+							<a href="coupon1.php?category=<?php echo $index;?>" target="_blank" class="btn-primary text-center text-uppercase">
+                                View Offers
                             </a>
 						</div>
 					</div>

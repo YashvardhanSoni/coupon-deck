@@ -225,7 +225,7 @@ $activeCategories = activeCategories($method, $url);
 								<strong class="heading6">Name: <?php echo $index['title'];?></strong>
 								<p><strong class="heading6"> </strong><?php echo $desc;?></p>
 								<div class="text-center">
-									<a href="coupon-detail.php#popup<?php echo $i;?>" target="_blank" class="btn-primary text-center text-uppercase md-round">view details</a>
+									<a href="coupon-detail.php?brand=<?php echo $index['title'];?>" target="_blank" class="btn-primary text-center text-uppercase md-round">view details</a>
 									<!-- <time class="time" datetime="2017-02-03 20:00">Expires On : 29 Oct, 2017</time> -->
 									
 								</div>

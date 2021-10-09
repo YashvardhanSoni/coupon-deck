@@ -235,7 +235,7 @@ $hotOffers = hotOffers($method, $url);
 									<li><a href="#"><i class="icon icon-smile"></i> Verified</a></li>
 									<li><a href="#"><i class="icon icon-user"></i> Used</a></li>
 								</ul> -->
-								<a href="coupon1.php?hotoffers=<?php echo $index['id'];?>" class="btn-primary md-round text-center text-uppercase">View Offer</a>
+								<a href="coupon-detail.php?hotoffers=<?php echo $index['id'];?>" target="_blank" class="btn-primary md-round text-center text-uppercase">View Offer</a>
 								<!-- <time class="time text-center" datetime="2017-02-03 20:00">Expires On : 03 Sep, 2017</time> -->
 							</div>
 						</div>
@@ -264,11 +264,11 @@ $hotOffers = hotOffers($method, $url);
               			$i = 0;
                     	foreach($activeBrands as $index){
                       	if($i < 10){?>
-								<li><a href="coupon1.php?brand=<?php echo $index['title'];?>"><img src="<?php echo $index['logo'];?>" style="padding:20px;" width="150" height="65" alt="<?php echo $index['title'];?>" class="img-responsive"></a></li>
+								<li><a href="coupon-detail.php?brand=<?php echo $index['title'];?>" target="_blank"><img src="<?php echo $index['logo'];?>" style="padding:20px;" width="150" height="65" alt="<?php echo $index['title'];?>" class="img-responsive"></a></li>
 								<?php $i++; }}}?>	
 							</ul>
 							<div class="text-center">
-								<a href="store.php" class="btn-primary text-center text-uppercase md-round">Visit all stores</a>
+								<a href="brands.php" target="_blank" class="btn-primary text-center text-uppercase md-round">Visit all stores</a>
 							</div>
 						</div>
 					</div>

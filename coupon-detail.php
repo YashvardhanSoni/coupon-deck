@@ -319,16 +319,7 @@ $activeRegion = activeRegion($method, $url);
 									</ul>
 								</section>
 								<!-- Widget of the page -->
-								<section class="widget tags-widget">
-									<h3 class="heading4">Popular Tags</h3>
-									<ul class="list-unstyled tags-list text-center">
-										<li><a href="#">Accessories</a></li>
-										<li><a href="#">Watches</a></li>
-										<li><a href="#">Sports</a></li>
-										<li><a href="#">Beauty &amp; Fitness</a></li>
-										<li><a href="#">Fashion</a></li>
-									</ul>
-								</section>
+								
 							</aside>
 						</div>
 					</div>
