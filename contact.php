@@ -175,14 +175,14 @@ session_start();
 								<span class="icon icon-location"></span>
 								<div class="align-left">
 									<strong class="title">Our Location</strong>
-									<address>A - 153, BLOCK - A ANSAL TOWN SHAMSHABAD ROAD Agra-283125 Uttar Pradesh</address>
+									<address>Office : 1131 , tower A, The -ithum , Noida sector 62 , Noida UP</address>
 								</div>
 							</li>
 							<li>
 								<span class="icon icon-phone"></span>
 								<div class="align-left">
 									<strong class="title">Call Us</strong>
-									<span class="tel"><a href="tel:09540291981">+91-9540291981</a></span>
+									<span class="tel"><a href="tel:08433267909">+91-8433267909</a></span>
 								</div>
 							</li>
 							<li>
@@ -204,7 +204,7 @@ session_start();
 			</section>
 			<!-- map holder of the page -->
 			<div class="map-holder">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14203.906399107229!2d78.06832500000002!3d27.125547!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6fe699e6230e34a8!2sAnsal%20town%20shamshabad%20road!5e0!3m2!1sen!2sus!4v1632745388902!5m2!1sen!2sus" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.036261476047!2d77.36183701460394!3d28.62867529100737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce52e4e306aa7%3A0x4b019eabebb5a120!2sThe%20I-Thum!5e0!3m2!1sen!2sus!4v1633937532030!5m2!1sen!2sus" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 
 		</main>
@@ -220,11 +220,11 @@ session_start();
 							<ul class="list-unstyled contact-list">
 								<li>
 									<span class="icon icon-location"></span>
-									<address>A - 153, BLOCK - A ANSAL TOWN SHAMSHABAD ROAD Agra-283125 Uttar Pradesh</address>
+									<address>Office : 1131 , tower A, The -ithum , Noida sector 62 , Noida UP</address>
 								</li>
 								<li>
 									<span class="icon icon-phone"></span>
-									<span class="tel"><a href="tel:919540291981">+91-9540291981</a></span>
+									<span class="tel"><a href="tel:918433267909">+91-8433267909</a></span>
 								</li>
 								<li>
 									<span class="icon icon-email"></span>
